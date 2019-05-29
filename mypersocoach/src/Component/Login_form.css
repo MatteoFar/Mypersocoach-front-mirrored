@@ -1,0 +1,135 @@
+body{
+  margin:0;
+  padding:0;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+#grille{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:2fr 4fr 1fr;
+  height: 100vh;
+  grid-template-areas:
+      "header"
+      "section"
+      "footer";
+  width: 380px;/* Donner une taille fixe ? */
+  margin:auto;
+  /* padding-top:60px; */
+}
+header,section,footer{
+  background-color:rgb(55, 115, 184);
+  text-align: center;
+}
+header{
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  /* font-size: 1em; */
+  font-size: 24px;
+  color: rgb(255, 189, 74);
+  font-family: 'Lato', sans-serif;
+  /* letter-spacing: 0.6em; */
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.white{
+  color:white;
+}
+::placeholder{
+  font-family: 'Montserrat', sans-serif;
+}
+section{
+  grid-area: section;
+}
+footer{
+  grid-area: footer;
+}
+/* Pour positionner l'intégralité du formulaire */
+#formulaire{
+  width: 300px;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+/* Mise en forme des champs text, email et password */
+input[type="text"],input[type="email"],input[type="password"] {
+  width: 250px;
+  padding: 15px;
+  height: 52px;
+  font-size: 14px;
+  /* color: rgb(255, 255, 255); */
+  box-sizing: border-box; /* Pour forcer la taille des input à entrer dans son parent */
+  border:none;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  outline: none;
+}
+/* Focus sur les champs text, email et password du formulaire */
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
+  border-color: rgb(255, 189, 74);
+  box-shadow: 0 0 10px 0 rgb(255, 189, 74);
+}
+/* Mise en forme du bouton submit */
+input[type="submit"]{
+  font-family: 'Montserrat', sans-serif;
+  width: 250px;
+  padding: 15px;
+  height: 52px;
+  font-size: 14px;
+  background-color:rgb(255, 189, 74);
+  color: rgb(255, 255, 255);
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+/* Focus du bouton submit */
+input[type="submit"]:focus{
+  background-color: rgb(72, 201, 176);
+  outline: none;
+}
+/* Mise en forme du bouton Sign up */
+input[type="button"]{
+  font-family: 'Montserrat', sans-serif;
+  width: 250px;
+  padding: 15px;
+  height: 52px;
+  font-size: 14px;
+  background-color: #BDC3C7;
+  color: rgb(255, 255, 255);
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+/* Focus du bouton Sign up */
+input[type="button"]:focus{
+  background-color: rgb(202, 207, 210);
+  outline: none;
+}
+/*
+#signup{
+  text-align: center;
+  color: rgb(255, 255, 255) !important;
+  background-color: #BDC3C7;
+}*/
+/*------------- FORMAT DESKTOP -------------*/
+@media screen and (min-width:960px){
+  /* Taille de la grille au format desktop */
+  #grille{
+      width: 760px;
+  }
+  /* Mise en forme des champs text, email et password */
+  input[type="text"],input[type="email"],input[type="password"] {
+      width: 400px;
+  }
+  #formulaire{
+      width: 400px;
+      /* border: 1px solid black;  */
+  }
+}
