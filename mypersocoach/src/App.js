@@ -3,8 +3,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import './App.css'
 
 import Heading from './components/Heading'
-import Problem from './components/Problem'
-import ProblemModal from './components/ProblemModal'
+
 
 class App extends Component {
   render() {
