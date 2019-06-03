@@ -13,8 +13,7 @@ class App extends Component {
         <BrowserRouter> 
           <Switch>
                 <Route exact path="/" component={Heading} />
-                <Route path="/" component={Problem} />
-                <Route path="/" component={ProblemModal} />
+                
           </Switch>
         </BrowserRouter>
       </div>
