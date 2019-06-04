@@ -6,7 +6,7 @@ import '../Component/Login_form.css'
 function Login() {
     return (
       <div className="App">
-      <Background_login/>
+      <Background_login/> 
 
       </div>
     );

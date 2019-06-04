@@ -8,7 +8,7 @@ const Login = () => {
     <div id="grille">
       <Background_login/>
         <section>
-            <form method="post" action="#">
+            <form method="post" action="#"> 
                 <div id="formulaire">
                     <p>
                         <input type="email" name="email" placeholder="Email" />
