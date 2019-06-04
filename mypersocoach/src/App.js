@@ -1,23 +1,23 @@
-import React, {Component} from 'react'
-import { Route, BrowserRouter, Switch } from 'react-router-dom'
-import './App.css'
+import React, { Component } from "react";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+import "./App.css";
 
-import Heading from './components/Heading'
-
+//import Heading from './components/Heading'
+import Symptome3 from "./components/Pages/Symptome3";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <BrowserRouter> 
+      <div>
+        <BrowserRouter>
           <Switch>
-                <Route exact path="/" component={Heading} />
-                
+            {/* <Route exact path="/" component={Heading} /> */}
+            <Route path="/" component={Symptome3} />
           </Switch>
         </BrowserRouter>
       </div>
-  )}
+    );
+  }
 }
-
 
 export default App;
