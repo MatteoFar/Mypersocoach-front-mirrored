@@ -3,7 +3,7 @@ import Problem from "./Problem"
 
 const headingIcons = [
   {
-    image : require('../components/icon_heading.png')
+    image : require('../Component/icon_heading.png')
   }
 ]
 const headingTexts = [
@@ -34,7 +34,7 @@ const Heading = () => {
       {headingTexts.map(headingText => (
         <p> {headingText.text} </p>
       ))}
-      <Problem/>
+
     </div>
   </div>
 
