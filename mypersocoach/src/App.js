@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 import "./App.css";
 
 //import Heading from './components/Heading'
-import Symptome3 from "./components/Pages/Symptome3";
+import Symptome3 from "./Pages/Symptome3";
 
 class App extends Component {
   render() {
