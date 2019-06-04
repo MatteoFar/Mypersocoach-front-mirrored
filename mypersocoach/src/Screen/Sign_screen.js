@@ -1,15 +1,12 @@
 import React from 'react';
-import Login_form from '../Component/Login_form';
-import Background_login from '../Component/Background_login';
-import '../Component/Login_form.css'
+import Sign_up_form from '../Component/Sign_up_form';
 
-function Login() {
+const Sign_screen = () => {
     return (
       <div className="App">
-      <Background_login/>
-
+        <Sign_up_form/>
       </div>
     );
   }
 
-export default Login;
+export default Sign_screen;
