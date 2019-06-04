@@ -2,7 +2,7 @@ import React from 'react';
 import Background_login from './Background_login';
 import '../Component/Login_form.css';
 
-function Background() {
+const Login = () => {
   return (
       <body>
     <div id="grille">
@@ -33,4 +33,4 @@ function Background() {
   );
 }
 
-export default Background;
+export default Login;

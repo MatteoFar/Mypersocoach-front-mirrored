@@ -1,15 +1,12 @@
 import React from 'react';
-import Background_login from '../Component/Background_login';
 import Login_form from '../Component/Login_form';
 
-function Login() {
+const Login_screen = () => {
     return (
       <div className="App">
-      {/* <Background_login/> */}
-      <Login_form/>
-
+        <Login_form/>
       </div>
     );
   }
 
-export default Login;
+export default Login_screen;
