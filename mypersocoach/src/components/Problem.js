@@ -53,23 +53,49 @@ class Problem extends React.Component {
   render() {
 
     return (
+
       <div className="modal">
+        
         <div>
-          {iconProblems.filter(iconProblem => {
+          {iconProblems.map(iconGoal => (
+            <button onClick ={this.handleshowConflictModal}>
+              <img className="image_icon" alt="icon" src={iconGoal.icon} />
+              <p className="text">{iconGoal.text}</p>
+            </button>
+          ))}
+        </div>
+
+        <div>
+          {conflictModal.filter(iconProblem => {
             if(this.state.showConflictModal === true)
-            return(iconProblem.conflictModal)
+            return(iconProblem)
           }).map(iconProblem=> {
-            <p>{iconProblem.icon}</p>
+            return (<div>
+                     <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
+                     <p>{iconProblem.text}</p>
+                    </div>)
           })}
         </div>
 
         <div>
           {iconGoals.map(iconGoal => (
-            <button>
+            <button onClick ={this.handleshowGoalModal}>
               <img className="image_icon" alt="icon" src={iconGoal.icon} />
               <p className="text">{iconGoal.text}</p>
             </button>
           ))}
+        </div>
+
+        <div>
+          {goalModal.filter(iconGoal=> {
+            if(this.state.showGoalModal === true)
+            return(iconGoal)
+          }).map(iconProblem=> {
+            return (<div>
+                     <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
+                     <p>{iconProblem.text}</p>
+                    </div>)
+          })}
         </div>
       </div>
     );

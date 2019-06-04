@@ -9,7 +9,7 @@ class Start extends Component {
       <div className="start">
         <Heading/>
         <Problem />
-        <ProblemModal/>
+        {/* <ProblemModal/> */}
       </div>
   )}
 }
