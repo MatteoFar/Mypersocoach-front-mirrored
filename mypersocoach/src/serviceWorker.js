@@ -10,11 +10,7 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 
-<<<<<<< HEAD
 const isLocalhost = Boolean(
-=======
-const isLocalhost = Boolean( 
->>>>>>> dev
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
     window.location.hostname === '[::1]' ||
