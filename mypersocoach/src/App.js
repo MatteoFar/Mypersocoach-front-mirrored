@@ -12,7 +12,9 @@ class App extends Component {
       <div className="App">
         <BrowserRouter> 
           <Switch>
-                <Route exact path="/start" component={Start} />   
+                <Route exact path="/start" component={Start} />  
+                <Route exact path="/login" component={Login_screen} />
+                <Route exact path="/sign_up" component={Sign_screen} /> 
           </Switch>
         </BrowserRouter>
       </div>
@@ -20,4 +22,3 @@ class App extends Component {
 }
 
 
-export default App;
