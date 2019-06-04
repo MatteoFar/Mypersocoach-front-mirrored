@@ -34,7 +34,7 @@ const Heading = () => {
       {headingTexts.map(headingText => (
         <p> {headingText.text} </p>
       ))}
-      <Problem/>
+
     </div>
   </div>
 
