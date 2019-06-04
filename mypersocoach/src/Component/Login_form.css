@@ -13,7 +13,7 @@ body{
       "header"
       "section"
       "footer";
-  width: 380px;/* Donner une taille fixe ? */
+  width: 380px;
   margin:auto;
 }
 header,section,footer{
@@ -51,7 +51,7 @@ section{
 footer{
   grid-area: footer;
 }
-/* Pour positionner l'intégralité du formulaire */
+/* To position the entire form */
 #formulaire{
   width: 300px;
   margin: auto;
@@ -60,25 +60,24 @@ footer{
 ::placeholder{
   font-family: 'Montserrat', sans-serif;
 }
-/* Mise en forme des champs text, email et password */
+/* Formatting text, email and password fields */
 input[type="text"],input[type="email"],input[type="password"] {
   width: 250px;
   padding: 15px;
   height: 52px;
   font-size: 14px;
-  /* color: rgb(255, 255, 255); */
-  box-sizing: border-box; /* Pour forcer la taille des input à entrer dans son parent */
+  box-sizing: border-box; /* To force the size of the input to enter in its parent */
   border:none;
   background-color: rgb(245, 245, 245);
   border-radius: 5px;
   outline: none;
 }
-/* Focus sur les champs text, email et password du formulaire */
+/* Focus on the text, email and password fields of the form */
 input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
   border-color: rgb(255, 189, 74);
   box-shadow: 0 0 10px 0 rgb(255, 189, 74);
 }
-/* Mise en forme du bouton submit */
+/* Formatting the submit button */
 input[type="submit"]{
   font-family: 'Montserrat', sans-serif;
   width: 250px;
@@ -92,12 +91,12 @@ input[type="submit"]{
   cursor: pointer;
   outline: none;
 }
-/* Focus du bouton submit */
+/* Submit button focus */
 input[type="submit"]:focus{
   background-color: rgb(72, 201, 176);
   outline: none;
 }
-/* Mise en forme du bouton Sign up */
+/* Formatting the Sign up button */
 input[type="button"]{
   font-family: 'Montserrat', sans-serif;
   width: 250px;
@@ -111,24 +110,37 @@ input[type="button"]{
   cursor: pointer;
   outline: none;
 }
-/* Focus du bouton Sign up */
+/* Sign up button focus */
 input[type="button"]:focus{
   background-color: rgb(202, 207, 210);
   outline: none;
 }
 
-/*------------- FORMAT DESKTOP -------------*/
+/*------------- DESKTOP FORMAT -------------*/
 @media screen and (min-width:960px){
-  /* Taille de la grille au format desktop */
+  /* Grid size in desktop format */
   #grille{
       width: 760px;
   }
-  /* Mise en forme des champs text, email et password */
+
+  #formulaire{
+    width: 400px;
+    /* border: 1px solid black;  */
+  }
+
+  /* Formatting text, email and password fields */
   input[type="text"],input[type="email"],input[type="password"] {
       width: 400px;
   }
-  #formulaire{
-      width: 400px;
-      /* border: 1px solid black;  */
+
+  /* Formatting the submit button */
+  input[type="submit"]{
+    width: 400px;
   }
+  
+  /* Formatting the Sign up button */
+  input[type="button"]{
+    width: 400px;
+  }
+
 }
