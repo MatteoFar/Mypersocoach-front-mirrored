@@ -8,6 +8,10 @@ body {
 }
 
 code {
+<<<<<<< HEAD
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+=======
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", 
+>>>>>>> dev
     monospace;
 }
