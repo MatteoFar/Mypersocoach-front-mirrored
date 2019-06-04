@@ -22,7 +22,7 @@ const headingTexts = [
 ]
 const Heading = () => {
    return (
-  <div className="icons">
+  <div className="header_Symptome">
     <div>
       {headingIcons.map(headingIcon => (
         
