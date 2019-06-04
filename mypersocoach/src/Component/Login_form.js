@@ -4,7 +4,7 @@ import '../Component/Login_form.css';
 
 const Login = () => {
   return (
-      <body>
+    
     <div id="grille">
       <Background_login/>
         <section>
@@ -20,7 +20,7 @@ const Login = () => {
                     <p>
                         <input type="submit" name="login" value="Login" />
                     </p>
-                    <p class="white">Tu as déjà un compte ?</p>
+                    <p className="white">Tu as déjà un compte ?</p>
                     <p>
                         <input type="button" name="texte" value="Sign Up" />
                     </p>
@@ -29,7 +29,7 @@ const Login = () => {
         </section>
         <footer></footer>   
     </div>
-</body>
+
   );
 }
 
