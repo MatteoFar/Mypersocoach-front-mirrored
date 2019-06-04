@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Problem from '../components/Problem'
-import ProblemModal from '../components/ProblemModal'
-import Heading from '../components/Heading';
+import Problem from '../Component/Problem'
+import ProblemModal from '../Component/ProblemModal'
+import Heading from '../Component/Heading';
 
 class Start extends Component {
   render() {
