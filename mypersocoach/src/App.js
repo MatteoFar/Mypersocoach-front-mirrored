@@ -1,15 +1,15 @@
 import React from 'react';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import Sign_screen from './Screen/Sign_screen'
-import Login_screen from './Screen/Login_screen';
-import './App.css';
+import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
+import SignScreen from './Screen/SignScreen';
+import LoginScreen from './Screen/LoginScreen';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/login" component={Login_screen} />
-        <Route exact path="/sign_up" component={Sign_screen} />
+        <Route exact path="/" component={LoginScreen} />
+        <Route exact path="/sign_up" component={SignScreen} /> 
       </Switch>
   </BrowserRouter>
   );

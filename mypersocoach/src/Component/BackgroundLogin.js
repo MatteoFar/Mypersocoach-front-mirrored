@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Background_login = () => {
+const BackgroundLogin = () => {
   return (
         <header>
             <h1>Mypersocoach</h1> 
@@ -10,4 +10,4 @@ const Background_login = () => {
   );
 }
 
-export default Background_login;
+export default BackgroundLogin;

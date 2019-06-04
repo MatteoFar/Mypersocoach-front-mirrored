@@ -1,12 +1,12 @@
 import React from 'react';
-import Background_login from './Background_login';
-import '../Component/Login_form.css';
+import BackgroundLogin from './BackgroundLogin';
+import '../Component/LoginForm.css';
 
 const Login = () => {
   return (
     
     <div id="grille">
-      <Background_login/>
+      <BackgroundLogin/>
         <section>
             <form method="post" action="#"> 
                 <div id="formulaire">
