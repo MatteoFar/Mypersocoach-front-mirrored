@@ -12,7 +12,24 @@
     display: flex;
     justify-content: center;
 }
-
-.modal {
+.display-modal1 {
+    display: flex;
+    justify-content: center;
     border: solid 1px black;
 }
+
+/* .modal_problem {
+    background-color: red
+}
+.modal_problem1 {
+    display: none;
+}
+
+.modal_goal {
+    background-color: red
+}
+
+.modal_goal1 {
+    border: solid 1px black;
+    display: none;
+} */

@@ -41,17 +41,27 @@ class Problem extends React.Component {
 
   state = {
     showGoalModal : false,
-    showConflictModal : false,
+    showConflictModal : true,
   }
 
   handleshowGoalModal =() => {
-    this.setState({ showGoalModal: !this.state.showGoalModal })
+    if(this.state.showGoalModal === true)
+    this.setState({ showGoalModal: this.state.showGoalModal   })
+    else {
+      return(this.setState({  showGoalModal: !this.state.showGoalModal, showConflictModal: !this.state.showConflictModal }))
+    }
   }
   handleshowConflictModal =() => {
-    this.setState({ showConflictModal: !this.state.showConflictModal })
+    if(this.state.showConflictModal === true)
+    this.setState({  showConflictModal: this.state.showConflictModal  })
+    
+    else {
+      this.setState({ showConflictModal: !this.state.showConflictModal ,showGoalModal: !this.state.showGoalModal })
+    }
   }
   render() { 
-
+    const display_modalP  = this.state.showConflictModal ? 'modal_problem1' : 'modal_problem' ;
+    const display_modalG  = this.state.showGoalModal ? 'modal_goal1' : 'modal_goal' ;
     return (
 
       <div className="display-modal">
@@ -64,13 +74,10 @@ class Problem extends React.Component {
           ))}
         </div>
 
-        <div className="modal">
+          <div className={display_modalP} >
           {conflictModal.filter(iconProblem => {
-            if(this.state.showConflictModal === true)
+            if(this.state.showConflictModal === true && this.state.showGoalModal === false )
             return(iconProblem)
-            else if (this.state.showGoalModal === true) {
-              return(<p>hohoho</p>)
-            }
             }).map(iconProblem=> {
             return (<div>
                      <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
@@ -78,8 +85,22 @@ class Problem extends React.Component {
                     </div>)
                   })}
         </div>
+       {/*  modal Problem */}
+       {/*  modal Objective */}
 
-        <div>
+       <div  className={display_modalG }>
+          {goalModal.filter(iconGoal=> {
+            if(this.state.showGoalModal === true && this.state.showConflictModal === false )
+            return(iconGoal)
+          }).map(iconProblem=> {
+            return (<div>
+                     <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
+                     <p>{iconProblem.text}</p>
+                    </div>)
+          })}
+        </div>
+
+        <div >
           {iconGoals.map(iconGoal => (
             <button onClick ={this.handleshowGoalModal}>
               <img className="image_icon" alt="icon" src={iconGoal.icon} />
@@ -88,17 +109,7 @@ class Problem extends React.Component {
           ))}
         </div>
 
-        {/* <div className="modal">
-          {goalModal.filter(iconGoal=> {
-            if(this.state.showGoalModal === true && this.state.showConflictModal === false)
-            return(iconGoal)
-          }).map(iconProblem=> {
-            return (<div>
-                     <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
-                     <p>{iconProblem.text}</p>
-                    </div>)
-          })}
-        </div> */}
+        
       </div>
     );
   }
