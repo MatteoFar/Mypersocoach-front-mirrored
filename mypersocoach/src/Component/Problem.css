@@ -1,0 +1,18 @@
+.start {
+    width: 380px;
+    margin: 0px auto;
+    height: 756px;
+}
+
+.header_mainProb {
+    text-align: center;
+}
+
+.display-modal {
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    border: solid 1px black;
+}

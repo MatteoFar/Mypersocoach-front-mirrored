@@ -1,4 +1,4 @@
-body{
+/* body{
   margin:0;
   padding:0;
   font-family: 'Lato', sans-serif; 
@@ -50,7 +50,7 @@ section{
 }
 footer{
   grid-area: footer;
-}
+} */
 /* To position the entire form */
 #formulaire{
   width: 300px;

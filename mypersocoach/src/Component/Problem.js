@@ -1,5 +1,5 @@
 import React from "react";
-import ProblemModal from "../Component/ProblemModal"
+import './Problem.css'
 
 //import { ButtonToolbar, Button,Modal, ModalBody } from 'reactstrap'
 //import { Modal, ModalBody } from 'reactstrap'
@@ -50,12 +50,11 @@ class Problem extends React.Component {
   handleshowConflictModal =() => {
     this.setState({ showConflictModal: !this.state.showConflictModal })
   }
-  render() {
+  render() { 
 
     return (
 
-      <div className="modal">
-        
+      <div className="display-modal">
         <div>
           {iconProblems.map(iconGoal => (
             <button onClick ={this.handleshowConflictModal}>
@@ -65,16 +64,19 @@ class Problem extends React.Component {
           ))}
         </div>
 
-        <div>
+        <div className="modal">
           {conflictModal.filter(iconProblem => {
             if(this.state.showConflictModal === true)
             return(iconProblem)
-          }).map(iconProblem=> {
+            else if (this.state.showGoalModal === true) {
+              return(<p>hohoho</p>)
+            }
+            }).map(iconProblem=> {
             return (<div>
                      <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
                      <p>{iconProblem.text}</p>
                     </div>)
-          })}
+                  })}
         </div>
 
         <div>
@@ -86,9 +88,9 @@ class Problem extends React.Component {
           ))}
         </div>
 
-        <div>
+        {/* <div className="modal">
           {goalModal.filter(iconGoal=> {
-            if(this.state.showGoalModal === true)
+            if(this.state.showGoalModal === true && this.state.showConflictModal === false)
             return(iconGoal)
           }).map(iconProblem=> {
             return (<div>
@@ -96,7 +98,7 @@ class Problem extends React.Component {
                      <p>{iconProblem.text}</p>
                     </div>)
           })}
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -1,5 +1,4 @@
 import React from "react"
-import Problem from "./Problem"
 
 const headingIcons = [
   {
@@ -22,7 +21,7 @@ const headingTexts = [
 ]
 const Heading = () => {
    return (
-  <div className="header_Symptome">
+  <div className="header_mainProb">
     <div>
       {headingIcons.map(headingIcon => (
         
