@@ -1,16 +1,16 @@
 import React from "react";
-import ProblemModal from "../components/ProblemModal"
+import ProblemModal from "../Component/ProblemModal"
 
 //import { ButtonToolbar, Button,Modal, ModalBody } from 'reactstrap'
 //import { Modal, ModalBody } from 'reactstrap'
 
 const iconProblems = [
   {
-    icon: require("../components/icon_problem.png"),
+    icon: require("../Component/icon_problem.png"),
     text: `Résoudre un problème.`
   },
   {
-    icon: require("../components/icon_goal.png"),
+    icon: require("../Component/icon_goal.png"),
     text: `Atteindre un objectif.`
   }
   
