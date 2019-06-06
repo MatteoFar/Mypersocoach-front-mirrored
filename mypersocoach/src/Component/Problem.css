@@ -10,26 +10,70 @@
 
 .display-modal {
     display: flex;
-    justify-content: center;
-}
-.display-modal1 {
-    display: flex;
-    justify-content: center;
-    border: solid 1px black;
+    justify-content: space-around;
+    
 }
 
-/* .modal_problem {
-    background-color: red
+.modal_Cards {
+    text-align: center;
+    background-color: rgba(253, 253, 253, 0.25);
+    box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px ;
+    width: 318px;
+    height: 250px;
+    margin: 0 auto;
 }
-.modal_problem1 {
-    display: none;
+.Goal_modal {
+    display: grid; 
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 250px;
+    align-items: center;
+}
+.icon_Goal {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
 }
 
-.modal_goal {
-    background-color: red
+.modal_Cards p {
+    margin: 0 auto;
+    max-width: 282px;
+    color: rgb(150, 159, 170)
 }
 
-.modal_goal1 {
-    border: solid 1px black;
-    display: none;
-} */
+.Problem_modal {
+    display: grid; 
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 250px;
+    align-items: center;
+}
+.icon_problem {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.modal_Cards button {
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    height: 45px;
+    width: 145px;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: yellow;
+    margin-bottom: 10px;
+}
+
+.button {
+    height: 90px;
+    width: 130px;
+    cursor: pointer;
+}
+.image-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    
+}

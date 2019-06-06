@@ -1,5 +1,5 @@
 import React from "react";
-import './Problem.css'
+import './Problem.css';
 
 
 const iconProblems = [
@@ -40,10 +40,11 @@ class Problem extends React.Component {
   state = {
     showGoalModal : false,
     showConflictModal : false,
-    showModal : false,
   }
 
-  handleshowGoalModal =() => {
+  
+  /* Function that allows to exchange cards */
+  handleshowGoalModal = () => {
     if(this.state.showGoalModal === true)
     this.setState({ showGoalModal: this.state.showGoalModal })
     else if (this.state.showConflictModal === false) {
@@ -53,7 +54,7 @@ class Problem extends React.Component {
       return(this.setState({ showGoalModal: !this.state.showGoalModal, showConflictModal: this.state.showGoalModal }))
     }
   }
-  handleshowConflictModal =() => {
+  handleshowConflictModal = () => {
     if(this.state.showConflictModal === true)
     this.setState({  showConflictModal: this.state.showConflictModal  })
     else if (this.state.showGoalModal === false) {
@@ -63,61 +64,62 @@ class Problem extends React.Component {
       this.setState({ showConflictModal: !this.state.showConflictModal ,showGoalModal: this.state.showConflictModal })
     }
   }
+ /* ------------------------------------------------*/
 
-  //  componentDidUpdate =() => {
-  //   return this.state.showConflictModal = true ? this.state.showConflictModal : ''
-  //  }
 
   render() { 
-    const display_modalP  = this.state.showConflictModal ? 'modal_problem1' : 'modal_problem' ;
-    const display_modalG  = this.state.showGoalModal ? 'modal_goal1' : 'modal_goal' ;
     return (
-
+    <div className="modal_container">
       <div className="display-modal">
-        <div >
+        <div className="button" >
           {iconProblems.map(iconGoal => (
-            <button onClick ={this.handleshowConflictModal}>
+            <div onClick ={this.handleshowConflictModal}>
               <img className="image_icon" alt="icon" src={iconGoal.icon} />
               <p className="text">{iconGoal.text}</p>
-            </button>
+            </div>
           ))}
         </div>
+        <div className="button" >
+          {iconGoals.map(iconGoal => (
+            <div onClick ={this.handleshowGoalModal}>
+              <img className="image_icon" alt="icon" src={iconGoal.icon} />
+              <p className="text">{iconGoal.text}</p>
+            </div>
+          ))}
+         </div>
+       </div>
 
-          <div className={display_modalP} >
-          {conflictModal.filter(iconProblem => {
-            if(this.state.showConflictModal === true && this.state.showGoalModal === false )
-            return(iconProblem)
-            }).map(iconProblem=> {
-            return (<div>
-                     <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
-                     <p>{iconProblem.text}</p>
-                    </div>)
-                  })}
-           </div>
        {/*  modal Problem */}
        {/*  modal Objective */}
 
-       <div  className={display_modalG }>
-          {goalModal.filter(iconGoal=> {
-            if(this.state.showGoalModal === true && this.state.showConflictModal === false )
-            return(iconGoal)
-          }).map(iconProblem=> {
-            return (<div>
+        
+       <div className="modal_Cards">
+        <div >
+          {conflictModal.filter(iconProblem => {
+            if(this.state.showConflictModal === true && this.state.showGoalModal === false )
+            return(iconProblem)}).map(iconProblem=> {
+            return (<div className="Problem_modal">
                      <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
                      <p>{iconProblem.text}</p>
+                     <button >C'est parti !</button>
                     </div>)
-          })}
+           })}
         </div>
 
         <div >
-          {iconGoals.map(iconGoal => (
-            <button onClick ={this.handleshowGoalModal}>
-              <img className="image_icon" alt="icon" src={iconGoal.icon} />
-              <p className="text">{iconGoal.text}</p>
-            </button>
-          ))}
-        </div>
+          {goalModal.filter(iconGoal=> {
+            if(this.state.showGoalModal === true && this.state.showConflictModal === false )
+            return(iconGoal)}).map(iconProblem=> {
+            return (<div className ="Goal_modal">
+                     <img className="icon_Goal" alt="icon_Goal" src={iconProblem.icon}/>
+                     <p>{iconProblem.text}</p>
+                     <button >C'est parti !</button>
+                    </div>)
+          })}
+       </div>
       </div>
+   </div>
+      
     );
   }
 }
