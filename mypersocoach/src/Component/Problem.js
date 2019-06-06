@@ -73,7 +73,7 @@ class Problem extends React.Component {
       <div className="display-modal">
         <div className="button" >
           {iconProblems.map(iconGoal => (
-            <div onClick ={this.handleshowConflictModal}>
+            <div  onClick ={this.handleshowConflictModal}>
               <img className="image_icon" alt="icon" src={iconGoal.icon} />
               <p className="text">{iconGoal.text}</p>
             </div>
@@ -81,7 +81,7 @@ class Problem extends React.Component {
         </div>
         <div className="button" >
           {iconGoals.map(iconGoal => (
-            <div onClick ={this.handleshowGoalModal}>
+            <div  onClick ={this.handleshowGoalModal}>
               <img className="image_icon" alt="icon" src={iconGoal.icon} />
               <p className="text">{iconGoal.text}</p>
             </div>

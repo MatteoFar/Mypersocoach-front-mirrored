@@ -6,6 +6,14 @@
 
 .header_mainProb {
     text-align: center;
+    color: rgb(150, 159, 170)
+}
+
+.heading_text {
+    max-width: 282px;
+    max-height: 105px;
+    margin: 0 auto;
+
 }
 
 .display-modal {
@@ -14,19 +22,17 @@
     
 }
 
-.modal_Cards {
+.Goal_modal {
+    display: grid; 
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 250px;
+    align-items: center;
     text-align: center;
     background-color: rgba(253, 253, 253, 0.25);
     box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px ;
     width: 318px;
     height: 250px;
     margin: 0 auto;
-}
-.Goal_modal {
-    display: grid; 
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 250px;
-    align-items: center;
 }
 .icon_Goal {
     width: 64px;
@@ -39,12 +45,20 @@
     max-width: 282px;
     color: rgb(150, 159, 170)
 }
-
+.icon_symp {
+    margin-top: 30px;
+}
 .Problem_modal {
     display: grid; 
     grid-template-rows: 1fr 1fr 1fr;
     height: 250px;
     align-items: center;
+    text-align: center;
+    background-color: rgba(253, 253, 253, 0.25);
+    box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px ;
+    width: 318px;
+    height: 250px;
+    margin: 0 auto;
 }
 .icon_problem {
     width: 64px;
@@ -62,18 +76,22 @@
     font-size: 14px;
     margin: 0 auto;
     border-radius: 5px;
-    background-color: yellow;
+    background-color: rgb(245, 188, 72);
     margin-bottom: 10px;
 }
 
 .button {
-    height: 90px;
+    /* height: 90px; */
     width: 130px;
     cursor: pointer;
+    text-align: center;
+    color: rgb(150, 159, 170);
 }
-.image-icon {
+
+.image_icon {
     width: 64px;
     height: 64px;
-    margin: 0 auto;
+    
+    
     
 }
