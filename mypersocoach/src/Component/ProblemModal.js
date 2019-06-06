@@ -1,27 +1,24 @@
 import React from "react";
-
-import icon_problem from '../Component/icon_problem.png'
-import icon_goal from '../Component/icon_goal.png'
-
-
+import Popup from "reactjs-popup";
 
 const ProblemModal = () => (
-  <div>
-  <div className="Issue">
-    < img className="image_icon" alt="icon" src={icon_problem} />
-    <p>Apaiser une situation conflictuelle<br></br>
-       Résoudre un probleme<br></br>
-       Faire évoluer une situation
-    </p>
+  <div className="example-warper">
+    <Popup
+      trigger={<button className="button"> Bottom Center </button>}
+      position="bottom center"
+      on="hover"
+    >
+      <Card title="Bottom Center" />
+    </Popup>
   </div>
-
-   <div className="objective">
-    < img className="image_icon" alt="icon" src={icon_goal} />
-    <p>Atteindre un objectif individuel<br></br>
-       Améliorer une performence<br></br>
-       Réussir quelque chose qui semble compliqué
-    </p>
-  </div>
+);
+const Card = ({ title }) => (
+  <div className="card">
+    <div className="header">{title} position </div>
+    <div className="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit autem
+      sapiente labore architecto exercitationem optio quod dolor cupiditate
+    </div>
   </div>
 );
 

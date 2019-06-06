@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-.App {
+
+/* .App {
 =======
 /* .App {
 >>>>>>> dev
@@ -14,13 +14,19 @@
 
 .App-header {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   background-color: #282c34;
   min-height: 100vh;
 =======
+>>>>>>> dev
   background-color:rgb(55, 115, 184);
   height: 130vh;
   margin: 0 auto;
   width: 55vh;
+<<<<<<< HEAD
+=======
+>>>>>>> dev
 >>>>>>> dev
   display: flex;
   flex-direction: column;
@@ -30,7 +36,10 @@
   color: white;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> dev
 >>>>>>> dev
 }
 
@@ -46,7 +55,5 @@
     transform: rotate(360deg);
   }
 <<<<<<< HEAD
-}
-=======
 } */
->>>>>>> dev
+

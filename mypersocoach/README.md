@@ -3,9 +3,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 <<<<<<< HEAD
+In the project directory, you can run: 
+=======
+<<<<<<< HEAD
 In the project directory, you can run:
 =======
 In the project directory, you can run: 
+>>>>>>> dev
 >>>>>>> dev
 
 ### `npm start`
