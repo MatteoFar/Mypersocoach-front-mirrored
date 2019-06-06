@@ -1,3 +1,6 @@
+
+/* .App {
+=======
 /* .App {
   text-align: center;
 }
@@ -9,18 +12,45 @@
 }
 
 .App-header {
+<<<<<<< HEAD
   background-color: #282c34;
   min-height: 100vh;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  background-color: #282c34;
+  min-height: 100vh;
+=======
+>>>>>>> dev
+>>>>>>> 9023243480b3c5739dcccb721d6e65fe1235b1b4
   background-color:rgb(55, 115, 184);
   height: 130vh;
   margin: 0 auto;
   width: 55vh;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> dev
+>>>>>>> dev
+>>>>>>> 9023243480b3c5739dcccb721d6e65fe1235b1b4
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
+>>>>>>> dev
+>>>>>>> 9023243480b3c5739dcccb721d6e65fe1235b1b4
 }
 
 .App-link {
@@ -34,4 +64,10 @@
   to {
     transform: rotate(360deg);
   }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+} */
+
+
