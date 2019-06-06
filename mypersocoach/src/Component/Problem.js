@@ -1,8 +1,6 @@
 import React from "react";
 import './Problem.css'
 
-//import { ButtonToolbar, Button,Modal, ModalBody } from 'reactstrap'
-//import { Modal, ModalBody } from 'reactstrap'
 
 const iconProblems = [
   {
@@ -41,31 +39,42 @@ class Problem extends React.Component {
 
   state = {
     showGoalModal : false,
-    showConflictModal : true,
+    showConflictModal : false,
+    showModal : false,
   }
 
   handleshowGoalModal =() => {
     if(this.state.showGoalModal === true)
-    this.setState({ showGoalModal: this.state.showGoalModal   })
+    this.setState({ showGoalModal: this.state.showGoalModal })
+    else if (this.state.showConflictModal === false) {
+      this.setState({  showGoalModal: !this.state.showGoalModal  })
+    }
     else {
-      return(this.setState({  showGoalModal: !this.state.showGoalModal, showConflictModal: !this.state.showConflictModal }))
+      return(this.setState({ showGoalModal: !this.state.showGoalModal, showConflictModal: this.state.showGoalModal }))
     }
   }
   handleshowConflictModal =() => {
     if(this.state.showConflictModal === true)
     this.setState({  showConflictModal: this.state.showConflictModal  })
-    
+    else if (this.state.showGoalModal === false) {
+      this.setState({  showConflictModal: !this.state.showConflictModal  })
+    }
     else {
-      this.setState({ showConflictModal: !this.state.showConflictModal ,showGoalModal: !this.state.showGoalModal })
+      this.setState({ showConflictModal: !this.state.showConflictModal ,showGoalModal: this.state.showConflictModal })
     }
   }
+
+  //  componentDidUpdate =() => {
+  //   return this.state.showConflictModal = true ? this.state.showConflictModal : ''
+  //  }
+
   render() { 
     const display_modalP  = this.state.showConflictModal ? 'modal_problem1' : 'modal_problem' ;
     const display_modalG  = this.state.showGoalModal ? 'modal_goal1' : 'modal_goal' ;
     return (
 
       <div className="display-modal">
-        <div>
+        <div >
           {iconProblems.map(iconGoal => (
             <button onClick ={this.handleshowConflictModal}>
               <img className="image_icon" alt="icon" src={iconGoal.icon} />
@@ -84,7 +93,7 @@ class Problem extends React.Component {
                      <p>{iconProblem.text}</p>
                     </div>)
                   })}
-        </div>
+           </div>
        {/*  modal Problem */}
        {/*  modal Objective */}
 
@@ -108,8 +117,6 @@ class Problem extends React.Component {
             </button>
           ))}
         </div>
-
-        
       </div>
     );
   }
