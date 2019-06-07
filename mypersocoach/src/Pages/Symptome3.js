@@ -57,8 +57,9 @@ const Symptome3 = () => {
           </div>
         ))}
       </div>
+      
     </div>
-  );
-};
+  )
+}
 
-export default Symptome3;
+export default Symptome3
