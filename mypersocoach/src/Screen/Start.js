@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import Problem from '../Component/Problem'
-//import ProblemModal from '../Component/ProblemModal'
+import React, {Component} from 'react';
+import Problem from '../Component/Problem';
 import Heading from '../Component/Heading';
+import '../Component/Problem.css'
 
 class Start extends Component {
   render() {
@@ -9,7 +9,6 @@ class Start extends Component {
       <div className="start">
         <Heading/>
         <Problem />
-        {/* <ProblemModal/> */}
       </div>
   )}
 }
