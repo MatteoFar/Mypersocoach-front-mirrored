@@ -1,0 +1,27 @@
+.containerSymptome3 {
+  color: rgb(150, 159, 170);
+  display: grid;
+  height: 30vh;
+  justify-content: center;
+}
+
+.logoText {
+  font-size: 14px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.icons {
+  display: grid;
+  font-size: 14px;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  margin-top: 19px;
+  text-align: center;
+}
+/* .image_icon !must change the name!{ 
+  width: 60px;
+} */
+.text {
+  text-align: center;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import SignUpForm from '../Component/SignUpForm';
+// import Background_login from '../Component/Background_login';
 
 const SignScreen = () => {
     return (
