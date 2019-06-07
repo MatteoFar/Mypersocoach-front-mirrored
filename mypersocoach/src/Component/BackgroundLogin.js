@@ -1,9 +1,10 @@
 import React from 'react';
+import './LoginForm.css';
 
 const BackgroundLogin = () => {
   return (
-        <header>
-            <h1>Mypersocoach</h1> 
+        <header className="blue_bg header_login">
+            <h1>MYPERSOCOACH</h1> 
         </header>
 
 

@@ -1,18 +1,19 @@
 import React from 'react';
 import BackgroundLogin from './BackgroundLogin';
+import '../Component/GeneralCss.css';
 import '../Component/LoginForm.css';
 
 const Signup = () => {
     return (
       
-      <div id="grille">
+      <div id="grid_login">
       <BackgroundLogin/>
 
-      <section>
+      <section className="blue_bg">
             
             <form method="post" action="#">
-                <div id="formulaire">
-                    <p className="white">Choisis ton identifiant et ton mot de passe</p>
+                <div id="form">
+                    <p className="white_text">Choisis ton identifiant et ton mot de passe</p>
                     
                     <p>
                         <input type="email" name="email" placeholder="Email" />
@@ -24,7 +25,7 @@ const Signup = () => {
 
                     <div className="height20"></div>
 
-                    <p className="white">Remplis ces quelques informations complémentaires</p>
+                    <p className="white_text">Remplis ces quelques informations complémentaires</p>
                     
                     <p>
                         <input type="text" name="firstname" placeholder="Prénom" />
@@ -43,14 +44,14 @@ const Signup = () => {
                     </p>
 
                     <p>
-                        <input type="submit" name="signup" value="Sign Up" />
+                        <input className="btn_forward" type="submit" name="signup" value="Sign Up" />
                     </p>
 
                 </div>
             </form>
             
         </section>
-        <footer></footer>  
+        <footer className="blue_bg"></footer>  
 
       </div>
     );
