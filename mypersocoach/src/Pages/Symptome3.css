@@ -29,6 +29,12 @@
   text-align: center;
 }
 
+.iconLink{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .button_symptome3 {
   background: none rgba(127, 149, 235, 0);
   border: 1px solid rgb(150, 159, 170);

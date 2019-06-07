@@ -53,10 +53,10 @@ const Symptome3 = () => {
       </div>
       <div className="icons">
         {iconProblems2.map(iconProblem2 => (
-          <div>
-            <img className="image_icon" alt="icon" src={iconProblem2.icon} />
+          <button className="iconLink">
+            <img href="#" className="image_icon" alt="icon" src={iconProblem2.icon} />
             <p className="text">{iconProblem2.text}</p>
-          </div>
+          </button>
         ))}
        
       </div>
