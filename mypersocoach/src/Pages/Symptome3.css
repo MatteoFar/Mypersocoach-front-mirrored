@@ -32,11 +32,13 @@
 .iconLink{
   background: none;
   border: none;
+  color: rgb(150, 159, 170);
   cursor: pointer;
+
 }
 
 .button_symptome3 {
-  background: none rgba(127, 149, 235, 0);
+  background: none;
   border: 1px solid rgb(150, 159, 170);
   border-radius: 3px;
   color: rgb(150, 159, 170);
