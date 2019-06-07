@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .start {
     width: 380px;
     margin: 0px auto;
@@ -78,14 +80,18 @@
     border-radius: 5px;
     background-color: rgb(245, 188, 72);
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .button {
     /* height: 90px; */
-    width: 130px;
     cursor: pointer;
     text-align: center;
     color: rgb(150, 159, 170);
+}
+.modal_Cards button:hover {
+    background-color: rgb(95, 201, 177);
+    
 }
 
 .image_icon {

@@ -5,7 +5,7 @@ import './Problem.css';
 const iconProblems = [
   {
     icon: require("../Component/icon_problem.png"),
-    text: `Résoudre un problème.`
+    text: `Résoudre un problème`
   },
   
   
@@ -13,14 +13,14 @@ const iconProblems = [
 const iconGoals = [
   {
     icon: require("../Component/icon_goal.png"),
-    text: `Atteindre un objectif.`
+    text: `Atteindre un objectif`
   }
 ];
 
 const conflictModal = [
   {
     icon: require("../Component/icon_problem.png"),
-    text: `Apaiser une situation conflictuelle
+    text: `Apaiser une situation conflictuelle 
     Résoudre un probleme
     Faire évoluer une situation`
   }
@@ -89,8 +89,8 @@ class Problem extends React.Component {
          </div>
        </div>
 
-       {/*  modal Problem */}
-       {/*  modal Objective */}
+       {/*  modal Objective ↑ */}
+       {/*  modal Problem ↓ */}
 
         
        <div className="modal_Cards">
@@ -101,7 +101,7 @@ class Problem extends React.Component {
             return (<div className="Problem_modal">
                      <img className="icon_problem" alt="icon_problem" src={iconProblem.icon}/>
                      <p>{iconProblem.text}</p>
-                     <button >C'est parti !</button>
+                     <button type="button" name ="C'est parti !">C'est parti !</button>
                     </div>)
            })}
         </div>
@@ -113,7 +113,7 @@ class Problem extends React.Component {
             return (<div className ="Goal_modal">
                      <img className="icon_Goal" alt="icon_Goal" src={iconProblem.icon}/>
                      <p>{iconProblem.text}</p>
-                     <button >C'est parti !</button>
+                     <button type="button" name ="C'est parti !" >C'est parti !</button>
                     </div>)
           })}
        </div>
