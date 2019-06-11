@@ -1,5 +1,6 @@
 import React from "react";
 
+//import {ButtonToolbar,Button } from 'reactstrap';
 import "./Symptome3.css";
 
 const headingIcons2 = [
@@ -40,6 +41,7 @@ const iconProblems2 = [
 ];
 const Symptome3 = () => {
   return (
+    
     <div className="containerSymptome3">
       <div className="logoText">
         {headingIcons2.map(headingIcon2 => (
@@ -51,15 +53,18 @@ const Symptome3 = () => {
       </div>
       <div className="icons">
         {iconProblems2.map(iconProblem2 => (
-          <div>
-            <img className="image_icon" alt="icon" src={iconProblem2.icon} />
+          <button className="iconLink">
+            <img href="#" className="image_icon" alt="icon" src={iconProblem2.icon} />
             <p className="text">{iconProblem2.text}</p>
-          </div>
+          </button>
         ))}
+       
       </div>
-      
+     
+     <button href="#" className="button_symptome3">Pas vraiment</button>
+   
     </div>
-  )
-}
-
-export default Symptome3
+    
+     );
+    };
+export default Symptome3;
