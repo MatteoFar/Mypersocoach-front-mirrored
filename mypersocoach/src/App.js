@@ -1,6 +1,8 @@
-import React, {Component} from 'react'
-import { Route, BrowserRouter, Switch } from 'react-router-dom'
-import './App.css'
+import React from 'react';
+import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
+import SignScreen from './Screen/SignScreen';
+import LoginScreen from './Screen/LoginScreen';
+import AnswerScreen from './Screen/AnswerScreen';
 
 import Start from './Screen/Start'
 
@@ -11,23 +13,23 @@ import Start from './Screen/Start'
 //import Source2 from "./Pages/Source2"
 import Source2Environment from "./Pages/Source2Environment"
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>
         <BrowserRouter>
           <Switch>
+                <Route exact path="/" component={LoginScreen} />
                 <Route exact path="/start" component={Start} />  
-                {/*<Route exact path="/login" component={Login_screen} />
-                <Route exact path="/sign_up" component={Sign_screen} /> */}
-                {/*<Route exact path="/" component={Symptome3} /> */}
-                {/* <Route exact path="/" component={Source2} /> */}
-                <Route exact path="/" component={Source2Environment}/>
-
+                <Route exact path="/sign_up" component={SignScreen} /> 
+                <Route exact path="/answer_screen" component={AnswerScreen} />
+                <Route exact path="/symptome3" component={Symptome3} />
+                <Route exact path="/Source2" component={Source2} />
+                <Route exact path="/Source2environnement" component={Source2environnement}/>
           </Switch>
         </BrowserRouter>
       </div>
   )}
 }
 
-export default App
+export default App;

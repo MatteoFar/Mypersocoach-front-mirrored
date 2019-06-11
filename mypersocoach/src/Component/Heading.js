@@ -1,5 +1,4 @@
 import React from "react"
-//import Problem from "./Problem"
 
 const headingIcons = [
   {
@@ -16,23 +15,32 @@ const headingTexts = [
   {
     text: "Je vais te guider tout au long des différentes étapes."
   },
+]
+const headingTitle = [
   {
     text: "Quel est l'objet des entretiens ?"
   }
 ]
 const Heading = () => {
    return (
-  <div className="icons">
+  <div className="header_mainProb">
     <div>
       {headingIcons.map(headingIcon => (
         
-          <img className="image_icon" alt="icon" src={headingIcon.image} />
+          <img className="icon_symp" alt="icon" src={headingIcon.image} />
         
       ))}
     </div>
-    <div>
+    <div className="heading_text">
       {headingTexts.map(headingText => (
         <p> {headingText.text} </p>
+      ))}
+
+    </div>
+
+    <div>
+      {headingTitle.map(headingTitles => (
+        <h4> {headingTitles.text} </h4>
       ))}
 
     </div>

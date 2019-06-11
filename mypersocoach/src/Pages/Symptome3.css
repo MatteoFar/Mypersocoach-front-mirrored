@@ -20,11 +20,9 @@
   margin-top: 19px;
   text-align: center;
 }
-
-.image_icon {
+/* .image_icon !must change the name!{ 
   width: 60px;
-}
-
+} */
 .text {
   text-align: center;
 }
