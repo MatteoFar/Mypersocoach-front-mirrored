@@ -44,7 +44,7 @@ const Source2Environment = () => {
           <p> {text_environment.text} </p>
         ))}
       </div>
-      <div className="containerSource2_environment"
+      <div className="containerSource2_environment">
       {/* <div className="icons">
         {iconProblems3.map(iconProblem2 => (
           <button className="iconLink">
@@ -58,7 +58,7 @@ const Source2Environment = () => {
           </button>
         ))}
       </div> */}
-
+      </div>
       <button href="#" className="button_source2_environment">
         Je ne suis pas sûr
       </button>
