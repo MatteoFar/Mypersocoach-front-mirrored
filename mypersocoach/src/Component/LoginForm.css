@@ -1,0 +1,24 @@
+
+.header_login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top:70px; */
+  /* padding-bottom: 80px; */
+}
+
+h1{
+  font-size: 24px;
+  color: rgb(255, 189, 74);
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 10px;
+  /* text-transform: uppercase; */
+  font-weight: lighter;
+}
+
+
+
+
+
+
+

@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-import { Route, BrowserRouter, Switch } from 'react-router-dom'
-import Login_screen from './Screen/Login_screen'
-import Sign_screen from './Screen/Sign_screen'
-import './App.css'
+import React from 'react';
+import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
+import SignScreen from './Screen/SignScreen';
+import LoginScreen from './Screen/LoginScreen';
+import AnswerScreen from './Screen/AnswerScreen';
 
 import Start from './Screen/Start'
 //import Heading from './Component/Heading'
@@ -16,10 +16,11 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <Switch>
+                <Route exact path="/" component={Login_screen} />
                 <Route exact path="/start" component={Start} />  
-                {/*<Route exact path="/login" component={Login_screen} />
-                <Route exact path="/sign_up" component={Sign_screen} /> */}
-                <Route exact path="/" component={Symptome3} />
+                <Route exact path="/sign_up" component={Sign_screen} /> 
+                <Route exact path="/answer_screen" component={AnswerScreen} />
+                <Route exact path="/symptome3" component={Symptome3} />
           </Switch>
         </BrowserRouter>
       </div>
