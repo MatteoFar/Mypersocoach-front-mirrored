@@ -10,15 +10,15 @@ import Start from './Screen/Start'
 //import Heading from './components/Heading'
 import Symptome3 from "./Pages/Symptome3";
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>
         <BrowserRouter>
           <Switch>
-                <Route exact path="/" component={Login_screen} />
+                <Route exact path="/" component={LoginScreen} />
                 <Route exact path="/start" component={Start} />  
-                <Route exact path="/sign_up" component={Sign_screen} /> 
+                <Route exact path="/sign_up" component={SignScreen} /> 
                 <Route exact path="/answer_screen" component={AnswerScreen} />
                 <Route exact path="/symptome3" component={Symptome3} />
           </Switch>
