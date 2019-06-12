@@ -1,7 +1,14 @@
 import React from 'react';
 import BackgroundAnswer from './BackgroundAnswer';
-// import '../Component/GeneralCss.css';
+import '../Component/GeneralCss.css';
 import '../Component/AnswerForm.css';
+
+const titleAnswers = [
+    {
+        icon : require("../Pages/logo_perf.png"),
+        text : "Titre 1 du problème identifié"
+    },
+]
 
 const Answer = () => {
     return (
@@ -10,17 +17,21 @@ const Answer = () => {
             <BackgroundAnswer/>
 
             <section>
-                {/* <img src="" alt="#">Icône de l'entête</img> */}
-                <div className="title_pbm">
-                    <p>Icône</p>
-                    <h1 class="h1">Titre 1 du problème identifié</h1>
+
+                {/* Title */}
+                <div>
+                    {titleAnswers.map(titleAnswer => (
+                        <div className="title_pbm">
+                            <img className="image_icon_small" alt="icon" src={titleAnswer.icon} />
+                            <h1 className="h1">{titleAnswer.text}</h1>
+                        </div>
+                        )
+                    )}
                 </div>
                 
 
                 <form method="post" action="#">
                     <div id="form">
-
-                    
 
                         <p>
                             <textarea name="textarea" maxlength="300" placeholder="Vous pouvez écrire ici"></textarea>
@@ -35,11 +46,10 @@ const Answer = () => {
                             <input className="btn_back" type="button" name="texte" value="Retour" />
                         </p>
 
-                        
-
                     </div>
                 </form>
             </section>
+            
             <footer></footer>
 
         </div>
