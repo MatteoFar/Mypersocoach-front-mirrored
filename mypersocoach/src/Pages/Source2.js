@@ -2,6 +2,7 @@ import React from "react";
 
 //import {ButtonToolbar,Button } from 'reactstrap';
 import "./Source2.css";
+// import { stat } from "fs";
 
 const headingIcons3 = [
   {
@@ -32,9 +33,56 @@ const iconProblems3 = [
   }
   
 ];
-const Source2 = () => {
+
+const modalText = [{
+     text: `Il faut prendre le temps de réfléchir...`,
+     text1: `Selon toi, qu'est-ce qui est à l'origin de ce problème?`
+}]
+class Source2 extends React.Component {
+  state = {
+    count: 5,
+    // running: false,
+    modal : true
+  }
+
+  componentWillMount() {
+    this.timer = setInterval(() => {
+      const newCount = this.state.count - 1;
+      this.setState({
+        count: newCount >= 0 ? newCount : null,
+        // running: true,
+      })
+       if(this.state.count === 0){
+         this.setState({ modal: !this.state.modal})
+       } else if (this.state.modal === false) {
+        this.setState({
+          count: newCount === null,
+        })
+       }
+    }, 1000);
+  }
+
+  format(time) {
+    let seconds = time % 31;
+    return seconds;
+  }
+
+  Showmodal = () => {
+    this.setState({  modal: !this.state.modal  })
+    if( this.state.modal === true) {
+      return console.log("true")
+    } else {
+      console.log("false")
+    }
+  }
+
+
+  render() {
+    const {count} = this.state;
+    const modal = this.state.modal ? 'modal_main' : 'modaloff' ;
+    // // let modal = this.state.count === 0 ? 'modaloff' : 'modal_main' ; 
   return (
-    
+  
     <div className="containersource2">
       <div className="logoText">
         {headingIcons3.map(headingIcon3 => (
@@ -55,9 +103,26 @@ const Source2 = () => {
       </div>
      
      <button href="#" className="button_source2">Je ne suis pas sûr</button>
-   
+
+
+    <div className= {modal}>
+    <div>
+      {modalText.map(modalTexts => (
+        <div className="modal_text">
+        <p>{modalTexts.text}</p>
+        <p>{modalTexts.text1}</p>
+          <div>
+          {this.format(count)}
+          </div>
+          <div className="pass" onClick= {this.Showmodal}>
+            <h3  >Passer</h3>
+          </div>
+        </div>
+      ))}
+      </div>
     </div>
-    
-     );
-    };
+    </div>
+     )}};
+
+
 export default Source2;
