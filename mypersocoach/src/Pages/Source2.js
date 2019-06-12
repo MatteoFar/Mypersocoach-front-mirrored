@@ -40,7 +40,7 @@ const modalText = [{
 }]
 class Source2 extends React.Component {
   state = {
-    count: 5,
+    count: 10,
     // running: false,
     modal : true
   }
