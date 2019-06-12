@@ -1,8 +1,8 @@
 .containerSymptome3 {
   color: rgb(150, 159, 170);
   display: grid;
-  height: 30vh;
   justify-content: center;
+
 }
 
 .logoText {
@@ -13,9 +13,10 @@
 
 .icons {
   display: grid;
-  font-size: 14px;
   grid-template-columns: 1fr 1fr;
-  height: 70vh;
+  font-size: 14px;
+  height: 60vh;
+  margin: 35px;
   margin-top: 19px;
   text-align: center;
 }
@@ -25,3 +26,28 @@
 .text {
   text-align: center;
 }
+
+.iconLink{
+  background: none;
+  border: none;
+  color: rgb(150, 159, 170);
+  cursor: pointer;
+
+}
+
+.button_symptome3 {
+  background: none;
+  border: 1px solid rgb(150, 159, 170);
+  border-radius: 3px;
+  color: rgb(150, 159, 170);
+  cursor: pointer;
+  font-family: Lato;
+  font-size: 14px;
+  height: 45px;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0px;
+  text-align: center;
+  width: 282px;
+  
+  }
