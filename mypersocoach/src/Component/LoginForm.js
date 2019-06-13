@@ -19,11 +19,11 @@ const Login = () => {
                     </p>
                     
                     <p>
-                        <input className="btn_forward" type="submit" name="login" value="Login" />
+                        <input className="btn_forward btn_small" type="submit" name="login" value="Login" />
                     </p>
                     <p className="white_text">Tu as déjà un compte ?</p>
                     <p>
-                        <input className="btn_back" type="button" name="texte" value="Sign Up" />
+                        <input className="btn_back btn_small" type="button" name="texte" value="Sign Up" />
                     </p>
                     
                </div>

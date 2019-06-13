@@ -1,7 +1,7 @@
 import React from "react";
 
 //import {ButtonToolbar,Button } from 'reactstrap';
-import "./Source2Environment.css";
+import "./Source2environment.css";
 
 const headingIcons3 = [
   {
@@ -35,7 +35,8 @@ const text2 = [
 ];
 const Source2Environment = () => {
   return (
-    <div className="containerSource2_environment">
+    
+    <div className="containersource2">
       <div className="logoText">
         {headingIcons3.map(headingIcon3 => (
           <img className="image_icon" alt="icon" src={headingIcon3.image} />
@@ -44,25 +45,32 @@ const Source2Environment = () => {
           <p> {text_environment.text} </p>
         ))}
       </div>
+<<<<<<< HEAD:mypersocoach/src/Pages/Source2Environment.js
       <div className="containerSource2_environment">
+=======
+>>>>>>> dev:mypersocoach/src/Pages/Source2environment.js
       {/* <div className="icons">
         {iconProblems3.map(iconProblem2 => (
           <button className="iconLink">
-            <img
-              href="#"
-              className="image_icon"
-              alt="icon"
-              src={iconProblem2.icon}
-            />
+            <img href="#" className="image_icon" alt="icon" src={iconProblem2.icon} />
             <p className="text">{iconProblem2.text}</p>
-          </button>
+          </button> 
         ))}
+<<<<<<< HEAD:mypersocoach/src/Pages/Source2Environment.js
       </div> */}
       </div>
       <button href="#" className="button_source2_environment">
         Je ne suis pas sûr
       </button>
+=======
+       
+        </div> */}
+     
+     <button href="#" className="button_source2">Je ne suis pas sûr</button>
+   
+>>>>>>> dev:mypersocoach/src/Pages/Source2environment.js
     </div>
-  );
-};
+    
+     );
+    };
 export default Source2Environment;

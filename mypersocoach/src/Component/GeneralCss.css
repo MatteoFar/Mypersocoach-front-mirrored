@@ -1,3 +1,5 @@
+/* GeneralCss.css */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
@@ -22,18 +24,6 @@ body{
     margin:auto;
   }
 
-#grid_answer{
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:1fr 4fr 1fr;
-    height: 100vh;
-    grid-template-areas:
-        "header"
-        "section"
-        "footer";
-    width: 380px;
-    margin:auto;
-  }
 
 header,section,footer{
     text-align: center;
@@ -87,7 +77,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus 
 /* Formatting texterea */
 textarea{
     font-family: 'Montserrat', sans-serif;  
-    width: 250px;
+    width: 282px;
     padding: 6px;
     height: 190px;
     font-size: 14px;
@@ -103,7 +93,7 @@ textarea{
 /* Formatting the submit button */
 input[type="submit"]{
     font-family: 'Montserrat', sans-serif;
-    width: 250px;
+    width: 282px;
     padding: 15px;
     height: 52px;
     font-size: 14px;
@@ -116,7 +106,7 @@ input[type="submit"]{
 /* Formatting the Sign up button */
 input[type="button"]{
     font-family: 'Montserrat', sans-serif;
-    width: 250px;
+    width: 282px;
     padding: 15px;
     height: 52px;
     font-size: 14px;
@@ -126,7 +116,13 @@ input[type="button"]{
     outline: none;
   }
 
-  /* Format the following button in yellow color */
+
+/* Small button size*/
+.btn_small{
+  width: 250px !important;
+}
+
+/* Format the following button in yellow color */
 .btn_forward{
   background-color:rgb(255, 189, 74);
   color: rgb(255, 255, 255);
@@ -166,53 +162,49 @@ input[type="button"]{
     height: 20px;
   }
 
-.title_pbm{
-    display: flex;
-    margin: auto;
-    width: 250px;
-    border:1px solid black;
-  }
 
-.title_pbm h1{
-  padding-left: 10px;
+/*======= ICONS =======*/
+.image_icon_large {
+  width: 64px;
+  height: 64px;
 }
 
+.image_icon_small {
+  width: 30px;
+  height: 30px;
+}
 
 /*======= DESKTOP FORMAT =======*/
 @media screen and (min-width:960px){
-    /* Grid size in desktop format */
+  /* Grid size in desktop format */
 
-    #grid_login{
-      width: 760px;
-    }
-  
-    #grid_answer{
-      width: 760px;
-    }
-  
-    #form{
-      width: 400px;
-      /* border: 1px solid black;  */
-    }
-  
-    /* Formatting text, email and password fields */
-    input[type="text"],input[type="email"],input[type="password"] {
-        width: 400px;
-    }
-  
-    /* Formatting the submit button */
-    input[type="submit"]{
-      width: 400px;
-    }
-    
-    /* Formatting the Sign up button */
-    input[type="button"]{
-      width: 400px;
-    }
+  #grid_login{
+    width: 760px;
+  }
 
-    /* Formatting the textarea */
-    textarea{
+  #form{
+    width: 400px;
+    /* border: 1px solid black;  */
+  }
+
+  /* Formatting text, email and password fields */
+  input[type="text"],input[type="email"],input[type="password"] {
       width: 400px;
   }
-  
+
+  /* Formatting the submit button */
+  input[type="submit"]{
+    width: 400px;
   }
+  
+  /* Formatting the Sign up button */
+  input[type="button"]{
+    width: 400px;
+  }
+
+  /* Formatting the textarea */
+  textarea{
+    width: 400px;
+}
+
+}
