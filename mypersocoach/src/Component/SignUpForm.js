@@ -44,7 +44,7 @@ const Signup = () => {
                     </p>
 
                     <p>
-                        <input className="btn_forward" type="submit" name="signup" value="Sign Up" />
+                        <input className="btn_forward btn_small" type="submit" name="signup" value="Sign Up" />
                     </p>
 
                 </div>
