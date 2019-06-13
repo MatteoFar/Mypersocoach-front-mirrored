@@ -45,6 +45,10 @@ const Source2Environment = () => {
           <p> {text_environment.text} </p>
         ))}
       </div>
+<<<<<<< HEAD:mypersocoach/src/Pages/Source2Environment.js
+      <div className="containerSource2_environment">
+=======
+>>>>>>> dev:mypersocoach/src/Pages/Source2environment.js
       {/* <div className="icons">
         {iconProblems3.map(iconProblem2 => (
           <button className="iconLink">
@@ -52,11 +56,19 @@ const Source2Environment = () => {
             <p className="text">{iconProblem2.text}</p>
           </button> 
         ))}
+<<<<<<< HEAD:mypersocoach/src/Pages/Source2Environment.js
+      </div> */}
+      </div>
+      <button href="#" className="button_source2_environment">
+        Je ne suis pas sûr
+      </button>
+=======
        
         </div> */}
      
      <button href="#" className="button_source2">Je ne suis pas sûr</button>
    
+>>>>>>> dev:mypersocoach/src/Pages/Source2environment.js
     </div>
     
      );
