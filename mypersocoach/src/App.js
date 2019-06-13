@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
 import SignScreen from './Screen/SignScreen';
 import LoginScreen from './Screen/LoginScreen';
 import AnswerScreen from './Screen/AnswerScreen';
+import Source2 from './Pages/Source2'
 
 import Start from './Screen/Start'
 
