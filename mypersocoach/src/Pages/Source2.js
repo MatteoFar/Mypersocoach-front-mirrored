@@ -40,8 +40,7 @@ const modalText = [{
 }]
 class Source2 extends React.Component {
   state = {
-    count: 10,
-    // running: false,
+    count: 10000,
     modal : true
   }
 
@@ -50,7 +49,6 @@ class Source2 extends React.Component {
       const newCount = this.state.count - 1;
       this.setState({
         count: newCount >= 0 ? newCount : null,
-        // running: true,
       })
        if(this.state.count === 0){
          this.setState({ modal: !this.state.modal})
@@ -63,7 +61,7 @@ class Source2 extends React.Component {
   }
 
   format(time) {
-    let seconds = time % 31;
+    let seconds = time % 31000;
     return seconds;
   }
 
@@ -109,13 +107,15 @@ class Source2 extends React.Component {
     <div>
       {modalText.map(modalTexts => (
         <div className="modal_text">
-        <p>{modalTexts.text}</p>
-        <p>{modalTexts.text1}</p>
-          <div>
+        <div>
+          <p>{modalTexts.text}</p>
+          <p>{modalTexts.text1}</p>
+        </div>
+          <div className="count">
           {this.format(count)}
           </div>
           <div className="pass" onClick= {this.Showmodal}>
-            <h3  >Passer</h3>
+            <p>Passer ></p>
           </div>
         </div>
       ))}
