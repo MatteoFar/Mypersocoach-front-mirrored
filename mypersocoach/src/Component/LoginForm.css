@@ -7,12 +7,12 @@
   /* padding-bottom: 80px; */
 }
 
-h1{
+.h1_login{
   font-size: 24px;
   color: rgb(255, 189, 74);
   font-family: 'Lato', sans-serif;
   letter-spacing: 10px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   font-weight: lighter;
 }
 

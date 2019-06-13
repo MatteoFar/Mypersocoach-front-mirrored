@@ -6,9 +6,15 @@ import '../Component/AnswerForm.css';
 const titleAnswers = [
     {
         icon : require("../Pages/logo_perf.png"),
-        text : "Titre 1 du problème identifié"
+        titre : "Titre 1 du problème identifié"
     },
 ]
+
+const textAnswers = {
+    text : "Vous pouvez écrire ici",
+    text_valid : "Valider",
+    text_return : "Retour"
+}
 
 const Answer = () => {
     return (
@@ -23,7 +29,7 @@ const Answer = () => {
                     {titleAnswers.map(titleAnswer => (
                         <div className="title_pbm">
                             <img className="image_icon_small" alt="icon" src={titleAnswer.icon} />
-                            <h1 className="h1">{titleAnswer.text}</h1>
+                            <h1 className="h1">{titleAnswer.titre}</h1>
                         </div>
                         )
                     )}
@@ -34,16 +40,16 @@ const Answer = () => {
                     <div id="form">
 
                         <p>
-                            <textarea name="textarea" maxlength="300" placeholder="Vous pouvez écrire ici"></textarea>
+                            <textarea name="textarea" maxlength="300" placeholder={textAnswers.text}></textarea>
                             {/* rows="5" cols="30" */}
                         </p>
                         
                         <p>
-                            <input className="btn_forward" type="submit" name="login" value="Valider" />
+                            <input className="btn_forward" type="submit" name="login" value={textAnswers.text_valid} />
                         </p>
                         
                         <p>
-                            <input className="btn_back" type="button" name="texte" value="Retour" />
+                            <input className="btn_back" type="button" name="texte" value={textAnswers.text_return} />
                         </p>
 
                     </div>
