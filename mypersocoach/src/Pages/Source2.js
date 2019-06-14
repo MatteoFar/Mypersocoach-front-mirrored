@@ -40,7 +40,7 @@ const modalText = [{
 }]
 class Source2 extends React.Component {
   state = {
-    count: 10000,
+    count: 30,
     modal : true
   }
 
@@ -61,7 +61,7 @@ class Source2 extends React.Component {
   }
 
   format(time) {
-    let seconds = time % 31000;
+    let seconds = time % 31;
     return seconds;
   }
 

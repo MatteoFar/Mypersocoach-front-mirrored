@@ -7,10 +7,7 @@ import Source2 from './Pages/Source2'
 
 import Start from './Screen/Start'
 
-
-
 import Symptome3 from "./Pages/Symptome3";
-import Source2 from "./Pages/Source2"
 import Source2environment from "./Pages/Source2environment"
 
 class App extends React.Component {
