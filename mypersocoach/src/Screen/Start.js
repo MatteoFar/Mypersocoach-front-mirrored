@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import Problem from '../Component/Problem';
-import Heading from '../Component/Heading';
+import GetHeading from '../Component/GetHeading';
+import Problem from '../Component/Problem'
+
 import '../Component/Problem.css'
 
 class Start extends Component {
   render() {
     return (
       <div className="start">
-        <Heading/>
+        <GetHeading/>
         <Problem />
       </div>
   )}
