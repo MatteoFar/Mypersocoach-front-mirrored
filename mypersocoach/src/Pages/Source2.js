@@ -36,7 +36,7 @@ const Source2 = () => {
   return (
     
     <div className="containersource2">
-      <div className="logoText">
+      <div className="logoTextSymptome3">
         {headingIcons3.map(headingIcon3 => (
           <img className="image_icon" alt="icon" src={headingIcon3.image} />
         ))}

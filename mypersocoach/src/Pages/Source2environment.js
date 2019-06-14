@@ -3,14 +3,18 @@ import React from "react";
 //import {ButtonToolbar,Button } from 'reactstrap';
 import "./Source2environment.css";
 
-const headingIcons3 = [
+const headingEnvironments = [
   {
-    image: require("../Pages/logo_heading2.png"),
-    text: `Mon environment`
+    image: require("../Pages/logo_heading2.png")
   }
 ];
-
-const text_environments = [
+const iconTextEnvironments = [
+  {
+    image: require("../Pages/logo_environment.png"),
+    text: "Mon environnement"
+  }
+];
+const textEnvironments = [
   {
     text: `Il faut s'interroger : qu'est ce qui dans ton environnement pourrait être la cause de ton problème`
   },
@@ -24,41 +28,47 @@ const text_environments = [
     text: `Quel type de personne prend toute ton énergie ?`
   },
   {
-    text: `Quelles heures de la journée sont les plus productives pour toi ?` 
-  }
-]
-const text2 = [
+    text: `Quelles heures de la journée sont les plus productives pour toi ?`
+  },
   {
-    text: `Semble-t-il y avoir un élément dans ton environnement de travail qui serait la cause de ton problème ?` 
+    text: `Semble-t-il y avoir un élément dans ton environnement de travail qui serait la cause de ton problème ?`
   }
-  
 ];
+
 const Source2Environment = () => {
   return (
-    
-    <div className="containersource2">
-      <div className="logoText">
-        {headingIcons3.map(headingIcon3 => (
-          <img className="image_icon" alt="icon" src={headingIcon3.image} />
-        ))}
-        {text_environments.map(text_environment => (
-          <p> {text_environment.text} </p>
+    <div className="containerSource2Environment">
+      <div className="logoTextEnvironment">
+        {headingEnvironments.map(headingEnvironment => (
+          <img
+            className="imageIconEnvironment"
+            alt="icon"
+            src={headingEnvironment.image}
+          />
         ))}
       </div>
-      {/* <div className="icons">
-        {iconProblems3.map(iconProblem2 => (
-          <button className="iconLink">
-            <img href="#" className="image_icon" alt="icon" src={iconProblem2.icon} />
-            <p className="text">{iconProblem2.text}</p>
-          </button> 
+      <div className="iconTextEnvironment">
+        {iconTextEnvironments.map(iconTextEnvironment => (
+          <>
+            <img
+              href="#"
+              className="iconEnvironment"
+              alt="icon"
+              src={iconTextEnvironment.image}
+            />
+            <p className="textEnvironment">{iconTextEnvironment.text}</p>
+          </>
         ))}
-       
-        </div> */}
-     
-     <button href="#" className="button_source2">Je ne suis pas sûr</button>
-   
+      </div>
+
+      {textEnvironments.map(textEnvironment => (
+        <p className="noMarginText"> {textEnvironment.text} </p>
+      ))}
+
+      <button href="#" className="buttonSource2Yes">Oui</button>
+      
+      <button href="#" className="buttonSource2No">Non</button>
     </div>
-    
-     );
-    };
+  )
+}
 export default Source2Environment;

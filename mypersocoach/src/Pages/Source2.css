@@ -2,10 +2,12 @@
     color: rgb(150, 159, 170);
     display: grid;
     justify-content: center;
+    width: 461px;
+    margin: auto;
   
   }
   
-  .logoText {
+  .logoTextSymptome3 {
     font-size: 14px;
     margin: 30px 75px auto 75px;
     text-align: center;

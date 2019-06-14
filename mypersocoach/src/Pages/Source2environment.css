@@ -1,54 +1,92 @@
-.containerSource2_environment {
-    color: rgb(150, 159, 170);
-    display: grid;
-    justify-content: center;
+.containerSource2Environment {
+  color: rgb(150, 159, 170);
+  display: grid;
+  margin: auto;
+  width: 461px;
+
+
+}
+
+.logoTextEnvironment {
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+
+} 
+
+.iconEnvironment {
+  height: 30px;
+  width: 30px;
+
+
+}
+
+.iconTextEnvironment {
+  display: flex;
+  font-size: 14px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: 20px 130px 10px 130px;
+  text-align: center;
+}
+
+.imageIconEnvironment {
+  width: 64px;
+
+}
+
+.noMarginText {
+  margin: 0rem 5rem 0.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.textEnvironment {
+  background: none;
+  border: none;
+  color: rgb(150, 159, 170);
+  margin: auto;
+
+}
+
+.buttonSource2Yes {
+  background: none rgb(255, 189, 74);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 14px;
+  height: 45px;
+  margin: 61px auto 0px;
+  text-align: center;
+  width: 282px;
+  
+}
+
+.buttonSource2No {
+  background: none rgb(189, 195, 199);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 14px;
+  height: 45px;
+  margin: 10px auto 0px;
+  text-align: center;
+  width: 282px;
+  
+}
+
+/* @media screen and (max-width:768px){
+  .containerSource2Environment{
+    width: 461px;
   
   }
-  
-  .logoText {
-    font-size: 14px;
-    margin: 30px 75px auto 75px;
-    text-align: center;
-  }
-  
-  .icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 14px;
-    height: 30vh;
-    margin: auto 50px 30px 50px;
-    margin-top: 19px;
-    text-align: center;
-  }
-  
-  .image_icon {
-    width: 60px;
-  }
-  
-  .text {
-    text-align: center;
-  }
-  
-  .iconLink{
-    background: none;
-    border: none;
-    color: rgb(150, 159, 170);
-    cursor: pointer;
-  
-  }
-  
-  .button_source2_environment {
-    background: none;
-    border: 1px solid rgb(150, 159, 170);
-    border-radius: 3px;
-    color: rgb(150, 159, 170);
-    cursor: pointer;
-    font-family: Lato;
-    font-size: 14px;
-    height: 45px;
-    margin: 0 auto;
-    padding: 0px;
-    text-align: center;
-    width: 150px;
-    
-    }
+}
+@media screen and (max-width:576px) {
+.containerSource2Environment{
+  max-width: 461px;
+}
+} */
