@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
-import GetHeading from '../Component/GetHeading';
-import Problem from '../Component/Problem'
+import IconMain from '../Component/IconMain';
 
+import DisplayModal from '../Component/DisplayModal'
 import '../Component/Problem.css'
 
 class Start extends Component {
   render() {
     return (
       <div className="start">
-        <GetHeading/>
-        <Problem />
+        <IconMain/>
+        
+        <DisplayModal />
+        
       </div>
   )}
 }
