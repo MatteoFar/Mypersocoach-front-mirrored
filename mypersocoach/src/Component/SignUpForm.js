@@ -29,37 +29,37 @@ const Signup = () => {
                 <div id="form">
                     <p className="white_text">{textSignup.text}</p>
                     
-                    <p>
+                    <div>
                         <input type="email" name="email" placeholder={textSignup.text_email} />
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <input type="password" id="password" name="password" placeholder={textSignup.text_password} />
-                    </p>
-
-                    <div className="height20"></div>
+                    </div>
 
                     <p className="white_text">{textSignup.text1}</p>
                     
-                    <p>
+                    <div>
                         <input type="text" name="firstname" placeholder={textSignup.text_firstname} />
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <input type="text" name="lastname" placeholder={textSignup.text_lastname} />
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <input type="text" name="function" placeholder={textSignup.text_function} />
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <input type="text" name="entreprise" placeholder={textSignup.text_entreprise} />
-                    </p>
+                    </div>
 
-                    <p>
+                    <div className="height15"></div>
+
+                    <div>
                         <input className="btn_forward btn_small" type="submit" name="signup" value={textSignup.text_signup} />
-                    </p>
+                    </div>
 
                 </div>
             </form>
