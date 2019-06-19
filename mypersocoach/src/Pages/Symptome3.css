@@ -14,12 +14,8 @@
   margin: 14px 60px 0px 60px;
 }
 
-<<<<<<< HEAD
 .iconsSymptom3 {
   background: none;
-=======
-.icons_ {
->>>>>>> dev
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 14px;
@@ -33,6 +29,7 @@
 .iconLinkSymptom3 {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .imageIconSymptom3 {
@@ -45,7 +42,6 @@
   background: none;
   border: none;
   color: rgb(150, 159, 170);
-  cursor: pointer;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
