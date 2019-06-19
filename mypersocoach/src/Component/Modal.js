@@ -6,8 +6,7 @@ class Modal extends React.Component {
 
     state = { 
         show: false ,
-       
-    };
+       };
  
     showModal = () => {
       this.setState({ show: true });
@@ -17,11 +16,6 @@ class Modal extends React.Component {
       this.setState({ show: false });
     };
 
-      
-
-
-
-  
 render(){
 
 
@@ -32,7 +26,7 @@ return(
         <div className="display-modal">
         <img className="image_icon" onClick={this.showModal} alt="icon" src={this.props.icon} />
  
-        <p className="text"></p>
+        <p className="text">{this.props.text}</p>
  
         <ModalGoal text_modal={this.props.text_modal} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
     </div>
