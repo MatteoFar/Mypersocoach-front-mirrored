@@ -14,8 +14,12 @@
   margin: 14px 60px 0px 60px;
 }
 
+<<<<<<< HEAD
 .iconsSymptom3 {
   background: none;
+=======
+.icons_ {
+>>>>>>> dev
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 14px;
