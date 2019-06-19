@@ -4,7 +4,10 @@ import ModalGoal from "./ModalGoal";
 
 class Modal extends React.Component {
 
-    state = { show: false };
+    state = { 
+        show: false ,
+       
+    };
  
     showModal = () => {
       this.setState({ show: true });
@@ -13,6 +16,11 @@ class Modal extends React.Component {
     hideModal = () => {
       this.setState({ show: false });
     };
+
+      
+
+
+
   
 render(){
 
@@ -20,15 +28,16 @@ render(){
 return(
 
  <div>
-
- <img className="image_icon" onClick={this.showModal} alt="icon" src={this.props.icon} />
+     <div className="modal_container">
+        <div className="display-modal">
+        <img className="image_icon" onClick={this.showModal} alt="icon" src={this.props.icon} />
  
- <p className="text">{this.props.text}</p>
+        <p className="text"></p>
  
- <ModalGoal src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
+        <ModalGoal text_modal={this.props.text_modal} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
+    </div>
+ </div>
  
- 
-
 </div>
 
 )
