@@ -39,18 +39,18 @@ const Answer = () => {
                 <form method="post" action="#">
                     <div id="form">
 
-                        <p>
+                        <div>
                             <textarea name="textarea" maxlength="300" placeholder={textAnswers.text}></textarea>
                             {/* rows="5" cols="30" */}
-                        </p>
+                        </div>
                         
-                        <p>
+                        <div>
                             <input className="btn_forward" type="submit" name="login" value={textAnswers.text_valid} />
-                        </p>
+                        </div>
                         
-                        <p>
+                        <div>
                             <input className="btn_back" type="button" name="texte" value={textAnswers.text_return} />
-                        </p>
+                        </div>
 
                     </div>
                 </form>

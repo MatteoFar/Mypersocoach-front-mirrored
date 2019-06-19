@@ -23,20 +23,25 @@ const Login = () => {
 
             <form method="post" action="#"> 
                 <div id="form">
-                    <p>
+                    <div>
                         <input type="email" name="email" placeholder={textLogin.text_email} />
-                    </p>
-                    <p>
+                    </div>
+
+                    <div>
                         <input type="password" id="password" name="password" placeholder={textLogin.text_password} />
-                    </p>
+                    </div>
                     
-                    <p>
+                    <div>
                         <input className="btn_forward btn_small" type="submit" name="login" value={textLogin.text_login} />
-                    </p>
+                    </div>
+
+                    <div className="height30"></div>
+                    
                     <p className="white_text">{textLogin.text}</p>
-                    <p>
+                    
+                    <div>
                         <input className="btn_back btn_small" type="button" name="texte" value={textLogin.text_signup} />
-                    </p>
+                    </div>
                     
                </div>
             </form>
