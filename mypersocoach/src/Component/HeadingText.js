@@ -20,12 +20,20 @@ const textEnvironments = [
     text: `Semble-t-il y avoir un élément dans ton environnement de travail qui serait la cause de ton problème ?`
   }
 ];
+const headingTexts2 = [
+  {
+    text: `Voici des thématiques récurrentes,y en a-t-il une qui correspondond à la situation ?`
+  }
+];
 class HeadingText extends React.Component {
   render() {
     return (
       <>
         {textEnvironments.map(textEnvironment => (
           <p className="noMarginText"> {textEnvironment.text} </p>
+        ))}
+        {headingTexts2.map(headingText2 => (
+          <p className="textSymptom3Header"> {headingText2.text} </p>
         ))}
       </>
     );

@@ -5,7 +5,7 @@ import "./Source2environment.css";
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/FowardStep";
+import FowardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 
 const Source2Environment = () => {

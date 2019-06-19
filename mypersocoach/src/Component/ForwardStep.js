@@ -5,7 +5,7 @@ const YesButton = [
     text: "Oui"
   }
 ];
-class FowardStep extends React.Component {
+class ForwardStep extends React.Component {
   render() {
     return (
       <>
@@ -19,4 +19,4 @@ class FowardStep extends React.Component {
   }
 }
 
-export default FowardStep;
+export default ForwardStep;
