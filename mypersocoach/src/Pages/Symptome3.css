@@ -1,41 +1,58 @@
-.containerSymptome3 {
+.containerSymptom3 {
   color: rgb(150, 159, 170);
   display: grid;
-  justify-content: center;
-
+  width: 461px;
+  margin: auto;
 }
 
-.logoText {
+.logoTextSymptom3 {
   font-size: 14px;
   margin-top: 30px;
   text-align: center;
 }
+.textSymptom3Header{
+  margin: 14px 60px 0px 60px;
+}
 
+<<<<<<< HEAD
+.iconsSymptom3 {
+  background: none;
+=======
 .icons_ {
+>>>>>>> dev
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 14px;
-  height: 60vh;
+  height: 45vh;
   margin: 35px;
   margin-top: 19px;
   text-align: center;
-}
-/* .image_icon !must change the name!{ 
-  width: 60px;
-} */
-.text {
-  text-align: center;
+
 }
 
-.iconLink{
+.iconLinkSymptom3 {
+  background: none;
+  border: none;
+}
+
+.imageIconSymptom3 {
+  width: 60px;
+}
+
+
+
+.textSymptom3 {
   background: none;
   border: none;
   color: rgb(150, 159, 170);
   cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
 
 }
 
-.button_symptome3 {
+.button_symptom3 {
   background: none;
   border: 1px solid rgb(150, 159, 170);
   border-radius: 3px;
@@ -44,10 +61,9 @@
   font-family: Lato;
   font-size: 14px;
   height: 45px;
-  line-height: 1;
   margin: 0 auto;
   padding: 0px;
   text-align: center;
   width: 282px;
-  
-  }
+
+}
