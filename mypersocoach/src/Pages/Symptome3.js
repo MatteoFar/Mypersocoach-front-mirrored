@@ -41,30 +41,37 @@ const iconProblems2 = [
 ];
 const Symptome3 = () => {
   return (
-    
-    <div className="containerSymptome3">
-      <div className="logoText">
+    <div className="containerSymptom3">
+      <div className="logoTextSymptom3">
         {headingIcons2.map(headingIcon2 => (
-          <img className="image_icon" alt="icon" src={headingIcon2.image} />
+          <img
+            className="imageIconSymptom3"
+            alt="icon"
+            src={headingIcon2.image}
+          />
         ))}
         {headingTexts2.map(headingText2 => (
-          <p> {headingText2.text} </p>
+          <p className="textSymptom3Header"> {headingText2.text} </p>
         ))}
       </div>
-      <div className="icons">
+      <div className="iconsSymptom3">
         {iconProblems2.map(iconProblem2 => (
-          <button className="iconLink">
-            <img href="#" className="image_icon" alt="icon" src={iconProblem2.icon} />
-            <p className="text">{iconProblem2.text}</p>
+          <button className="iconLinkSymptom3">
+            <img
+              href="#"
+              className="imageIconSymptom3"
+              alt="icon"
+              src={iconProblem2.icon}
+            />
+            <p className="textSymptom3">{iconProblem2.text}</p>
           </button>
         ))}
-       
       </div>
-     
-     <button href="#" className="button_symptome3">Pas vraiment</button>
-   
+
+      <button href="#" className="button_symptom3">
+        Pas vraiment
+      </button>
     </div>
-    
-     );
-    };
+  );
+};
 export default Symptome3;
