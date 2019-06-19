@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+
+.modal-display-block {
+    display: block;
+  }
+  
+.modal-display-none {
+    display: none;
+  }
+
+
 .start {
     width: 380px;
     margin: 0px auto;

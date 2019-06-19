@@ -1,13 +1,19 @@
 import React from "react";
 import './Problem.css';
+import Modal from "./Modal";
 
 class DisplayModal extends React.Component {
 
 state = {
-
     text_prob: [],
     question: []
 }
+
+
+
+
+
+
 
 getText = () => {
   fetch('http://localhost:3003/main_theme')
@@ -49,18 +55,16 @@ componentDidMount(){
     <div className="modal_container">
     <div className="display-modal">
       <div className="button" >
-        {this.state.text_prob.map(content => (
-          
-          
-          <div >
-           
-            <img className="image_icon" alt="icon" src={content.picture_src} />
-            <p className="text">{content.all_text}</p>
-          </div>
-        ))}
+        {this.state.text_prob.map(content => <Modal text={content.all_text} icon={content.picture_src}/>)}
+      
       </div>
       </div>
     </div>
+   
+   
+   
+   
+
     </div>
 )
 
