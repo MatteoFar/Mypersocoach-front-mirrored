@@ -13,43 +13,44 @@ const textLogin =
     }
 
 
-const Login = () => {
-  return (
-    
-    <div id="grid_login">
-      <BackgroundLogin/>
-      
-        <section className="blue_bg">
+class Login extends React.Component {
+    render() {
 
-            <form method="post" action="#"> 
-                <div id="form">
-                    <div>
-                        <input type="email" name="email" placeholder={textLogin.text_email} />
-                    </div>
+        return (
+            <div id="grid_login">
+            <BackgroundLogin/>
+            
+                <section className="blue_bg">
 
-                    <div>
-                        <input type="password" id="password" name="password" placeholder={textLogin.text_password} />
-                    </div>
-                    
-                    <div>
-                        <input className="btn_forward btn_small" type="submit" name="login" value={textLogin.text_login} />
-                    </div>
+                    <form method="post" action="#"> 
+                        <div id="form">
+                            <div>
+                                <input type="email" name="email" placeholder={textLogin.text_email} />
+                            </div>
 
-                    <div className="height30"></div>
-                    
-                    <p className="white_text">{textLogin.text}</p>
-                    
-                    <div>
-                        <input className="btn_back btn_small" type="button" name="texte" value={textLogin.text_signup} />
-                    </div>
-                    
-               </div>
-            </form>
-        </section>
-        <footer className="blue_bg"></footer>   
-    </div>
+                            <div>
+                                <input type="password" id="password" name="password" placeholder={textLogin.text_password} />
+                            </div>
+                            
+                            <div>
+                                <input className="btn_forward btn_small" type="submit" name="login" value={textLogin.text_login} />
+                            </div>
 
-  );
+                            <div className="height30"></div>
+                            
+                            <p className="white_text">{textLogin.text}</p>
+                            
+                            <div>
+                                <input className="btn_back btn_small" type="button" name="texte" value={textLogin.text_signup} />
+                            </div>
+                            
+                        </div>
+                    </form>
+                </section>
+                <footer className="blue_bg"></footer>   
+            </div>
+        );
+    }
 }
 
 export default Login;
