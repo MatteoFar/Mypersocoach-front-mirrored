@@ -1,4 +1,5 @@
 import React from "react";
+
 const iconProblems2 = [
   {
     icon: require(`../Pages/logo_conflict.png`),
