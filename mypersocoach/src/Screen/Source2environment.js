@@ -49,7 +49,7 @@ class Source2Environment extends React.Component {
         <IconMain icon={this.state.icon.picture_src} />
         <TitlePage problem_origin={this.state.problem_origin} />
         <HeadingText text_static={this.state.text_static.all_text} />
-        <FowardStep />
+        <FowardStep/>
         <NextStep />
       </div>
     );
