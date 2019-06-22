@@ -10,7 +10,7 @@ class HeadingText extends React.Component {
     }
   
     getHeadingText = () => {
-        fetch('http://localhost:3003/text_static/1')
+        fetch('http://localhost:3004/text_static/1')
           .then(res => res.json())
           .then(data => {
             this.setState({ headingText : data })

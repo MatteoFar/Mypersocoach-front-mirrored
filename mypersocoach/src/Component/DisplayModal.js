@@ -6,8 +6,8 @@ class DisplayModal extends React.Component {
 
 state = {
     text_prob: [],
-    question: [],
-    text_modal:[]
+    question: []
+   
 }
 
 
@@ -17,7 +17,7 @@ state = {
 
 
 getText = () => {
-  fetch('http://localhost:3003/main_theme')
+  fetch('http://localhost:3004/main_theme')
         .then(res => res.json())
         .then(data => {
             this.setState({ text_prob : data })
@@ -26,7 +26,7 @@ getText = () => {
 }
 
 getQuestion = () => {
-  fetch('http://localhost:3003/text_static/105')
+  fetch('http://localhost:3004/text_static/105')
   .then(res => res.json())
   .then(data => {
       this.setState({ question : data })
@@ -34,14 +34,7 @@ getQuestion = () => {
 
 }
 
-getTextModal = () => {
-  fetch('http://localhost:3003/text_static/6')
-  .then(res => res.json())
-  .then(data => {
-      this.setState({ text_modal : data[0] })
-  })
 
-}
 
 
 
@@ -49,7 +42,7 @@ getTextModal = () => {
 componentDidMount(){
   this.getQuestion()
   this.getText()
-  this.getTextModal()
+
 }
 
 
@@ -68,7 +61,7 @@ componentDidMount(){
     <div className="modal_container">
     <div className="display-modal">
       <div className="button" >
-        {this.state.text_prob.map(content => <Modal text_modal={this.state.text_modal.all_text} text={content.all_text} icon={content.picture_src}/>)}
+        {this.state.text_prob.map(content => <Modal  text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
       
       </div>
       </div>

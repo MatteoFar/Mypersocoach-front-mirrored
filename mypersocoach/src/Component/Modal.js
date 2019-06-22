@@ -26,9 +26,9 @@ return(
         <div className="display-modal">
         <img className="image_icon" onClick={this.showModal} alt="icon" src={this.props.icon} />
  
-        <p className="text">{this.props.text}</p>
+        <p className="text">{this.props.text1}</p>
  
-        <ModalGoal text_modal={this.props.text_modal} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
+        <ModalGoal text2={this.props.text2} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
     </div>
  </div>
  
