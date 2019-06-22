@@ -16,7 +16,7 @@ class IconMain extends Component {
         fetch('http://localhost:3004/icon/27')
             .then(res => res.json())
             .then(data => {
-                this.setState({ icon : data })
+                this.setState({ icon : data[0] })
             })
        
         }
@@ -30,8 +30,8 @@ class IconMain extends Component {
         const result = this.state.icon
 
         return(
-            <div>
-                <Heading headers ={result}/>
+            <div className="header_mainProb">
+                <img src={result.picture_src}/>
             </div>
         )
     }

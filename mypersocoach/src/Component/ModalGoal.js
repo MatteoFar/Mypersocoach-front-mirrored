@@ -7,8 +7,9 @@ const ModalGoal  = ({src, show, handleClose, text2}) => {
  const showHideClassname = show ? "modal-display-block" : "modal-display-none";
   
 return(
-    <div className={showHideClassname}>
-    <div className="modal_Cards" >
+    <div className={showHideClassname} >
+        
+    <div  className="modal_Cards" >
     <div className="Problem_modal">
     <img className="icon_problem"  alt="icon_problem" src={src}/>
     <p>{text2}</p>

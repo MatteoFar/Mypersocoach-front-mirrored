@@ -6,44 +6,63 @@ class HeadingText extends React.Component {
 
     state = {
       
-      headingText : []
+      headingText1 : [],
+      headingText2 : [],
+      headingText3 : []
     }
   
-    getHeadingText = () => {
+    getHeadingText1 = () => {
         fetch('http://localhost:3004/text_static/1')
           .then(res => res.json())
           .then(data => {
-            this.setState({ headingText : data })
+            this.setState({ headingText1 : data[0] })
           })
       }
   
+      getHeadingText2 = () => {
+        fetch('http://localhost:3004/text_static/108')
+          .then(res => res.json())
+          .then(data => {
+            this.setState({ headingText2 : data[0] })
+          })
+      }
+
+      getHeadingText3 = () => {
+        fetch('http://localhost:3004/text_static/109')
+          .then(res => res.json())
+          .then(data => {
+            this.setState({ headingText3 : data[0] })
+          })
+      }
+
+
     componentDidMount(){
-      this.getHeadingText()
+      this.getHeadingText1()
+      this.getHeadingText2()
+      this.getHeadingText3()
     }
     
     render() {
-        return (
+        
+      
+      return (
 
 <div>
         <div className="header_mainProb">
-        {this.state.headingText.map(header => {
-          return(
-              <div>
-                
-                <p>{header.all_text}</p>
-              </div>
-            )
-          })
-        }
-         </div>
+        <p>{this.state.headingText1.all_text}</p>
+        </div>
 
-</div>
-
-
-        )
+        <p>{this.state.headingText2.all_text}</p>
+            
+          <div>      
+          <p>{this.state.headingText3.all_text}</p>
+          </div>
+         
+       </div>
+)
 
 
     }
-}
+  }
 
 export default HeadingText;

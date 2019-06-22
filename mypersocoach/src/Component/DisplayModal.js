@@ -12,10 +12,6 @@ state = {
 
 
 
-
-
-
-
 getText = () => {
   fetch('http://localhost:3004/main_theme')
         .then(res => res.json())
@@ -29,14 +25,10 @@ getQuestion = () => {
   fetch('http://localhost:3004/text_static/105')
   .then(res => res.json())
   .then(data => {
-      this.setState({ question : data })
+      this.setState({ question : data[0] })
   })
 
 }
-
-
-
-
 
 
 componentDidMount(){
@@ -56,21 +48,13 @@ componentDidMount(){
     
   
     <div>
-     <p>{this.state.question.map(question => (<p>{question.all_text}</p>))}</p>
+      <p>{this.state.question.all_text}</p>
 
-    <div className="modal_container">
-    <div className="display-modal">
-      <div className="button" >
-        {this.state.text_prob.map(content => <Modal  text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
-      
+    
+      <div className="display-modal" >
+      {this.state.text_prob.map(content => <Modal  text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
       </div>
-      </div>
-    </div>
-   
-   
-   
-   
-
+    
     </div>
 )
 
