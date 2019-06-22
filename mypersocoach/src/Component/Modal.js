@@ -2,6 +2,9 @@ import React from "react";
 import './Problem.css';
 import ModalGoal from "./ModalGoal";
 
+const nl2br = require('react-nl2br');
+
+
 class Modal extends React.Component {
 
     state = { 
@@ -28,7 +31,7 @@ return(
  
         <p className="text">{this.props.text1}</p>
  
-        <ModalGoal text2={this.props.text2} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
+        <ModalGoal text2={nl2br(this.props.text2)} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
     </div>
  
  

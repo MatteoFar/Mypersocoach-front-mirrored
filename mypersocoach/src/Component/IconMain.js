@@ -1,5 +1,5 @@
 import React , { Component } from 'react'
-import Heading from './Heading'
+import './Problem.css';
 
 
 

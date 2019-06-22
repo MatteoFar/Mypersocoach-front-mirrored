@@ -53,7 +53,7 @@
 .Problem_modal {
     display: grid; 
     grid-template-rows: 1fr 1fr 1fr;
-    height: 250px;
+    
     align-items: center;
     text-align: center;
     background-color: rgba(253, 253, 253, 0.25);
