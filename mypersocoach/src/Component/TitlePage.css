@@ -1,8 +1,16 @@
 .iconTextEnvironment {
     display: flex;
     font-size: 14px;
-    grid-template-columns: 1fr;
     justify-content: center;
-    margin: 20px 130px 10px 130px;
+    align-items: center;
+    /* margin: 20px 130px 10px 130px; */
     text-align: center;
+    
   }
+  
+  .iconTextEnvironment img {
+    height: 30px;
+    width: 30px;
+    padding-right: 10px
+  }
+  
