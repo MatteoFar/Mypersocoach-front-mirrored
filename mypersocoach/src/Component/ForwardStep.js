@@ -1,7 +1,6 @@
 import React from "react";
 
-class ForwardStep extends React.Component {
-  render() {
+const ForwardStep = ({  }) => {
     return (
       <>
         <button href="#" className="buttonSource2Yes">
@@ -11,6 +10,6 @@ class ForwardStep extends React.Component {
       </>
     );
   }
-}
+
 
 export default ForwardStep;

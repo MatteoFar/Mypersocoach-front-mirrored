@@ -1,5 +1,6 @@
 import React from "react";
-import "../Screen/Source2environment.css";
+
+import "../Component/HeadingText.css"
 
 const HeadingText = ({ text_static }) => {
   return (

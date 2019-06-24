@@ -1,0 +1,15 @@
+.button_symptom3 {
+    background: none;
+    border: 1px solid rgb(150, 159, 170);
+    border-radius: 3px;
+    color: rgb(150, 159, 170);
+    cursor: pointer;
+    font-family: Lato;
+    font-size: 14px;
+    height: 45px;
+    margin: 31px 30px;
+    padding: 0px;
+    text-align: center;
+    width: 282px;
+  
+  }
