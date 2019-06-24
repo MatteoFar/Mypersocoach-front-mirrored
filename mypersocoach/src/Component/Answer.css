@@ -1,0 +1,15 @@
+textarea{
+    font-family: 'Montserrat', sans-serif;  
+    width: 282px;
+    padding: 6px;
+    margin-bottom:10px;
+    height: 190px;
+    font-size: 14px;
+    color: #7e7e7e;
+    border-radius: 5px;
+    box-sizing: border-box; /* To force the size of the input to enter in its parent */
+    border:none;
+    /* border:1px solid #969FAA; */
+    background-color: rgb(245, 245, 245);
+    outline: none;
+}
