@@ -34,7 +34,7 @@ class Source2Environment extends React.Component {
       });
   };
   getTextStatic = () => {
-    fetch("http://localhost:3001/text_static/98")
+    fetch("http://localhost:3001/text_static/110")
       .then(res => res.json())
       .then(data => {
         this.setState({ text_static: data[0] });
@@ -52,7 +52,7 @@ class Source2Environment extends React.Component {
       <div className="containerSource2Environment">
         <IconMain icon={this.state.icon.picture_src} />
         {/* <TitlePage problem_origin={this.state.problem_origin} /> */} 
-        {/* <HeadingText text_static={this.state.text_static.all_text} /> */} <p>Décrire le problème ou la situation à faire évoluer ci-dessous</p>
+        <HeadingText text_static={this.state.text_static.all_text} /> 
         <Answer/>
         <ForwardStep/>
         <NotReally />
