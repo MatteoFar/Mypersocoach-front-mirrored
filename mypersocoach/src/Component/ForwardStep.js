@@ -1,4 +1,5 @@
 import React from "react";
+import "./ForwardStep.css"
 
 class ForwardStep extends React.Component {
   render() {

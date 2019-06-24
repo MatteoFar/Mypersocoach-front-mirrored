@@ -1,4 +1,5 @@
 import React from "react";
+import "./TitlePage.css"
 
 const TitlePage = ({ problem_origin }) => {
   return (

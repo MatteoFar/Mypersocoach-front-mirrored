@@ -1,0 +1,8 @@
+.iconTextEnvironment {
+    display: flex;
+    font-size: 14px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 20px 130px 10px 130px;
+    text-align: center;
+  }
