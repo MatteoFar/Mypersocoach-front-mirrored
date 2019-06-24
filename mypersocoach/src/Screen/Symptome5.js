@@ -8,6 +8,9 @@ import HeadingText from "../Component/HeadingText";
 import FowardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 import Answer from "../Component/Answer"
+import NotReally from "../Component/NotReally";
+import { validate } from "@babel/types";
+import ForwardStep from "../Component/ForwardStep";
 
 class Source2Environment extends React.Component {
   state = {
@@ -51,8 +54,8 @@ class Source2Environment extends React.Component {
         {/* <TitlePage problem_origin={this.state.problem_origin} /> */} 
         {/* <HeadingText text_static={this.state.text_static.all_text} /> */} <p>Décrire le problème ou la situation à faire évoluer ci-dessous</p>
         <Answer/>
-        <FowardStep/>
-        <NextStep />
+        <ForwardStep/>
+        <NotReally />
       </div>
     );
   }
