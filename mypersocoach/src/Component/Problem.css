@@ -54,8 +54,8 @@
     position: fixed;
     display: grid; 
     grid-template-rows: 1fr 1fr 1fr;
-    top: 52%;
-    right: 40%;
+    top: 40%;
+    right: 41%;
     align-items: center;
     text-align: center;
     background-color: rgba(253, 253, 253, 0.25);
