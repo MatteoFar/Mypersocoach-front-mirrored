@@ -61,7 +61,7 @@
     position: fixed;
     display: grid; 
     grid-template-rows: 1fr 1fr 1fr;
-    top: 40%;
+    top: 50%;
     right: 41%;
     align-items: center;
     text-align: center;

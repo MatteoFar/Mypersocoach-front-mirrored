@@ -1,7 +1,7 @@
 import React from 'react';
 import BackgroundLogin from './BackgroundLogin';
-import '../Component/GeneralCss.css';
-import '../Component/LoginForm.css';
+// import '../Component/GeneralCss.css';
+// import '../Component/LoginForm.css';
 
 const textSignup = 
     {
@@ -17,58 +17,60 @@ const textSignup =
     }
 
 
-const Signup = () => {
-    return (
-      
-      <div id="grid_login">
-      <BackgroundLogin/>
+class Signup extends React.Component {
+    render() {
+        return (
+        
+        <div id="grid_login">
+        <BackgroundLogin/>
 
-      <section className="blue_bg">
-            
-            <form method="post" action="#">
-                <div id="form">
-                    <p className="white_text">{textSignup.text}</p>
-                    
-                    <p>
-                        <input type="email" name="email" placeholder={textSignup.text_email} />
-                    </p>
+        <section className="blue_bg">
+                
+                <form method="post" action="#">
+                    <div id="form">
+                        <p className="white_text">{textSignup.text}</p>
+                        
+                        <div>
+                            <input type="email" name="email" placeholder={textSignup.text_email} />
+                        </div>
 
-                    <p>
-                        <input type="password" id="password" name="password" placeholder={textSignup.text_password} />
-                    </p>
+                        <div>
+                            <input type="password" id="password" name="password" placeholder={textSignup.text_password} />
+                        </div>
 
-                    <div className="height20"></div>
+                        <p className="white_text">{textSignup.text1}</p>
+                        
+                        <div>
+                            <input type="text" name="firstname" placeholder={textSignup.text_firstname} />
+                        </div>
 
-                    <p className="white_text">{textSignup.text1}</p>
-                    
-                    <p>
-                        <input type="text" name="firstname" placeholder={textSignup.text_firstname} />
-                    </p>
+                        <div>
+                            <input type="text" name="lastname" placeholder={textSignup.text_lastname} />
+                        </div>
 
-                    <p>
-                        <input type="text" name="lastname" placeholder={textSignup.text_lastname} />
-                    </p>
+                        <div>
+                            <input type="text" name="function" placeholder={textSignup.text_function} />
+                        </div>
 
-                    <p>
-                        <input type="text" name="function" placeholder={textSignup.text_function} />
-                    </p>
+                        <div>
+                            <input type="text" name="entreprise" placeholder={textSignup.text_entreprise} />
+                        </div>
 
-                    <p>
-                        <input type="text" name="entreprise" placeholder={textSignup.text_entreprise} />
-                    </p>
+                        <div className="height15"></div>
 
-                    <p>
-                        <input className="btn_forward btn_small" type="submit" name="signup" value={textSignup.text_signup} />
-                    </p>
+                        <div>
+                            <input className="btn_forward btn_small" type="submit" name="signup" value={textSignup.text_signup} />
+                        </div>
 
-                </div>
-            </form>
-            
-        </section>
-        <footer className="blue_bg"></footer>  
+                    </div>
+                </form>
+                
+            </section>
+            <footer className="blue_bg"></footer>  
 
-      </div>
-    );
+        </div>
+        );
+    }
   }
 
 export default Signup;

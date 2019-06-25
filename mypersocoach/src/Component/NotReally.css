@@ -1,0 +1,14 @@
+.button_not_really {
+    background: none rgb(189, 195, 199);
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 14px;
+    height: 45px;
+    margin: 10px auto 0px;
+    text-align: center;
+    width: 282px;
+    
+  }

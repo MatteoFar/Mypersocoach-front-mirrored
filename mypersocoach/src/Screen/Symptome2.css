@@ -1,0 +1,13 @@
+.containerSymptome2 {
+    display: grid;
+    margin: auto;
+    width: 380px;
+  }
+
+  .containerS2 {
+      height: 700px;
+      width: 380px;
+      background-color:rgb(55, 115, 184);
+      margin: 0 auto;
+  }
+  
