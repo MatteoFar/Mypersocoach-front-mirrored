@@ -52,7 +52,7 @@ componentDidMount(){
 
     
       <div className="display-modal" >
-      {this.state.text_prob.map(content => <Modal  text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
+      {this.state.text_prob.map(content => <Modal  id= {content.id} text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
       </div>
     
     </div>
