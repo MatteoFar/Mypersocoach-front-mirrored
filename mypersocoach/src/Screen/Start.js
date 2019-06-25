@@ -1,14 +1,21 @@
 import React, {Component} from 'react';
-import Problem from '../Component/Problem';
-import Heading from '../Component/Heading';
+import IconMain from '../Component/IconMain';
+import HeadingText from '../Component/HeadingText'
+import DisplayModal from '../Component/DisplayModal'
+
 import '../Component/Problem.css'
+
+
+
 
 class Start extends Component {
   render() {
     return (
       <div className="start">
-        <Heading/>
-        <Problem />
+        <IconMain/>
+        <HeadingText />
+        <DisplayModal />
+        
       </div>
   )}
 }

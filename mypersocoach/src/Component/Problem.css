@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+
+.modal-display-block {
+    display: block;
+  }
+  
+.modal-display-none {
+    display: none;
+  }
+
+
 .start {
     width: 380px;
     margin: 0px auto;
@@ -24,18 +34,8 @@
     
 }
 
-.Goal_modal {
-    display: grid; 
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 250px;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(253, 253, 253, 0.25);
-    box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px ;
-    width: 318px;
-    height: 250px;
-    margin: 0 auto;
-}
+
+
 .icon_Goal {
     width: 64px;
     height: 64px;

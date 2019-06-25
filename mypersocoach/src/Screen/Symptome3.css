@@ -1,20 +1,25 @@
 .containerSymptom3 {
   color: rgb(150, 159, 170);
+  width: 380px;
+  margin: auto;  
+}
+.flex{
   display: grid;
-  width: 461px;
-  margin: auto;
+  grid-template-columns: 1fr 1fr;
+
+
 }
 
-.logoTextSymptom3 {
+/* .logoTextEnvironment {
   font-size: 14px;
   margin-top: 30px;
   text-align: center;
-}
-.textSymptom3Header{
+} */
+/* .header_mainProb{
   margin: 14px 60px 0px 60px;
-}
+} */
 
-.iconsSymptom3 {
+/* .iconsSymptom3 {
   background: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,11 +29,12 @@
   margin-top: 19px;
   text-align: center;
 
-}
+} */
 
-.iconLinkSymptom3 {
+/* .iconLinkSymptom3 {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .imageIconSymptom3 {
@@ -41,14 +47,13 @@
   background: none;
   border: none;
   color: rgb(150, 159, 170);
-  cursor: pointer;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
 
 }
-
-.button_symptom3 {
+ */
+/* .button_symptom3 {
   background: none;
   border: 1px solid rgb(150, 159, 170);
   border-radius: 3px;
@@ -62,4 +67,4 @@
   text-align: center;
   width: 282px;
 
-}
+} */

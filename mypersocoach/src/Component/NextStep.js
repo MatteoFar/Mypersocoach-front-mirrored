@@ -1,21 +1,15 @@
 import React from "react";
 
-const NoButton = [
-  {
-    text: "Non"
-  }
-];
-class NextStep extends React.Component {
-  render() {
+const NextStep = ({  }) => {
+  
     return (
       <>
-        {NoButton.map(No => (
-          <button href="#" className="buttonSource2No">
-            {No.text}
-          </button>
-        ))}
+        <button href="#" className="buttonSource2No">
+          Non
+        </button>
+        
       </>
     );
   }
-}
+
 export default NextStep;
