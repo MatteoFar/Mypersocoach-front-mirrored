@@ -12,9 +12,9 @@ return(
     <div  className="modal_Cards" >
     <div className="Problem_modal">
     <img className="icon_problem"  alt="icon_problem" src={src}/>
-    <p>{text2}</p>
+    <p className="modalText">{text2}</p>
     <button type="button" name ="C'est parti !">C'est parti !</button>
-    <button onClick={handleClose}>Fermer</button>
+    
     </div>
     </div>
     </div>

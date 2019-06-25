@@ -11,7 +11,7 @@ import '../Component/Problem.css'
 class Start extends Component {
   render() {
     return (
-      <div className="start">
+      <div className="startContainer">
         <IconMain/>
         <HeadingText />
         <DisplayModal />

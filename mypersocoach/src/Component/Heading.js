@@ -4,12 +4,12 @@ const Heading = ({ headers }) => {
    return (
     <div>
 
-      <div className="header_mainProb">
+      <div className="headerText" className="header_mainProb">
         {headers.map(header => {
           return(
               <div>
                 <img src={header.picture_src} />
-                <p>{header.all_text}</p>
+                <p >{header.all_text}</p>
               </div>
             )
           })

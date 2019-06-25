@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .modal-display-block {
     display: block;
@@ -9,31 +9,38 @@
     display: none;
   }
 
+.headerText , .modalText, .header_mainProb {
+    text-align: center;
+    color: rgb(150, 159, 170);
+    font-size: 14px;
+    font-family: Lato;
+}
 
-.start {
+.displayModalText {
+    text-align: center;
+    color: rgb(150, 159, 170);
+    font-size: 14px;
+    font-family: Lato;
+    font-weight: bold
+}
+
+.startContainer {
     width: 380px;
     margin: 0px auto;
     height: 756px;
 }
 
-.header_mainProb {
-    text-align: center;
-    color: rgb(150, 159, 170)
+.displayModalCentered {
+    width: 150px;
+    text-align: center
 }
 
-.heading_text {
-    max-width: 282px;
-    max-height: 105px;
-    margin: 0 auto;
-
-}
 
 .display-modal {
     display: flex;
     justify-content: space-around;
     
 }
-
 
 
 .icon_Goal {
@@ -97,9 +104,7 @@
 }
 
 .image_icon {
-    width: 64px;
-    height: 64px;
-    
-    
-    
+    display: inline-block;
+    text-align: center;
 }
+

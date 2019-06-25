@@ -41,29 +41,25 @@ const Modal = ({id, text1, text2, icon})  =>{
   }, []);
 
 
- 
-
 return(
 
- <div>
+ <div className="displayModalCentered">
      
-     <div ref={node}  onClick={e => setOpen(!open)}>
-        
-        
+     <div className="image_icon" ref={node}  onClick={e => setOpen(!open)}>
         
         <div >
         
-        <div>
-        <img className="image_icon" onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} />
+        
+        <img  onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} />
        
-        </div>
+        
+       
         {open && (<ModalGoal text2={nl2br(text2)} src={icon} show={setOpen} />)}
- 
-      <p className="text">{text1}</p>
-       </div>
-      
+     
+        </div>
+       
       </div>      
- 
+ <div ><p >{text1}</p></div>
 </div>
 
 )
