@@ -1,9 +1,10 @@
 import React from "react";
+import "./ForwardStep.css"
 
 const ForwardStep = ({  }) => {
     return (
       <>
-        <button href="#" className="buttonSource2Yes">
+        <button href="#" className="buttonForward_Step">
           Oui
         </button>
         

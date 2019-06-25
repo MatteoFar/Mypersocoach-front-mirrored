@@ -2,10 +2,11 @@ import React from "react";
 
 import "../Component/HeadingText.css"
 
+const nl2br = require('react-nl2br');
 const HeadingText = ({ text_static }) => {
   return (
-    <div className="header_mainProb">
-      <p>{text_static}</p>
+    <div className="Source2_heading_text">
+      <p>{nl2br(text_static)}</p>
     </div>
   );
 };
