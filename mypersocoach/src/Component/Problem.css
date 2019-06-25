@@ -9,7 +9,7 @@
     display: none;
   }
 
-.headerText , .modalText, .header_mainProb {
+.modalText, .header_mainProb {
     text-align: center;
     color: rgb(150, 159, 170);
     font-size: 14px;
