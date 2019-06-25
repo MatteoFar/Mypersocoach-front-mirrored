@@ -5,7 +5,7 @@ class ForwardStep extends React.Component {
   render() {
     return (
       <>
-        <button href="#" className="buttonSource2Yes">
+        <button href="#" className="buttonForward_Step">
           Oui
         </button>
         

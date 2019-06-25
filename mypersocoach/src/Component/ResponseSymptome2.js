@@ -3,8 +3,8 @@ import "./ResponseSymptome2.css"
 
 const ResponseSymptome2 = ({ Answer }) => {
   return (
-    <div className="logoTextEnvironment">
-      <p>ceci</p>
+    <div className="Response">
+      <p>CA S'AFFICHE PAS !!! C'EST CA MON PROBLEME !!</p>
     </div>
   );
 };

@@ -1,7 +1,5 @@
-.containerSymptome2 {
-  background-color:rgb(55, 115, 184);
-  display: grid;
-  margin: auto;
-  width: 380px;
-  
+
+.Response {
+    margin: 0 auto;
+    height: 250px;
 }

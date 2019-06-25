@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Source2environment.css";
+import "./Symptome2.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
@@ -8,6 +8,7 @@ import FowardStep from "../Component/ForwardStep";
 import NotReally from "../Component/NotReally";
 import ResponseSymptome2 from "../Component/ResponseSymptome2"
 import ForwardStep from "../Component/ForwardStep";
+import BackSubmit from "../Component/BackSubmit";
 
 class Source2Environment extends React.Component {
   state = {
@@ -46,12 +47,14 @@ class Source2Environment extends React.Component {
 
   render() {
     return (
+      <div className="containerS2">
       <div className="containerSymptome2">
         <IconMain icon={this.state.icon.picture_src} />
         <HeadingText text_static={this.state.text_static.all_text} /> 
         <ResponseSymptome2 />
         <ForwardStep/>
-        {/* <NotReally /> */}
+        <BackSubmit />
+      </div>
       </div>
     );
   }
