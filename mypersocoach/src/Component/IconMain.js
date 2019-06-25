@@ -1,5 +1,5 @@
-import React from "react";
-import "./IconMain.css"
+import React , { Component } from 'react'
+// import './Problem.css';
 
 import "../Component/IconMain.css"
 
@@ -11,4 +11,6 @@ const IconMain = ({ icon }) => {
   );
 };
 
-export default IconMain;
+
+
+export default IconMain

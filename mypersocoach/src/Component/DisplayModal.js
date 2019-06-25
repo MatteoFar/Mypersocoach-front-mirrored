@@ -1,84 +1,57 @@
 import React from "react";
 import './Problem.css';
 import Modal from "./Modal";
+import axios from "axios"
+import { async } from "q";
+
 
 class DisplayModal extends React.Component {
 
 state = {
     text_prob: [],
-    question: [],
-    text_modal:[]
-}
-
-
-
-
-
-
-
-getText = () => {
-  fetch('http://localhost:3003/main_theme')
-        .then(res => res.json())
-        .then(data => {
-            this.setState({ text_prob : data })
-        })
+    question: []
    
 }
 
-getQuestion = () => {
-  fetch('http://localhost:3003/text_static/105')
-  .then(res => res.json())
-  .then(data => {
-      this.setState({ question : data })
-  })
 
+
+getText = async () => {
+  const res= await axios.get('http://localhost:3004/main_theme')
+  this.setState({ text_prob : res.data })
+        
+   
 }
 
-getTextModal = () => {
-  fetch('http://localhost:3003/text_static/6')
-  .then(res => res.json())
-  .then(data => {
-      this.setState({ text_modal : data[0] })
-  })
+getQuestion = async () => {
+  const res= await axios.get('http://localhost:3004/text_static/105')
+  this.setState({ question : res.data[0] })
+ 
 
 }
-
-
 
 
 componentDidMount(){
   this.getQuestion()
   this.getText()
-  this.getTextModal()
+
 }
-
-
-  
-
 
   render() { 
 
-
-    return (
+const{text_prob, question}=this.state
     
-  
-    <div>
-     <p>{this.state.question.map(question => (<p>{question.all_text}</p>))}</p>
-
-    <div className="modal_container">
-    <div className="display-modal">
-      <div className="button" >
-        {this.state.text_prob.map(content => <Modal text_modal={this.state.text_modal.all_text} text={content.all_text} icon={content.picture_src}/>)}
-      
-      </div>
-      </div>
+return (
+    
+  <div>
+    <div className="displayModalText">
+      <p>{question.all_text}</p>
     </div>
+    
+      <div className="display-modal" >
+      {text_prob.map(content => <Modal  id= {content.id} text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
+      </div>
+  </div>
    
-   
-   
-   
-
-    </div>
 )
 
   }
