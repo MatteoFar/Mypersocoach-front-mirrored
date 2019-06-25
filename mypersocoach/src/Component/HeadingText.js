@@ -1,5 +1,6 @@
 import React from "react";
-import "./HeadingText.css";
+
+import "../Component/HeadingText.css"
 
 const nl2br = require('react-nl2br');
 const HeadingText = ({ text_static }) => {

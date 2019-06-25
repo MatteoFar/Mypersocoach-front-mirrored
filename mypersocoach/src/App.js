@@ -7,7 +7,7 @@ import Symptome2 from "./Screen/Symptome2";
 
 import Start from "./Screen/Start";
 import Symptome5 from "./Screen/Symptome5";
-import Symptome3 from "./Pages/Symptome3";
+import Symptome3 from "./Screen/Symptome3";
 import Source2 from "./Pages/Source2";
 import Source2environment from "./Screen/Source2environment";
 

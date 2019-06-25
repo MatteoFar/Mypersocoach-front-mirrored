@@ -1,8 +1,8 @@
 import React from "react";
 import "./NextStep.css"
 
-class NextStep extends React.Component {
-  render() {
+const NextStep = ({  }) => {
+  
     return (
       <>
         <button href="#" className="buttonSource2No">
@@ -12,5 +12,5 @@ class NextStep extends React.Component {
       </>
     );
   }
-}
+
 export default NextStep;
