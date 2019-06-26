@@ -16,14 +16,14 @@ state = {
 
 
 getText = async () => {
-  const res= await axios.get('http://localhost:3004/main_theme')
+  const res= await axios.get('http://localhost:3001/main_theme')
   this.setState({ text_prob : res.data })
         
    
 }
 
 getQuestion = async () => {
-  const res= await axios.get('http://localhost:3004/text_static/105')
+  const res= await axios.get('http://localhost:3001/text_static/105')
   this.setState({ question : res.data[0] })
  
 

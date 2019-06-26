@@ -30,6 +30,7 @@ const Modal = ({id, text1, text2, icon})  =>{
     setOpen(false);
   };
 
+  
 
   useEffect(() => {
     // add when mounted
@@ -54,7 +55,7 @@ return(
        
         
        
-        {open && (<ModalGoal text2={nl2br(text2)} src={icon} show={setOpen} />)}
+        {open && (<ModalGoal id={id} text2={nl2br(text2)} src={icon} show={setOpen} />)}
      
         </div>
        

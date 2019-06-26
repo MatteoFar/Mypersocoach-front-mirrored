@@ -36,6 +36,7 @@ class Symptome3 extends React.Component {
     this.getThematic();
   }
 
+
   render() {
     const { icon, text_static, problem } = this.state;
     return (
@@ -44,7 +45,7 @@ class Symptome3 extends React.Component {
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes problem={problem} />
+          <Symptomes  problem={problem} />
         ))}
         </div>
         <ForwardAnnex />

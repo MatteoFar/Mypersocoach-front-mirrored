@@ -17,7 +17,7 @@ class Start extends Component {
   }
 
   getHeadingText1 = () => {
-      fetch('http://localhost:3004/text_static/1')
+      fetch('http://localhost:3001/text_static/1')
         .then(res => res.json())
         .then(data => {
           this.setState({ headingText1 : data[0] })
@@ -25,7 +25,7 @@ class Start extends Component {
     }
 
     getHeader = () => {
-      fetch('http://localhost:3004/icon/27')
+      fetch('http://localhost:3001/icon/27')
           .then(res => res.json())
           .then(data => {
               this.setState({ icon : data[0] })
