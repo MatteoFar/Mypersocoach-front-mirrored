@@ -13,35 +13,7 @@
     text-align: center;
     width: 282px;
     
-  }
-  
-  .icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 14px;
-    height: 40vh;
-    margin: auto 50px 30px 50px;
-    margin-top: 5px;
-    text-align: center;
-    grid-gap: 25px;
-  }
-  
-  .image_icon {
-    width: 60px;
-  }
-  
-  .text {
-    text-align: center;
-  }
-  
-  .iconLink{
-    background: none;
-    border: none;
-    color: rgb(150, 159, 170);
-    cursor: pointer;
-  
-  }
-  
+  }  
   .button_source2 {
     background: none;
     border: 1px solid rgb(150, 159, 170);
@@ -55,19 +27,9 @@
     padding: 0px;
     text-align: center;
     width: 150px;
-    
     }
 
-    /* .modal_main {
-      background-color: rgba(55, 115, 184, 0.9);
-      position: absolute;
-      opacity: 20%;
-      z-index: 1;
-      width: 380px;
-      height: 100%;
-    }
-
-    .modal_text {
+    /* .modal_text {
       display: grid;
       grid-auto-columns: 1fr;
       grid-gap: 30px;
@@ -82,11 +44,11 @@
       color: white;
     }
 
-    /* .count {
+     .count {
       margin-top: 25px;
-    } */
+    } 
 
-    /* .pass p {
+    .pass p {
       cursor: pointer;
       color: gold;
       text-decoration: underline;
