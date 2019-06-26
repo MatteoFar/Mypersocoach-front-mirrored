@@ -1,23 +1,16 @@
-import React from "react";
+import React , { Component } from 'react'
+// import './Problem.css';
 
-const headingEnvironments = [
-  {
-    image: require("../Pages/logo_heading2.png")
-  }
-];
-class IconMain extends React.Component {
-  render() {
-    return (
-      <div className="logoTextEnvironment">
-        {headingEnvironments.map(headingEnvironment => (
-          <img
-            className="imageIconEnvironment"
-            alt="icon"
-            src={headingEnvironment.image}
-          />
-        ))}
-      </div>
-    );
-  }
-}
-export default IconMain;
+import "../Component/IconMain.css"
+
+const IconMain = ({ icon }) => {
+  return (
+    <div className="logoTextEnvironment">
+      <img src={icon} />
+    </div>
+  );
+};
+
+
+
+export default IconMain

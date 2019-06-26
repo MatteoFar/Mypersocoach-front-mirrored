@@ -8,7 +8,8 @@ import axios from 'axios';
 
 const titleAnswers = [
     {
-        icon : require("../Pages/logo_perf.png"),
+        icon : '',
+        //require("../Pages/logo_perf.png"),
         titre : "Titre 1 du problème identifié"
     },
 ]

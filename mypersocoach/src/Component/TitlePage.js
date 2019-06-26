@@ -1,28 +1,15 @@
 import React from "react";
+import "./TitlePage.css"
 
-const iconTextEnvironments = [
-  {
-    image: require("../Pages/logo_environment.png"),
-    text: "Mon environnement"
-  }
-];
-class TitlePage extends React.Component {
-  render() {
-    return (
-      <div className="iconTextEnvironment">
-        {iconTextEnvironments.map(iconTextEnvironment => (
-          <>
-            <img
-              href="#"
-              className="iconEnvironment"
-              alt="icon"
-              src={iconTextEnvironment.image}
-            />
-            <p className="textEnvironment">{iconTextEnvironment.text}</p>
-          </>
-        ))}
-      </div>
-    );
-  }
-}
+const TitlePage = ({ problem_origin }) => {
+  return (
+    <div className="iconTextEnvironment">
+      <>
+        <img className="icon_titlePage" src={problem_origin.picture_src} />
+        <p className="text_titlePage">{problem_origin.all_text}</p>
+      </>
+    </div>
+  );
+};
+
 export default TitlePage;

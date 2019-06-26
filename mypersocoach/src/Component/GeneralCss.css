@@ -63,7 +63,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus 
 
 
 /* Formatting texterea */
-textarea{
+/* textarea{
     font-family: 'Montserrat', sans-serif;  
     width: 282px;
     padding: 6px;
@@ -73,11 +73,11 @@ textarea{
     color: #7e7e7e;
     border-radius: 5px;
     box-sizing: border-box; /* To force the size of the input to enter in its parent */
-    border:none;
+    /* border:none; */
     /* border:1px solid #969FAA; */
-    background-color: rgb(245, 245, 245);
-    outline: none;
-}
+    /* background-color: rgb(245, 245, 245); */
+    /* outline: none; */
+/* }  */
 
 /* Formatting the submit button */
 input[type="submit"]{
