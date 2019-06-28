@@ -1,14 +1,22 @@
 .buttonSource2No {
-    background: none rgb(189, 195, 199);
-    border: none;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    font-family: Montserrat;
-    font-size: 14px;
-    height: 45px;
-    margin: 10px auto 0px;
-    text-align: center;
-    width: 282px;
-    
+  font-family: "Montserrat", sans-serif;
+  height: 45px;
+  width: 282px;
+  margin: 10px auto 0px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  background: none rgb(189, 195, 199);  
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  outline: none;
+  }
+
+  .buttonSource2No:hover {
+    background-color: rgb(202,207, 210);
+  }
+
+  .buttonSource2No:active {
+    background-color: rgb(161,166, 169);
   }
