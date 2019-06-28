@@ -11,11 +11,12 @@ import Symptomes from "../Component/Symptomes";
 import ForwardAnnex from "../Component/ForwardAnnex";
 
 class Symptome3 extends React.Component {
+  
   state = {
     icon: [],
     text_static: [],
     problem: [],
-    summaryID : ''
+    id : null
   };
   
   getHeader = async () => {
@@ -36,24 +37,16 @@ class Symptome3 extends React.Component {
  
 
   loadSummaryId = () => {
-    const id = {
-      summaryID: this.state.summaryID
-    };
+    const {id} = this.state
 
-    axios.post(`http://localhost:3001/summary`, {id})
+    axios.post(`http://localhost:3001/summary`, {id: id})
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+        console.log("response axios: ", res);
       })
   }
+  
 
 
-// try {
-//   const response = await axios.post('http://demo0725191.mockable.io/post_data', { posted_data: 'example' });
-//   console.log('👉 Returned data:', response);
-// } catch (e) {
-//   console.log(`😱 Axios request failed: ${e}`);
-// }
   
 
 
