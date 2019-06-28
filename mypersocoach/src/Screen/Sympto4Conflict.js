@@ -6,9 +6,10 @@ import './GeneralContainer.css';
 import IconMain from '../Component/IconMain';
 import HeadingText from '../Component/HeadingText';
 import TitlePageSympto from '../Component/TiltePageSympto';
-import Answer from '../Component/Answer';
-import Validate from '../Component/Validate';
-import BackButton from '../Component/BackButton';
+// import Answer from '../Component/Answer';
+// import Validate from '../Component/Validate';
+// import BackButton from '../Component/BackButton';
+import FormConflict from '../Component/FormConflict.js';
 
 
 // On fait un composant intelligent car il y a des states qui vont récupérer des informations de la base des données
@@ -19,11 +20,11 @@ class Sympto4Conflict extends React.Component {
     state = {
         icon: [],
         text_static: [],
-        problem: [],
-        response: [],
-        text_static2: [],
-        text_static3: [],
-        text_static4: []
+        problem: []
+        // response: [],
+        // text_static2: [],
+        // text_static3: [],
+        // text_static4: []
     };
 
     //"getHeader" est la fonction d'Axios qui permettra d'éxécuter les tâches de recherche d'infos dans la bdd
@@ -46,43 +47,24 @@ class Sympto4Conflict extends React.Component {
         this.setState({problem: res.data[0]});
     };
 
-    getTextarea = async() => {
-        // Vérifier ce qu'il faut mettre en ciblage
-        const res = await axios.get("http://localhost:3001/response")
-        this.setState({response: res.data[0]});
-    }
-
-    getPlaceholder = async() => {
-        const res = await axios.get("http://localhost:3001/text_static/140")
-        this.setState({text_static2: res.data[0]});
-    };
-
-    getValidate = async() => {
-        const res = await axios.get("http://localhost:3001/text_static/116")
-        this.setState({text_static3: res.data[0]});
-    };
-
-    getBack = async() => {
-        const res = await axios.get("http://localhost:3001/text_static/117")
-        this.setState({text_static4: res.data[0]});
-    };
+    
 
     //Dès que le composant est monté (lorsqu'il est retransmit dans le DOM virtuel), il exécute la fonction de chaque Axios
     componentDidMount() {
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();
-        this.getTextarea();
-        this.getPlaceholder();
-        this.getValidate();
-        this.getBack();
+        // this.getTextarea();
+        // this.getPlaceholder();
+        // this.getValidate();
+        // this.getBack();
     }
 
     render() {
         //Augmente la portée des states pour que les composants puissent les récupérer
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
-        const{icon,text_static,problem,response,text_static2,text_static3,text_static4}= this.state
+        const{icon,text_static,problem}= this.state
 
         return (
             <div className="general_container">
@@ -91,16 +73,11 @@ class Sympto4Conflict extends React.Component {
                 <IconMain icon={icon.picture_src} />
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
-                
-                {/* Mettre l'url cible dans "action" */}
-                {/* <form method="post" action="#"> */}
-                    <Answer response={response} text_static2={text_static2}/>
-                    <Validate text_static3={text_static3.all_text}/>
-                    <BackButton text_static4={text_static4.all_text}/>
-                {/* </form> */}
+                {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
+                <FormConflict />
 
             </div>
-            // .response_summary
+            
         );
     }
 }
