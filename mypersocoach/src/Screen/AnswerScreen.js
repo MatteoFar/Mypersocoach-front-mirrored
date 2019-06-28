@@ -6,7 +6,6 @@ const AnswerScreen = () => {
         <div className="App">
             <AnswerForm/>
         </div>
-
     );
 }
 

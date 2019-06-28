@@ -2,7 +2,7 @@ import React from 'react';
 
 const headingAnswers = [
     {
-        icon : ""/*require("../Pages/icon_heading.png")*/,
+        icon : '',
         text : "Exprime le besoin auquel tu fais face ou la situation à faire évoluer"
     },
 

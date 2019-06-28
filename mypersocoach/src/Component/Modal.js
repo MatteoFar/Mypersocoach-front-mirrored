@@ -1,41 +1,70 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import './Problem.css';
 import ModalGoal from "./ModalGoal";
 
-class Modal extends React.Component {
 
-    state = { 
-        show: false ,
-       };
+
+
+const nl2br = require('react-nl2br');
+
+
+const Modal = ({id, text1, text2, icon})  =>{
+
+  const node = useRef();
+
+  const [open, setOpen] = useState(false);
+
  
-    showModal = () => {
-      this.setState({ show: true });
-    };
   
-    hideModal = () => {
-      this.setState({ show: false });
-    };
+  const handleClick = e => {
+    if (node.current.contains(e.target)) {
+      // inside click
+      return;
+    }
+    // outside click
+    setOpen(false);
+  };
+  
 
-render(){
+  const handleChange = () => {
+    setOpen(false);
+  };
+
+  
+
+  useEffect(() => {
+    // add when mounted
+    document.addEventListener("mousedown", handleClick);
+  // return function to be called when unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
 
 
 return(
 
- <div>
-     <div className="modal_container">
-        <div className="display-modal">
-        <img className="image_icon" onClick={this.showModal} alt="icon" src={this.props.icon} />
- 
-        <p className="text">{this.props.text}</p>
- 
-        <ModalGoal text_modal={this.props.text_modal} src={this.props.icon} show={this.state.show} handleClose={this.hideModal} />
-    </div>
- </div>
- 
+ <div className="displayModalCentered">
+     
+     <div className="image_icon" ref={node}  onClick={e => setOpen(!open)}>
+        
+        <div >
+        
+        
+        <img  onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} />
+       
+        
+       
+        {open && (<ModalGoal id={id} text2={nl2br(text2)} src={icon} show={setOpen} />)}
+     
+        </div>
+       
+      </div>      
+ <div ><p >{text1}</p></div>
 </div>
 
 )
 }
-}
+
 
 export default Modal;

@@ -2,12 +2,11 @@
   color: rgb(150, 159, 170);
   display: grid;
   margin: auto;
-  width: 461px;
-
-
+  width: 380px;
+  /* border: 1px solid black; */
 }
 
-/* .logoTextEnvironment {
+/* .logo {
   font-size: 14px;
   margin-top: 30px;
   text-align: center;
@@ -61,7 +60,7 @@
   margin: 61px auto 0px;
   text-align: center;
   width: 282px;
-  
+
 } */
 
 /* .buttonSource2No {
@@ -76,13 +75,13 @@
   margin: 10px auto 0px;
   text-align: center;
   width: 282px;
-  
+
 } */
 
 /* @media screen and (max-width:768px){
   .containerSource2Environment{
     width: 461px;
-  
+
   }
 }
 @media screen and (max-width:576px) {
