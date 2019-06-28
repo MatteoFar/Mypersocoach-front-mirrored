@@ -70,7 +70,9 @@ class Sympto4Orga extends React.Component {
           })
       }
 
+
     componentDidMount() {
+
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();

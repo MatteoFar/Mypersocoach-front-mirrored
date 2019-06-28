@@ -9,7 +9,7 @@ class ModalGoal extends Component {
  
  
 handleClick = () => {
-    if (this.props.id == 1) {
+    if (this.props.id === 1) {
     this.props.history.push("/symptome3");}
     else { this.props.history.push("/o-objectif1")}
     }

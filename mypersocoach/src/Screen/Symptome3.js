@@ -16,7 +16,7 @@ class Symptome3 extends React.Component {
     icon: [],
     text_static: [],
     problem: [],
-    id : null,
+    id : undefined
   };
   
   getHeader = async () => {
@@ -36,31 +36,18 @@ class Symptome3 extends React.Component {
     this.setState({ problem: res.data });
   };
   
- 
+
 
   loadSummaryId = () => {
     const {id} = this.state
-
-    axios.post(`http://localhost:3001/summary`, {id: id})
+     axios.post(`http://localhost:3001/summary`, {id: id})
       .then(res => {
         console.log("response axios: ", res);
       })
+    
   }
   
-
-
-  // loadMainThemeId = () => {
-    
-  //   const id = this.props.mainThemeId
-
-  //   axios.post(`http://localhost:3001/problem`, {main_theme_id: id})
-  //     .then(res => {
-  //       console.log("response axios: ", res);
-  //     })
-  // }
   
-
-
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
