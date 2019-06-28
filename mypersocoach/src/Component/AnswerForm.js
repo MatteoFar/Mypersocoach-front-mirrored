@@ -7,17 +7,17 @@ const titleAnswers = [
     {
         icon : '',
         //require("../Pages/logo_perf.png"),
-        titre : "Titre 1 du problème identifié"
+        titre : "Titre 1 du problème identifié test"
     },
 ]
 
 const textAnswers = {
-    text : "Vous pouvez écrire ici",
+    text : "Vous pouvez écrire ici et c'est un test",
     text_valid : "Valider",
     text_return : "Retour"
 }
 
-class Answer extends React.Component {
+class AnswerForm extends React.Component {
     render() {
 
         return (
@@ -65,4 +65,4 @@ class Answer extends React.Component {
     }
 }
 
-export default Answer;
+export default AnswerForm;
