@@ -1,15 +1,20 @@
+.answer_container {
+    margin-top: 18px;
+    /* border: 1px solid black; */
+    text-align: center;
+  } 
+
 textarea{
     font-family: 'Montserrat', sans-serif;  
-    width: 282px;
-    padding: 6px;
-    margin-bottom:10px;
     height: 190px;
-    font-size: 14px;
-    color: #7e7e7e;
-    border-radius: 5px;
-    box-sizing: border-box; /* To force the size of the input to enter in its parent */
+    width: 282px;
     border:none;
+    border-radius: 5px;
     /* border:1px solid #969FAA; */
+    padding: 6px;
+    box-sizing: border-box; /* To force the size of the input to enter in its parent */
+    font-size: 14px;
     background-color: rgb(245, 245, 245);
+    color: #7e7e7e;
     outline: none;
 }
