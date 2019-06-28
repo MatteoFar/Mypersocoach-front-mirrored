@@ -1,15 +1,28 @@
+.forward_step_container {
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
 .buttonForward_Step {
-    background: none rgb(255, 189, 74);
-    border: none;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    font-family: Montserrat;
-    font-size: 14px;
-    height: 45px;
-    margin: 0px auto;
-    text-align: center;
-    width: 282px;
-    margin-bottom: 10px;
-    
+  font-family: "Montserrat", sans-serif;  
+  height: 45px;
+  width: 282px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  background: none rgb(255, 189, 74);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  outline: none;
   }
+
+.buttonForward_Step:hover {
+  background-color: rgb(72, 201, 176);
+}
+
+.buttonForward_Step:active {
+  background-color: rgb(22, 160, 133);
+}
