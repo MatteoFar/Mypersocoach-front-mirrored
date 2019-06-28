@@ -6,7 +6,7 @@ import "./Source2.css"
 
 const headingIcons3 = [
   {
-    image: require("../Pages/logo_heading2.png")
+    image: ""/*require("../Pages/logo_heading2.png")*/
   }
 ];
 const headingTexts3 = [
@@ -16,19 +16,19 @@ const headingTexts3 = [
 ];
 const iconProblems3 = [
   {
-    icon: require(`../Pages/logo_environment.png`),
+    icon: ""/*require(`../Pages/logo_environment.png`)*/,
     text: `Mon environnement`
   },
   {
-    icon: require(`../Pages/logo_behavior.png`),
+    icon: ""/*require(`../Pages/logo_behavior.png`)*/,
     text: `Mon comportement`
   },
   {
-    icon: require(`../Pages/logo_capacity.png`),
+    icon: ""/*require(`../Pages/logo_capacity.png`)*/,
     text: `Mes capacités`
   },
   {
-    icon: require(`../Pages/logo_conviction.png`),
+    icon: ""/*require(`../Pages/logo_conviction.png`)*/,
     text: `Mes croyances et valeurs`
   }
   
