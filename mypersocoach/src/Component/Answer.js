@@ -1,19 +1,17 @@
 import React from "react";
 import "./Answer.css"
 
-class Answer extends React.Component {
-  state = {
-    answer : [],
-  }
 
-  
-  render() {
+const Answer = ({ response,text_static2,text_static }) => {
   return (
-    <div className="logoTextEnvironment">
-      <textarea placeholder="Commence à écrire"></textarea>
+    <div className="answer_container">
+      <>
+        <textarea name="textarea" maxlength="300" placeholder={text_static2.all_text}>
+          {response}
+        </textarea>
+      </>
     </div>
   );
 };
-}
 
 export default Answer;

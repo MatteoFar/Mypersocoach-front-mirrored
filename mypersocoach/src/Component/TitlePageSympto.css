@@ -1,0 +1,24 @@
+.iconTextSympto {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 282px;
+    margin: auto;
+    /* border: 1px solid black; */
+    font-size: 14px;
+    /* text-align: center; */
+  }
+
+.iconTextSympto img {
+    height: 30px;
+    width: 30px;
+    padding-right: 10px
+  }
+
+.h1{
+    font-size: 13px;
+    color: rgb(150,159,170);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+  }
+  

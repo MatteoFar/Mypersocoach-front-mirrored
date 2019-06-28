@@ -9,14 +9,11 @@ const HeadingText = ({text_static}) => {
 
   return (
 
-<div>
-        <div className="Source2_heading_text">
-        <p>{nl2br(text_static)}</p>
-        </div>
- </div>
-)
+    <div className="heading_text_container">
+      <p>{nl2br(text_static)}</p>
+    </div>
+    
+    )
 }
-
-
 
 export default HeadingText;

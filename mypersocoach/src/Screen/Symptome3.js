@@ -29,7 +29,9 @@ class Symptome3 extends React.Component {
   };
 
   getThematic = async () => {
+    //Ici, on cible toutes les icônes (il y a map), donc on ne précise pas d'id précis
     const res = await axios.get("http://localhost:3001/problem/");
+    //Comme on ne précise pas d'id précis, on ne met pas de [0] à la suite de "res.data"
     this.setState({ problem: res.data });
   };
   
