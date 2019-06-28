@@ -7,11 +7,11 @@ class Symptomes extends Component {
   
   handleClick = () => {
     if (this.props.problem.id === 1) {
-    this.props.history.push("/symptome4_conflit");}
-    else if (this.props.problem.id === 2) { this.props.history.push("/symptome4_performance")}
-    else if (this.props.problem.id === 3) { this.props.history.push("/symptome4_organisation")}
-    else if (this.props.problem.id === 4) { this.props.history.push("/symptome4_communication")}
-    else if (this.props.problem.id === 5) { this.props.history.push("/symptome4_temps")}
+    this.props.history.push("/symptome4_conflict");}
+    else if (this.props.problem.id === 2) { this.props.history.push("/symptome4_perf")}
+    else if (this.props.problem.id === 3) { this.props.history.push("/symptome4_orga")}
+    else if (this.props.problem.id === 4) { this.props.history.push("/symptome4_com")}
+    else if (this.props.problem.id === 5) { this.props.history.push("/symptome4_time")}
     else if (this.props.problem.id === 6) { this.props.history.push("/symptome4_stress")}
   }
 

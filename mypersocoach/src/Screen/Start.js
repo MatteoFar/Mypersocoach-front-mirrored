@@ -7,7 +7,6 @@ import '../Component/Problem.css'
 
 
 
-
 class Start extends Component {
   
   state = {
