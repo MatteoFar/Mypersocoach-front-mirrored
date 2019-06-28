@@ -16,7 +16,7 @@ class Symptome3 extends React.Component {
     icon: [],
     text_static: [],
     problem: [],
-    id : null
+    id : null,
   };
   
   getHeader = async () => {
@@ -49,6 +49,15 @@ class Symptome3 extends React.Component {
   
 
 
+  // loadMainThemeId = () => {
+    
+  //   const id = this.props.mainThemeId
+
+  //   axios.post(`http://localhost:3001/problem`, {main_theme_id: id})
+  //     .then(res => {
+  //       console.log("response axios: ", res);
+  //     })
+  // }
   
 
 
@@ -67,7 +76,7 @@ class Symptome3 extends React.Component {
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes  summaryId={this.state.summaryID} problem={problem} />
+          <Symptomes  mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
         ))}
 
         </div>

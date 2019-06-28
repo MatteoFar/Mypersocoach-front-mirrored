@@ -15,6 +15,8 @@ class Symptomes extends Component {
     else if (this.props.problem.id === 6) { this.props.history.push("/symptome4_stress")}
   }
 
+  
+
   render(){
   return (
     <div className="iconsSymptom3">
