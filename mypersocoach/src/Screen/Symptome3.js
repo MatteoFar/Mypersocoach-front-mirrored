@@ -14,8 +14,10 @@ class Symptome3 extends React.Component {
   state = {
     icon: [],
     text_static: [],
-    problem: []
+    problem: [],
+    summaryID : ''
   };
+  
   getHeader = async () => {
     const res = await axios.get("http://localhost:3001/icon/27");
     this.setState({ icon: res.data[0] });
@@ -32,10 +34,36 @@ class Symptome3 extends React.Component {
     //Comme on ne précise pas d'id précis, on ne met pas de [0] à la suite de "res.data"
     this.setState({ problem: res.data });
   };
+  
+ 
+
+  loadSummaryId = () => {
+    const id = {
+      summaryID: this.state.summaryID
+    };
+
+    axios.post(`http://localhost:3001/summary`, {id})
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
+
+
+// try {
+//   const response = await axios.post('http://demo0725191.mockable.io/post_data', { posted_data: 'example' });
+//   console.log('👉 Returned data:', response);
+// } catch (e) {
+//   console.log(`😱 Axios request failed: ${e}`);
+// }
+  
+
+
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
     this.getThematic();
+    this.loadSummaryId()
   }
 
   render() {
@@ -46,8 +74,9 @@ class Symptome3 extends React.Component {
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes problem={problem} />
+          <Symptomes  summaryId={this.state.summaryID} problem={problem} />
         ))}
+
         </div>
         <ForwardAnnex />
       </div>
