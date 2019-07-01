@@ -7,7 +7,7 @@ import BackButton from './BackButton';
 
 import '../Screen/GeneralContainer.css';
 
-class FormConflict extends React.Component {
+class Form extends React.Component {
 
     state = {
         response: [],

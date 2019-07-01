@@ -23,7 +23,8 @@ class Sympto4Time extends React.Component {
         response: [],
         text_static2: [],
         text_static3: [],
-        text_static4: []
+        text_static4: [],
+        problem_id: 5
     };
 
     //"getHeader" est la fonction d'Axios qui permettra d'éxécuter les tâches de recherche d'infos dans la bdd
@@ -67,6 +68,17 @@ class Sympto4Time extends React.Component {
         this.setState({text_static4: res.data[0]});
     };
 
+
+    getIdProblem = () => {
+        const {problem_id} = this.state
+        const id= this.props.location.state.lastId
+        axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
+          .then(res => {
+            console.log("response axios: ", res);
+          })
+      }
+
+
     //Dès que le composant est monté (lorsqu'il est retransmit dans le DOM virtuel), il exécute la fonction de chaque Axios
     componentDidMount() {
         this.getHeader();
@@ -76,6 +88,7 @@ class Sympto4Time extends React.Component {
         this.getPlaceholder();
         this.getValidate();
         this.getBack();
+        this.getIdProblem()
     }
 
     render() {
