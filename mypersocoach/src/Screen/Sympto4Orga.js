@@ -63,8 +63,8 @@ class Sympto4Orga extends React.Component {
      
     getIdProblem = () => {
         const {problem_id} = this.state
-    
-        axios.post(`http://localhost:3001/summary`, {problem_id: problem_id})
+        const id= this.props.location.state.lastId
+        axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
           .then(res => {
             console.log("response axios: orga", res);
           })

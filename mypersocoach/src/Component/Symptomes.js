@@ -17,15 +17,40 @@ class Symptomes extends Component {
         });
     }
    
-      else if (this.props.problem.id === 2) { this.props.history.push("/symptome4_perf")}
+      else if (this.props.problem.id === 2) { 
+        this.props.history.push({
+        pathname: "/symptome4_perf",
+        state: {lastId: this.props.lastId}
+      });
+    }
+
+      else if (this.props.problem.id === 3) { 
+        this.props.history.push({
+        pathname: "/symptome4_orga",
+        state: {lastId: this.props.lastId}
+      });
+    }  
+        
+      else if (this.props.problem.id === 4) { 
+        this.props.history.push({
+        pathname: "/symptome4_com",
+        state: {lastId: this.props.lastId}
+      });
+    }  
    
-      else if (this.props.problem.id === 3) { this.props.history.push("/symptome4_orga")}
+      else if (this.props.problem.id === 5) { 
+        this.props.history.push({
+        pathname: "/symptome4_time",
+        state: {lastId: this.props.lastId}
+      });
+    }  
     
-      else if (this.props.problem.id === 4) { this.props.history.push("/symptome4_com")}
-   
-      else if (this.props.problem.id === 5) { this.props.history.push("/symptome4_time")}
-    
-      else if (this.props.problem.id === 6) { this.props.history.push("/symptome4_stress")}
+      else if (this.props.problem.id === 6) { 
+        this.props.history.push({
+        pathname: "/symptome4_stress",
+        state: {lastId: this.props.lastId}
+      });
+    }  
   }
 
   
