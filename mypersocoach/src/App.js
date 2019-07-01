@@ -10,6 +10,7 @@ import Symptome5 from "./Screen/Symptome5";
 import Symptome3 from "./Screen/Symptome3";
 import Source2 from "./Screen/Source2";
 import Source2environment from "./Screen/Source2environment";
+import Source3environment from "./Screen/Source3_environment"
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class App extends React.Component {
             <Route exact path="/Source2environment" component={Source2environment} />
             <Route exact path="/Symptome5" component={Symptome5} />
             <Route exact path="/symptome2" component={Symptome2} />
+            <Route exact path="/source3_environment" component={Source3environment} />
           </Switch>
         </BrowserRouter>
       </div>
