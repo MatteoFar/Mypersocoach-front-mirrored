@@ -2,29 +2,55 @@ import React from 'react';
 import BackgroundAnswer from './BackgroundAnswer';
 import '../Component/GeneralCss.css';
 import '../Component/AnswerForm.css';
+import axios from 'axios';
+
+
 
 const titleAnswers = [
     {
-        icon : require("../Pages/logo_perf.png"),
-        titre : "Titre 1 du problème identifié"
+        icon : '',
+        //require("../Pages/logo_perf.png"),
+        titre : "Titre 1 du problème identifié test"
     },
 ]
 
 const textAnswers = {
-    text : "Vous pouvez écrire ici",
+    text : "Vous pouvez écrire ici et c'est un test",
     text_valid : "Valider",
     text_return : "Retour"
 }
 
 class Answer extends React.Component {
+
+
+state = {
+    textarea: '',
+}
+
+onChange = (e) => {
+    this.setState({[e.target.name]: e.target.value });
+}
+
+
+
+onSubmit = (e) => {
+    e.preventDefault();
+    const {textarea} = this.state;
+    console.log((textarea))
+    axios.post('http://localhost:3001/response', {textarea: textarea , response_summary: 1, summary_id: 1, problem_id: 1, problem_origin_id : 1})
+    .then((res => console.log("response axios: ", res)))
+    
+}
+
+
+
     render() {
 
+        const {textarea} = this.state;
         return (
             <div id="grid_answer">
                 <BackgroundAnswer/>
-
                 <section>
-
                     {/* Title */}
                     <div>
                         {titleAnswers.map(titleAnswer => (
@@ -35,24 +61,18 @@ class Answer extends React.Component {
                             )
                         )}
                     </div>
-                    
-
-                    <form method="post" action="#">
+                    <form onSubmit={this.onSubmit} method="post" action="#">
                         <div id="form">
-
                             <div>
-                                <textarea name="textarea" maxlength="300" placeholder={textAnswers.text}></textarea>
+                                <textarea name="textarea" value={textarea} maxlength="300" placeholder={textAnswers.text} onChange={this.onChange}></textarea>
                                 {/* rows="5" cols="30" */}
-                            </div>
-                            
+                            </div> 
                             <div>
-                                <input className="btn_forward" type="submit" name="login" value={textAnswers.text_valid} />
-                            </div>
-                            
+                                <input className="btn_forward" type="submit" name="login" value={textAnswers.text_valid}/>
+                            </div> 
                             <div>
-                                <input className="btn_back" type="button" name="texte" value={textAnswers.text_return} />
+                                <input className="btn_back" type="button" name="texte" value={textAnswers.text_return}/>
                             </div>
-
                         </div>
                     </form>
                 </section>
@@ -64,4 +84,4 @@ class Answer extends React.Component {
     }
 }
 
-export default Answer;
+export default AnswerForm;

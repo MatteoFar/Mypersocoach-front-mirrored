@@ -7,9 +7,9 @@
     font-family: Lato;
     font-size: 14px;
     height: 45px;
-    margin: 31px 50px;
+    justify-content: center;
+    margin: 31px auto;
     padding: 0px;
-    text-align: center;
     width: 282px;
   
   }

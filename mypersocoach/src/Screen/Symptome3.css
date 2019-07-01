@@ -1,16 +1,20 @@
 .containerSymptom3 {
   color: rgb(150, 159, 170);
-  width: 380px;
-  margin: auto;  
+  max-width: 380px;
+  margin: auto; 
+  display: grid;
+  grid-template-columns: 1fr;
+
 }
 .flex{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
 
 
 }
 
-/* .logoTextEnvironment {
+/* .logo {
   font-size: 14px;
   margin-top: 30px;
   text-align: center;
