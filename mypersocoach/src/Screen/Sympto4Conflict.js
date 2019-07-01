@@ -10,6 +10,7 @@ import TitlePageSympto from '../Component/TiltePageSympto';
 // import Validate from '../Component/Validate';
 // import BackButton from '../Component/BackButton';
 import FormConflict from '../Component/FormConflict.js';
+import { async } from 'q';
 
 
 // On fait un composant intelligent car il y a des states qui vont récupérer des informations de la base des données
@@ -20,11 +21,12 @@ class Sympto4Conflict extends React.Component {
     state = {
         icon: [],
         text_static: [],
-        problem: []
-        // response: [],
-        // text_static2: [],
-        // text_static3: [],
-        // text_static4: []
+        problem: [],
+        response: [],
+        text_static2: [],
+        text_static3: [],
+        text_static4: [],
+        problem_id: 1
     };
 
     //"getHeader" est la fonction d'Axios qui permettra d'éxécuter les tâches de recherche d'infos dans la bdd
@@ -48,16 +50,27 @@ class Sympto4Conflict extends React.Component {
     };
 
     
+    getIdProblem = () => {
+        const {problem_id} = this.state
+        const id= this.props.location.state.lastId
+        console.log('pouet pouet', id)
+        axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
+          .then(res => {
+            console.log("response axios: conflict ", res);
+          })
+      }
 
+    
     //Dès que le composant est monté (lorsqu'il est retransmit dans le DOM virtuel), il exécute la fonction de chaque Axios
     componentDidMount() {
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();
-        // this.getTextarea();
-        // this.getPlaceholder();
-        // this.getValidate();
-        // this.getBack();
+        //this.getTextarea();
+        //this.getPlaceholder();
+        //this.getValidate();
+       //this.getBack();
+        this.getIdProblem()
     }
 
     render() {
@@ -65,6 +78,8 @@ class Sympto4Conflict extends React.Component {
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         const{icon,text_static,problem}= this.state
+        console.log('coucou cest nous', this.props.location.state.lastId);
+        
 
         return (
             <div className="general_container">
