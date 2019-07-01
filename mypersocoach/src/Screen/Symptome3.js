@@ -16,7 +16,8 @@ class Symptome3 extends React.Component {
     icon: [],
     text_static: [],
     problem: [],
-    id : undefined
+    id : null,
+    lastId: ""
   };
   
   getHeader = async () => {
@@ -42,10 +43,12 @@ class Symptome3 extends React.Component {
     const {id} = this.state
      axios.post(`http://localhost:3001/summary`, {id: id})
       .then(res => {
-        console.log("response axios: ", res);
+        console.log("response axios: symp3", res);
+        const lastId = res.data.summaryId
+        this.setState({ lastId : lastId})
+        console.log('pouic pouic', this.state.lastId)
       })
-    
-  }
+   }
   
   
   componentDidMount() {
@@ -56,14 +59,16 @@ class Symptome3 extends React.Component {
   }
 
   render() {
-    const { icon, text_static, problem } = this.state;
+    const { icon, text_static, problem, lastId } = this.state;
+    console.log("oui oui oui",this.state.lastId)
+    
     return (
       <div className="containerSymptom3">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes  mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
+          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
         ))}
 
         </div>

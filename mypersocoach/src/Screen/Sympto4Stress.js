@@ -66,7 +66,7 @@ class Sympto4Stress extends React.Component {
     
         axios.post(`http://localhost:3001/summary`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: ", res);
+            console.log("response axios: stress", res);
           })
       }
 

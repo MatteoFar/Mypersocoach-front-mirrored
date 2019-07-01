@@ -73,10 +73,9 @@ class Sympto4Com extends React.Component {
     
         axios.post(`http://localhost:3001/summary`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: ", res);
+            console.log("response axios: commmmm", res);
           })
       }
-
 
 
     //Dès que le composant est monté (lorsqu'il est retransmit dans le DOM virtuel), il exécute la fonction de chaque Axios

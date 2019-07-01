@@ -10,6 +10,7 @@ import TitlePageSympto from '../Component/TiltePageSympto';
 // import Validate from '../Component/Validate';
 // import BackButton from '../Component/BackButton';
 import FormConflict from '../Component/FormConflict.js';
+import { async } from 'q';
 
 
 // On fait un composant intelligent car il y a des states qui vont récupérer des informations de la base des données
@@ -49,15 +50,13 @@ class Sympto4Conflict extends React.Component {
     };
 
     
-
-    
     getIdProblem = () => {
         const {problem_id} = this.state
-        const id= this.props.summaryID
-        
-        axios.put(`http://localhost:3001/summary/:${id}`, {problem_id: problem_id})
+        const id= this.props.location.state.lastId
+        console.log('pouet pouet', id)
+        axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: ", res);
+            console.log("response axios: conflict ", res);
           })
       }
 
@@ -67,10 +66,10 @@ class Sympto4Conflict extends React.Component {
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();
-        this.getTextarea();
-        this.getPlaceholder();
-        this.getValidate();
-        this.getBack();
+        //this.getTextarea();
+        //this.getPlaceholder();
+        //this.getValidate();
+       //this.getBack();
         this.getIdProblem()
     }
 
@@ -79,6 +78,8 @@ class Sympto4Conflict extends React.Component {
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         const{icon,text_static,problem}= this.state
+        console.log('coucou cest nous', this.props.location.state.lastId);
+        
 
         return (
             <div className="general_container">

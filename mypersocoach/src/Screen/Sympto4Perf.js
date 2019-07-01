@@ -61,15 +61,18 @@ class Sympto4Perf extends React.Component {
     };
 
 
-    getIdProblem = () => {
+
+
+    getIdProblem = async() => {
         const {problem_id} = this.state
     
         axios.post(`http://localhost:3001/summary`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: ", res);
+            console.log("response axios: perf ", res);
           })
       }
 
+    
 
     componentDidMount() {
         this.getHeader();
@@ -89,6 +92,7 @@ class Sympto4Perf extends React.Component {
 
 
     render() {
+        
         const{icon,text_static,problem,response,text_static2,text_static3,text_static4}= this.state
 
         return (
