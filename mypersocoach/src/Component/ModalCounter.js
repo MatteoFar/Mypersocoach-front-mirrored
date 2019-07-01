@@ -7,7 +7,7 @@ import "./MondalCounter.css";
 
 class ModalCounter extends React.Component {
   state = {
-    count: 9000,
+    count: 30,
     modal : true
   }
 
@@ -28,7 +28,7 @@ class ModalCounter extends React.Component {
   }
 
   format(time) {
-    let seconds = time % 9001;
+    let seconds = time % 31;
     return seconds;
   }
 
@@ -43,7 +43,7 @@ class ModalCounter extends React.Component {
 
 
   render() {
-    const name = { name : this.props.text_static1}
+    const name = { name : this.props.text_static1, name1: this.props.text_static3}
     // console.log(name)
     const {count} = this.state;
     const modal = this.state.modal ? 'modal_main' : 'modaloff' ;
@@ -59,7 +59,7 @@ class ModalCounter extends React.Component {
           {this.format(count)}
           </div>
           <div className="pass" onClick= {this.Showmodal}>
-            <p>Passer ></p>
+            <p>{this.props.text_static3}</p>
           </div>
         </div>
       </div>

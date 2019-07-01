@@ -15,6 +15,7 @@ class Source2 extends React.Component {
     text_static: [],
     problem_origin: [],
     text_static1: [],
+    text_static3: [],
   };
 
   getHeader = async () => {
@@ -50,6 +51,14 @@ class Source2 extends React.Component {
       // });
       console.log(res)
   };
+  getTextStatic3 = async () => {
+    const res= await axios.get("http://localhost:3001/text_static/56")
+    this.setState({ text_static3: res.data[0] })
+      // .then(data => {
+      //   this.setState({ text_static: data[0] });
+      // });
+      console.log(res)
+  };
 
 
 
@@ -58,13 +67,14 @@ class Source2 extends React.Component {
     this.getHeader();
     this.getOriginProblem();
     this.getTextStatic2();
+    this.getTextStatic3();
   }
 
   render() {
-    const {icon, text_static, problem_origin,text_static1}=this.state
+    const {icon, text_static, problem_origin,text_static1,text_static3}=this.state
   return (
     <div className="containersource2">
-     <ModalCounter text_static1={text_static1.all_text}/>
+     <ModalCounter text_static1={text_static1.all_text} text_static3={text_static3.all_text}/>
      <IconMain icon={icon.picture_src}/>
      <HeadingText text_static={text_static.all_text}/>
      <div className="icons">
