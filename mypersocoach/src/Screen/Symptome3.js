@@ -11,11 +11,13 @@ import Symptomes from "../Component/Symptomes";
 import ForwardAnnex from "../Component/ForwardAnnex";
 
 class Symptome3 extends React.Component {
+  
   state = {
     icon: [],
     text_static: [],
     problem: [],
-    summaryID : ''
+    id : null,
+    lastId: ""
   };
   
   getHeader = async () => {
@@ -35,30 +37,20 @@ class Symptome3 extends React.Component {
     this.setState({ problem: res.data });
   };
   
- 
+
 
   loadSummaryId = () => {
-    const id = {
-      summaryID: this.state.summaryID
-    };
-
-    axios.post(`http://localhost:3001/summary`, {id})
+    const {id} = this.state
+     axios.post(`http://localhost:3001/summary`, {id: id})
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+        console.log("response axios: symp3", res);
+        const lastId = res.data.summaryId
+        this.setState({ lastId : lastId})
+        console.log('pouic pouic', this.state.lastId)
       })
-  }
-
-
-// try {
-//   const response = await axios.post('http://demo0725191.mockable.io/post_data', { posted_data: 'example' });
-//   console.log('👉 Returned data:', response);
-// } catch (e) {
-//   console.log(`😱 Axios request failed: ${e}`);
-// }
+   }
   
-
-
+  
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
@@ -67,14 +59,16 @@ class Symptome3 extends React.Component {
   }
 
   render() {
-    const { icon, text_static, problem } = this.state;
+    const { icon, text_static, problem, lastId } = this.state;
+    console.log("oui oui oui",this.state.lastId)
+    
     return (
       <div className="containerSymptom3">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes  summaryId={this.state.summaryID} problem={problem} />
+          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
         ))}
 
         </div>
