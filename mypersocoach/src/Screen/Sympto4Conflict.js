@@ -6,11 +6,7 @@ import './GeneralContainer.css';
 import IconMain from '../Component/IconMain';
 import HeadingText from '../Component/HeadingText';
 import TitlePageSympto from '../Component/TiltePageSympto';
-// import Answer from '../Component/Answer';
-// import Validate from '../Component/Validate';
-// import BackButton from '../Component/BackButton';
-import FormConflict from '../Component/FormConflict.js';
-import { async } from 'q';
+import Form from '../Component/Form';
 
 
 // On fait un composant intelligent car il y a des states qui vont récupérer des informations de la base des données
@@ -50,7 +46,6 @@ class Sympto4Conflict extends React.Component {
         this.setState({problem: res.data[0]});
     };
 
-    
     getIdProblem = () => {
         const {problem_id} = this.state
         const id= this.props.location.state.lastId
@@ -69,10 +64,6 @@ class Sympto4Conflict extends React.Component {
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();
-        //this.getTextarea();
-        //this.getPlaceholder();
-        //this.getValidate();
-       //this.getBack();
         this.getIdProblem()
     }
 
@@ -85,7 +76,7 @@ class Sympto4Conflict extends React.Component {
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         const{icon,text_static,problem}= this.state
-        console.log('coucou cest nous', this.props.location.state.lastId);
+        // console.log('coucou cest nous', this.props.location.state.lastId);
         
 
         return (
@@ -96,7 +87,8 @@ class Sympto4Conflict extends React.Component {
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
                 {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
-                <FormConflict summaryId={this.props.location.state.lastId}/>
+                <Form summaryId={this.props.location.state.lastId}/>
+                
 
             </div>
             

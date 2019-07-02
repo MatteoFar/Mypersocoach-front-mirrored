@@ -19,10 +19,11 @@ class Answer extends React.Component  {
   render() {
   
     return (
-    <div onSubmit={this.onSubmit} className="answer_container">
+      <div className="answer_container">
       <>
-        <textarea name="textarea" maxlength="300" placeholder={this.props.text_static2.all_text} onchange={this.props.controlFunct} value={this.props.content}>
-          {this.props.response}
+        <textarea id="textarea" name="textarea" maxlength="300" placeholder={this.props.text_static2.all_text}>
+        {this.props.response}
+
         </textarea>
       </>
     </div>
