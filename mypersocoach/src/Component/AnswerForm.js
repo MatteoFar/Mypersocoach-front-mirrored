@@ -27,20 +27,7 @@ state = {
     textarea: '',
 }
 
-onChange = (e) => {
-    this.setState({[e.target.name]: e.target.value });
-}
 
-
-
-onSubmit = (e) => {
-    e.preventDefault();
-    const {textarea} = this.state;
-    console.log((textarea))
-    axios.post('http://localhost:3001/response', {textarea: textarea , response_summary: 1, summary_id: 1, problem_id: 1, problem_origin_id : 1})
-    .then((res => console.log("response axios: ", res)))
-    
-}
 
 
 

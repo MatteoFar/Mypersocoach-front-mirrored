@@ -27,6 +27,7 @@ class Sympto4Conflict extends React.Component {
         text_static3: [],
         text_static4: [],
         problem_id: 1
+       
     };
 
     //"getHeader" est la fonction d'Axios qui permettra d'éxécuter les tâches de recherche d'infos dans la bdd
@@ -60,7 +61,9 @@ class Sympto4Conflict extends React.Component {
           })
       }
 
-    
+
+
+
     //Dès que le composant est monté (lorsqu'il est retransmit dans le DOM virtuel), il exécute la fonction de chaque Axios
     componentDidMount() {
         this.getHeader();
@@ -74,6 +77,10 @@ class Sympto4Conflict extends React.Component {
     }
 
     render() {
+        
+       
+        
+        
         //Augmente la portée des states pour que les composants puissent les récupérer
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
@@ -82,7 +89,6 @@ class Sympto4Conflict extends React.Component {
         
 
         return (
-<<<<<<< HEAD
             <div className="general_container">
                 {/* Appel du composant. Le 1er "icon" correspond au state */}
                 {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
@@ -93,21 +99,6 @@ class Sympto4Conflict extends React.Component {
                 <FormConflict summaryId={this.props.location.state.lastId}/>
 
             </div>
-=======
-            
-            
-              <div className="general_container">
-              {/* Appel du composant. Le 1er "icon" correspond au state */}
-              {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
-              <IconMain icon={icon.picture_src} />
-              <HeadingText text_static={text_static.all_text} />
-              <TitlePageSympto problem={problem} />
-              {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
-              <FormConflict />
-          </div>  
-            
-            
->>>>>>> dev
             
         );
     }

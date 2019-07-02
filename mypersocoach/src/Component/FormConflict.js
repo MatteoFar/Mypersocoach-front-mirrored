@@ -13,8 +13,10 @@ class FormConflict extends React.Component {
         response: [],
         text_static2: [],
         text_static3: [],
-        text_static4: []
+        text_static4: [],
+        textarea:''
     }
+
 
     getTextarea = async() => {
         // Vérifier ce qu'il faut mettre en ciblage
@@ -38,22 +40,42 @@ class FormConflict extends React.Component {
         this.setState({text_static4: res.data[0]});
     };
 
+    
+    
+    
+    HandleChangeTextarea(e){
+        this.setState({textarea: e.target.value})
+    }
+    
+    handleSubmit = (e) => {
+    e.preventDefault();
+    const {textarea} = this.state;
+    console.log((textarea))
+    axios.post('http://localhost:3001/response', {textarea: textarea, response_summary: 1, summary_id: 1, problem_id: 1, problem_origin_id : 1})
+    .then((res => console.log("response axios: ", res)))
+    
+    }
+  
+   
+    
+    
     componentDidMount() {
         this.getTextarea();
         this.getPlaceholder();
         this.getValidate();
         this.getBack();
+      
     }
 
     render() {
-
+        
         const{response,text_static2,text_static3,text_static4}= this.state
 
         return (
             <div className="general_container">
                 {/* Mettre l'url cible dans "action" */}
-                <form method="post" action="#">
-                    <Answer response={response} text_static2={text_static2}/>
+                <form  method="post" action="#">
+                    <Answer summaryId= {this.props.summaryId} response={response} text_static2={text_static2} content={this.state.textarea} controlFunct={this.handleChangeTextarea}/>
                     <Validate text_static3={text_static3.all_text}/>
                     <BackButton text_static4={text_static4.all_text}/>
                 </form>

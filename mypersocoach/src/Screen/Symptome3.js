@@ -49,7 +49,8 @@ class Symptome3 extends React.Component {
         console.log('pouic pouic', this.state.lastId)
       })
    }
-  
+
+   
   
   componentDidMount() {
     this.getHeader();
@@ -68,7 +69,7 @@ class Symptome3 extends React.Component {
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
+          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId}  problem={problem} />
         ))}
 
         </div>
