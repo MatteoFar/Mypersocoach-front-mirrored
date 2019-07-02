@@ -11,7 +11,7 @@ import Answer from "../Component/Answer"
 import NotReally from "../Component/NotReally";
 import { validate } from "@babel/types";
 import ForwardStep from "../Component/ForwardStep";
-import FormConflict from "../Component/FormConflict";
+import Form from "../Component/Form";
 
 class Source2Environment extends React.Component {
   state = {
@@ -54,7 +54,7 @@ class Source2Environment extends React.Component {
         <IconMain icon={this.state.icon.picture_src} />
         <TitlePage problem_origin={this.state.problem_origin} /> 
         <HeadingText text_static={this.state.text_static.all_text} /> 
-        <FormConflict/>
+        <Form/>
       </div>
     );
   }
