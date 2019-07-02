@@ -1,5 +1,5 @@
 import React from "react";
-import "./BackButton.css"
+// import "./BackButton.css"
 
 const BackButton = ({ text_static4 }) => {
     return (
