@@ -6,26 +6,24 @@ import axios from 'axios';
 
 
 
-const titleAnswers = [
-    {
-        icon : '',
-        //require("../Pages/logo_perf.png"),
-        titre : "Titre 1 du problème identifié test"
-    },
-]
+// const titleAnswers = [
+//     {
+//         icon : '',
+//         //require("../Pages/logo_perf.png"),
+//         titre : "Titre 1 du problème identifié test"
+//     },
+// ]
 
-const textAnswers = {
-    text : "Vous pouvez écrire ici et c'est un test",
-    text_valid : "Valider",
-    text_return : "Retour"
-}
+// const textAnswers = {
+//     text : "Vous pouvez écrire ici et c'est un test",
+//     text_valid : "Valider",
+//     text_return : "Retour"
+// }
 
 class Answer extends React.Component {
 
 
-state = {
-    textarea: '',
-}
+
 
 onChange = (e) => {
     this.setState({[e.target.name]: e.target.value });
@@ -37,7 +35,13 @@ onSubmit = (e) => {
     e.preventDefault();
     const {textarea} = this.state;
     console.log((textarea))
-    axios.post('http://localhost:3001/response', {textarea: textarea , response_summary: 1, summary_id: 1, problem_id: 1, problem_origin_id : 1})
+    axios.post('http://localhost:3001/response', {
+        
+        textarea: textarea , 
+        response_summary: 1, 
+        summary_id: 1, problem_id: 1, 
+        problem_origin_id : 1
+    })
     .then((res => console.log("response axios: ", res)))
     
 }
@@ -47,6 +51,8 @@ onSubmit = (e) => {
     render() {
 
         const {textarea} = this.state;
+
+        
         return (
             <div id="grid_answer">
                 <BackgroundAnswer/>

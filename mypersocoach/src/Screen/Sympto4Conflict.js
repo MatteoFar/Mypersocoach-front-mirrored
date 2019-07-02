@@ -91,7 +91,7 @@ class Sympto4Conflict extends React.Component {
               <HeadingText text_static={text_static.all_text} />
               <TitlePageSympto problem={problem} />
               {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
-              <FormConflict />
+              <FormConflict summaryId= {this.props.location.state.lastId}/>
           </div>  
             
             
