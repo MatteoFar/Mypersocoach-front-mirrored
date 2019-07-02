@@ -25,6 +25,7 @@ class FormConflict extends React.Component {
     getPlaceholder = async() => {
         const res = await axios.get("http://localhost:3001/text_static/140")
         this.setState({text_static2: res.data[0]});
+        
     };
 
     getValidate = async() => {

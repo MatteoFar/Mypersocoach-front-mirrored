@@ -20,7 +20,8 @@ class Sympto4Orga extends React.Component {
         response: [],
         text_static2: [],
         text_static3: [],
-        text_static4: []
+        text_static4: [],
+        problem_id: 3
     };
 
     getHeader = async() => {
@@ -59,7 +60,19 @@ class Sympto4Orga extends React.Component {
         this.setState({text_static4: res.data[0]});
     };
 
+     
+    getIdProblem = () => {
+        const {problem_id} = this.state
+        const id= this.props.location.state.lastId
+        axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
+          .then(res => {
+            console.log("response axios: orga", res);
+          })
+      }
+
+
     componentDidMount() {
+
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();
@@ -67,6 +80,7 @@ class Sympto4Orga extends React.Component {
         this.getPlaceholder();
         this.getValidate();
         this.getBack();
+        this.getIdProblem()
     }
 
     render() {
