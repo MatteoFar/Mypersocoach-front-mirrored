@@ -58,10 +58,11 @@ class Symptome3 extends React.Component {
     this.getThematic();
     this.loadSummaryId()
   }
-
+  
   render() {
     const { icon, text_static, problem, lastId } = this.state;
     console.log("oui oui oui",this.state.lastId)
+    console.log('pouet pouet', this.state.id)
     
     return (
       <div className="containerSymptom3">

@@ -56,9 +56,7 @@ class Sympto4Conflict extends React.Component {
           })
       }
 
-
-
-
+    
     //Dès que le composant est monté (lorsqu'il est retransmit dans le DOM virtuel), il exécute la fonction de chaque Axios
     componentDidMount() {
         this.getHeader();
@@ -80,6 +78,8 @@ class Sympto4Conflict extends React.Component {
         
 
         return (
+            
+            
             <div className="general_container">
                 {/* Appel du composant. Le 1er "icon" correspond au state */}
                 {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
@@ -87,10 +87,10 @@ class Sympto4Conflict extends React.Component {
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
                 {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
-                <Form summaryId={this.props.location.state.lastId}/>
-                
-
+                <Form summaryId={this.props.location.state.lastId} />
             </div>
+
+            
             
         );
     }
