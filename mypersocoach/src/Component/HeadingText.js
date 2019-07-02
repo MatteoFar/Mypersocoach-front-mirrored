@@ -5,12 +5,12 @@ const nl2br = require('react-nl2br');
 
 
 
-const HeadingText = ({text_static}) => {
+const HeadingText = ({text_static,text_after_link}) => {
 
   return (
 
     <div className="heading_text_container">
-      <p>{nl2br(text_static)}</p>
+      <p>{nl2br(text_static)}{nl2br(text_after_link)}</p>
     </div>
     
     )
