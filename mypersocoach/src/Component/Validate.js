@@ -1,6 +1,6 @@
 import React from "react";
-import "./Validate.css"
-// import { validate } from "@babel/types";
+// import "./Validate.css"
+
 
 const Validate = ({ text_static3 }) => {
     return (
