@@ -1,5 +1,5 @@
 import React from "react";
-import "./Answer.css"
+// import "./Answer.css"
 
 
 class Answer extends React.Component{
@@ -16,7 +16,7 @@ render(){
   return (
     <div className="answer_container">
       <>
-        <textarea name="textarea" onchange= {this.props.controlFunct} value={this.props.content} maxlength="300" placeholder={this.props.text_static2.all_text}>
+        <textarea id="textarea" name="textarea" onchange= {this.props.controlFunct} value={this.props.content} maxlength="300" placeholder={this.props.text_static2.all_text}>
           {this.props.response}
         </textarea>
       </>

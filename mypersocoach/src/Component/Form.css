@@ -1,0 +1,90 @@
+
+/* Form.css */
+
+/* Textarea */
+/* .general_container .answer_container {
+    margin-top: 18px ; 
+    border: 1px solid black;
+    text-align: center;
+  }  */
+
+textarea{
+    background-color: rgb(245, 245, 245);
+    border:none;
+    border-radius: 5px;
+    /* border:1px solid #969FAA; */
+    box-sizing: border-box; /* To force the size of the input to enter in its parent */
+    color: #7e7e7e;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 14px;
+    height: 190px;
+    margin-top: 18px ;
+    outline: none;
+    padding: 6px;
+    resize: none;
+    width: 282px;
+}
+
+
+/* Validate button */
+/* .validate_container {
+    margin: auto;
+    border: 1px solid black;
+} */
+
+.button_validate {
+    font-family: "Montserrat", sans-serif;
+    height: 45px;
+    width: 282px;
+    margin: 0px auto;
+    margin-top: 11px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    background: none rgb(255, 189, 74);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+    }
+
+  .button_validate:hover {
+    background-color: rgb(72, 201, 176);
+  }
+
+  .button_validate:active {
+    background-color: rgb(22, 160, 133);
+  }
+
+
+
+/* Back button */
+/* .backbutton_container {
+    margin: auto;
+    border: 1px solid black;
+} */
+
+.button_back {
+    font-family: "Montserrat", sans-serif;
+    height: 45px;
+    width: 282px;
+    margin: 0px auto;
+    margin-top: 11px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #BDC3C7;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+    }
+
+  .button_back:hover {
+    background-color: rgb(202,207, 210);
+  }
+
+  .button_back:active {
+    background-color: rgb(161,166, 169);
+  }
+  
