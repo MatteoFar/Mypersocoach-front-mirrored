@@ -82,6 +82,7 @@ class Sympto4Conflict extends React.Component {
         
 
         return (
+<<<<<<< HEAD
             <div className="general_container">
                 {/* Appel du composant. Le 1er "icon" correspond au state */}
                 {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
@@ -92,6 +93,21 @@ class Sympto4Conflict extends React.Component {
                 <FormConflict summaryId={this.props.location.state.lastId}/>
 
             </div>
+=======
+            
+            
+              <div className="general_container">
+              {/* Appel du composant. Le 1er "icon" correspond au state */}
+              {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
+              <IconMain icon={icon.picture_src} />
+              <HeadingText text_static={text_static.all_text} />
+              <TitlePageSympto problem={problem} />
+              {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
+              <FormConflict />
+          </div>  
+            
+            
+>>>>>>> dev
             
         );
     }

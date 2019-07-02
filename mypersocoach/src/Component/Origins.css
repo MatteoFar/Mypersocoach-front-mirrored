@@ -1,0 +1,26 @@
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    height: 40vh;
+    margin: auto 50px 30px 50px;
+    margin-top: 5px;
+    text-align: center;
+    grid-gap: 25px;
+  }
+
+  .image_icon {
+    width: 60px;
+  }
+  
+  .text {
+    text-align: center;
+  }
+  
+  .iconLink{
+    background: none;
+    border: none;
+    color: rgb(150, 159, 170);
+    cursor: pointer;
+  
+  }
