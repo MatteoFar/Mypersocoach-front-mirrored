@@ -1,13 +1,16 @@
 import React from "react";
-// import "./Answer.css"
+import "./Answer.css"
+import axios from "axios";
 
+class Answer extends React.Component  {
+  
 
-class Answer extends React.Component{
-
-//  ({ response,text_static2,text_static }) => {
 state = {
     textarea: '',
 }
+
+
+
 
 render(){
   
@@ -22,8 +25,9 @@ render(){
       </>
     </div>
   );
+  }
 };
 
-}
+
 
 export default Answer;

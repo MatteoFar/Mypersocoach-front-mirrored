@@ -41,15 +41,16 @@ class Symptome3 extends React.Component {
 
   loadSummaryId = () => {
     const {id} = this.state
-    axios.post(`http://localhost:3001/summary`, {id: id})
-    .then(res => {
-      console.log("response axios: symp3", res);
-      const lastId = res.data.summaryId
-      this.setState({ lastId : lastId})
-      console.log('pouic pouic', this.state.lastId)
-    })
-  }
-  
+     axios.post(`http://localhost:3001/summary`, {id: id})
+      .then(res => {
+        console.log("response axios: symp3", res);
+        const lastId = res.data.summaryId
+        this.setState({ lastId : lastId})
+        console.log('pouic pouic', this.state.lastId)
+      })
+   }
+
+   
   
   componentDidMount() {
     this.getHeader();
@@ -69,7 +70,7 @@ class Symptome3 extends React.Component {
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
+          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId}  problem={problem} />
         ))}
 
         </div>

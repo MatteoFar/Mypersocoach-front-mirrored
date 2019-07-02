@@ -15,7 +15,6 @@ class Form extends React.Component {
         text_static2: [],
         text_static3: [],
         text_static4: [],
-
         textarea: ''
     }
 
@@ -41,11 +40,12 @@ class Form extends React.Component {
             textarea: textarea,
             response_summary: 1,
             summary_id: this.props.summaryId,
-            problem_id: 1,
+            problem_id: this.props.problemId,
             problem_origin_id: 1
 
         })
             .then((res => console.log("response axios: ", res)))
+            console.log('youhou problemId', this.props.problemId)
 
     }
 
