@@ -64,10 +64,10 @@ class Sympto4Conflict extends React.Component {
         //Augmente la portée des states pour que les composants puissent les récupérer
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
-        const{icon,text_static,problem}= this.state
-        console.log('coucou cest nous', this.props.location.state.lastId);
         
-
+        
+        
+        const{icon,text_static,problem}= this.state
         return (
             
             
