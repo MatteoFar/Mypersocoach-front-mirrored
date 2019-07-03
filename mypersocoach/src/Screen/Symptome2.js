@@ -15,7 +15,8 @@ import BackSubmit from "../Component/BackSubmit";
 class Symptome2 extends React.Component {
   state = {
     icon: [],
-    text_static: []
+    text_static: [],
+    response: ""
   };
 
   getHeader = async () => {
@@ -30,19 +31,31 @@ class Symptome2 extends React.Component {
       
   };
 
+  getResponse = async () => {
+    const id = this.props.location.state.lastId
+    console.log('ou est mon id', id)
+    const res= await axios.get(`http://localhost:3001/response/${id}`)
+        this.setState({ response : res.data.response_summary});
+        console.log('ilestoulerésultat', res.data.response_summary )
+      
+  };
+
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
+    this.getResponse()
   }
 
   render() {
-    const{icon,text_static}= this.state
+    
+    console.log('oho"ho"ho"hoh', this.state.response)
+    const{icon,text_static, response}= this.state
     return (
       <div className="containerS2">
       <div className="containerSymptome2">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
-        <ResponseSymptome2 />
+        <ResponseSymptome2 response={response}/>
         <ForwardStep/>
         <BackSubmit />
       </div>

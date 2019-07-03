@@ -38,6 +38,7 @@ class App extends React.Component {
             <Route exact path="/Symptome5" component={Symptome5} />
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/source3_environment" component={Source3environment} />
+            <Route exact path="/symptome2" component={Symptome2} />
           </Switch>
         </BrowserRouter>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { withRouter } from "react-router-dom";
 
 // import Answer from './Answer';
 // import Validate from './Validate';
@@ -15,9 +16,12 @@ class Form extends React.Component {
         text_static2: [],
         text_static3: [],
         text_static4: [],
-        textarea: ''
+        textarea: '',
+        lastId: this.props.lasId
     }
 
+   
+      
 
     handleChangeTextarea = (e) => {
 
@@ -34,12 +38,16 @@ class Form extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const { textarea } = this.state;
-        console.log((textarea))
+        
+        this.props.history.push({
+            pathname: "/symptome2", 
+            state: {lastId: this.props.lastId}
+            });
         axios.post('http://localhost:3001/response', {
 
             textarea: textarea,
-            response_summary: 1,
-            summary_id: this.props.summaryId,
+            response_summary: this.state.textarea,
+            summary_id: this.props.lastId,
             problem_id: this.props.problemId,
             problem_origin_id: 1
 
@@ -83,7 +91,7 @@ class Form extends React.Component {
 
         const { response, text_static2, text_static3, text_static4 } = this.state
 
-        console.log('pouet pouet', this.state.textarea)
+        console.log('pouet pouet', this.state.textarea, this.state.lasId)
 
         return (
             <div>
@@ -96,7 +104,7 @@ class Form extends React.Component {
                         {response}
                     </textarea>
 
-                    <button id="valid" href="#" className="button_validate" type="submit" name="valid">{text_static3.all_text}</button>
+                    <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
 
                     <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text}</button>
 
@@ -106,4 +114,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default withRouter(Form);
