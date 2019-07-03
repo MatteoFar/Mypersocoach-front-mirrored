@@ -18,18 +18,8 @@ class Sympto4Conflict extends React.Component {
         icon: [],
         text_static: [],
         problem: [],
-        response: [],
-        text_static2: [],
-        text_static3: [],
-        text_static4: [],
         problem_id: 1
-       
     };
-
-    
-
-
-
 
     //"getHeader" est la fonction d'Axios qui permettra d'éxécuter les tâches de recherche d'infos dans la bdd
     //Il ne s'agit que de la structure et non de l'appel de fonction
@@ -71,15 +61,11 @@ class Sympto4Conflict extends React.Component {
     }
 
     render() {
-        
-       
-        
-        
         //Augmente la portée des states pour que les composants puissent les récupérer
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         const{icon,text_static,problem}= this.state
-        // console.log('coucou cest nous', this.props.location.state.lastId);
+        console.log('coucou cest nous', this.props.location.state.lastId);
         
 
         return (
@@ -91,7 +77,6 @@ class Sympto4Conflict extends React.Component {
                 <IconMain icon={icon.picture_src} />
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
-                {/* Vérifier ce qu'il faut mettre comme paramètre dans le composant FormConflict */}
                 <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId} />
             </div>
 
