@@ -26,11 +26,6 @@ class Sympto4Conflict extends React.Component {
        
     };
 
-    
-
-
-
-
     //"getHeader" est la fonction d'Axios qui permettra d'éxécuter les tâches de recherche d'infos dans la bdd
     //Il ne s'agit que de la structure et non de l'appel de fonction
     getHeader = async() => {
@@ -71,9 +66,6 @@ class Sympto4Conflict extends React.Component {
     }
 
     render() {
-        
-       
-        
         
         //Augmente la portée des states pour que les composants puissent les récupérer
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
