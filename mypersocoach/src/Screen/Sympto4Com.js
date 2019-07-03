@@ -87,7 +87,7 @@ class Sympto4Com extends React.Component {
                 <IconMain icon={icon.picture_src} />
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
-                <Form />
+                <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId}/>
 
             </div>
         );
