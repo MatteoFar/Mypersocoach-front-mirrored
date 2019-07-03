@@ -34,9 +34,9 @@ class ModalExample extends React.Component {
           {/* </div>
            */}
           {/* <div > */}
-            <p onClick={this.Showmodal}className="pass_continue">{this.props.modal_continue}</p>
+            <p className="pass_continue">{this.props.modal_continue}</p>
           {/* </div> */}
-          <p className="modal_closed">{this.props.modal_closed}</p>
+          <p onClick={this.Showmodal}className="modal_closed">{this.props.modal_closed}</p>
         </div>
       </div>
     );

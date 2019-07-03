@@ -13,7 +13,7 @@ import { validate } from "@babel/types";
 import ForwardStep from "../Component/ForwardStep";
 import FormConflict from "../Component/FormConflict";
 
-class Source2Environment extends React.Component {
+class Source3Environment extends React.Component {
   state = {
     icon: [],
     problem_origin: [],
@@ -59,4 +59,4 @@ class Source2Environment extends React.Component {
     );
   }
 }
-export default Source2Environment;
+export default Source3Environment;
