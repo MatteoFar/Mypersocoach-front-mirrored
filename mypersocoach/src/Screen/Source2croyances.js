@@ -107,8 +107,8 @@ class Source2Capacites extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    this.getTextModal();
     this.getIconModal();
+    this.getTextModal();
     this.getModalContinue();
     this.getModalClosed();
   }
