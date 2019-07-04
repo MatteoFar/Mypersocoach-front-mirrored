@@ -11,7 +11,7 @@ import HeadingLink from "../Component/HeadingLink";
 import FowardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 
-class Source2Capacites extends React.Component {
+class Source2Croyances extends React.Component {
   state = {
     icon: [],
     problem_origin: [],
@@ -24,7 +24,8 @@ class Source2Capacites extends React.Component {
     text_modal1: [],
     icon_modal: [],
     modal_continue: [],
-    modal_closed: []
+    modal_closed: [],
+    link_modal: true
   };
   getHeader = async () => {
     const res = await axios.get("http://localhost:3001/icon/6");
@@ -99,6 +100,10 @@ class Source2Capacites extends React.Component {
     console.log(res);
   };
 
+  LinkOpenModal() {
+    this.setState({ link_modal: true });
+  }
+
   componentDidMount() {
     this.getHeader();
     this.getProblem();
@@ -111,6 +116,7 @@ class Source2Capacites extends React.Component {
     this.getTextModal();
     this.getModalContinue();
     this.getModalClosed();
+    this.LinkOpenModal();
   }
 
   render() {
@@ -130,16 +136,19 @@ class Source2Capacites extends React.Component {
 
     return (
       <div className="containerSource2Environment">
+        <IconMain icon={icon.picture_src} />
+        <TitlePage problem_origin={problem_origin} />
+        <HeadingText text_static={text_static.all_text} />
+        <HeadingLink
+          onClick={this.LinkOpenModal}
+          text_static_link={text_static_link.all_text}
+        />
         <ModalExample
           icon_modal={icon_modal.picture_src}
           text_modal1={text_modal1.all_text}
           modal_continue={modal_continue.all_text}
           modal_closed={modal_closed.all_text}
         />
-        <IconMain icon={icon.picture_src} />
-        <TitlePage problem_origin={problem_origin} />
-        <HeadingText text_static={text_static.all_text} />
-        <HeadingLink text_static_link={text_static_link.all_text} />
         <HeadingText text_after_link={text_after_link.all_text} />
         <FowardStep text_static2={text_static2.all_text} />
         <NextStep text_static3={text_static3.all_text} />
@@ -147,4 +156,4 @@ class Source2Capacites extends React.Component {
     );
   }
 }
-export default Source2Capacites;
+export default Source2Croyances;
