@@ -2,9 +2,7 @@ import React from "react";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 
-// import Answer from './Answer';
-// import Validate from './Validate';
-// import BackButton from './BackButton';
+
 
 
 import './Form.css';
@@ -20,7 +18,7 @@ class Form extends React.Component {
         text_static4: [],
         textarea: '',
         lastId: this.props.lastId,
-        lastResponseId: ''
+       
     }
 
 
@@ -49,24 +47,14 @@ class Form extends React.Component {
 
         })
             .then((res => {
-                // console.log("response axios: Form", res);
-                const lastResponseId = res.data.lastResponseId
-                this.setState({ lastResponseId: lastResponseId})
-               // const lastResponseId = this.state.lastResponseId;
-                // console.log('hihihihi!', this.state.lastResponseId)
-         
                 
-                
-                // console.log('last resp ou es tu? je ne te voie pas', res.data.lastResponseId)
-               
-                console.log('last response ', this.state.lastResponseId)
 
                 this.props.history.push({
                     pathname: "/symptome2", 
                     state: {
 
                         lastId: this.props.lastId, 
-                        lastResponseId: lastResponseId
+                        
                     
                     }
 
@@ -100,8 +88,7 @@ class Form extends React.Component {
     componentDidUpdate(prevprops, prevstate) {
         
         
-    // console.log( 'youhou mes props et mes states', prevprops)
-    // console.log('prev state :', prevstate);
+   
     
     }
     
@@ -123,16 +110,13 @@ class Form extends React.Component {
 
         const { response, text_static2, text_static3, text_static4 } = this.state
 
-        // console.log('pouet pouet', this.state.lastResponseId  )
-        // console.log('mounted component');
+       
         
 
         return (
             <div>
                 <form id="form" method="post" action="#" onSubmit={this.handleSubmit} onClick={this.test}>
-                    {/* <Answer response={response} text_static2={text_static2}/> */}
-                    {/* <Validate text_static3={text_static3.all_text}/> */}
-                    {/* <BackButton text_static4={text_static4.all_text}/> */}
+                    
 
                     <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
                         {response}
