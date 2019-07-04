@@ -6,29 +6,29 @@ import "./ModalExample.css";
 const nl2br = require("react-nl2br");
 
 class ModalExample extends React.Component {
-  state = {
-    modal: true
-  };
+ state = {
+   modal: false,
+ };
   
-  HandleOpenModal () {
-      this.setState({ modal: true });
-    }
-  CloseModal = () => {
-    this.setState({ modal: !this.state.modal });
-    // this.setState({ modal: false });
-    // if (this.state.modal === true) {
-    //    return console.log("true");
-    //  } else {
-    //    console.log("false");
-    //  }
-  };
+ HandleOpenModal () {
+     this.setState({ modal: true });
+   }
+ CloseModal = () => {
+   this.setState({ modal: !this.state.modal });
+  // this.setState({ modal: false });
+  // if (this.state.modal === true) {
+  //    return console.log("true");
+  //  } else {
+  //    console.log("false");
+  //  }
+ };
 
   render() {
     
     const modal = this.state.modal ? "modal_main" : "modaloff";
    
     return (
-      <div className={modal}>
+      <div className= {modal} >
         <div className="modal_text2">
           
           <img className="belief_image" src={this.props.icon_modal} />

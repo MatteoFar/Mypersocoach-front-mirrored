@@ -4,4 +4,16 @@
   margin: auto;
   width: 380px;
 }
+.modal_main {
+  background-color: rgba(55, 115, 184, 0.9);
+  position: absolute;
+  opacity: 20%;
+  z-index: 1;
+  width: 380px;
+  height: 100%;
+  color:white;
+}
+.modaloff {
+  display: none;
+  }
   

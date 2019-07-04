@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import "./Source2capacites.css";
+import "./Source2croyances.css";
 
 import ModalExample from "../Component/ModalExample";
 import IconMain from "../Component/IconMain";
@@ -25,8 +25,9 @@ class Source2Croyances extends React.Component {
     icon_modal: [],
     modal_continue: [],
     modal_closed: [],
-    link_modal: true
+    link_modal : false
   };
+  
   getHeader = async () => {
     const res = await axios.get("http://localhost:3001/icon/6");
     this.setState({ icon: res.data[0] });
@@ -101,7 +102,7 @@ class Source2Croyances extends React.Component {
   };
 
   LinkOpenModal() {
-    this.setState({ link_modal: true });
+    this.setState({ link_modal: !this.state.link_modal });
   }
 
   componentDidMount() {
@@ -134,16 +135,19 @@ class Source2Croyances extends React.Component {
       modal_closed
     } = this.state;
 
+    const modal = this.state.link_modal ? "modal_main" : "modaloff";
+
     return (
       <div className="containerSource2Environment">
         <IconMain icon={icon.picture_src} />
         <TitlePage problem_origin={problem_origin} />
         <HeadingText text_static={text_static.all_text} />
-        <HeadingLink
+        <HeadingLink 
           onClick={this.LinkOpenModal}
           text_static_link={text_static_link.all_text}
+          link_modal= {this.state.link_modal}
         />
-        <ModalExample
+        <ModalExample className={modal}
           icon_modal={icon_modal.picture_src}
           text_modal1={text_modal1.all_text}
           modal_continue={modal_continue.all_text}
