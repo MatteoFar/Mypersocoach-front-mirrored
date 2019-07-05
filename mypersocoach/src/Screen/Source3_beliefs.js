@@ -54,7 +54,7 @@ class Source3Beliefs extends React.Component {
         <IconMain icon={this.state.icon.picture_src} />
         <TitlePage problem_origin={this.state.problem_origin} /> 
         <HeadingText text_static={this.state.text_static.all_text} /> 
-        <Form/>
+        <Form summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} redirectionPage={'recap'} />
       </div>
     );
   }

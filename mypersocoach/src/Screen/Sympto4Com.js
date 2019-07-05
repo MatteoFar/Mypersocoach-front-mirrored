@@ -81,13 +81,12 @@ class Sympto4Com extends React.Component {
 
     render() {
         const{icon,text_static,problem}= this.state
-
         return (
             <div className="general_container">
                 <IconMain icon={icon.picture_src} />
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
-                <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId}/>
+                <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId} redirectionPage={'symptome4'} />
 
             </div>
         );
