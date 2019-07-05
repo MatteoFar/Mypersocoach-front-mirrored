@@ -12,7 +12,6 @@ import Answer from "../Component/Answer"
 import NotReally from "../Component/NotReally";
 import { validate } from "@babel/types";
 import Validate from "../Component/Validate";
-import Axios from "axios";
 
 class Symptome5 extends React.Component {
   state = {
