@@ -65,6 +65,7 @@ class Sympto4Conflict extends React.Component {
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         
+        console.log( 'ma last if est tu la',this.props.location.state.lastId )
         
         
         const{icon,text_static,problem}= this.state

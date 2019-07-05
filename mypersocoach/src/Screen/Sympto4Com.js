@@ -81,7 +81,6 @@ class Sympto4Com extends React.Component {
 
     render() {
         const{icon,text_static,problem}= this.state
-
         return (
             <div className="general_container">
                 <IconMain icon={icon.picture_src} />
