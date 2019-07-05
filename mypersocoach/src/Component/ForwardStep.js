@@ -8,11 +8,13 @@ class ForwardStep extends React.Component{
     }
   
   handleClick = () => {
-    this.props.history.push({
-        pathname: "/Source2", 
-        state: {summaryId: this.props.lastId}
-        });
+    if(this.props.redirectionPage === 1) {
+      this.props.history.push({
+          pathname: "/Source2", 
+          state: {summaryId: this.props.lastId}
+          });
       }
+  }
   
   
   render(){
