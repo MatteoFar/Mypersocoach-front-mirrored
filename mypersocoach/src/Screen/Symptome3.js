@@ -61,8 +61,14 @@ class Symptome3 extends React.Component {
   
   render() {
     const { icon, text_static, problem, lastId } = this.state;
+<<<<<<< HEAD
     // console.log("oui oui oui",this.state.lastId)
     // console.log('pouet pouet', this.state.id)
+=======
+    console.log("oui oui oui",this.state.lastId)
+    console.log('pouet pouet', this.state.id)
+    console.log( 'tab',problem);
+>>>>>>> dev
     
     //display of problem array where we see id=1 conflit avec un collègue, id=2 maperformance etc...
     //we need this id in the next component :Symptomes in order to set conditions to access the 6 Symto4 components
@@ -82,5 +88,6 @@ class Symptome3 extends React.Component {
       </div>
     );
   }
+  
 }
 export default Symptome3;
