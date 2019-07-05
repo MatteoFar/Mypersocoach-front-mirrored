@@ -18,6 +18,12 @@ import Sympto4Com from "./Screen/Sympto4Com";
 import Sympto4Orga from "./Screen/Sympto4Orga";
 import Sympto4Time from "./Screen/Sympto4Time";
 import Sympto4Stress from "./Screen/Sympto4Stress";
+import Source2comportement from "./Screen/Source2comportement";
+import Source2croyances from "./Screen/Source2croyances";
+import Source2capacites from"./Screen/Source2capacites"
+
+
+
 
 class App extends React.Component {
   render() {

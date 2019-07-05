@@ -17,8 +17,9 @@ class Form extends React.Component {
         text_static3: [],
         text_static4: [],
         textarea: '',
-        summary_id: this.props.lastId
-       
+        summary_id: this.props.lastId,
+        problem_origin_id: this.props.problem_originId
+    
     }
 
 
@@ -35,7 +36,9 @@ class Form extends React.Component {
         e.preventDefault();
         const { textarea } = this.state;
         // allows us to go the symptome 2 page thanks to history.push and tranfert lastId recap as props
-
+        // first condition
+        
+        if (this.props.redirectionPage === 'symptome4') {
             
             axios.post('http://localhost:3001/response', {
 
@@ -47,20 +50,140 @@ class Form extends React.Component {
 
         })
             .then((res => {
-                
-
                 this.props.history.push({
                     pathname: "/symptome2", 
                     state: {
 
-                        summary_id: this.props.lastId, 
-                        
-                    
-                    }
+                        summary_id: this.props.lastId,
 
-                    });
-              }))
+                        }
+                });
+              }
+        ))
+       
+       
+        } 
+      // another condition
+      else if ( this.props.redirectionPage === 'Source2environnement') {
+        
+      axios.post('http://localhost:3001/response', {
+
+        textarea: textarea,
+        response_summary: this.state.textarea,
+        summary_id: this.props.summaryId,
+        problem_origin_id: this.props.problem_originId
+        // problem_origin_id: 1
+
+    })
+
+    .then((res => { 
+        //mettre des conditions de redirection
+        
+            this.props.history.push({
+                pathname: "/source2comportement", 
+                state: {
+
+                    summaryId: this.props.summaryId,       
+                    problem_origin_id: this.props.problem_originId
+
+                }
+            });
         }
+    ))
+}
+
+else if ( this.props.redirectionPage === 'Source2comportement') {
+        
+    axios.post('http://localhost:3001/response', {
+
+      textarea: textarea,
+      response_summary: this.state.textarea,
+      summary_id: this.props.summaryId,
+      problem_origin_id: this.props.problem_originId
+      // problem_origin_id: 1
+
+  })
+
+  .then((res => { 
+      //mettre des conditions de redirection
+      
+          this.props.history.push({
+              pathname: "/source2capacites", 
+              state: {
+
+                  summaryId: this.props.summaryId, 
+                  problem_origin_id: this.props.problem_originId 
+
+                }
+            })
+        }
+    ))
+}
+
+else if ( this.props.redirectionPage === 'Source2croyances') {
+        
+    axios.post('http://localhost:3001/response', {
+
+      textarea: textarea,
+      response_summary: this.state.textarea,
+      summary_id: this.props.summaryId,
+      problem_origin_id: this.props.problem_originId
+      // problem_origin_id: 1
+
+  })
+
+  .then((res => { 
+      //mettre des conditions de redirection
+      
+          this.props.history.push({
+              pathname: "/source2croyances", 
+              state: {
+
+                  summaryId: this.props.summaryId,
+                  problem_origin_id: this.props.problem_originId    
+
+                }
+            })
+  
+        }
+    ))
+}
+
+// else if ( this.props.redirectionPage === 'deuxiemerecap') {
+        
+//     axios.post('http://localhost:3001/response', {
+
+//       textarea: textarea,
+//       response_summary: this.state.textarea,
+//       summary_id: this.props.summaryId,
+//       problem_origin_id: this.props.problem_originId
+//       // problem_origin_id: 1
+
+//   })
+
+//   .then((res => { 
+//       //mettre des conditions de redirection
+      
+//           this.props.history.push({
+//               pathname: "/?", 
+//               state: {
+//                   summaryId: this.props.summaryId,       
+//               }
+//       });
+  
+//   }
+//   ))
+// }
+
+
+}   
+
+
+
+    
+
+
+// another c}
         
 
 
@@ -110,8 +233,8 @@ class Form extends React.Component {
 
         const { response, text_static2, text_static3, text_static4 } = this.state
 
-       console.log("est ce que summary-id se charge", this.state.summary_id)
-    console.log('est ce que ma props se charge', this.props.lastId)
+    //    console.log("est ce que summary-id se charge", this.state.summary_id)
+    // console.log('est ce que ma props se charge', this.props.lastId)
 
         return (
             <div>

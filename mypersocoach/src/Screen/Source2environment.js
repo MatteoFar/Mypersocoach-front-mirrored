@@ -86,6 +86,8 @@ class Source2Environment extends React.Component {
 
   render() {
     const{icon, problem_origin, text_static,text_static2,text_static3}=this.state
+    console.log('coucou idsummary', this.props.location.state.summaryId)
+    
     return (
       
       <div className="containerSource2Environment">
@@ -93,7 +95,7 @@ class Source2Environment extends React.Component {
         <IconMain icon={icon.picture_src} />
         <TitlePage problem_origin={problem_origin} /> 
         <HeadingText text_static={text_static.all_text} />
-        <FowardStep redirectionPage={2} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
+        <FowardStep redirectionPage={'source3_environment'} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
         <NextStep text_static3={text_static3.all_text}/>
       </div>
         
