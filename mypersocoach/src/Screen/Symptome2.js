@@ -12,6 +12,7 @@ import ForwardStep from "../Component/ForwardStep";
 import BackSubmit from "../Component/BackSubmit";
 
 
+
 class Symptome2 extends React.Component {
   state = {
 
@@ -39,13 +40,13 @@ class Symptome2 extends React.Component {
       
       
       const id = this.props.location.state.lastId;
-      console.log('mon id affiche t elle', id)
+      // console.log('mon id affiche t elle', id)
       const res= await axios.get(`http://localhost:3001/response/${id}`)
           
-      console.log('response where are you', res.data[0].response_summary )
+      // console.log('response where are you', res.data[0].response_summary )
       this.setState({ 
         response: res.data[0].response_summary});
-      console.log('where is ma response Id', res.data[0].id)
+      // console.log('where is ma response Id', res.data[0].id)
       this.setState({responseId: res.data[0].id});
     };
 
@@ -60,7 +61,7 @@ class Symptome2 extends React.Component {
 
    render() {
     console.log("voila ma state", this.state)
-   
+   console.log("summary id es tu là ....", this.props.location.state.summaryId)
     const{icon, text_static, response, responseId} = this.state
     return (
       <div className="containerS2">
@@ -68,7 +69,7 @@ class Symptome2 extends React.Component {
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
         <ResponseSymptome2 response={response}/>
-        <ForwardStep lastId={this.props.location.state.lastId}/>
+        <ForwardStep summaryId={this.props.location.state.summaryId}/>
         <BackSubmit />
       </div>
       </div>
