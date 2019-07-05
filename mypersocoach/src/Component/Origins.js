@@ -8,7 +8,8 @@ import { withRouter } from "react-router-dom";
 class Origins extends React.Component {
   
   state={
-    summaryId:''
+    summaryId:'',
+    problem_originId: ''
   }
   
   handleClick = () => {
@@ -16,28 +17,41 @@ class Origins extends React.Component {
     if(this.props.problem_origins.id === 1) {
       this.props.history.push({
         pathname: "/Source2environment", 
-        state: { summaryId: this.props.summaryId }
+        state: { 
+          summaryId: this.props.summaryId,
+          problem_originId: this.props.problem_origins.id
+        }
         });
     }
 
-    if(this.props.problem_origins.id === 2) {
+    else if(this.props.problem_origins.id === 2) {
       this.props.history.push({
         pathname: "/Source2comportement", 
-        state: { summaryId: this.props.summaryId }
+        state: { 
+          summaryId: this.props.summaryId,
+          problem_originId: this.props.problem_origins.id
+        }
         });
     }
 
-    if(this.props.problem_origins.id === 3) {
+    else if(this.props.problem_origins.id === 3) {
       this.props.history.push({
         pathname: "/Source2capacites", 
-        state: { summaryId: this.props.summaryId }
-        });
+        state: { 
+          summaryId: this.props.summaryId, 
+          problem_originId: this.props.problem_origins.id
+        }
+       
+      });
     }
 
-    if(this.props.problem_origins.id === 4) {
+    else if(this.props.problem_origins.id === 4) {
       this.props.history.push({
         pathname: "/Source2croyances", 
-        state: { summaryId: this.props.summaryId }
+        state: { 
+          summaryId: this.props.summaryId, 
+          problem_originId: this.props.problem_origins.id
+        }
         });
     }
     

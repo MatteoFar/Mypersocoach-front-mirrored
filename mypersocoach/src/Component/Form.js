@@ -17,7 +17,7 @@ class Form extends React.Component {
         text_static3: [],
         text_static4: [],
         textarea: '',
-        summary_id: this.props.lastId,
+        summary_id: this.props.lastId
        
     }
 
@@ -43,7 +43,7 @@ class Form extends React.Component {
             response_summary: this.state.textarea,
             summary_id: this.props.lastId,
             problem_id: this.props.problemId,
-            problem_origin_id: 1
+            problem_origin_id: null
 
         })
             .then((res => {

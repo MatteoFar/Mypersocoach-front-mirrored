@@ -17,7 +17,8 @@ class Source2Environment extends React.Component {
     text_static: [],
     text_static2: [],
     text_static3: [],
-    id : 1
+  
+   
   };
 
   getHeader = async () => {
@@ -58,12 +59,26 @@ class Source2Environment extends React.Component {
       // });
   };
 
+  // getIdProblemOrigin = () => {
+    
+  //   const problem_originId= this.props.location.state.problem_originId
+  //   console.log('ai je mon id problem origin', id)
+  //   axios.put(`http://localhost:3001/response/${id}`, {problem_id: problem_id})
+  //     .then(res => {
+  //       console.log("response axios: commmmm", res);
+  //     })
+  // }
+
+
+
+
   componentDidMount() {
     this.getHeader();
     this.getProblem();
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
+    this.getIdProblemOrigin()
   }
 
   render() {
