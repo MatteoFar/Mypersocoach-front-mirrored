@@ -10,7 +10,8 @@ import Symptome5 from "./Screen/Symptome5";
 import Symptome3 from "./Screen/Symptome3";
 import Source2 from "./Screen/Source2";
 import Source2environment from "./Screen/Source2environment";
-import Source3environment from "./Screen/Source3_environment"
+import Source3environment from "./Screen/Source3_environment";
+import Source3comportement from "./Screen/Source3_comportement";
 import Sympto4Perf from "./Screen/Sympto4Perf";
 import Sympto4Com from "./Screen/Sympto4Com";
 import Sympto4Orga from "./Screen/Sympto4Orga";
@@ -38,6 +39,7 @@ class App extends React.Component {
             <Route exact path="/Symptome5" component={Symptome5} />
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/source3_environment" component={Source3environment} />
+            <Route exact path="/source3_comportement" component={Source3comportement}/>
             <Route exact path="/symptome2" component={Symptome2} />
           </Switch>
         </BrowserRouter>
