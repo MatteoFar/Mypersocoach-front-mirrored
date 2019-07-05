@@ -16,7 +16,8 @@ class Source2Environment extends React.Component {
     problem_origin: [],
     text_static: [],
     text_static2: [],
-    text_static3: []
+    text_static3: [],
+    id : 1
   };
 
   getHeader = async () => {
