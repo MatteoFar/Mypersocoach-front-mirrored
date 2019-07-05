@@ -9,17 +9,10 @@ import Symptome5 from "./Screen/Symptome5";
 import Symptome3 from "./Screen/Symptome3";
 import Source2 from "./Screen/Source2";
 import Source2environment from "./Screen/Source2environment";
-<<<<<<< HEAD
 import Source3Environment from "./Screen/Source3_environment";
 import Source3Behavior from "./Screen/Source3_behavior";
 import Source3Capacity from "./Screen/Source3_capacity"
 import Source3Beliefs from "./Screen/Source3_beliefs"
-=======
-import Source2comportement from "./Screen/Source2comportement";
-import Source2capacites from "./Screen/Source2capacites";
-import Source2croyances from "./Screen/Source2croyances";
-import Source3environment from "./Screen/Source3_environment"
->>>>>>> dev
 import Sympto4Perf from "./Screen/Sympto4Perf";
 import Sympto4Com from "./Screen/Sympto4Com";
 import Sympto4Orga from "./Screen/Sympto4Orga";
