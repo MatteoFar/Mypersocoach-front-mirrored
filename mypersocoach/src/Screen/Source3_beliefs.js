@@ -13,7 +13,7 @@ import { validate } from "@babel/types";
 import ForwardStep from "../Component/ForwardStep";
 import Form from "../Component/Form";
 
-class Source2Environment extends React.Component {
+class Source3Beliefs extends React.Component {
   state = {
     icon: [],
     problem_origin: [],
@@ -28,7 +28,7 @@ class Source2Environment extends React.Component {
       });
   };
   getProblem = () => {
-    fetch("http://localhost:3001/problem_origin/2")
+    fetch("http://localhost:3001/problem_origin/4")
       .then(res => res.json())
       .then(data => {
         this.setState({ problem_origin: data[0] });
@@ -59,4 +59,4 @@ class Source2Environment extends React.Component {
     );
   }
 }
-export default Source2Environment;
+export default Source3Beliefs;

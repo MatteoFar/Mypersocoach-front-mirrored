@@ -13,7 +13,7 @@ import { validate } from "@babel/types";
 import ForwardStep from "../Component/ForwardStep";
 import Form from "../Component/Form";
 
-class Source3Capacity extends React.Component {
+class Source3Behavior extends React.Component {
   state = {
     icon: [],
     problem_origin: [],
@@ -28,7 +28,7 @@ class Source3Capacity extends React.Component {
       });
   };
   getProblem = () => {
-    fetch("http://localhost:3001/problem_origin/3")
+    fetch("http://localhost:3001/problem_origin/2")
       .then(res => res.json())
       .then(data => {
         this.setState({ problem_origin: data[0] });
@@ -59,4 +59,4 @@ class Source3Capacity extends React.Component {
     );
   }
 }
-export default Source3Capacity;
+export default Source3Behavior;

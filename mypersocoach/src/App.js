@@ -4,15 +4,15 @@ import SignScreen from "./Screen/SignScreen";
 import LoginScreen from "./Screen/LoginScreen";
 import Sympto4Conflict from "./Screen/Sympto4Conflict";
 import Symptome2 from "./Screen/Symptome2";
-
 import Start from "./Screen/Start";
 import Symptome5 from "./Screen/Symptome5";
 import Symptome3 from "./Screen/Symptome3";
 import Source2 from "./Screen/Source2";
 import Source2environment from "./Screen/Source2environment";
-import Source3environment from "./Screen/Source3_environment";
-import Source3comportement from "./Screen/Source3_comportement";
-import Source3capacity from "./Screen/Source3_capacity"
+import Source3Environment from "./Screen/Source3_environment";
+import Source3Behavior from "./Screen/Source3_behavior";
+import Source3Capacity from "./Screen/Source3_capacity"
+import Source3Beliefs from "./Screen/Source3_beliefs"
 import Sympto4Perf from "./Screen/Sympto4Perf";
 import Sympto4Com from "./Screen/Sympto4Com";
 import Sympto4Orga from "./Screen/Sympto4Orga";
@@ -39,9 +39,10 @@ class App extends React.Component {
             <Route exact path="/Source2environment" component={Source2environment} />
             <Route exact path="/Symptome5" component={Symptome5} />
             <Route exact path="/symptome2" component={Symptome2} />
-            <Route exact path="/source3_environment" component={Source3environment} />
-            <Route exact path="/source3_comportement" component={Source3comportement}/>
-            <Route exact path="/source3_capacites" component={Source3capacity}/>
+            <Route exact path="/source3_environment" component={Source3Environment} />
+            <Route exact path="/source3_comportement" component={Source3Behavior}/>
+            <Route exact path="/source3_capacites" component={Source3Capacity}/>
+            <Route exact path="/source3_croyances" component={Source3Beliefs}/>
             <Route exact path="/symptome2" component={Symptome2} />
           </Switch>
         </BrowserRouter>
