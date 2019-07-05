@@ -1,0 +1,39 @@
+.modal_main {
+  background-color: rgba(55, 115, 184, 0.9);
+  position: absolute;
+  opacity: 20%;
+  z-index: 1;
+  width: 380px;
+  height: 100%;
+  color:white;
+}
+
+.pass_continue  {
+cursor: pointer;
+color: gold !important;
+text-decoration: underline;
+}
+.belief_image{
+  margin: auto;
+}
+.modal_text2 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-gap: 30px;
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 284px;
+  text-align: center;
+  
+  /* color: white;  */
+  }
+
+.modal_closed{
+  cursor: pointer;
+  margin: 0;
+  text-decoration: underline;
+}
+
+  .modaloff {
+  display: none;
+  }

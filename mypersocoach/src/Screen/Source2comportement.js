@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios"
 
-import "./Source2environment.css";
+import "./Source2comportement.css";
 
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
@@ -10,14 +10,13 @@ import FowardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 
 
-class Source2Environment extends React.Component {
+class Source2Comportement extends React.Component {
   state = {
     icon: [],
     problem_origin: [],
     text_static: [],
     text_static2: [],
-    text_static3: [],
-    id : 1
+    text_static3: []
   };
 
   getHeader = async () => {
@@ -28,14 +27,14 @@ class Source2Environment extends React.Component {
       // });
   };
   getProblem = async () => {
-    const res= await axios.get("http://localhost:3001/problem_origin/1")
+    const res= await axios.get("http://localhost:3001/problem_origin/2")
     this.setState({ problem_origin: res.data[0]})
     // .then(data => {
       //   this.setState({ problem_origin: data[0] });
       // });
   };
   getTextStatic = async () => {
-    const res= await axios.get("http://localhost:3001/text_static/22")
+    const res= await axios.get("http://localhost:3001/text_static/23")
     this.setState({ text_static: res.data[0] })
       // .then(data => {
       //   this.setState({ text_static: data[0] });
@@ -82,4 +81,4 @@ class Source2Environment extends React.Component {
     );
   }
 }
-export default Source2Environment;
+export default Source2Comportement;
