@@ -39,8 +39,9 @@ class Symptome2 extends React.Component {
     getResponse = async () => {
       
       
-      const id = this.props.location.state.summary_Id;
+      const id = this.props.location.state.summary_id;
       console.log("voici mon id", id)
+      
       // console.log('mon id affiche t elle', id)
       const res= await axios.get(`http://localhost:3001/response/${id}`)
           
@@ -63,7 +64,7 @@ class Symptome2 extends React.Component {
    render() {
     console.log("voila ma state", this.state)
     console.log("ou est ma response elle a disparu", this.state.response)
-   console.log("summary id es tu là ....", this.props.location.state.summaryId)
+   console.log("summary id es tu là ....", this.props.location.state.summary_id)
     const{icon, text_static, response} = this.state
     return (
       <div className="containerS2">
@@ -71,7 +72,7 @@ class Symptome2 extends React.Component {
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
         <ResponseSymptome2 response={response}/>
-        <ForwardStep lastId={this.props.location.state.lastId} redirectionPage={1}/>
+        <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={1}/>
         <BackSubmit />
       </div>
       </div>

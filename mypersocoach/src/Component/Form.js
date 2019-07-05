@@ -43,7 +43,7 @@ class Form extends React.Component {
             response_summary: this.state.textarea,
             summary_id: this.props.lastId,
             problem_id: this.props.problemId,
-            problem_origin_id: null
+            // problem_origin_id: 1
 
         })
             .then((res => {
@@ -110,8 +110,8 @@ class Form extends React.Component {
 
         const { response, text_static2, text_static3, text_static4 } = this.state
 
-       
-        
+       console.log("est ce que summary-id se charge", this.state.summary_id)
+    console.log('est ce que ma props se charge', this.props.lastId)
 
         return (
             <div>

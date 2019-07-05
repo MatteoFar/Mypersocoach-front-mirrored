@@ -60,10 +60,13 @@ class Source2Environment extends React.Component {
   };
 
   // getIdProblemOrigin = () => {
-    
-  //   const problem_originId= this.props.location.state.problem_originId
+  //   const problem_originId =  this.props.location.state.problem_originId
+  //   const id = this.props.location.state.summaryId
+
+  //   console.log('ma id de summary es tu toujorus là', id)
+
   //   console.log('ai je mon id problem origin', id)
-  //   axios.put(`http://localhost:3001/response/${id}`, {problem_id: problem_id})
+  //   axios.put(`http://localhost:3001/response/${id}`, {problem_originId: problem_originId})
   //     .then(res => {
   //       console.log("response axios: commmmm", res);
   //     })
@@ -78,7 +81,7 @@ class Source2Environment extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    this.getIdProblemOrigin()
+    // this.getIdProblemOrigin()
   }
 
   render() {
@@ -90,7 +93,7 @@ class Source2Environment extends React.Component {
         <IconMain icon={icon.picture_src} />
         <TitlePage problem_origin={problem_origin} /> 
         <HeadingText text_static={text_static.all_text} />
-        <FowardStep text_static2={text_static2.all_text}/>
+        <FowardStep redirectionPage={2} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
         <NextStep text_static3={text_static3.all_text}/>
       </div>
         

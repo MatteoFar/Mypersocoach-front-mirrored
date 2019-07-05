@@ -58,9 +58,9 @@ class Origins extends React.Component {
   }
   
   render() {
-    console.log('test de map origin',this.props.problem_origins);
-    console.log('id de summary', this.props.summaryId);
-    
+    // console.log('test de map origin',this.props.problem_origins);
+    // console.log('id de summary', this.props.summaryId);
+    console.log('ai je mon id de problement origin',  this.props.problem_origins.id)
     
   return (
       <>

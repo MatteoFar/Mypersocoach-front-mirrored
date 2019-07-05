@@ -11,10 +11,17 @@ class ForwardStep extends React.Component{
     if(this.props.redirectionPage === 1) {
       this.props.history.push({
           pathname: "/Source2", 
-          state: {summaryId: this.props.lastId}
+          state: {summaryId: this.props.summaryId}
           });
-      }
-  }
+      } 
+      // else if (this.props.redirectionPage ===2) {
+        // this.props.history.push({
+        //   pathname: "/source3environment", 
+        //   state: {summaryId: this.props.summaryId}
+        //   });
+      // }
+    }
+  
   
   
   render(){
