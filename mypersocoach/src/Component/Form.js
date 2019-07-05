@@ -17,7 +17,7 @@ class Form extends React.Component {
         text_static3: [],
         text_static4: [],
         textarea: '',
-        lastId: this.props.lastId,
+        summary_id: this.props.lastId,
        
     }
 
@@ -53,7 +53,7 @@ class Form extends React.Component {
                     pathname: "/symptome2", 
                     state: {
 
-                        lastId: this.props.lastId, 
+                        summary_id: this.props.lastId, 
                         
                     
                     }
