@@ -12,6 +12,7 @@ import Source2 from "./Screen/Source2";
 import Source2environment from "./Screen/Source2environment";
 import Source3environment from "./Screen/Source3_environment";
 import Source3comportement from "./Screen/Source3_comportement";
+import Source3capacity from "./Screen/Source3_capacity"
 import Sympto4Perf from "./Screen/Sympto4Perf";
 import Sympto4Com from "./Screen/Sympto4Com";
 import Sympto4Orga from "./Screen/Sympto4Orga";
@@ -40,6 +41,7 @@ class App extends React.Component {
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/source3_environment" component={Source3environment} />
             <Route exact path="/source3_comportement" component={Source3comportement}/>
+            <Route exact path="/source3_capacites" component={Source3capacity}/>
             <Route exact path="/symptome2" component={Symptome2} />
           </Switch>
         </BrowserRouter>
