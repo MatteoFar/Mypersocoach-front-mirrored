@@ -71,7 +71,7 @@ class Symptome2 extends React.Component {
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
         <ResponseSymptome2 response={response}/>
-        <ForwardStep summaryId={this.props.location.state.summaryId}/>
+        <ForwardStep lastId={this.props.location.state.lastId} redirectionPage={1}/>
         <BackSubmit />
       </div>
       </div>
