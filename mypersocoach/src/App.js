@@ -26,6 +26,7 @@ import Source2capacites from"./Screen/Source2capacites"
 
 
 
+
 class App extends React.Component {
   render() {
     return (
@@ -44,9 +45,9 @@ class App extends React.Component {
             <Route exact path="/symptome3" component={Symptome3} />
             <Route exact path="/Source2" component={Source2} />
             <Route exact path="/Source2environment" component={Source2environment} />
-            <Route exact path="/source2comportement" component={Source3Behavior} />
-            <Route exact path="/source2croyances" component={Source3Beliefs} />
-            <Route exact path="/source2capacites" component={Source3Capacity} />
+            <Route exact path="/source2comportement" component={Source2comportement} />
+            <Route exact path="/source2croyances" component={Source2croyances} />
+            <Route exact path="/source2capacites" component={Source2capacites} />
             <Route exact path="/Symptome5" component={Symptome5} />
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/source3_environment" component={Source3Environment} />
