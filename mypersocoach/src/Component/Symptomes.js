@@ -15,6 +15,7 @@ class Symptomes extends Component {
         pathname: "/symptome4_conflict", 
         state: {lastId: this.props.lastId}
         });
+        
     }
    
       else if (this.props.problem.id === 2) { 
@@ -56,9 +57,9 @@ class Symptomes extends Component {
   
 
   render(){
-  console.log('couccou ma props',this.props.lastId)
-  console.log('history çamarche?', this.props.history)
-  console.log('mon objet', this)  
+  // console.log('couccou ma props',this.props.lastId)
+  // console.log('history çamarche?', this.props.history)
+  // console.log('mon objet', this)  
   
   return (
     <div className="iconsSymptom3">
@@ -67,9 +68,9 @@ class Symptomes extends Component {
         <img
           href="#"
           className="imageIconSymptom3"
-          alt="icon"
+          alt={this.props.problem.description_alt}
           src={this.props.problem.picture_src}
-          onClick={this.handleClick} 
+          onClick={this.handleClick}
        
        />
 

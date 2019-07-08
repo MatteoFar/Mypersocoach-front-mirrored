@@ -2,8 +2,66 @@ import React from "react";
 import "./Origins.css"
 
 import "../Component/HeadingText.css"
+import { withRouter } from "react-router-dom";
 
-const Origins = ({ problem_origins }) => {
+
+class Origins extends React.Component {
+  
+  state={
+    summaryId:'',
+    problem_originId: ''
+  }
+  
+  handleClick = () => {
+   
+    if(this.props.problem_origins.id === 1) {
+      this.props.history.push({
+        pathname: "/Source2environment", 
+        state: { 
+          summaryId: this.props.summaryId,
+          problem_originId: this.props.problem_origins.id
+        }
+        });
+    }
+
+    else if(this.props.problem_origins.id === 2) {
+      this.props.history.push({
+        pathname: "/Source2comportement", 
+        state: { 
+          summaryId: this.props.summaryId,
+          problem_originId: this.props.problem_origins.id
+        }
+        });
+    }
+
+    else if(this.props.problem_origins.id === 3) {
+      this.props.history.push({
+        pathname: "/Source2capacites", 
+        state: { 
+          summaryId: this.props.summaryId, 
+          problem_originId: this.props.problem_origins.id
+        }
+       
+      });
+    }
+
+    else if(this.props.problem_origins.id === 4) {
+      this.props.history.push({
+        pathname: "/Source2croyances", 
+        state: { 
+          summaryId: this.props.summaryId, 
+          problem_originId: this.props.problem_origins.id
+        }
+        });
+    }
+    
+  }
+  
+  render() {
+    // console.log('test de map origin',this.props.problem_origins);
+    // console.log('id de summary', this.props.summaryId);
+    console.log('ai je mon id de problement origin',  this.props.problem_origins.id)
+    
   return (
       <>
      {/* <div className="logoTextSymptome3">
@@ -16,13 +74,13 @@ const Origins = ({ problem_origins }) => {
       </div> */}
       
       <div>
-          <button className="iconLink">
-            <img href="#" className="image_icon" alt="icon" src={problem_origins.picture_src} />
-            <p className="text">{problem_origins.all_text}</p>
+          <button onClick={this.handleClick} className="iconLink">
+            <img href="#" className="image_icon" alt={this.props.problem_origins.description_alt} src={this.props.problem_origins.picture_src} />
+            <p className="text">{this.props.problem_origins.all_text}</p>
           </button>
       </div>
       </>
   );
 };
-
-export default Origins;
+}
+export default withRouter(Origins);

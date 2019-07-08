@@ -1,5 +1,7 @@
 
 .Response {
     margin: 0 auto;
-    height: 250px;
+    height: 66vh;
+    width: 282px;
+    text-align: center;
 }

@@ -49,7 +49,8 @@ class Symptome3 extends React.Component {
         console.log('pouic pouic', this.state.lastId)
       })
    }
-  
+
+   
   
   componentDidMount() {
     this.getHeader();
@@ -57,18 +58,23 @@ class Symptome3 extends React.Component {
     this.getThematic();
     this.loadSummaryId()
   }
-
+  
   render() {
     const { icon, text_static, problem, lastId } = this.state;
-    console.log("oui oui oui",this.state.lastId)
+    // console.log("oui oui oui",this.state.lastId)
+    // console.log('pouet pouet', this.state.id)
     
+    //display of problem array where we see id=1 conflit avec un collègue, id=2 maperformance etc...
+    //we need this id in the next component :Symptomes in order to set conditions to access the 6 Symto4 components
+
+    console.log("mon tableau problem", problem)
     return (
       <div className="containerSymptom3">
-        <IconMain icon={icon.picture_src} />
+        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (
-          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId} summaryId={this.state.summaryID} problem={problem} />
+          <Symptomes lastId={lastId} mainThemeID={this.props.mainThemeId}  problem={problem} />
         ))}
 
         </div>
@@ -76,5 +82,6 @@ class Symptome3 extends React.Component {
       </div>
     );
   }
+
 }
 export default Symptome3;

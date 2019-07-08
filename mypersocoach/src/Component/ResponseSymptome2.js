@@ -1,11 +1,14 @@
 import React from "react";
 import "./ResponseSymptome2.css"
 
-const ResponseSymptome2 = ({ Answer }) => {
+const ResponseSymptome2 = ({ response }) => {
+  
+ 
+  
   return (
-    <div className="Response">
-      <p>CA S'AFFICHE PAS !!! C'EST CA MON PROBLEME !!</p>
-    </div>
+     <div className="Response">
+       <p>{response}</p>
+     </div>
   );
 };
 

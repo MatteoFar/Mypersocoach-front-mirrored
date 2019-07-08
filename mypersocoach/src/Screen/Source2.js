@@ -16,7 +16,17 @@ class Source2 extends React.Component {
     problem_origin: [],
     text_static1: [],
     text_static3: [],
+    summaryId : ""
   };
+
+
+  // handleClick = () => {
+   
+  //     this.props.history.push({
+  //       pathname: "/Source2environment", 
+  //       state: { summaryId: this.props.location.state.summaryId }
+  //       });
+  //   }
 
   getHeader = async () => {
     const res= await axios.get("http://localhost:3001/icon/6")
@@ -71,20 +81,27 @@ class Source2 extends React.Component {
   }
 
   render() {
+    console.log("summaryId es-tu là", this.props.summaryId)
+    console.log('map de origin est la ', this.state.problem_origin);
+    
+    
     const {icon, text_static, problem_origin,text_static1,text_static3}=this.state
   return (
     <div className="containersource2">
      <ModalCounter text_static1={text_static1.all_text} text_static3={text_static3.all_text}/>
-     <IconMain icon={icon.picture_src}/>
+     <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
      <HeadingText text_static={text_static.all_text}/>
      <div className="icons">
      {problem_origin.map(problem_origins => (
-       <Origins problem_origins={problem_origins}/>
+      <Origins summaryId={this.props.location.state.summaryId} problem_origins={problem_origins}/>
       ))}
       </div>
      <button href="#" className="button_source2">Je ne suis pas sûr</button>
     </div>
-     )}};
+     )}
+    
+    
+    };
 
 
 export default Source2;

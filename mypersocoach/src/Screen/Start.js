@@ -43,7 +43,7 @@ class Start extends Component {
   render() {
     return (
       <div className="startContainer">
-        <IconMain icon={this.state.icon.picture_src} />
+        <IconMain icon={this.state.icon.picture_src} alt={this.state.icon.description_alt}/>
         <HeadingText text_static= {this.state.headingText1.all_text} />
         <DisplayModal />
         
