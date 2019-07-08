@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios"
 
-import "./Source2environment.css";
+import "./Source2comportement.css";
 
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
@@ -10,15 +10,13 @@ import FowardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 
 
-class Source2Environment extends React.Component {
+class Source2Comportement extends React.Component {
   state = {
     icon: [],
     problem_origin: [],
     text_static: [],
     text_static2: [],
-    text_static3: [],
-  
-   
+    text_static3: []
   };
 
   getHeader = async () => {
@@ -29,14 +27,14 @@ class Source2Environment extends React.Component {
       // });
   };
   getProblem = async () => {
-    const res= await axios.get("http://localhost:3001/problem_origin/1")
+    const res= await axios.get("http://localhost:3001/problem_origin/2")
     this.setState({ problem_origin: res.data[0]})
     // .then(data => {
       //   this.setState({ problem_origin: data[0] });
       // });
   };
   getTextStatic = async () => {
-    const res= await axios.get("http://localhost:3001/text_static/22")
+    const res= await axios.get("http://localhost:3001/text_static/23")
     this.setState({ text_static: res.data[0] })
       // .then(data => {
       //   this.setState({ text_static: data[0] });
@@ -59,35 +57,16 @@ class Source2Environment extends React.Component {
       // });
   };
 
-  // getIdProblemOrigin = () => {
-  //   const problem_originId =  this.props.location.state.problem_originId
-  //   const id = this.props.location.state.summaryId
-
-  //   console.log('ma id de summary es tu toujorus là', id)
-
-  //   console.log('ai je mon id problem origin', id)
-  //   axios.put(`http://localhost:3001/response/${id}`, {problem_originId: problem_originId})
-  //     .then(res => {
-  //       console.log("response axios: commmmm", res);
-  //     })
-  // }
-
-
-
-
   componentDidMount() {
     this.getHeader();
     this.getProblem();
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    // this.getIdProblemOrigin()
   }
 
   render() {
     const{icon, problem_origin, text_static,text_static2,text_static3}=this.state
-    console.log('coucou idsummary', this.props.location.state.summaryId)
-    
     return (
       
       <div className="containerSource2Environment">
@@ -95,11 +74,11 @@ class Source2Environment extends React.Component {
         <IconMain icon={icon.picture_src} />
         <TitlePage problem_origin={problem_origin} /> 
         <HeadingText text_static={text_static.all_text} />
-        <FowardStep redirectionPage={'source3_environment'} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
+        <FowardStep text_static2={text_static2.all_text} redirectionPage = {'source3_comportement'} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId}/>
         <NextStep text_static3={text_static3.all_text}/>
       </div>
         
     );
   }
 }
-export default Source2Environment;
+export default Source2Comportement;
