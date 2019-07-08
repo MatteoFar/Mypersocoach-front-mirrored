@@ -49,12 +49,14 @@ class Source3Environment extends React.Component {
   }
 
   render() {
+   console.log('est ce que ma summary_id se charge?', this.props.location.state.summaryId)
+   console.log('et mon rpoblem origin id alors?', this.props.location.state.problem_originId)
     return (
       <div className="containerSource2Environment">
         <IconMain icon={this.state.icon.picture_src} />
         <TitlePage problem_origin={this.state.problem_origin} /> 
         <HeadingText text_static={this.state.text_static.all_text} /> 
-        <Form/>
+        <Form  summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} redirectionPage={'Source2environnement'}/>
       </div>
     );
   }
