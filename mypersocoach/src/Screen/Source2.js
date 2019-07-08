@@ -92,7 +92,7 @@ class Source2 extends React.Component {
      <IconMain icon={icon.picture_src}/>
      <HeadingText text_static={text_static.all_text}/>
      <div className="icons">
-     {this.state.problem_origin.map(problem_origins => (
+     {problem_origin.map(problem_origins => (
       <Origins summaryId={this.props.location.state.summaryId} problem_origins={problem_origins}/>
       ))}
       </div>
