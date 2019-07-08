@@ -21,7 +21,8 @@ class Source2Croyances extends React.Component {
     text_static1: [],
     text_static2: [],
     text_static3: [],
-    text_modal1: []
+    text_modal1: [],
+    summaryId:[]
     // icon_modal: [],
     // modal_continue: [],
     // modal_closed: []
@@ -64,7 +65,7 @@ class Source2Croyances extends React.Component {
     const res = await axios.get("http://localhost:3001/text_static/26");
     this.setState({ text_after_link: res.data[0] });
   };
-  
+
   getTextStatic2 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/121");
     this.setState({ text_static2: res.data[0] });
@@ -80,20 +81,11 @@ class Source2Croyances extends React.Component {
     //   this.setState({ text_static: data[0] });
     // });
   };
-<<<<<<< HEAD
   // getIconModal = async () => {
   //   const res = await axios.get("http://localhost:3001/problem_origin/4");
   //   this.setState({ icon_modal: res.data[0] });
   //   console.log(res);
   // };
-=======
-
-  getIconModal = async () => {
-    const res = await axios.get("http://localhost:3001/problem_origin/4");
-    this.setState({ icon_modal: res.data[0] });
-    console.log(res);
-  };
->>>>>>> dev
 
   // getTextModal = async () => {
   //   const res = await axios.get("http://localhost:3001/text_static/52");
@@ -138,32 +130,23 @@ class Source2Croyances extends React.Component {
 
     return (
       <div className="containerSource2Environment">
-        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
+        <IconMain icon={icon.picture_src} alt={icon.description_alt} />
         <TitlePage problem_origin={problem_origin} />
         <HeadingText text_static={text_static.all_text} />
-<<<<<<< HEAD
+
         <HeadingLink
-          text_static_link={text_static_link.all_text}
-          link_modal={this.state.link_modal}
-=======
-       
-        <HeadingLink 
           onClick={this.LinkOpenModal}
           text_static_link={text_static_link.all_text}
-          link_modal= {this.state.link_modal}
-        />
-
-        <ModalExample className={modal}
-          icon_modal={icon_modal.picture_src}
-          alt={icon_modal.description_alt}
-          text_modal1={text_modal1.all_text}
-          modal_continue={modal_continue.all_text}
-          modal_closed={modal_closed.all_text}
->>>>>>> dev
+          link_modal={this.state.link_modal}
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
-        <FowardStep  redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId}/>
+        <FowardStep
+          redirectionPage={"source3_croyances"}
+          text_static2={text_static2.all_text}
+          summaryId={this.props.location.state.summaryId}
+          problem_originId={this.props.location.state.problem_originId}
+        />
         <NextStep text_static3={text_static3.all_text} />
       </div>
     );
