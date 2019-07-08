@@ -2,6 +2,7 @@ import React from "react";
 import "./ForwardStep.css"
 import { withRouter } from "react-router-dom";
 
+
 class ForwardStep extends React.Component{
     state= {
       summaryId:'',
@@ -61,13 +62,29 @@ class ForwardStep extends React.Component{
   
   }
   
+
+ 
   
   render(){
-  return (
+  
+    if(this.props.redirectionPage === 'Source2') {
+  
+    return (
+      <div className="forward_step_container">
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
+      </div>
+    );
+  }
+
+  else {
+    return (
       <div className="forward_step_container">
         <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static2} </button>
       </div>
     );
+
+  }
+
   }
 }
 export default withRouter(ForwardStep);

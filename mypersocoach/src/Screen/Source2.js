@@ -89,10 +89,10 @@ class Source2 extends React.Component {
   return (
     <div className="containersource2">
      <ModalCounter text_static1={text_static1.all_text} text_static3={text_static3.all_text}/>
-     <IconMain icon={icon.picture_src}/>
+     <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
      <HeadingText text_static={text_static.all_text}/>
      <div className="icons">
-     {this.state.problem_origin.map(problem_origins => (
+     {problem_origin.map(problem_origins => (
       <Origins summaryId={this.props.location.state.summaryId} problem_origins={problem_origins}/>
       ))}
       </div>
