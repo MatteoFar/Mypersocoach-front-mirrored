@@ -6,9 +6,9 @@ const ResponseSymptome2 = ({ response }) => {
  
   
   return (
-    <div className="Response">
-      <p>{response}</p>
-    </div>
+     <div className="Response">
+       <p>{response}</p>
+     </div>
   );
 };
 

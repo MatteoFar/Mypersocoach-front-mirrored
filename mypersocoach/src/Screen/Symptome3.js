@@ -70,7 +70,7 @@ class Symptome3 extends React.Component {
     console.log("mon tableau problem", problem)
     return (
       <div className="containerSymptom3">
-        <IconMain icon={icon.picture_src} />
+        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <HeadingText text_static={text_static.all_text} />
         <div className="flex">
         {problem.map(problem => (

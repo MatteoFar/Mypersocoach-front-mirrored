@@ -1,6 +1,6 @@
 import React from "react";
 import "./Answer.css"
-import axios from "axios";
+
 
 class Answer extends React.Component  {
   

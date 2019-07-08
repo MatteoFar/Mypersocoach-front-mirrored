@@ -75,7 +75,7 @@ class Origins extends React.Component {
       
       <div>
           <button onClick={this.handleClick} className="iconLink">
-            <img href="#" className="image_icon" alt="icon" src={this.props.problem_origins.picture_src} />
+            <img href="#" className="image_icon" alt={this.props.problem_origins.description_alt} src={this.props.problem_origins.picture_src} />
             <p className="text">{this.props.problem_origins.all_text}</p>
           </button>
       </div>

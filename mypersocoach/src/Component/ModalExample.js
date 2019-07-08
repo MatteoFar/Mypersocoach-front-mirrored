@@ -31,7 +31,7 @@ class ModalExample extends React.Component {
       <div className= {modal} >
         <div className="modal_text2">
           
-          <img className="belief_image" src={this.props.icon_modal} />
+          <img className="belief_image" src={this.props.icon_modal} alt={this.props.alt}/>
           <p>{nl2br(this.props.text_modal1)}</p>
           <p onClick={this.HandleOpenModal} className="pass_continue">{this.props.modal_continue}</p>
           <p onClick={this.CloseModal} className="modal_closed">{this.props.modal_closed}</p>

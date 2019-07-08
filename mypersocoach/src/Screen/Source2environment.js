@@ -92,7 +92,7 @@ class Source2Environment extends React.Component {
       
       <div className="containerSource2Environment">
       
-        <IconMain icon={icon.picture_src} />
+        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <TitlePage problem_origin={problem_origin} /> 
         <HeadingText text_static={text_static.all_text} />
         <FowardStep redirectionPage={'source3_environment'} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
