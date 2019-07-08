@@ -19,7 +19,9 @@ class Symptome2 extends React.Component {
     icon: [],
     text_static: [],
     response: '',
-    responseId: ''
+    responseId: '',
+    text_static3:'',
+    text_static4:''
   };
 
   getHeader = async () => {
@@ -52,6 +54,17 @@ class Symptome2 extends React.Component {
       this.setState({responseId: res.data[0].id});
     };
 
+    
+    getOk = async () => {
+      const res = await axios.get("http://localhost:3001/text_static/118")
+      this.setState({ text_static3: res.data[0] });
+  };
+  
+  getNotSure = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/119")
+    this.setState({ text_static4: res.data[0] });
+};
+    
 
 
 
@@ -59,21 +72,23 @@ class Symptome2 extends React.Component {
     this.getHeader();
     this.getTextStatic();
     this.getResponse();
+    this.getOk();
+    this.getNotSure();
   }
 
    render() {
     console.log("voila ma state", this.state)
     console.log("ou est ma response elle a disparu", this.state.response)
    console.log("summary id es tu là ....", this.props.location.state.summary_id)
-    const{icon, text_static, response} = this.state
+    const{icon, text_static, response, text_static3, text_static4} = this.state
     return (
       <div className="containerS2">
       <div className="containerSymptome2">
-        <IconMain icon={icon.picture_src} />
+        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <HeadingText text_static={text_static.all_text} /> 
         <ResponseSymptome2 response={response}/>
-        <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={"Source2"}/>
-        <BackSubmit />
+        <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={"Source2"}  text_static3={text_static3.all_text} />
+        <BackSubmit  text_static4={text_static4.all_text}/>
       </div>
       </div>
     );

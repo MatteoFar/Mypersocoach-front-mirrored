@@ -6,7 +6,7 @@ class BackSubmit extends React.Component {
     return (
       <>
         <button href="#" className="button_back_submit">
-        test
+        {this.props.text_static4}
         </button>
         
       </>
