@@ -21,13 +21,12 @@ class Source2Croyances extends React.Component {
     text_static1: [],
     text_static2: [],
     text_static3: [],
-    text_modal1: [],
-    icon_modal: [],
-    modal_continue: [],
-    modal_closed: [],
-    link_modal : false
+    text_modal1: []
+    // icon_modal: [],
+    // modal_continue: [],
+    // modal_closed: []
   };
-  
+
   getHeader = async () => {
     const res = await axios.get("http://localhost:3001/icon/6");
     this.setState({ icon: res.data[0] });
@@ -79,27 +78,27 @@ class Source2Croyances extends React.Component {
     //   this.setState({ text_static: data[0] });
     // });
   };
-  getIconModal = async () => {
-    const res = await axios.get("http://localhost:3001/problem_origin/4");
-    this.setState({ icon_modal: res.data[0] });
-    console.log(res);
-  };
+  // getIconModal = async () => {
+  //   const res = await axios.get("http://localhost:3001/problem_origin/4");
+  //   this.setState({ icon_modal: res.data[0] });
+  //   console.log(res);
+  // };
 
-  getTextModal = async () => {
-    const res = await axios.get("http://localhost:3001/text_static/52");
-    this.setState({ text_modal1: res.data[0] });
-    console.log(res);
-  };
-  getModalContinue = async () => {
-    const res = await axios.get("http://localhost:3001/text_static/58");
-    this.setState({ modal_continue: res.data[0] });
-    console.log(res);
-  };
-  getModalClosed = async () => {
-    const res = await axios.get("http://localhost:3001/text_static/59");
-    this.setState({ modal_closed: res.data[0] });
-    console.log(res);
-  };
+  // getTextModal = async () => {
+  //   const res = await axios.get("http://localhost:3001/text_static/52");
+  //   this.setState({ text_modal1: res.data[0] });
+  //   console.log(res);
+  // };
+  // getModalContinue = async () => {
+  //   const res = await axios.get("http://localhost:3001/text_static/58");
+  //   this.setState({ modal_continue: res.data[0] });
+  //   console.log(res);
+  // };
+  // getModalClosed = async () => {
+  //   const res = await axios.get("http://localhost:3001/text_static/59");
+  //   this.setState({ modal_closed: res.data[0] });
+  //   console.log(res);
+  // };
 
   LinkOpenModal() {
     this.setState({ link_modal: !this.state.link_modal });
@@ -113,11 +112,6 @@ class Source2Croyances extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    this.getIconModal();
-    this.getTextModal();
-    this.getModalContinue();
-    this.getModalClosed();
-    this.LinkOpenModal();
   }
 
   render() {
@@ -128,30 +122,17 @@ class Source2Croyances extends React.Component {
       text_static_link,
       text_after_link,
       text_static2,
-      text_static3,
-      icon_modal,
-      text_modal1,
-      modal_continue,
-      modal_closed
+      text_static3
     } = this.state;
-
-    const modal = this.state.link_modal ? "modal_main" : "modaloff";
 
     return (
       <div className="containerSource2Environment">
         <IconMain icon={icon.picture_src} />
         <TitlePage problem_origin={problem_origin} />
         <HeadingText text_static={text_static.all_text} />
-        <HeadingLink 
-          onClick={this.LinkOpenModal}
+        <HeadingLink
           text_static_link={text_static_link.all_text}
-          link_modal= {this.state.link_modal}
-        />
-        <ModalExample className={modal}
-          icon_modal={icon_modal.picture_src}
-          text_modal1={text_modal1.all_text}
-          modal_continue={modal_continue.all_text}
-          modal_closed={modal_closed.all_text}
+          link_modal={this.state.link_modal}
         />
         <HeadingText text_after_link={text_after_link.all_text} />
         <FowardStep text_static2={text_static2.all_text} />
@@ -160,4 +141,5 @@ class Source2Croyances extends React.Component {
     );
   }
 }
+
 export default Source2Croyances;
