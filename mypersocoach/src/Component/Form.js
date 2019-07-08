@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { withRouter } from "react-router-dom";
+import { withRouter, NavLink } from "react-router-dom";
 
 
 
@@ -233,7 +233,7 @@ else if ( this.props.redirectionPage === 'Source2croyances') {
 
         const { response, text_static2, text_static3, text_static4 } = this.state
 
-    //    console.log("est ce que summary-id se charge", this.state.summary_id)
+    // console.log("est ce que summary-id se charge", this.state.summary_id)
     // console.log('est ce que ma props se charge', this.props.lastId)
 
         return (
@@ -247,7 +247,9 @@ else if ( this.props.redirectionPage === 'Source2croyances') {
 
                     <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
 
-                    <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text}</button>
+                    <NavLink className="navlink" to="/symptome3">
+                        <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text}</button>
+                    </NavLink>
 
                 </form>
             </div>
