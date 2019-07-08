@@ -5,7 +5,7 @@ import '../Component/LoginForm.css';
 
 const textLogin = 
     {
-        text : "Tu as déjà un compte ?",
+        text : "Tu n'as pas de compte ?",
         text_email : "Email",
         text_password : "Mot de passe",
         text_login : "Login",
