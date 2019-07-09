@@ -117,10 +117,10 @@ class Source2Croyances extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    this.getIconModal();
-    this.getTextModal();
-    this.getModalContinue();
-    this.getModalClosed();
+    // this.getIconModal();
+    // this.getTextModal();
+    // this.getModalContinue();
+    // this.getModalClosed();
     this.LinkOpenModal();
   }
 
