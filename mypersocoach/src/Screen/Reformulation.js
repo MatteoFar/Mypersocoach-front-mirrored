@@ -27,7 +27,9 @@ class Reformulation extends React.Component {
     response:[],
     responseCapacite:[],
     responseComportement : [],
-    responseEnvironnement: []
+    responseEnvironnement: [],
+    textButtonYes: [],
+    textButtonNo:[]
   };
 
   getHeader = async () => {
@@ -66,6 +68,22 @@ class Reformulation extends React.Component {
     const res= await axios.get("http://localhost:3001/text_static/33")
         this.setState({ headingResponse4: res.data[0] }); 
   };
+
+  getTextbuttonYes = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/123");
+    this.setState({ textButtonYes: res.data[0] });
+    // .then(data => {
+    //   this.setState({ text_static: data[0] });
+    // });
+  };
+  getTextbuttonNo = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/124");
+    this.setState({ textButtonNo: res.data[0] });
+    // .then(data => {
+    //   this.setState({ text_static: data[0] });
+    // });
+  };
+
 
 
   getResponse = async () => {
@@ -106,12 +124,18 @@ class Reformulation extends React.Component {
       
       const idresp = localStorage.getItem('idRespCapacite')
       console.log('mon id affiche t elle', idresp)
+      if (idresp === null) {
+        return console.log('false')
+      }
+      
+      else {
+      
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseCapacite: res.data[0].response_summary})
     
-      
+    }
         
       // console.log('where is ma response Id', this.state.response)
       // this.setState({responseId: res.data[0].id});
@@ -122,14 +146,17 @@ class Reformulation extends React.Component {
       
       const idresp= localStorage.getItem('idRespComportement')
       console.log('ou est mon locla storage', localStorage.getItem('idRespComportement'))
-     
+      if (idresp === null) {
+        return console.log('false')
+      }
+      else {
       console.log('test id comportement', idresp)
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseComportement: res.data[0].response_summary})
     
-      
+    }
         
       // console.log('where is ma response Id', this.state.response)
       // this.setState({responseId: res.data[0].id});
@@ -140,14 +167,19 @@ class Reformulation extends React.Component {
       
 
       const idresp= localStorage.getItem('idRespEnvironnement')
-      console.log('ou est mon locla storage', localStorage.getItem('idRespEnvironnement'))
-     
+      console.log(' à quoi ressemble tu idresp', idresp)
+      // console.log('ou est mon locla storage', localStorage.getItem('idRespEnvironnement'))
+     if (idresp === null) {
+       return console.log('false')
+     }
+     else {
       console.log('test id comportement', idresp)
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
-          
+         console.log('true') 
+         console.log(' à quoi ressemble tu idresp', idresp)
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseEnvironnement: res.data[0].response_summary})
-    
+    }
       
         
       // console.log('where is ma response Id', this.state.response)
@@ -169,7 +201,9 @@ class Reformulation extends React.Component {
     this.getResponseCroyance();
     this.getResponseCapacite();
     this.getResponseComportement();
-    this.getResponseEnvironnement()
+    this.getResponseEnvironnement();
+    this.getTextbuttonYes();
+    this.getTextbuttonNo()
   }
 
    render() {
@@ -186,7 +220,7 @@ class Reformulation extends React.Component {
     
     const{icon, text_static, text_static2,
          headingResponse,headingResponse2,headingResponse3,
-         headingResponse4, response, responseCroyance, responseCapacite, responseComportement, responseEnvironnement} = this.state
+         headingResponse4, response, responseCroyance, responseCapacite, responseComportement, responseEnvironnement, textButtonYes, textButtonNo} = this.state
     
     // const {response} = this.state
     
@@ -213,8 +247,8 @@ class Reformulation extends React.Component {
          />
          </div>
         
-        <ForwardStep/>
-        <BackSubmit />
+        <ForwardStep textButtonYes={textButtonYes.all_text}/>
+        <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
       </div>
       </div>
     );

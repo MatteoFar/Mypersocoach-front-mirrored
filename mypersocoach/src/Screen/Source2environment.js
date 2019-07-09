@@ -59,19 +59,6 @@ class Source2Environment extends React.Component {
       // });
   };
 
-  // getIdProblemOrigin = () => {
-  //   const problem_originId =  this.props.location.state.problem_originId
-  //   const id = this.props.location.state.summaryId
-
-  //   console.log('ma id de summary es tu toujorus là', id)
-
-  //   console.log('ai je mon id problem origin', id)
-  //   axios.put(`http://localhost:3001/response/${id}`, {problem_originId: problem_originId})
-  //     .then(res => {
-  //       console.log("response axios: commmmm", res);
-  //     })
-  // }
-
 
 
 
@@ -81,7 +68,7 @@ class Source2Environment extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    // this.getIdProblemOrigin()
+   
   }
 
   render() {

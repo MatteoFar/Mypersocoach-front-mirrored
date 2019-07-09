@@ -4,13 +4,12 @@ import axios from "axios";
 import "./Source2environment.css";
 
 import IconMain from "../Component/IconMain";
-import TitlePage from "../Component/TitlePage";
+
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
-import NextStep from "../Component/NextStep";
+
 import Answer from "../Component/Answer"
 import NotReally from "../Component/NotReally";
-import { validate } from "@babel/types";
+
 import Validate from "../Component/Validate";
 
 class Symptome5 extends React.Component {
