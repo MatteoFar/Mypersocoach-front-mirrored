@@ -1,5 +1,6 @@
 .forward_step_container {
   margin: auto;
+  margin-top: 137px;
   /* border: 1px solid black; */
 }
 
@@ -12,7 +13,7 @@
   font-family: "Montserrat", sans-serif;  
   font-size: 14px;
   height: 45px;
-  margin: 10px auto;
+  /* margin: auto; */
   /* margin-top: 300px; */
   /* margin-bottom: 10px; */
   text-align: center;

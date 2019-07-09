@@ -5,8 +5,6 @@ import "./Symptome2.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
-import NotReally from "../Component/NotReally";
 import ResponseSymptome2 from "../Component/ResponseSymptome2"
 import ForwardStep from "../Component/ForwardStep";
 import BackSubmit from "../Component/BackSubmit";
@@ -14,8 +12,8 @@ import BackSubmit from "../Component/BackSubmit";
 
 
 class Symptome2 extends React.Component {
+  
   state = {
-
     icon: [],
     text_static: [],
     response: '',
@@ -83,13 +81,13 @@ class Symptome2 extends React.Component {
     const{icon, text_static, response, text_static3, text_static4} = this.state
     return (
       <div className="containerS2">
-      <div className="containerSymptome2">
-        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-        <HeadingText text_static={text_static.all_text} /> 
-        <ResponseSymptome2 response={response}/>
-        <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={"Source2"}  text_static3={text_static3.all_text} />
-        <BackSubmit  text_static4={text_static4.all_text}/>
-      </div>
+        <div className="containerSymptome2">
+          <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
+          <HeadingText text_static={text_static.all_text} /> 
+          <ResponseSymptome2 response={response}/>
+          <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={"Source2"}  text_static3={text_static3.all_text} />
+          <BackSubmit  text_static4={text_static4.all_text}/>
+        </div>
       </div>
     );
   }
