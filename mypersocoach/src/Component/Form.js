@@ -18,8 +18,9 @@ class Form extends React.Component {
         text_static4: [],
         textarea: '',
         summary_id: this.props.lastId,
-        problem_origin_id: this.props.problem_originId
-    
+        problem_origin_id: this.props.problem_originId,
+      
+        
     }
 
 
@@ -78,11 +79,16 @@ class Form extends React.Component {
 
     .then((res => { 
         //mettre des conditions de redirection
-        
-            this.props.history.push({
+        //recup de lastid de response
+        console.log("response à ma réponse", res)
+           const idRespEnvironment = res.data.lastResponseId
+           localStorage.setItem('idRespEnvironnement',idRespEnvironment)
+           console.log("est ce que j'ai mon idenvrionnement",  res.data.lastResponseId)
+       
+        this.props.history.push({
                 pathname: "/source2comportement", 
                 state: {
-
+                    
                     summaryId: this.props.summaryId,       
                     problem_origin_id: this.props.problem_originId
 
@@ -106,11 +112,16 @@ else if ( this.props.redirectionPage === 'Source2comportement') {
 
   .then((res => { 
       //mettre des conditions de redirection
+      const idRespComportement = res.data.lastResponseId
+      localStorage.setItem('idRespComportement',idRespComportement)
       
-          this.props.history.push({
+      console.log('est ce que jai mon id comportement', idRespComportement);
+      
+      this.props.history.push({
               pathname: "/source2capacites", 
               state: {
-
+                  
+                 
                   summaryId: this.props.summaryId, 
                   problem_origin_id: this.props.problem_originId 
 
@@ -134,11 +145,18 @@ else if ( this.props.redirectionPage === 'Source2croyances') {
 
   .then((res => { 
       //mettre des conditions de redirection
+      console.log("response à ma réponse", res)
       
+      const idRespCapacite = res.data.lastResponseId
+      localStorage.setItem('idRespCapacite', idRespCapacite) 
+
+      console.log("est ce que j'ai mon idcapacite",  res.data.lastResponseId)
+   
           this.props.history.push({
               pathname: "/source2croyances", 
               state: {
 
+                  
                   summaryId: this.props.summaryId,
                   problem_origin_id: this.props.problem_originId    
 
@@ -149,31 +167,42 @@ else if ( this.props.redirectionPage === 'Source2croyances') {
     ))
 }
 
-// else if ( this.props.redirectionPage === 'deuxiemerecap') {
+else if ( this.props.redirectionPage === 'reformulation') {
         
-//     axios.post('http://localhost:3001/response', {
+    axios.post('http://localhost:3001/response', {
 
-//       textarea: textarea,
-//       response_summary: this.state.textarea,
-//       summary_id: this.props.summaryId,
-//       problem_origin_id: this.props.problem_originId
-//       // problem_origin_id: 1
+      textarea: textarea,
+      response_summary: this.state.textarea,
+      summary_id: this.props.summaryId,
+      problem_origin_id: this.props.problem_originId
+      // problem_origin_id: 1
 
-//   })
+  })
 
-//   .then((res => { 
-//       //mettre des conditions de redirection
-      
-//           this.props.history.push({
-//               pathname: "/?", 
-//               state: {
-//                   summaryId: this.props.summaryId,       
-//               }
-//       });
-  
-//   }
-//   ))
-// }
+  .then((res => { 
+     
+        console.log("response à ma réponse", res)
+        //    const idRespCroyance = res.data.lastResponseId
+           console.log("est ce que j'ai mon idcroyance",  res.data.lastResponseId)
+           const idRespCroyance = res.data.lastResponseId
+           localStorage.setItem('idRespCroyance', idRespCroyance) 
+        
+           
+        this.props.history.push({
+                pathname: "/reformulation", 
+                state: {
+                    
+                    
+                    summaryId: this.props.summaryId,       
+                    problem_origin_id: this.props.problem_originId
+
+                }
+            });
+
+
+  }
+  ))
+}
 
 
 }   
