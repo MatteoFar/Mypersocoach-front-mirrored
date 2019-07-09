@@ -33,19 +33,19 @@ textarea{
 } */
 
 .button_validate {
-    font-family: "Montserrat", sans-serif;
-    height: 45px;
-    width: 282px;
-    margin: 0px auto;
-    margin-top: 11px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
     background: none rgb(255, 189, 74);
+    border: none;
+    border-radius: 5px;  
     color: rgb(255, 255, 255);
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    height: 45px;
+    margin: 0px auto;
+    margin-top: 11px;
     outline: none;
+    text-align: center;
+    width: 282px;
     }
 
   .button_validate:hover {
@@ -65,19 +65,19 @@ textarea{
 } */
 
 .button_back {
-    font-family: "Montserrat", sans-serif;
-    height: 45px;
-    width: 282px;
-    margin: 0px auto;
-    margin-top: 11px;
+    background-color: #BDC3C7;  
     border: none;
     border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
-    background-color: #BDC3C7;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    height: 45px;
+    margin: 0px auto;
+    margin-top: 11px;
     outline: none;
+    text-align: center;
+    width: 282px;
     }
 
   .button_back:hover {
@@ -87,4 +87,8 @@ textarea{
   .button_back:active {
     background-color: rgb(161,166, 169);
   }
-  
+
+  /* .navlink {
+    color: white;
+    text-decoration: none;
+  } */
