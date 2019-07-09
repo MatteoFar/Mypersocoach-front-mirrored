@@ -83,7 +83,9 @@ class Symptome2 extends React.Component {
       <div className="containerS2">
         <div className="containerSymptome2">
           <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-          <HeadingText text_static={text_static.all_text} /> 
+          <div className="white">
+            <HeadingText text_static={text_static.all_text} /> 
+          </div>
           <ResponseSymptome2 response={response}/>
           <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={"Source2"}  text_static3={text_static3.all_text} />
           <BackSubmit  text_static4={text_static4.all_text}/>
