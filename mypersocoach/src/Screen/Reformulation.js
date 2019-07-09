@@ -22,7 +22,12 @@ class Reformulation extends React.Component {
     headingResponse: [],
     headingResponse2: [],
     headingResponse3: [],
-    headingResponse4: []
+    headingResponse4: [],
+    responseCroyance:[],
+    response:[],
+    responseCapacite:[],
+    responseComportement : [],
+    responseEnvironnement: []
   };
 
   getHeader = async () => {
@@ -63,23 +68,94 @@ class Reformulation extends React.Component {
   };
 
 
-    // getResponse = async () => {
+  getResponse = async () => {
       
       
-    //   const id = this.props.location.state.lastId;
-    //   console.log('mon id affiche t elle', id)
-    //   const res= await axios.get(`http://localhost:3001/response/${id}`)
+      const id = this.props.location.state.summaryId;
+      console.log('mon id affiche t elle', id)
+      const res= await axios.get(`http://localhost:3001/response/${id}`)
           
-    //   console.log('response where are you', res.data[0].response_summary )
-    //   this.setState({ 
-    //     response: res.data[0].response_summary});
-    //   console.log('where is ma response Id', res.data[0].id)
-    //   this.setState({responseId: res.data[0].id});
-    // };
+      console.log('response a question principale', res.data[0].response_summary )
+      this.setState({ response: res.data[0].response_summary})
+    
+      
+        
+      console.log('where is ma response Id', this.state.response)
+      // this.setState({responseId: res.data[0].id});
+    };
+
+    getResponseCroyance = async () => {
+      
+      
+      console.log('ou est mon locla storage', localStorage.getItem('idRespCroyance'))
+      const idresp = localStorage.getItem('idRespCroyance')
+      console.log('mon id affiche t elle', idresp)
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+          
+      console.log('response where are you', res.data[0].response_summary )
+      this.setState({ responseCroyance: res.data[0].response_summary})
+    
+      
+        
+      // console.log('where is ma response Id', this.state.response)
+      // this.setState({responseId: res.data[0].id});
+    }; 
+
+    getResponseCapacite = async () => {
+     
+      
+      const idresp = localStorage.getItem('idRespCapacite')
+      console.log('mon id affiche t elle', idresp)
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+          
+      console.log('response where are you', res.data[0].response_summary )
+      this.setState({ responseCapacite: res.data[0].response_summary})
+    
+      
+        
+      // console.log('where is ma response Id', this.state.response)
+      // this.setState({responseId: res.data[0].id});
+    }; 
 
 
+    getResponseComportement = async () => {
+      
+      const idresp= localStorage.getItem('idRespComportement')
+      console.log('ou est mon locla storage', localStorage.getItem('idRespComportement'))
+     
+      console.log('test id comportement', idresp)
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+          
+      console.log('response where are you', res.data[0].response_summary )
+      this.setState({ responseComportement: res.data[0].response_summary})
+    
+      
+        
+      // console.log('where is ma response Id', this.state.response)
+      // this.setState({responseId: res.data[0].id});
+    }; 
 
 
+    getResponseEnvironnement = async () => {
+      
+
+      const idresp= localStorage.getItem('idRespEnvironnement')
+      console.log('ou est mon locla storage', localStorage.getItem('idRespEnvironnement'))
+     
+      console.log('test id comportement', idresp)
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+          
+      console.log('response where are you', res.data[0].response_summary )
+      this.setState({ responseEnvironnement: res.data[0].response_summary})
+    
+      
+        
+      // console.log('where is ma response Id', this.state.response)
+      // this.setState({responseId: res.data[0].id});
+    }; 
+
+
+    
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
@@ -89,29 +165,54 @@ class Reformulation extends React.Component {
     this.getHeadingResponse3();
     this.getHeadingResponse4();
 
-    // this.getResponse();
+    this.getResponse();
+    this.getResponseCroyance();
+    this.getResponseCapacite();
+    this.getResponseComportement();
+    this.getResponseEnvironnement()
   }
 
    render() {
     // console.log("voila ma state", this.state)
-   
-    const{icon, text_static, response,text_static2,
-         headingResponse,headingResponse2,headingResponse3,
-         headingResponse4, responseId} = this.state
+    const idresp = this.props.location.state.idRespComportement;
 
-    return (
+    localStorage.getItem('idRespComportement')
+      console.log('ou est mon locla storage', localStorage.getItem('idRespComportement'))
+   
+    console.log('test id comportement', idresp)
+
+   
+    console.log("mon id croyance est là", this.props.location.state.idRespCroyance)
+    
+    const{icon, text_static, text_static2,
+         headingResponse,headingResponse2,headingResponse3,
+         headingResponse4, response, responseCroyance, responseCapacite, responseComportement, responseEnvironnement} = this.state
+    
+    // const {response} = this.state
+    
+    console.log('this props croyance', this.props.location.state.respCroyance)
+         return (
       <div className="containerS2">
       <div className="containerSymptome2">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
+        
+          <div>
         <div className="ResponseContainer">
            <ResponseSymptome2 response={response}/>
         </div>
         <HeadingText text_static={text_static2.all_text} /> 
-        <OriginResponse headingResponse={headingResponse.all_text} 
+        <OriginResponse  headingResponse={headingResponse.all_text} 
          headingResponse2={headingResponse2.all_text}
          headingResponse3={headingResponse3.all_text}
-         headingResponse4={headingResponse4.all_text} />
+         headingResponse4={headingResponse4.all_text}
+         responseCapacite={responseCapacite}
+         responseComportement = { responseComportement}
+         responseCroyance={responseCroyance} 
+         responseEnvironnement={responseEnvironnement}
+         />
+         </div>
+        
         <ForwardStep/>
         <BackSubmit />
       </div>
