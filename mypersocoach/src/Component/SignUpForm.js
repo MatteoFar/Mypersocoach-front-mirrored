@@ -22,7 +22,7 @@ class Signup extends React.Component {
         return (
         
         <div id="grid_login">
-        <BackgroundLogin/>
+        {/* <BackgroundLogin/> */}
 
         <section className="blue_bg">
                 
@@ -66,7 +66,7 @@ class Signup extends React.Component {
                 </form>
                 
             </section>
-            <footer className="blue_bg"></footer>  
+            {/* <footer className="blue_bg"></footer>   */}
 
         </div>
         );
