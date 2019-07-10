@@ -13,6 +13,7 @@ class Form extends React.Component {
         text_static2: [],
         text_static3: [],
         text_static4: [],
+        text_static5:[],
         textarea: '',
         summary_id: this.props.lastId,
         problem_origin_id: this.props.problem_originId,
@@ -31,7 +32,7 @@ class Form extends React.Component {
         e.preventDefault();
         const { textarea } = this.state;
         // allows us to go the symptome 2 page thanks to history.push and tranfert lastId recap as props
-        // first condition
+        // first condition 
         
         if (this.props.redirectionPage === 'symptome4') {
             
@@ -58,7 +59,7 @@ class Form extends React.Component {
        
        
         } 
-      // another condition
+      // another condition 
       else if ( this.props.redirectionPage === 'Source2environnement') {
         
       axios.post('http://localhost:3001/response', {
@@ -229,27 +230,79 @@ else if ( this.props.redirectionPage === 'reformulation') {
         this.setState({ text_static4: res.data[0] });
     };
 
-    componentDidUpdate(prevprops, prevstate) {
-        
+    getBack2 = async () => {
+        const res = await axios.get("http://localhost:3001/text_static/119")
+        this.setState({ text_static5: res.data[0] });
+    };
+    
+    
+    
+    //for the "Je ne suis pas sur" button
+   
+   
+   handleClick = () => {
+      //redirection for "je ne suis pas sûr button" in Source 3 envrionnement
+      
+        if(this.props.redirectionPage === 'Source2environnement') {
+        this.props.history.push({
+            pathname: "/Source2", 
+            state: {summaryId: this.props.summaryId}
+            });
+         
+      }
+    //reditection for "je ne suis pas sûr " in source 3 comportement
+    
+    else if(this.props.redirectionPage === 'Source2comportement') {
+        this.props.history.push({
+            pathname: "/source2comportement", 
+            state: {summaryId: this.props.summaryId}
+            });
+         
+      }
+     // reditection for "je ne suis pas sûr " in source 3 capacité
+      else if(this.props.redirectionPage === 'Source2croyances') {
+        this.props.history.push({
+            pathname: "/source2capacites", 
+            state: {summaryId: this.props.summaryId}
+            });
+         
+      }
+  // reditection for "je ne suis pas sûr " in source 3 croyances
+      else if(this.props.redirectionPage === 'reformulation') {
+        this.props.history.push({
+            pathname: "/source2croyances", 
+            state: {summaryId: this.props.summaryId}
+            });
+         
+      }
+
+
+
     }
     
     
+    
+
+
     componentDidMount() {
         this.getTextarea();
         this.getPlaceholder();
         this.getValidate();
         this.getBack();
+        this.getBack2();
         
     }
 
     
     render() {
 
-        const { response, text_static2, text_static3, text_static4 } = this.state
+        const { response, text_static2, text_static3, text_static4, text_static5 } = this.state
 
     // console.log("est ce que summary-id se charge", this.state.summary_id)
     // console.log('est ce que ma props se charge', this.props.lastId)
 
+// this return display the form with "retour" button in symptome4_compoents : synmpto4 conflict, symptome4_performance
+    if (this.props.redirectionPage === 'symptome4'){
         return (
             <div>
                 <form id="form" method="post" action="#" onSubmit={this.handleSubmit} onClick={this.test}>
@@ -262,12 +315,42 @@ else if ( this.props.redirectionPage === 'reformulation') {
                     <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
 
                     <NavLink className="navlink" to="/symptome3">
-                        <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text}</button>
+                        <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text} </button>
                     </NavLink>
 
                 </form>
             </div>
         )
+    }
+    
+    
+    // this return display the form with "jen en suis pas sûr" button" in Source3 evnvrionnement, source3 behavior ...
+        else {
+
+            return (
+                <div>
+                    <form id="form" method="post" action="#" onSubmit={this.handleSubmit} >
+                        
+    
+                        <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
+                            {response}
+                        </textarea>
+    
+                        <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+    
+                        <div className="navlink" >
+                            <button href="#" className="button_back" type="reset" name="return" onClick={this.handleClick} >{text_static5.all_text} </button>
+                    </div>
+    
+                    </form>
+                  
+                </div>
+            )  
+
+        }
+
+
+
     }
 }
 
