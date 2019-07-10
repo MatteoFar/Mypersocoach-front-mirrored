@@ -178,6 +178,7 @@ class Reformulation extends React.Component {
          console.log(' à quoi ressemble tu idresp', idresp)
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseEnvironnement: res.data[0].response_summary})
+      localStorage.clear()
     }
       
         
