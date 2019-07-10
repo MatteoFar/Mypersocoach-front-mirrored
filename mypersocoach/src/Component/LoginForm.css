@@ -1,3 +1,5 @@
+/* LoginForm.css */
+
 .page_width_height {
   min-height: 100vh;
   width:100vw;
@@ -34,13 +36,111 @@
   font-size: 24px;
   font-weight: lighter;
   letter-spacing: 10px;
+  margin-left: 10px; /*Margin added because of 'letter-spacing'*/
   text-transform: uppercase;
 }
 
 
+/* Validate button */
+
+.button_forward {
+  background: none rgb(255, 189, 74);
+  border: none;
+  border-radius: 5px;  
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  height: 45px;
+  margin: 0px auto;
+  margin-top: 11px;
+  outline: none;
+  text-align: center;
+  width: 250px;
+  }
+
+.button_forward:hover {
+  background-color: rgb(72, 201, 176);
+}
+
+.button_forward:active {
+  background-color: rgb(22, 160, 133);
+}
 
 
 
+/* Button Sign Up */
+
+.button_signup {
+  background-color: #BDC3C7;  
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  height: 45px;
+  margin: 0px auto;
+  margin-top: 11px;
+  outline: none;
+  text-align: center;
+  width: 250px;
+  }
+
+.button_signup:hover {
+  background-color: rgb(202,207, 210);
+}
+
+.button_signup:active {
+  background-color: rgb(161,166, 169);
+}
 
 
+
+/* Button Sign Up submit */
+.button_signup_submit {
+  background: none rgb(255, 189, 74);
+  border: none;
+  border-radius: 5px;  
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  height: 45px;
+  margin: 0px auto;
+  margin-top: 11px;
+  outline: none;
+  text-align: center;
+  width: 250px;
+  }
+
+.button_signup_submit:hover {
+  background-color: rgb(72, 201, 176);
+}
+
+.button_signup_submit:active {
+  background-color: rgb(22, 160, 133);
+}
+
+
+/* .navlink {
+  color: white;
+  text-decoration: none;
+} */
+
+
+
+/*======= DESKTOP FORMAT =======*/
+@media screen and (min-width:960px){
+
+  .page_width_height {
+    width:70vw;
+    margin: auto;
+  }
+
+  /* #grid_login{
+    width: 760px;
+  } */
+
+}
 
