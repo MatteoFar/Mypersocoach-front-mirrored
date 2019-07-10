@@ -2,7 +2,7 @@ import React from "react";
 import './Problem.css';
 import Modal from "./Modal";
 import axios from "axios"
-import { async } from "q";
+
 
 
 class DisplayModal extends React.Component {
