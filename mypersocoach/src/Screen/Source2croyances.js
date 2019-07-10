@@ -121,7 +121,7 @@ class Source2Croyances extends React.Component {
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
-        <FowardStep  redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} /> 
+        <FowardStep  /*redirectionPage = {'source3_croyances'}*/  text_static2={text_static2.all_text}/* summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId}*/ /> 
         <NextStep text_static3={text_static3.all_text} />
       </div>
     );
