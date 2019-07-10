@@ -60,6 +60,7 @@ class HeadingLink extends Component {
         <div>
         <div className={showHideModal}>
           <ModalExample
+            alt={icon_modal.description_alt}
             icon_modal={icon_modal.picture_src}
             text_modal1={text_modal1.all_text}
             modal_continue={modal_continue.all_text}

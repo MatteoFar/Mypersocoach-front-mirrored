@@ -3,7 +3,6 @@ import axios from "axios";
 
 import "./Source2croyances.css";
 
-import ModalExample from "../Component/ModalExample";
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
@@ -83,27 +82,6 @@ class Source2Croyances extends React.Component {
     // });
   };
 
-  // getIconModal = async () => {
-  //   const res = await axios.get("http://localhost:3001/problem_origin/4");
-  //   this.setState({ icon_modal: res.data[0] });
-  //   console.log(res);
-  // };
-
-  // getTextModal = async () => {
-  //   const res = await axios.get("http://localhost:3001/text_static/52");
-  //   this.setState({ text_modal1: res.data[0] });
-  //   console.log(res);
-  // };
-  // getModalContinue = async () => {
-  //   const res = await axios.get("http://localhost:3001/text_static/58");
-  //   this.setState({ modal_continue: res.data[0] });
-  //   console.log(res);
-  // };
-  // getModalClosed = async () => {
-  //   const res = await axios.get("http://localhost:3001/text_static/59");
-  //   this.setState({ modal_closed: res.data[0] });
-  //   console.log(res);
-  // };
 
   LinkOpenModal() {
     this.setState({ link_modal: !this.state.link_modal });
@@ -117,10 +95,6 @@ class Source2Croyances extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    this.getIconModal();
-    this.getTextModal();
-    this.getModalContinue();
-    this.getModalClosed();
     this.LinkOpenModal();
   }
 
@@ -133,13 +107,10 @@ class Source2Croyances extends React.Component {
       text_after_link,
       text_static2,
       text_static3
-      // icon_modal,
-      // text_modal1,
-      // modal_continue,
-      // modal_closed
+    
     } = this.state;
 
-    const modal = this.state.link_modal ? "modal_main" : "modaloff";
+    // const modal = this.state.link_modal ? "modal_main" : "modaloff";
 
     return (
       <div className="containerSource2Environment">
@@ -154,10 +125,11 @@ class Source2Croyances extends React.Component {
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
-        <FowardStep  redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId}/>
+        <FowardStep redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} />
         <NextStep text_static3={text_static3.all_text} />
       </div>
     );
   }
 }
+
 export default Source2Croyances;

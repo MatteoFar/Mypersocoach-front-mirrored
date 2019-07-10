@@ -38,26 +38,7 @@ class Sympto4Com extends React.Component {
         this.setState({problem: res.data[0]});
     };
 
-    // getTextarea = async() => {
-    //     Vérifier ce qu'il faut mettre en ciblage
-    //     const res = await axios.get("http://localhost:3001/response")
-    //     this.setState({response: res.data[0]});
-    // }
 
-    // getPlaceholder = async() => {
-    //     const res = await axios.get("http://localhost:3001/text_static/140")
-    //     this.setState({text_static2: res.data[0]});
-    // };
-
-    // getValidate = async() => {
-    //     const res = await axios.get("http://localhost:3001/text_static/116")
-    //     this.setState({text_static3: res.data[0]});
-    // };
-
-    // getBack = async() => {
-    //     const res = await axios.get("http://localhost:3001/text_static/117")
-    //     this.setState({text_static4: res.data[0]});
-    // };
 
     getIdProblem = () => {
         const {problem_id} = this.state
@@ -72,10 +53,6 @@ class Sympto4Com extends React.Component {
         this.getHeader();
         this.getTextStatic();
         this.getTitleStatic();
-        // this.getTextarea();
-        // this.getPlaceholder();
-        // this.getValidate();
-        // this.getBack();
         this.getIdProblem()
     }
 

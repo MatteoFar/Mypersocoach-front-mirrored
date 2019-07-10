@@ -88,7 +88,7 @@ class Symptome2 extends React.Component {
           </div>
           <ResponseSymptome2 response={response}/>
           <ForwardStep summaryId={this.props.location.state.summary_id} redirectionPage={"Source2"}  text_static3={text_static3.all_text} />
-          <BackSubmit  text_static4={text_static4.all_text}/>
+          <BackSubmit redirectionPage={"symptome3"} text_static4={text_static4.all_text}/>
         </div>
       </div>
     );

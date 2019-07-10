@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
+import { Route, BrowserRouter, Switch} from "react-router-dom";
 import SignScreen from "./Screen/SignScreen";
 import LoginScreen from "./Screen/LoginScreen";
 import Sympto4Conflict from "./Screen/Sympto4Conflict";

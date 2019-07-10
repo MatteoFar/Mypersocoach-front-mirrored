@@ -51,7 +51,7 @@ return(
         <div >
         
         
-        <img  onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} alt={alt}/>
+        <img  onClick={e => handleChange(id, text1, text2, icon)}  src={icon} alt={alt}/>
        
         
        
