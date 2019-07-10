@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 import { withRouter, NavLink } from "react-router-dom";
 
-
-
-
 import './Form.css';
 
 class Form extends React.Component {
@@ -30,9 +27,6 @@ class Form extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
 
     }
-
-
-    
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -213,14 +207,8 @@ else if ( this.props.redirectionPage === 'reformulation') {
 }   
 
 
-
-    
-
-
 // another c}
         
-
-
     getTextarea = async () => {
         //Vérifier ce qu'il faut mettre en ciblage
         const res = await axios.get("http://localhost:3001/response")
@@ -306,8 +294,6 @@ else if ( this.props.redirectionPage === 'reformulation') {
     }
 
     
-
-
     render() {
 
         const { response, text_static2, text_static3, text_static4, text_static5 } = this.state
