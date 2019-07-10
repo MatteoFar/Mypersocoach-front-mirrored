@@ -1,0 +1,12 @@
+.formAction {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+input{
+    margin: 2%;
+    width: 20%;
+   
+}
+
