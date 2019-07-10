@@ -6,8 +6,8 @@ import "./Source2croyances.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
-import HeadingLink from "../Component/HeadingLink";
 import FowardStep from "../Component/ForwardStep";
+import HeadingLinkAction from "../Component/HeadingLinkAction";
 
 class Solution1 extends React.Component {
   state = {
@@ -78,11 +78,12 @@ class Solution1 extends React.Component {
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <HeadingText text_static={text_static.all_text} />
        
-        <HeadingLink 
+        <HeadingLinkAction 
           onClick={this.LinkOpenModal}
           text_static_link={text_static_link.all_text}
           link_modal= {this.state.link_modal}
         />
+
 
         <FowardStep text_static2={text_static2.all_text} /> 
        

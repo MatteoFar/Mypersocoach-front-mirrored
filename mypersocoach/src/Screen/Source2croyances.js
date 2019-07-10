@@ -118,6 +118,7 @@ class Source2Croyances extends React.Component {
           onClick={this.LinkOpenModal}
           text_static_link={text_static_link.all_text}
           link_modal= {this.state.link_modal}
+        
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
