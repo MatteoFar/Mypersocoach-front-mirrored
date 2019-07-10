@@ -43,7 +43,7 @@ class ModalCounter extends React.Component {
 
 
   render() {
-    const name = { name : this.props.text_static1, name1: this.props.text_static3}
+    // const name = { name : this.props.text_static1, name1: this.props.text_static3}
     // console.log(name)
     const {count} = this.state;
     const modal = this.state.modal ? 'modal_main' : 'modaloff' ;

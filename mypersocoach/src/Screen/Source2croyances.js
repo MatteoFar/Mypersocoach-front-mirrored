@@ -3,7 +3,6 @@ import axios from "axios";
 
 import "./Source2croyances.css";
 
-import ModalExample from "../Component/ModalExample";
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
@@ -111,7 +110,7 @@ class Source2Croyances extends React.Component {
     
     } = this.state;
 
-    const modal = this.state.link_modal ? "modal_main" : "modaloff";
+    // const modal = this.state.link_modal ? "modal_main" : "modaloff";
 
     return (
       <div className="containerSource2Environment">

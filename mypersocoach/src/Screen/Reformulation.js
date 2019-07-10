@@ -5,8 +5,7 @@ import "./Symptome2.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
-import NotReally from "../Component/NotReally";
+
 import ResponseSymptome2 from "../Component/ResponseSymptome2"
 import ForwardStep from "../Component/ForwardStep";
 import BackSubmit from "../Component/BackSubmit";
