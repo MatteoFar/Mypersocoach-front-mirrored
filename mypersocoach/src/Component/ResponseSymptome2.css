@@ -1,7 +1,8 @@
 
 .Response {
+    color: white;
+    /* height: 66vh; */
     margin: 0 auto;
-    height: 66vh;
-    width: 282px;
     text-align: center;
+    width: 282px;
 }

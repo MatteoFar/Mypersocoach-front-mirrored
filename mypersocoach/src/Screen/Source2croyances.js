@@ -3,7 +3,6 @@ import axios from "axios";
 
 import "./Source2croyances.css";
 
-import ModalExample from "../Component/ModalExample";
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
@@ -79,16 +78,8 @@ class Source2Croyances extends React.Component {
   getTextStatic3 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/122");
     this.setState({ text_static3: res.data[0] });
-  }  
-  LinkOpenModal() {
-    this.setState({ link_modal: !this.state.link_modal });
   }
-
-  componentDidMount() {
-    this.getHeader();
-    this.getProblem();
-    this.getTextLink();
-    this.getTextAfterLink();
+  LinkOpenModal() {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
@@ -122,8 +113,8 @@ class Source2Croyances extends React.Component {
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
-        <FowardStep  /*redirectionPage = {'source3_croyances'}*/  text_static2={text_static2.all_text}/* summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId}*/ /> 
-        <NextStep text_static3={text_static3.all_text} />
+        <FowardStep redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} />
+        <NextStep redirectionPage={'reformulation'} text_static3={text_static3.all_text} />
       </div>
     );
   }

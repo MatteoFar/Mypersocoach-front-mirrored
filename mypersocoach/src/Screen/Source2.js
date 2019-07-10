@@ -78,6 +78,7 @@ class Source2 extends React.Component {
     this.getOriginProblem();
     this.getTextStatic2();
     this.getTextStatic3();
+
   }
 
   render() {

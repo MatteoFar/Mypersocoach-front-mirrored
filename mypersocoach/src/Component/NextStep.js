@@ -1,13 +1,70 @@
 import React from "react";
 import "./NextStep.css"
+import { withRouter } from "react-router-dom";
 
-const NextStep = ({ text_static3 }) => {
+class NextStep extends React.Component {
   
-    return (
+  
+  handleClick = () => {
+  
+  // redirection for non in source2envrionnement page
+    if (this.props.redirectionPage === 'source2comportement') {
+    this.props.history.push({
+      pathname: "/source2comportement", 
+      state: {
+        
+        summaryId: this.props.summaryId,
+        problem_originId: this.props.problem_originId
+      }
+      
+  })
+}
+else if (this.props.redirectionPage === 'source2capacite') {
+  this.props.history.push({
+    pathname: "/source2capacites", 
+    state: {
+      
+      summaryId: this.props.summaryId,
+      problem_originId: this.props.problem_originId
+    }
+    
+})
+}
+
+else if (this.props.redirectionPage === 'source2croyances') {
+  this.props.history.push({
+    pathname: "/source2croyances", 
+    state: {
+      
+      summaryId: this.props.summaryId,
+      problem_originId: this.props.problem_originId
+    }
+    
+})
+}
+
+  else if (this.props.redirectionPage === 'reformulation') {
+  this.props.history.push({
+    pathname: "/reformulation", 
+    state: {
+      
+      summaryId: this.props.summaryId,
+      problem_originId: this.props.problem_originId
+    }
+    
+})
+}
+
+  } 
+  
+  
+  render(){
+  return (
       <>
-        <button href="#" className="buttonSource2No" type="button" name="next">{ text_static3 }</button>
+        <button href="#" className="buttonSource2No" type="button" name="next" onClick={this.handleClick}>{this.props.text_static3 } </button>
       </>
     );
   }
+  }
 
-export default NextStep;
+export default withRouter(NextStep);
