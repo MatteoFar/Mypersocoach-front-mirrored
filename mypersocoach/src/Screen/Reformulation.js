@@ -98,6 +98,7 @@ class Reformulation extends React.Component {
       
         
       console.log('where is ma response Id', this.state.response)
+      
       // this.setState({responseId: res.data[0].id});
     };
 
@@ -107,12 +108,16 @@ class Reformulation extends React.Component {
       console.log('ou est mon locla storage', localStorage.getItem('idRespCroyance'))
       const idresp = localStorage.getItem('idRespCroyance')
       console.log('mon id affiche t elle', idresp)
+      if (idresp === null) {
+        return console.log('false')
+      }
+      else {
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseCroyance: res.data[0].response_summary})
-    
-      
+      localStorage.clear();
+    }
         
       // console.log('where is ma response Id', this.state.response)
       // this.setState({responseId: res.data[0].id});
@@ -133,7 +138,7 @@ class Reformulation extends React.Component {
           
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseCapacite: res.data[0].response_summary})
-    
+      localStorage.clear();
     }
         
       // console.log('where is ma response Id', this.state.response)
@@ -154,6 +159,7 @@ class Reformulation extends React.Component {
           
       console.log('response where are you', res.data[0].response_summary )
       this.setState({ responseComportement: res.data[0].response_summary})
+      localStorage.clear();
     
     }
         
