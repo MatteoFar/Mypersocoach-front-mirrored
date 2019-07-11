@@ -26,7 +26,7 @@ class Origins extends React.Component {
 
     else if(this.props.problem_origins.id === 2) {
       this.props.history.push({
-        pathname: "/source3_comportement", 
+        pathname: "/source2comportement", 
         state: { 
           summaryId: this.props.summaryId,
           problem_originId: this.props.problem_origins.id
