@@ -238,7 +238,7 @@ class Reformulation extends React.Component {
          />
          </div>
         
-        <ForwardStep textButtonYes={textButtonYes.all_text}/>
+        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text}/>
         <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
       </div>
       </div>
