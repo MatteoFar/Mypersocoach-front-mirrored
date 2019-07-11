@@ -79,13 +79,19 @@ class Source2Croyances extends React.Component {
     const res = await axios.get("http://localhost:3001/text_static/122");
     this.setState({ text_static3: res.data[0] });
   }
-  LinkOpenModal() {
+  
+
+  componentDidMount() {
+    this.getHeader();
+    this.getProblem();
+    this.getTextLink();
+    this.getTextAfterLink();
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
     
   }
-
+  
   render() {
     const {
       icon,

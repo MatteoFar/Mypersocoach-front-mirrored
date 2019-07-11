@@ -87,7 +87,7 @@ class ForwardStep extends React.Component{
   this.props.redirectionPage === 'source3_capacites') {
     return (
       <div className="forward_step_container">
-        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static2} </button>
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static2}</button>
       </div>
     );
 
