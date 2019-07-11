@@ -29,6 +29,9 @@ class Solution2 extends React.Component {
     handleChangeAction = (e) =>{
     
         this.setState({ [e.target.name] : e.target.value })
+        this.setState({countAction : this.state.countAction++})
+       
+        
     }
 
     addAction = () => {
@@ -56,21 +59,32 @@ class Solution2 extends React.Component {
     handleSubmit = (e) =>{
         
         e.preventDefault()
+       
+        if( this.state.action1.length > 0 &&
+            this.state.action2.length > 0 &&
+            this.state.action3.length > 0 &&
+            this.state.action4.length > 0 &&
+            this.state.action5.length > 0 ){
 
-        this.props.history.push({
-            pathname : '/solution-3',
-            state : {
+                this.props.history.push({
+                    pathname : '/solution-3',
+                    state : {
+                        
+                        action1 : this.state.action1,
+                        action2 : this.state.action2,
+                        action3 : this.state.action3,
+                        action4 : this.state.action4,
+                        action5 : this.state.action5,
+                        addActions :this.state.addActions
+                    }
 
-                action1 : this.state.action1,
-                action2 : this.state.action2,
-                action3 : this.state.action3,
-                action4 : this.state.action4,
-                action5 : this.state.action5,
-                addActions :this.state.addActions
-
-            }
-        })
-
+                }
+            )
+        }
+        else{
+            console.log('Entrez minimum 5 action wesh !');
+            
+        }
     }
 
     render(){
