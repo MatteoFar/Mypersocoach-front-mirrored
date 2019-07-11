@@ -15,10 +15,7 @@ class Sympto4Stress extends React.Component {
         icon: [],
         text_static: [],
         problem: [],
-        // response: [],
-        // text_static2: [],
-        // text_static3: [],
-        // text_static4: [],
+       
         problem_id: 6
     };
 

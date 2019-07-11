@@ -74,7 +74,7 @@ class Source2Capacites extends React.Component {
   render() {
 
     const{icon, problem_origin, text_static,text_static2,text_static3}=this.state
-    // console.log('id comportement re test', this.props.location.state.idRespComportement);
+   
     
     return (
       

@@ -24,7 +24,7 @@ import Source2croyances from "./Screen/Source2croyances";
 import Source2capacites from"./Screen/Source2capacites"
 import Solution2 from "./Screen/Solution2";
 import Solution3 from "./Screen/Solution3";
-
+import Solution1 from "./Screen/Solution1"
 
 
 
@@ -60,6 +60,7 @@ class App extends React.Component {
             <Route exact path="/reformulation" component={Reformulation} />
             <Route exact path="/solution-2" component={Solution2} />
             <Route exact path="/solution-3" component={Solution3} />
+            <Route exact path="/solution1" component={Solution1} />
           </Switch>
         </BrowserRouter>
       </div>
