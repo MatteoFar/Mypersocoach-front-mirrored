@@ -110,7 +110,7 @@ class Source2Croyances extends React.Component {
     
     } = this.state;
 
-    // const modal = this.state.link_modal ? "modal_main" : "modaloff";
+   
 
     return (
       <div className="containerSource2Environment">
