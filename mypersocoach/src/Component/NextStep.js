@@ -7,7 +7,7 @@ class NextStep extends React.Component {
   
   handleClick = () => {
   
-  // redirection for non in source2envrionnement page
+  // redirection for non in source2environnement page
     if (this.props.redirectionPage === 'source2comportement') {
     this.props.history.push({
       pathname: "/source2comportement", 
@@ -19,6 +19,7 @@ class NextStep extends React.Component {
       
   })
 }
+// redirection for non in source2capacité page
 else if (this.props.redirectionPage === 'source2capacite') {
   this.props.history.push({
     pathname: "/source2capacites", 
@@ -30,7 +31,7 @@ else if (this.props.redirectionPage === 'source2capacite') {
     
 })
 }
-
+// redirection for non in source2croyances page
 else if (this.props.redirectionPage === 'source2croyances') {
   this.props.history.push({
     pathname: "/source2croyances", 
@@ -41,8 +42,9 @@ else if (this.props.redirectionPage === 'source2croyances') {
     }
     
 })
-}
-
+  }
+  
+  // redirection for non, toward reformulation page
   else if (this.props.redirectionPage === 'reformulation') {
   this.props.history.push({
     pathname: "/reformulation", 

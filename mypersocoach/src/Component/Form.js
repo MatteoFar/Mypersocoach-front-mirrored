@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 import { withRouter, NavLink } from "react-router-dom";
 
-
-
-
 import './Form.css';
 
 class Form extends React.Component {
@@ -30,9 +27,6 @@ class Form extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
 
     }
-
-
-    
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -81,12 +75,15 @@ class Form extends React.Component {
     .then((res => { 
         //mettre des conditions de redirection
         //recup de lastid de response
-        console.log("response à ma réponse", res)
+       
+        console.log("que fais tu button valider")
+
            const idRespEnvironment = res.data.lastResponseId
           
            
             localStorage.setItem('idRespEnvironnement', idRespEnvironment)
-            console.log("est ce que j'ai mon idenvrionnement",  res.data.lastResponseId)
+        
+        
 
            
        
@@ -103,6 +100,8 @@ class Form extends React.Component {
     ))
 }
 
+// redirection to source2capacités
+
 else if ( this.props.redirectionPage === 'Source2comportement') {
         
     axios.post('http://localhost:3001/response', {
@@ -111,12 +110,12 @@ else if ( this.props.redirectionPage === 'Source2comportement') {
       response_summary: this.state.textarea,
       summary_id: this.props.summaryId,
       problem_origin_id: this.props.problem_originId
-      // problem_origin_id: 1
+      
 
   })
 
   .then((res => { 
-      //mettre des conditions de redirection
+      
       const idRespComportement = res.data.lastResponseId
       localStorage.setItem('idRespComportement',idRespComportement)
       
@@ -213,14 +212,8 @@ else if ( this.props.redirectionPage === 'reformulation') {
 }   
 
 
-
-    
-
-
 // another c}
         
-
-
     getTextarea = async () => {
         //Vérifier ce qu'il faut mettre en ciblage
         const res = await axios.get("http://localhost:3001/response")
@@ -265,11 +258,12 @@ else if ( this.props.redirectionPage === 'reformulation') {
     //reditection for "je ne suis pas sûr " in source 3 comportement
     
     else if(this.props.redirectionPage === 'Source2comportement') {
+        
         this.props.history.push({
             pathname: "/source2comportement", 
             state: {summaryId: this.props.summaryId}
             });
-         
+         console.log("que passa with button valider")
       }
      // reditection for "je ne suis pas sûr " in source 3 capacité
       else if(this.props.redirectionPage === 'Source2croyances') {
@@ -306,8 +300,6 @@ else if ( this.props.redirectionPage === 'reformulation') {
     }
 
     
-
-
     render() {
 
         const { response, text_static2, text_static3, text_static4, text_static5 } = this.state
@@ -325,20 +317,25 @@ else if ( this.props.redirectionPage === 'reformulation') {
                     <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
                         {response}
                     </textarea>
-
+                    {/* valider button */}
+                    
                     <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+
+                    {/* "Retour" button */}
 
                     <NavLink className="navlink" to="/symptome3">
                         <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text} </button>
                     </NavLink>
 
                 </form>
+            
+            
             </div>
         )
     }
     
     
-    // this return display the form with "jen en suis pas sûr" button" in Source3 evnvrionnement, source3 behavior ...
+    // this return display the form with "je n'en suis pas sûr" button" in Source3 evnvrionnement, source3 behavior ...
         else {
 
             return (
@@ -349,9 +346,13 @@ else if ( this.props.redirectionPage === 'reformulation') {
                         <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
                             {response}
                         </textarea>
-    
+
+
+                        {/* valider button */}
                         <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
-    
+
+
+                        {/* "Je n'en suis pas sûr" button */}
                         <div className="navlink" >
                             <button href="#" className="button_back" type="reset" name="return" onClick={this.handleClick} >{text_static5.all_text} </button>
                     </div>

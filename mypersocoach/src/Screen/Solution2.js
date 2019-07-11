@@ -46,7 +46,7 @@ class Solution2 extends React.Component {
         this.setState({ addAction : this.state.addActions })
 
     }
-
+// need to fix by putin a "setState"
 
     handleChange = (e, index) =>{
     this.state.addActions[index] = e.target.value
