@@ -73,7 +73,7 @@ class Source2Environment extends React.Component {
 
   render() {
     const{icon, problem_origin, text_static,text_static2,text_static3}=this.state
-    console.log('coucou idsummary', this.props.location.state.summaryId)
+    
     
     return (
       

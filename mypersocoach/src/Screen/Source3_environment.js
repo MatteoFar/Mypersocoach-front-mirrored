@@ -44,8 +44,7 @@ class Source3Environment extends React.Component {
   }
 
   render() {
-   console.log('est ce que ma summary_id se charge?', this.props.location.state.summaryId)
-   console.log('et mon rpoblem origin id alors?', this.props.location.state.problem_originId)
+   
     return (
       <div className="containerSource2Environment">
         <IconMain icon={this.state.icon.picture_src} alt={this.state.icon.description_alt}/>

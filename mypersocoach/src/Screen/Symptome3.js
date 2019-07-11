@@ -46,7 +46,7 @@ class Symptome3 extends React.Component {
         console.log("response axios: symp3", res);
         const lastId = res.data.summaryId
         this.setState({ lastId : lastId})
-        console.log('pouic pouic', this.state.lastId)
+       
       })
    }
 
@@ -61,8 +61,7 @@ class Symptome3 extends React.Component {
   
   render() {
     const { icon, text_static, problem, lastId } = this.state;
-    // console.log("oui oui oui",this.state.lastId)
-    // console.log('pouet pouet', this.state.id)
+  
     
     //display of problem array where we see id=1 conflit avec un collègue, id=2 maperformance etc...
     //we need this id in the next component :Symptomes in order to set conditions to access the 6 Symto4 components
