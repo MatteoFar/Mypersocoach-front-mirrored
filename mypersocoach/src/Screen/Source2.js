@@ -5,6 +5,8 @@ import IconMain from "../Component/IconMain";
 import Origins from "../Component/Origins"
 import axios from "axios"
 import "./Source2.css"
+import { withRouter } from "react-router-dom";
+
 //import {ButtonToolbar,Button } from 'reactstrap';
 // import { stat } from "fs";
 
@@ -71,6 +73,17 @@ class Source2 extends React.Component {
   };
 
 
+  handleClick = () => {
+    
+    // redirection to source2 page when coming from
+   
+     this.props.history.push({
+         pathname: "/Source2environment", 
+         state: {summaryId: this.props.summaryId}
+         });
+     
+        }
+
 
   componentDidMount() {
     this.getTextStatic();
@@ -97,7 +110,7 @@ class Source2 extends React.Component {
       <Origins summaryId={this.props.location.state.summaryId} problem_origins={problem_origins}/>
       ))}
       </div>
-     <button href="#" className="button_source2">Je ne suis pas sûr</button>
+     <button href="#" className="button_source2" onClick={this.handleClick}>Je ne suis pas sûr</button>
     </div>
      )}
     
@@ -105,4 +118,4 @@ class Source2 extends React.Component {
     };
 
 
-export default Source2;
+export default withRouter(Source2);

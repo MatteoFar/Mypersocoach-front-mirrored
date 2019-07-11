@@ -12,7 +12,7 @@ class ForwardStep extends React.Component{
   
   handleClick = () => {
     
-     // redirection to source2 page when coming from
+     // redirection to source2 page when coming from Symptome2 : first summary "ton problème actuel est"
     if(this.props.redirectionPage === 'Source2') {
       this.props.history.push({
           pathname: "/Source2", 
@@ -107,7 +107,7 @@ else if (this.props.redirectionPage === 'solution2') {
   
   render(){
   
-    // display of ???? 
+    // display of ???? in Source2 page
     if(this.props.redirectionPage === 'Source2') {
       console.log("qui est là?", this.props.idRespEnvironment)
     return (
