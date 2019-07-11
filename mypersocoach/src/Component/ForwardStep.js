@@ -82,7 +82,7 @@ class ForwardStep extends React.Component{
       </div>
     );
   }
-
+// display of source2envirnnement, source2comportement, source2capacité with "oui" button 
   else if (this.props.redirectionPage === 'source3_croyances' || this.props.redirectionPage === 'source3_environment' || this.props.redirectionPage === 'source3_comportement' ||
   this.props.redirectionPage === 'source3_capacites') {
     return (
