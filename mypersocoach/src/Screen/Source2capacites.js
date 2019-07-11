@@ -74,7 +74,7 @@ class Source2Capacites extends React.Component {
   render() {
 
     const{icon, problem_origin, text_static,text_static2,text_static3}=this.state
-    // console.log('id comportement re test', this.props.location.state.idRespComportement);
+   
     
     return (
       
@@ -84,7 +84,7 @@ class Source2Capacites extends React.Component {
         <TitlePage problem_origin={problem_origin} /> 
         <HeadingText text_static={text_static.all_text} />
         <FowardStep redirectionPage = {'source3_capacites'} text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} />
-        <NextStep redirectionPage={'source2croyances'} text_static3={text_static3.all_text}/>
+        <NextStep summaryId={this.props.location.state.summaryId} redirectionPage={'source2croyances'} text_static3={text_static3.all_text}/>
       </div>
         
     );

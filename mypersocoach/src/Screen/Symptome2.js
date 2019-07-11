@@ -40,15 +40,14 @@ class Symptome2 extends React.Component {
       
       
       const id = this.props.location.state.summary_id;
-      console.log("voici mon id", id)
+     
       
-      // console.log('mon id affiche t elle', id)
       const res= await axios.get(`http://localhost:3001/response/${id}`)
           
-      // console.log('response where are you', res.data[0].response_summary )
+      
       this.setState({ 
         response: res.data[0].response_summary});
-      // console.log('where is ma response Id', res.data[0].id)
+      
       this.setState({responseId: res.data[0].id});
     };
 
@@ -75,9 +74,7 @@ class Symptome2 extends React.Component {
   }
 
    render() {
-    console.log("voila ma state", this.state)
-    console.log("ou est ma response elle a disparu", this.state.response)
-   console.log("summary id es tu là ....", this.props.location.state.summary_id)
+  
     const{icon, text_static, response, text_static3, text_static4} = this.state
     return (
       <div className="containerS2">

@@ -1,19 +1,11 @@
-/* .containerSource2Environment {
-  color: rgb(150, 159, 170);
-  display: grid;
-  margin: auto;
-  width: 380px;
-} */
-
-
 .modal_main {
   background-color: rgba(55, 115, 184, 0.9);
-  position: absolute;
-  opacity: 20%;
-  z-index: 1;
-  width: 380px;
-  height: 100%;
   color:white;
+  height: 100%;
+  opacity: 20%;
+  position: absolute;
+  width: 380px;
+  z-index: 1;
 }
 
 .modaloff {
