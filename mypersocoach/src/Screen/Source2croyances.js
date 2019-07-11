@@ -73,19 +73,13 @@ class Source2Croyances extends React.Component {
     //   this.setState({ text_static: data[0] });
     // });
   };
+  
 
   getTextStatic3 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/122");
     this.setState({ text_static3: res.data[0] });
-    // .then(data => {
-    //   this.setState({ text_static: data[0] });
-    // });
-  };
-
-
-  LinkOpenModal() {
-    this.setState({ link_modal: !this.state.link_modal });
   }
+  
 
   componentDidMount() {
     this.getHeader();
@@ -95,9 +89,9 @@ class Source2Croyances extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getTextStatic3();
-    this.LinkOpenModal();
+    
   }
-
+  
   render() {
     const {
       icon,
@@ -107,10 +101,9 @@ class Source2Croyances extends React.Component {
       text_after_link,
       text_static2,
       text_static3
-    
+     
     } = this.state;
 
-   
 
     return (
       <div className="containerSource2Environment">
@@ -122,6 +115,7 @@ class Source2Croyances extends React.Component {
           onClick={this.LinkOpenModal}
           text_static_link={text_static_link.all_text}
           link_modal= {this.state.link_modal}
+        
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
