@@ -96,7 +96,7 @@ class Solution2 extends React.Component {
                         return (
                             <div key={index}>
 
-                                <input onChange={(e)=>this.handleChange(e, index)} value={addAction}></input>
+                                <input type ='text' onChange={(e)=>this.handleChange(e, index)} value={addAction}></input>
 
                             </div>
                         )
