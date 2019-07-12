@@ -189,7 +189,10 @@ class Reformulation extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getHeadingResponse();
-    this.getHeadingResponse2();
+    this.getHeadingResponse2();   {/* <button onClick={e => this.addAction(e)}>Add Action</button>
+    <button onClick={index => this.handleRemove(index)}>
+      Remove Action
+    </button> */}
     this.getHeadingResponse3();
     this.getHeadingResponse4();
 
@@ -228,7 +231,7 @@ class Reformulation extends React.Component {
         <OriginResponse  headingResponse={headingResponse.all_text} 
          headingResponse2={headingResponse2.all_text}
          headingResponse3={headingResponse3.all_text}
-         headingRes4={headingResponse4.all_text}
+         headingResponse4={headingResponse4.all_text}
          responseCapacite={responseCapacite}
          responseComportement = { responseComportement}
          responseCroyance={responseCroyance} 
