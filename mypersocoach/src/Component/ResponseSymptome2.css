@@ -3,6 +3,8 @@
     color: white;
     /* height: 66vh; */
     margin: 0 auto;
+    min-height: 10vh;
+    width: 282px;
     text-align: center;
     width: 282px;
 }

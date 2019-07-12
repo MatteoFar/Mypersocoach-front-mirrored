@@ -53,7 +53,7 @@ class ForwardStep extends React.Component{
         state: {
           
           summaryId: this.props.summaryId,
-          problem_originId: this.props.problem_originId
+          w: this.props.problem_originId
         }
         
     })
@@ -143,7 +143,7 @@ else if (this.props.redirectionPage === 'solution2') {
   else {
     return (
       <div className="forward_step_container">
-        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes}{this.props.text_static2} </button>
       </div>
     );
 

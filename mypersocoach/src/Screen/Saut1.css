@@ -1,0 +1,28 @@
+.containerSymptome2 {
+    display: grid;
+    margin: auto;
+    width: 380px;
+  }
+
+  .containerS2 {
+      min-height: 100vh;
+      width: 380px;
+      background-color:rgb(55, 115, 184);
+      margin: 0 auto;
+  }
+  .ResponseContainer {
+      min-height: 10vh;
+  }
+  .ResponseContainerSaut1 {
+      min-height: 10vh;
+  }
+  .OriginResponseSaut1 {
+      margin: 0 auto;
+      text-align: center;
+      /* height: 20vh; */
+  }
+  .ActionResponse {
+    margin: 0 auto;
+    text-align: center;
+    min-height: 10vh;
+  }
