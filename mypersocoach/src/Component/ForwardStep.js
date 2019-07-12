@@ -103,7 +103,7 @@ else if (this.props.redirectionPage === 'solution2') {
 
 else if (this.props.redirectionPage === 'solution3') {
   console.log('ou es ma redireciton page solution3', this.props.addActions)
-  
+      
       let count = 0      
 
       for(let i = 0 ; i<this.props.addActions.length; i++){
