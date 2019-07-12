@@ -9,12 +9,13 @@ import HeadingText from "../Component/HeadingText";
 import ForwardStep from "../Component/ForwardStep";
 import HeadingLinkAction from "../Component/HeadingLinkAction";
 
+
 class Solution1 extends React.Component {
   state = {
     icon: [],
     text_static: [],
     text_static_link: [],
-    text_static2: [],
+    text_static4: [],
     link_modal : false,
   
   };
@@ -41,9 +42,9 @@ class Solution1 extends React.Component {
     this.setState({ text_static_link: res.data[0] });
   };
   
-  getTextStatic2 = async () => {
+  getTextStatic4 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/125");
-    this.setState({ text_static2: res.data[0] });
+    this.setState({ text_static4: res.data[0] });
     // .then(data => {
     //   this.setState({ text_static: data[0] });
     // });
@@ -58,7 +59,7 @@ class Solution1 extends React.Component {
     this.getHeader();
     this.getTextLink();
     this.getTextStatic();
-    this.getTextStatic2();
+    this.getTextStatic4();
 
     
   }
@@ -68,7 +69,7 @@ class Solution1 extends React.Component {
       icon,
       text_static,
       text_static_link,
-      text_static2,
+      text_static4,
      
     } = this.state;
 
@@ -85,7 +86,7 @@ class Solution1 extends React.Component {
         />
 
 
-        <ForwardStep text_static2={text_static2.all_text} /> 
+        <ForwardStep redirectionPage={'solution2'} text_static4={text_static4.all_text} /> 
        
       </div>
     );

@@ -89,45 +89,42 @@ class Reformulation extends React.Component {
       
       
       const id = this.props.location.state.summaryId;
-      console.log('mon id affiche t elle', id)
+   
       const res= await axios.get(`http://localhost:3001/response/${id}`)
-          
-      console.log('response a question principale', res.data[0].response_summary )
+ 
       this.setState({ response: res.data[0].response_summary})
     
       
         
-      console.log('where is ma response Id', this.state.response)
       
-      // this.setState({responseId: res.data[0].id});
+      
     };
 
     getResponseCroyance = async () => {
       
       
-      console.log('ou est mon locla storage', localStorage.getItem('idRespCroyance'))
+     
       const idresp = localStorage.getItem('idRespCroyance')
-      console.log('mon id affiche t elle', idresp)
+     
       if (idresp === null) {
         return console.log('false')
       }
       else {
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
-      console.log('response where are you', res.data[0].response_summary )
+    
       this.setState({ responseCroyance: res.data[0].response_summary})
       localStorage.clear();
     }
         
-      // console.log('where is ma response Id', this.state.response)
-      // this.setState({responseId: res.data[0].id});
+    
     }; 
 
     getResponseCapacite = async () => {
      
       
       const idresp = localStorage.getItem('idRespCapacite')
-      console.log('mon id affiche t elle', idresp)
+    
       if (idresp === null) {
         return console.log('false')
       }
@@ -136,35 +133,32 @@ class Reformulation extends React.Component {
       
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
-      console.log('response where are you', res.data[0].response_summary )
+    
       this.setState({ responseCapacite: res.data[0].response_summary})
       localStorage.clear();
     }
         
-      // console.log('where is ma response Id', this.state.response)
-      // this.setState({responseId: res.data[0].id});
+      
     }; 
 
 
     getResponseComportement = async () => {
       
       const idresp= localStorage.getItem('idRespComportement')
-      console.log('ou est mon locla storage', localStorage.getItem('idRespComportement'))
+     
       if (idresp === null) {
         return console.log('false')
       }
       else {
-      console.log('test id comportement', idresp)
+     
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
-      console.log('response where are you', res.data[0].response_summary )
+     
       this.setState({ responseComportement: res.data[0].response_summary})
       localStorage.clear();
     
     }
-        
-      // console.log('where is ma response Id', this.state.response)
-      // this.setState({responseId: res.data[0].id});
+       
     }; 
 
 
@@ -172,24 +166,20 @@ class Reformulation extends React.Component {
       
 
       const idresp= localStorage.getItem('idRespEnvironnement')
-      console.log(' à quoi ressemble tu idresp', idresp)
-      // console.log('ou est mon locla storage', localStorage.getItem('idRespEnvironnement'))
+      
      if (idresp === null) {
        return console.log('false')
      }
      else {
-      console.log('test id comportement', idresp)
+      
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
-         console.log('true') 
-         console.log(' à quoi ressemble tu idresp', idresp)
-      console.log('response where are you', res.data[0].response_summary )
+         
       this.setState({ responseEnvironnement: res.data[0].response_summary})
       localStorage.clear()
     }
       
         
-      // console.log('where is ma response Id', this.state.response)
-      // this.setState({responseId: res.data[0].id});
+      
     }; 
 
 
@@ -213,24 +203,19 @@ class Reformulation extends React.Component {
   }
 
    render() {
-    // console.log("voila ma state", this.state)
+   
     const idresp = this.props.location.state.idRespComportement;
 
     localStorage.getItem('idRespComportement')
-      console.log('ou est mon locla storage', localStorage.getItem('idRespComportement'))
-   
-    console.log('test id comportement', idresp)
-
-   
-    console.log("mon id croyance est là", this.props.location.state.idRespCroyance)
+     
     
     const{icon, text_static, text_static2,
          headingResponse,headingResponse2,headingResponse3,
          headingResponse4, response, responseCroyance, responseCapacite, responseComportement, responseEnvironnement, textButtonYes, textButtonNo} = this.state
     
-    // const {response} = this.state
+   
     
-    console.log('this props croyance', this.props.location.state.respCroyance)
+
          return (
       <div className="containerS2">
       <div className="containerSymptome2">
@@ -253,7 +238,7 @@ class Reformulation extends React.Component {
          />
          </div>
         
-        <ForwardStep textButtonYes={textButtonYes.all_text}/>
+        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text}/>
         <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
       </div>
       </div>

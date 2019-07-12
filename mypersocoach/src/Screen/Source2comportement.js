@@ -67,7 +67,7 @@ class Source2Comportement extends React.Component {
 
   render() {
     const{icon, problem_origin, text_static,text_static2,text_static3}=this.state
-    console.log("qui est là?", this.props.location.state.idRespEnvironment)
+    
     
     return (
       
