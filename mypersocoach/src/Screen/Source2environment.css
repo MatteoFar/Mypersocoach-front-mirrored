@@ -3,6 +3,7 @@
   display: grid;
   margin: auto;
   width: 380px;
+  margin-bottom: 5vh;
   /* border: 1px solid black; */
 }
 

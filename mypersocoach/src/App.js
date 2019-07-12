@@ -59,9 +59,9 @@ class App extends React.Component {
             <Route exact path="/source3_croyances" component={Source3Beliefs}/>
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/reformulation" component={Reformulation} />
-            <Route exact path="/solution-1" component={Solution1} />
-            <Route exact path="/solution-2" component={Solution2} />
-            <Route exact path="/solution-3" component={Solution3} />
+            <Route exact path="/solution1" component={Solution1} />
+            <Route exact path="/solution2" component={Solution2} />
+            <Route exact path="/solution3" component={Solution3} />
             
           </Switch>
         </BrowserRouter>

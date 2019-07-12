@@ -53,7 +53,7 @@ class FormAction extends React.Component{
         e.preventDefault();
     
         this.props.history.push({
-          pathname: "/solution-3",
+          pathname: "/solution3",
           state: {
             action1: this.state.action1,
             action2: this.state.action2,

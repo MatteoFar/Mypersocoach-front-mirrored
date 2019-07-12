@@ -88,7 +88,7 @@ else if (this.props.redirectionPage === 'solution2') {
   console.log('ou es ma redireciton page solution2')
   
   this.props.history.push({
-    pathname: "/solution-2", 
+    pathname: "/solution2", 
     state: {
       
       summaryId: this.props.summaryId,
