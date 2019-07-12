@@ -5,8 +5,6 @@ import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
 import BackAction from '../Component/BackAction';
 
-import './Solution3.css';
-
 class Solution3 extends React.Component {
 
     state = {
@@ -16,12 +14,10 @@ class Solution3 extends React.Component {
         response : '',
     }
 
-    handleClick = (addActions) =>{
+    handleClick = (action, index) =>{
         console.log('que passa ?', this.state);
         
-        // this.setState({ response : action1 })
-        // console.log( 'test target',e.currentTarget.value);
-        this.setState({ response : addActions })
+        this.setState({ response : action[index] })
   // console.log( 'test target',e.currentTarget.value);
         console.log('test fonction', this.state.response);
       
@@ -66,20 +62,9 @@ class Solution3 extends React.Component {
 
     render(){
         
-        const {icon,text_static,text_static2} = this.state;
-        
-        const action1 = this.props.location.state.action1
-        const action2 = this.props.location.state.action2
-        const action3 = this.props.location.state.action3
-        const action4 = this.props.location.state.action4
-        const action5 = this.props.location.state.action5
-        // const action1 = this.props.location.state.action1
-        // const action2 = this.props.location.state.action2
-        // const action3 = this.props.location.state.action3
-        // const action4 = this.props.location.state.action4
-        // const action5 = this.props.location.state.action5
         const addActions = this.props.location.state.addActions
-        console.log('est tu la add action', addActions);
+        const {icon , text_static ,text_static2 } = this.state
+        console.log('cest quoi ce truc', addActions);
         
         return (
 
@@ -88,21 +73,19 @@ class Solution3 extends React.Component {
             <HeadingText text_static={text_static.all_text} />
             {/* <RecapSolution /> */}
                 
-                    {/* <p>{action1}<button onClick={() => this.handleClick(action1)}>Valider</button></p>
-                    <p>{action2}<button onClick={() => this.handleClick(action2)}>Valider</button></p>
-                    <p>{action3}<button onClick={() => this.handleClick(action3)}>Valider</button></p>
-                    <p>{action4}<button onClick={() => this.handleClick(action4)}>Valider</button></p>
-                    <p>{action5}<button onClick={() => this.handleClick(action5)}>Valider</button></p> */}
-
                     {addActions.map(addAction => 
-                            <p>{addAction}<button onClick={() => this.handleClick(addActions)}>Valider</button></p>
-                        )
-                    }
+
+                        <div>
+                            <p>{addAction}<button onClick={()=> this.handleClick(addActions)}>Valider</button></p>
+                        </div>
+                    )}
 
             <BackAction text_static2={text_static2.all_text}/>
             </div>
             
         )
+        
+        
     }
 }
 

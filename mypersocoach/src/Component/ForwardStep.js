@@ -10,6 +10,7 @@ class ForwardStep extends React.Component{
      
     }
   
+    
   handleClick = () => {
     
      // redirection to source2 page when coming from Symptome2 : first summary "ton problème actuel est"
@@ -101,17 +102,34 @@ else if (this.props.redirectionPage === 'solution2') {
 // redirection to solution3 page
 
 else if (this.props.redirectionPage === 'solution3') {
-  console.log('ou es ma redireciton page solution3')
+  console.log('ou es ma redireciton page solution3', this.props.addActions)
   
-  this.props.history.push({
-    pathname: "/solution3", 
-    state: {
-      
-      summaryId: this.props.summaryId,
-      problem_originId: this.props.problem_originId
-    }
-    
-})
+      let count = 0      
+
+      for(let i = 0 ; i<this.props.addActions.length; i++){
+          if(this.props.addActions[i].length >= 1){
+              count++
+              console.log('le compteur compte?', count);
+          }
+          
+      }
+
+      if(count >= 5){
+
+          this.props.history.push({
+              pathname : '/solution3',
+              state : {     
+              addActions :this.props.addActions,
+              summaryId: this.props.summaryId,
+              problem_originId: this.props.problem_originId 
+              }
+          })
+      }
+      else{
+          console.log('Entrer au moins 5 actions');
+          
+      }
+
 }
 
 }
@@ -156,9 +174,11 @@ else if (this.props.redirectionPage === 'solution3') {
   // display of "Je valide ces actions" in solution2 page
 
   else if (this.props.redirectionPage === 'solution3'){
+
+    
     return (
       <div className="forward_step_container">
-        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static2} </button>
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
       </div>
     );
 

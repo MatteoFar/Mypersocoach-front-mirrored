@@ -288,9 +288,6 @@ else if ( this.props.redirectionPage === 'reformulation') {
 
 
     }
-    
-    
-    
 
 
     componentDidMount() {
