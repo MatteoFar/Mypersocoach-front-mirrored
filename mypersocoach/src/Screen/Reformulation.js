@@ -215,7 +215,7 @@ class Reformulation extends React.Component {
     
 
          return (
-      <div className="containerS2">
+      <div className="containerS2 white">
       <div className="containerSymptome2">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
@@ -228,7 +228,7 @@ class Reformulation extends React.Component {
         <OriginResponse  headingResponse={headingResponse.all_text} 
          headingResponse2={headingResponse2.all_text}
          headingResponse3={headingResponse3.all_text}
-         headingResponse4={headingResponse4.all_text}
+         headingRes4={headingResponse4.all_text}
          responseCapacite={responseCapacite}
          responseComportement = { responseComportement}
          responseCroyance={responseCroyance} 
