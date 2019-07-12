@@ -19,13 +19,10 @@ class Solution3 extends React.Component {
     handleClick = (addActions) =>{
         console.log('que passa ?', this.state);
         
-<<<<<<< HEAD
-        this.setState({ response : action1 })
+        // this.setState({ response : action1 })
         // console.log( 'test target',e.currentTarget.value);
-=======
         this.setState({ response : addActions })
   // console.log( 'test target',e.currentTarget.value);
->>>>>>> dev
         console.log('test fonction', this.state.response);
       
         // this.props.history.push({
@@ -68,7 +65,6 @@ class Solution3 extends React.Component {
 
 
     render(){
-<<<<<<< HEAD
         
         const {icon,text_static,text_static2} = this.state;
         
@@ -77,13 +73,11 @@ class Solution3 extends React.Component {
         const action3 = this.props.location.state.action3
         const action4 = this.props.location.state.action4
         const action5 = this.props.location.state.action5
-=======
         // const action1 = this.props.location.state.action1
         // const action2 = this.props.location.state.action2
         // const action3 = this.props.location.state.action3
         // const action4 = this.props.location.state.action4
         // const action5 = this.props.location.state.action5
->>>>>>> dev
         const addActions = this.props.location.state.addActions
         console.log('est tu la add action', addActions);
         
