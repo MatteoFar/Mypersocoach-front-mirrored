@@ -11,7 +11,7 @@
       margin: 0 auto;
   }
   .ResponseContainer {
-      height: 20vh;
+      min-height: 10vh;
   }
   .ResponseContainerSaut1 {
       min-height: 10vh;
