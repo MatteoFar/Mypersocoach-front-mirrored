@@ -11,17 +11,11 @@ class FormAction extends React.Component{
     state = {
       
         addActions: [],
-        icon_add_action:[],
-        icon_remove:[],
         text_static2:[],
         text_static3: [],
         summaryId:''
     }
 
-      getButtonAddAction= async () => {
-        const res = await axios.get("http://localhost:3001/icon/33");
-        this.setState({ icon_add_action: res.data[0] });
-      };
 
       getButtonValidate= async () => {
         const res = await axios.get("http://localhost:3001/icon/33");
@@ -33,10 +27,6 @@ class FormAction extends React.Component{
         this.setState({ text_static3: res.data[0] });
       };
 
-      getButtonRemoveAction= async () => {
-        const res = await axios.get("http://localhost:3001/icon/20");
-        this.setState({ icon_remove: res.data[0] });
-      };
 
       getPlaceholderAction = async () => {
         const res = await axios.get("http://localhost:3001/text_static/141")
@@ -45,9 +35,10 @@ class FormAction extends React.Component{
 
     
       addAction = (e) => {
-        e.preventDefault();
+
+        e.preventDefault()
         this.setState({ addActions: [...this.state.addActions, ""] });
-        // this.setState({summaryId: this.props.summaryId})
+
       };
     
       getFiveInput =() => {
@@ -57,10 +48,11 @@ class FormAction extends React.Component{
     }
 
       handleRemove = (e, index) => {
-        console.log('il est là mon e', e)
-        e.preventDefault();
+        console.log('shit');
+        
+        e.preventDefault()
         this.state.addActions.splice(index, 1);
-        this.setState({ addActions: this.state.addActions });
+        this.setState({ addActions : this.state.addActions });
       };
       // need to fix by putin a "setState"
     
@@ -77,14 +69,13 @@ class FormAction extends React.Component{
       componentDidMount() {
         this.getFiveInput()
         this.getTextStatic3()
-        this.getButtonAddAction()
-        this.getButtonRemoveAction()
         this.getPlaceholderAction()
         
       }
 
       render(){
-
+        // console.log('ici',this.props.location.state.summaryId);
+        
       const{icon_add_action,icon_remove,text_static2,text_static3}=this.state
 
       return (
@@ -106,16 +97,18 @@ class FormAction extends React.Component{
 
             <div className="buttonAction">
 
-                <button className="button_action" onClick={e => this.addAction(e)}>
-                  <img src={icon_add_action.picture_src}/>
+                <button className="button_add" onClick={e => this.addAction(e)}>
+                  +
                 </button>
 
-                <button className="button_action" onClick={(e,index) => this.handleRemove(e, index)}>
-                  <img src={icon_remove.picture_src}/>
+                <button className="button_remove"onClick={(e, index) => this.handleRemove(e, index)}>
+                  -
                 </button>
 
             </div>
-         <ForwardStep summaryId={this.props.summaryId} text_static3={text_static3.all_text} addActions={this.state.addActions}  redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
+
+              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
+       
         </form>
     </div>
         

@@ -7,7 +7,6 @@ import "./Source2environment.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
-import ForwardStep from "../Component/ForwardStep";
 import FormAction from "../Component/FormAction";
 
 class Solution2 extends React.Component {
