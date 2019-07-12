@@ -5,8 +5,7 @@ import "./Symptome2.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
-import NotReally from "../Component/NotReally";
+
 import ResponseSymptome2 from "../Component/ResponseSymptome2"
 import ForwardStep from "../Component/ForwardStep";
 import BackSubmit from "../Component/BackSubmit";
@@ -22,7 +21,14 @@ class Reformulation extends React.Component {
     headingResponse: [],
     headingResponse2: [],
     headingResponse3: [],
-    headingResponse4: []
+    headingResponse4: [],
+    responseCroyance:[],
+    response:[],
+    responseCapacite:[],
+    responseComportement : [],
+    responseEnvironnement: [],
+    textButtonYes: [],
+    textButtonNo:[]
   };
 
   getHeader = async () => {
@@ -62,24 +68,122 @@ class Reformulation extends React.Component {
         this.setState({ headingResponse4: res.data[0] }); 
   };
 
+  getTextbuttonYes = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/123");
+    this.setState({ textButtonYes: res.data[0] });
+    // .then(data => {
+    //   this.setState({ text_static: data[0] });
+    // });
+  };
+  getTextbuttonNo = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/124");
+    this.setState({ textButtonNo: res.data[0] });
+    // .then(data => {
+    //   this.setState({ text_static: data[0] });
+    // });
+  };
 
-    // getResponse = async () => {
+
+
+  getResponse = async () => {
       
       
-    //   const id = this.props.location.state.lastId;
-    //   console.log('mon id affiche t elle', id)
-    //   const res= await axios.get(`http://localhost:3001/response/${id}`)
+      const id = this.props.location.state.summaryId;
+   
+      const res= await axios.get(`http://localhost:3001/response/${id}`)
+ 
+      this.setState({ response: res.data[0].response_summary})
+    
+      
+        
+      
+      
+    };
+
+    getResponseCroyance = async () => {
+      
+      
+     
+      const idresp = localStorage.getItem('idRespCroyance')
+     
+      if (idresp === null) {
+        return console.log('false')
+      }
+      else {
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
           
-    //   console.log('response where are you', res.data[0].response_summary )
-    //   this.setState({ 
-    //     response: res.data[0].response_summary});
-    //   console.log('where is ma response Id', res.data[0].id)
-    //   this.setState({responseId: res.data[0].id});
-    // };
+    
+      this.setState({ responseCroyance: res.data[0].response_summary})
+      localStorage.clear();
+    }
+        
+    
+    }; 
+
+    getResponseCapacite = async () => {
+     
+      
+      const idresp = localStorage.getItem('idRespCapacite')
+    
+      if (idresp === null) {
+        return console.log('false')
+      }
+      
+      else {
+      
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+          
+    
+      this.setState({ responseCapacite: res.data[0].response_summary})
+      localStorage.clear();
+    }
+        
+      
+    }; 
 
 
+    getResponseComportement = async () => {
+      
+      const idresp= localStorage.getItem('idRespComportement')
+     
+      if (idresp === null) {
+        return console.log('false')
+      }
+      else {
+     
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+          
+     
+      this.setState({ responseComportement: res.data[0].response_summary})
+      localStorage.clear();
+    
+    }
+       
+    }; 
 
 
+    getResponseEnvironnement = async () => {
+      
+
+      const idresp= localStorage.getItem('idRespEnvironnement')
+      
+     if (idresp === null) {
+       return console.log('false')
+     }
+     else {
+      
+      const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
+         
+      this.setState({ responseEnvironnement: res.data[0].response_summary})
+      localStorage.clear()
+    }
+      
+        
+      
+    }; 
+
+
+    
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
@@ -89,31 +193,53 @@ class Reformulation extends React.Component {
     this.getHeadingResponse3();
     this.getHeadingResponse4();
 
-    // this.getResponse();
+    this.getResponse();
+    this.getResponseCroyance();
+    this.getResponseCapacite();
+    this.getResponseComportement();
+    this.getResponseEnvironnement();
+    this.getTextbuttonYes();
+    this.getTextbuttonNo()
   }
 
    render() {
-    // console.log("voila ma state", this.state)
    
-    const{icon, text_static, response,text_static2,
-         headingResponse,headingResponse2,headingResponse3,
-         headingResponse4, responseId} = this.state
+    const idresp = this.props.location.state.idRespComportement;
 
-    return (
+    localStorage.getItem('idRespComportement')
+     
+    
+    const{icon, text_static, text_static2,
+         headingResponse,headingResponse2,headingResponse3,
+         headingResponse4, response, responseCroyance, responseCapacite, responseComportement, responseEnvironnement, textButtonYes, textButtonNo} = this.state
+    
+   
+    
+
+         return (
       <div className="containerS2">
       <div className="containerSymptome2">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
+        
+          <div>
         <div className="ResponseContainer">
            <ResponseSymptome2 response={response}/>
         </div>
         <HeadingText text_static={text_static2.all_text} /> 
-        <OriginResponse headingResponse={headingResponse.all_text} 
+        <OriginResponse  headingResponse={headingResponse.all_text} 
          headingResponse2={headingResponse2.all_text}
          headingResponse3={headingResponse3.all_text}
-         headingResponse4={headingResponse4.all_text} />
-        <ForwardStep/>
-        <BackSubmit />
+         headingResponse4={headingResponse4.all_text}
+         responseCapacite={responseCapacite}
+         responseComportement = { responseComportement}
+         responseCroyance={responseCroyance} 
+         responseEnvironnement={responseEnvironnement}
+         />
+         </div>
+        
+        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text}/>
+        <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
       </div>
       </div>
     );

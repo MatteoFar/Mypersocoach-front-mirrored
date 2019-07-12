@@ -8,7 +8,7 @@ import ModalGoal from "./ModalGoal";
 const nl2br = require('react-nl2br');
 
 
-const Modal = ({id, text1, text2, icon})  =>{
+const Modal = ({id, text1, text2, icon, alt})  =>{
 
   const node = useRef();
 
@@ -51,11 +51,11 @@ return(
         <div >
         
         
-        <img  onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} />
+        <img  onClick={e => handleChange(id, text1, text2, icon)}  src={icon} alt={alt}/>
        
         
        
-        {open && (<ModalGoal id={id} text2={nl2br(text2)} src={icon} show={setOpen} />)}
+        {open && (<ModalGoal id={id} text2={nl2br(text2)} src={icon} alt={alt} show={setOpen} />)}
      
         </div>
        

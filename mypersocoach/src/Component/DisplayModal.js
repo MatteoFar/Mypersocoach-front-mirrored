@@ -2,7 +2,7 @@ import React from "react";
 import './Problem.css';
 import Modal from "./Modal";
 import axios from "axios"
-import { async } from "q";
+
 
 
 class DisplayModal extends React.Component {
@@ -48,7 +48,7 @@ return (
     </div>
     
       <div className="display-modal" >
-      {text_prob.map(content => <Modal  id= {content.id} text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
+      {text_prob.map(content => <Modal  id= {content.id} text1={content.all_text1} text2={content.all_text2} icon={content.picture_src} alt={content.description_alt}/>)}
       </div>
   </div>
    

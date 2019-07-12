@@ -68,9 +68,9 @@ class Symptomes extends Component {
         <img
           href="#"
           className="imageIconSymptom3"
-          alt="icon"
+          alt={this.props.problem.description_alt}
           src={this.props.problem.picture_src}
-          onClick={this.handleClick} 
+          onClick={this.handleClick}
        
        />
 

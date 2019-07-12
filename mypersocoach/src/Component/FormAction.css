@@ -1,0 +1,35 @@
+.formCenter {
+    display:flex;
+    justify-content: center ;
+}
+.buttonAction{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: none;
+    
+}
+
+.numbForm {
+    font-size: 20px !important;
+    margin: 0px;
+    color: #7e7e7e !important;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.button_action{
+    background:none;
+    border: none;
+}
+
+.numbForm p{
+    align-items: center;
+    display: flex;
+    
+}   
+.inputAction{
+   max-width:  95vmin !important;
+   color: #7e7e7e !important;
+}
+

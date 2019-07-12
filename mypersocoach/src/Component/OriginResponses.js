@@ -1,7 +1,7 @@
 import React from "react";
 import "./OriginResponse.css"
 
-const OriginResponse = ({ response,headingResponse,headingResponse2,headingResponse3,headingResponse4 }) => {
+const OriginResponse = ({ headingResponse,headingResponse2,headingResponse3,headingResponse4,responseCroyance, responseCapacite, responseComportement,responseEnvironnement }) => {
   
  
   
@@ -10,22 +10,22 @@ const OriginResponse = ({ response,headingResponse,headingResponse2,headingRespo
 
      <div className="responseArea">
        <h3 className="titleOriginResponse"> {headingResponse}</h3>    
-       <p>{response}</p>
+       <p>{responseCroyance}</p>
      </div>
 
      <div className="responseArea">
        <h3 className="titleOriginResponse">{headingResponse2}</h3>    
-       <p>{response}</p>
+       <p>{responseCapacite}</p>
      </div>
 
      <div className="responseArea">
        <h3 className="titleOriginResponse">{headingResponse3}</h3>    
-       <p>{response}</p>
+       <p>{responseComportement}</p>
      </div>
 
      <div className="responseArea">
        <h3 className="titleOriginResponse">{headingResponse4}</h3>    
-       <p>{response}</p>
+       <p>{responseEnvironnement}</p>
      </div>
       
     </div>

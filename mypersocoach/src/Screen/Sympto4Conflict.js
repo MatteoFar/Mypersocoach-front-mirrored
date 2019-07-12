@@ -65,7 +65,7 @@ class Sympto4Conflict extends React.Component {
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         
-        console.log( 'ma last if est tu la',this.props.location.state.lastId )
+        
         
         
         const{icon,text_static,problem}= this.state
@@ -75,7 +75,7 @@ class Sympto4Conflict extends React.Component {
             <div className="general_container">
                 {/* Appel du composant. Le 1er "icon" correspond au state */}
                 {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
-                <IconMain icon={icon.picture_src} />
+                <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
                 <HeadingText text_static={text_static.all_text} />
                 <TitlePageSympto problem={problem} />
                 <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId} redirectionPage={'symptome4'}/>

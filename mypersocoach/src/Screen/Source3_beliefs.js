@@ -5,12 +5,7 @@ import "./Source2environment.css";
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
-import NextStep from "../Component/NextStep";
-import Answer from "../Component/Answer"
-import NotReally from "../Component/NotReally";
-import { validate } from "@babel/types";
-import ForwardStep from "../Component/ForwardStep";
+
 import Form from "../Component/Form";
 
 class Source3Beliefs extends React.Component {
@@ -51,10 +46,10 @@ class Source3Beliefs extends React.Component {
   render() {
     return (
       <div className="containerSource2Environment">
-        <IconMain icon={this.state.icon.picture_src} />
+        <IconMain icon={this.state.icon.picture_src} alt={this.state.icon.description_alt}/>
         <TitlePage problem_origin={this.state.problem_origin} /> 
         <HeadingText text_static={this.state.text_static.all_text} /> 
-        <Form summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} redirectionPage={'recap'} />
+        <Form summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} redirectionPage={'reformulation'} />
       </div>
     );
   }

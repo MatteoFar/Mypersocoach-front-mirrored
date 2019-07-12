@@ -28,7 +28,7 @@ render() {
         
     <div className="modal_Cards" >
     <div className="Problem_modal">
-    <img className="icon_problem"  alt="icon_problem" src={this.props.src}/>
+    <img className="icon_problem"  alt={this.props.alt} src={this.props.src}/>
     <p className="modalText">{this.props.text2}</p>
 <button type="button" mainThemeId={this.props.id} onClick={this.handleClick}   name ="C'est parti !">C'est parti !</button>
 
