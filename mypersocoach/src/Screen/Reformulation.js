@@ -228,7 +228,7 @@ class Reformulation extends React.Component {
         <OriginResponse  headingResponse={headingResponse.all_text} 
          headingResponse2={headingResponse2.all_text}
          headingResponse3={headingResponse3.all_text}
-         headingRes4={headingResponse4.all_text}
+         headingResponse4={headingResponse4.all_text}
          responseCapacite={responseCapacite}
          responseComportement = { responseComportement}
          responseCroyance={responseCroyance} 
@@ -243,4 +243,5 @@ class Reformulation extends React.Component {
     );
   }
 }
+
 export default Reformulation;
