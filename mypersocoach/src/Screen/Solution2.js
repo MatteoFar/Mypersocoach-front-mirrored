@@ -11,26 +11,37 @@ class Solution2 extends React.Component {
 
     state = {
 
-        action1 : '',
+        // action1 : '',
         
-        action2 : '',
+        // action2 : '',
 
-        action3: '',
+        // action3: '',
 
-        action4 : '',
+        // action4 : '',
 
-        action5 : '',
+        // action5 : '',
 
         addActions : [],
+        isDisabled : true
 
     }
 
-
+    // When filling in the first five actions, update value of differents action state
     handleChangeAction = (e) =>{
     
         this.setState({ [e.target.name] : e.target.value })
     }
 
+   // handle value of new action input (beyond five actions) when click on add action
+
+    handleChange = (e, index) =>{
+    this.state.addActions[index] = e.target.value
+    this.setState({ addActions : this.state.addActions })
+    
+    
+}
+    
+    // add 
     addAction = () => {
         
         this.setState({ addActions : [...this.state.addActions, ""] })
@@ -43,15 +54,7 @@ class Solution2 extends React.Component {
         this.setState({ addAction : this.state.addActions })
 
     }
-// need to fix by putin a "setState"
 
-    handleChange = (e, index) =>{
-    this.state.addActions[index] = e.target.value
-    this.setState({ addActions : this.state.addActions })
-    console.log('test de add actino', this.state.addActions);
-    
-    
-    }
 
     handleSubmit = (e) =>{
         
@@ -61,21 +64,39 @@ class Solution2 extends React.Component {
             pathname : '/solution-3',
             state : {
 
-                action1 : this.state.action1,
-                action2 : this.state.action2,
-                action3 : this.state.action3,
-                action4 : this.state.action4,
-                action5 : this.state.action5,
+                // action1 : this.state.action1,
+                // action2 : this.state.action2,
+                // action3 : this.state.action3,
+                // action4 : this.state.action4,
+                // action5 : this.state.action5,
                 addActions :this.state.addActions
-
+               
             }
         })
 
     }
 
-    render(){
-        console.log('test action' , this.state);
+    isDisabled(){
         
+       
+        if ( this.state.addActions.length <=5) {
+           
+            return true;   // for disable button return true otherwise false
+    
+    
+    }
+       else {
+            return false
+       } 
+     
+    
+    }
+
+
+
+    render(){
+        console.log('test de la state' , this.state);
+        console.log('test de add action', this.state.addActions);
         
         
         return (
@@ -86,22 +107,22 @@ class Solution2 extends React.Component {
 
 
 
-                    <input type ='text' name='action1' value ={this.state.action1} onChange={this.handleChangeAction}></input>
+                    {/* <input type ='text' name='action1' value ={this.state.action1} onChange={this.handleChangeAction}></input>
                     <input type ='text' name='action2' value ={this.state.action2} onChange={this.handleChangeAction}></input>
                     <input type ='text' name='action3' value ={this.state.action3} onChange={this.handleChangeAction}></input>
                     <input type ='text' name='action4' value ={this.state.action4} onChange={this.handleChangeAction}></input>
-                    <input type ='text' name='action5' value ={this.state.action5} onChange={this.handleChangeAction}></input>
+                    <input type ='text' name='action5' value ={this.state.action5} onChange={this.handleChangeAction}></input> */}
                     {/* ajouter les input a partir d ici*/}
                     {this.state.addActions.map( (addAction, index) =>{
                         return (
                             <div key={index}>
 
-                                <input onChange={(e)=>this.handleChange(e, index)} value={addAction}></input>
+                                <input onChange={(e)=>this.handleChange(e, index)} value={addAction}   ></input>
 
                             </div>
                         )
                     } )}
-                    <button type='submit'name='valide'>Je valide ces actions</button>
+                    <button type='submit'name='valide' disabled={this.isDisabled()} >Je valide ces actions</button>
 
                 </form>
                 

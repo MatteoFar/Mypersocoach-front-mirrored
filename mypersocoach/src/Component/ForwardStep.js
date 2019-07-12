@@ -103,11 +103,10 @@ else if (this.props.redirectionPage === 'solution2') {
 }
   
 
- 
   
   render(){
   
-    // display of ???? in Source2 page
+    // display of c'est bien ça button (first summary) in Symptome2 page
     if(this.props.redirectionPage === 'Source2') {
       console.log("qui est là?", this.props.idRespEnvironment)
     return (
@@ -117,7 +116,7 @@ else if (this.props.redirectionPage === 'solution2') {
     );
   }
 
-// display of source2envirnnement, source2comportement, source2capacité with "oui" button 
+// display of source2environnement, source2comportement, source2capacité with "oui" button 
   else if (this.props.redirectionPage === 'source3_croyances' || this.props.redirectionPage === 'source3_environment' || this.props.redirectionPage === 'source3_comportement' ||
   this.props.redirectionPage === 'source3_capacites') {
     return (

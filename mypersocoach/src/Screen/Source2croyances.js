@@ -7,7 +7,7 @@ import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
 import HeadingLink from "../Component/HeadingLink";
-import FowardStep from "../Component/ForwardStep";
+import ForwardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 
 class Source2Croyances extends React.Component {
@@ -21,7 +21,7 @@ class Source2Croyances extends React.Component {
     text_static2: [],
     text_static3: [],
     text_modal1: [],
-    icon_modal: [],
+    // icon_modal: [],
     modal_continue: [],
     modal_closed: [],
     link_modal : false,
@@ -119,7 +119,7 @@ class Source2Croyances extends React.Component {
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
-        <FowardStep redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} />
+        <ForwardStep redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} />
         <NextStep summaryId={this.props.location.state.summaryId} redirectionPage={'reformulation'} text_static3={text_static3.all_text} />
       </div>
     );
