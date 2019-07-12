@@ -6,7 +6,7 @@ import "./Source2croyances.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
+import ForwardStep from "../Component/ForwardStep";
 import HeadingLinkAction from "../Component/HeadingLinkAction";
 
 class Solution1 extends React.Component {
@@ -85,7 +85,7 @@ class Solution1 extends React.Component {
         />
 
 
-        <FowardStep text_static2={text_static2.all_text} /> 
+        <ForwardStep text_static2={text_static2.all_text} /> 
        
       </div>
     );
