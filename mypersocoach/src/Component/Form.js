@@ -247,6 +247,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
    
    handleClick = () => {
       //redirection for "je ne suis pas sûr button" in Source 3 envrionnement
+      // we go one step back to Source2envrionnement
       
         if(this.props.redirectionPage === 'Source2environnement') {
         this.props.history.push({
@@ -255,8 +256,8 @@ else if ( this.props.redirectionPage === 'reformulation') {
             });
          
       }
-    //reditection for "je ne suis pas sûr " in source 3 comportement
-    
+    //redirection for "je ne suis pas sûr " in source 3 comportement
+    // we go one step back to Source2comportement
     else if(this.props.redirectionPage === 'Source2comportement') {
         
         this.props.history.push({
@@ -266,6 +267,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
          console.log("que passa with button valider")
       }
      // reditection for "je ne suis pas sûr " in source 3 capacité
+     // we go one step back to Source2croyances
       else if(this.props.redirectionPage === 'Source2croyances') {
         this.props.history.push({
             pathname: "/source2capacites", 
@@ -274,6 +276,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
          
       }
   // reditection for "je ne suis pas sûr " in source 3 croyances
+  // we go one step back to Source2croyances
       else if(this.props.redirectionPage === 'reformulation') {
         this.props.history.push({
             pathname: "/source2croyances", 
@@ -304,8 +307,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
 
         const { response, text_static2, text_static3, text_static4, text_static5 } = this.state
 
-    // console.log("est ce que summary-id se charge", this.state.summary_id)
-    // console.log('est ce que ma props se charge', this.props.lastId)
+   
 
 // this return display the form with "retour" button in symptome4_compoents : synmpto4 conflict, symptome4_performance
     if (this.props.redirectionPage === 'symptome4'){

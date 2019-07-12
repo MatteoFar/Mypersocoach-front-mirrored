@@ -15,21 +15,35 @@ class ModalExample extends React.Component {
   };
 
   HandleOpenModal = () => {
+    console.log("HandleOpenModal");
+    
     if (this.state.show === true && this.state.show2 === false) {
-      return this.setState({ show2: !this.state.show2 });
+      return this.setState({ show2: true, show: false }, () => {
+        console.log('show', this.state);
+        
+      });
     }
     if (this.state.show2 === true) {
-      return this.setState({ show3: !this.state.show3 });
+      return this.setState({ show3: true, show2: false }, () => {
+        console.log('show2', this.state);
+        
+      });
     }
-    if (this.state.show3 === true && this.state.show2 === false) {
-      return this.setState({ show: !this.state.show });
+    if (this.state.show3 === true ) {
+      return this.setState({ show: true, show3: false }, () => {
+        console.log('show3', this.state);
+        
+      });
     }
-    this.setState({ show: !this.state.show });
+    this.setState({ show: true, show2: false, show3: false }, () => {
+      console.log(this.state);
+      
+    });
     //  this.setState({ show3: !this.state.show });
   };
 
   CloseModal = () => {
-    this.setState({ show: false });
+    this.setState({ show: true });
     this.setState({ show2: false });
     this.setState({ show3: false });
     
@@ -45,13 +59,13 @@ class ModalExample extends React.Component {
     const modal = this.state.show ? "modal_main1" : "modaloff1";
     const modal2 = this.state.show2 ? "modal_main1" : "modaloff1";
     const modal3 = this.state.show3 ? "modal_main1" : "modaloff1";
-    const show_modal = this.state.show_modal ? "modal_main1" : "modaloff1";
+    // const show_modal = this.state.show_modal ? "modal_main1" : "modaloff1";
     
     return (
       <>
         <div className={modal}>
           <div className="modal_main1">
-            <img className="belief_image" src={this.props.icon_modal} />
+            <img className="belief_image" src={this.props.icon_modal} alt={this.props.alt}/>
             <p>{nl2br(this.props.text_modal1)}</p>
             <p onClick={this.HandleOpenModal} className="pass_continue">
               {this.props.modal_continue}
@@ -64,7 +78,7 @@ class ModalExample extends React.Component {
 
         <div className={modal2}>
           <div className="modal_main1">
-            <img className="belief_image" src={this.props.icon_modal} />
+            <img className="belief_image" src={this.props.icon_modal} alt={this.props.alt}/>
             <p>{nl2br(this.props.text_modal2)}</p>
             <p onClick={this.HandleOpenModal} className="pass_continue">
               {this.props.modal_continue}
@@ -77,7 +91,7 @@ class ModalExample extends React.Component {
 
         <div className={modal3}>
           <div className="modal_main1">
-            <img className="belief_image" src={this.props.icon_modal} />
+            <img className="belief_image" src={this.props.icon_modal} alt={this.props.alt}/>
             <p>{nl2br(this.props.text_modal3)}</p>
             <p onClick={this.props.CloseModal} className="pass_continue">
               {this.props.button_finish}

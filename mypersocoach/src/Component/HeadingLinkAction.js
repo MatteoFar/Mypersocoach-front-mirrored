@@ -77,7 +77,7 @@ class HeadingLinkAction extends Component {
         
         <div className={show_modal} >
           <ModalAction modal_link_action={this.state.modal_link_action}
-            icon_modal_action={icon_modal_action.picture_src}alt={icon_modal_action.description_alt}
+            icon_modal_action={icon_modal_action.picture_src} alt={icon_modal_action.description_alt}
             text_modal_action={text_modal_action.all_text}
             button_finish={button_finish.all_text}
             CloseModal = {this.showModal}

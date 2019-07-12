@@ -24,7 +24,7 @@ class ModalAction extends React.Component {
       <>
         
           
-            <img className="belief_image" src={this.props.icon_modal_action} />
+            <img className="belief_image" src={this.props.icon_modal_action} alt={this.props.alt}/>
             <p>{nl2br(this.props.text_modal_action)}</p>
             <p onClick={this.props.CloseModal} className="pass_continue">
               {this.props.button_finish}
