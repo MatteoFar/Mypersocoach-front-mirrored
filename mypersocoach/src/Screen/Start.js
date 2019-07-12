@@ -26,7 +26,7 @@ class Start extends Component {
   getHeader = async () => {
     const res= await axios.get('http://localhost:3001/icon/27')
     this.setState({  icon: res.data[0]  })
-          
+  
      
   }
 
