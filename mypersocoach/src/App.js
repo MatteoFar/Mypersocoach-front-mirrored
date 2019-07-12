@@ -19,6 +19,7 @@ import Sympto4Orga from "./Screen/Sympto4Orga";
 import Sympto4Time from "./Screen/Sympto4Time";
 import Sympto4Stress from "./Screen/Sympto4Stress";
 import Reformulation from "./Screen/Reformulation";
+import Saut1 from "./Screen/Saut1";
 import Source2comportement from "./Screen/Source2comportement";
 import Source2croyances from "./Screen/Source2croyances";
 import Source2capacites from"./Screen/Source2capacites"
@@ -59,6 +60,7 @@ class App extends React.Component {
             <Route exact path="/source3_croyances" component={Source3Beliefs}/>
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/reformulation" component={Reformulation} />
+            <Route exact path="/Saut1" component={Saut1} />
             <Route exact path="/solution-1" component={Solution1} />
             <Route exact path="/solution-2" component={Solution2} />
             <Route exact path="/solution-3" component={Solution3} />
