@@ -67,8 +67,8 @@ class Solution2 extends React.Component {
         <div className="text_size">
         <HeadingText text_static={text_static.all_text} />
         </div>
-        <FormAction addActions={this.props.addActions}action1={this.props.action1}action2={this.props.action2}action3={this.props.action3}action4={this.props.action4}action5={this.props.action5}/>
-        <ForwardStep redirectionPage={'solution3'} text_static2={text_static2.all_text} /> 
+        <FormAction addActions={this.props.addActions} action1={this.props.action1} action2={this.props.action2} action3={this.props.action3} action4={this.props.action4}action5={this.props.action5}/>
+        <ForwardStep summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} /> 
        
         
         {/* <button onClick={e => this.addAction(e)}>Add Action</button>

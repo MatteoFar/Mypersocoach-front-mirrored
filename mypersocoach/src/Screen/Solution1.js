@@ -86,7 +86,7 @@ class Solution1 extends React.Component {
         />
 
 
-        <ForwardStep redirectionPage={'solution2'} text_static4={text_static4.all_text} /> 
+        <ForwardStep summaryId={this.props.location.state.summaryId} redirectionPage={'solution2'} text_static4={text_static4.all_text} /> 
        
       </div>
     );

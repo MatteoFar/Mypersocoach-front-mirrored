@@ -64,12 +64,15 @@ class FormAction extends React.Component{
           }
         });
       };
+
+    
       componentDidMount() {
         this.getButtonAddAction()
         this.getButtonRemoveAction()
         this.getPlaceholderAction()
         
       }
+
 render(){
   const{icon_add_action,icon_remove,text_static2}=this.state
 return(
