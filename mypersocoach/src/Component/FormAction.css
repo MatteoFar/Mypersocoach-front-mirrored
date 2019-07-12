@@ -15,6 +15,8 @@
     margin: 0px;
     color: #7e7e7e !important;
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 .button_action{
     background:none;
@@ -22,9 +24,12 @@
 }
 
 .numbForm p{
+    align-items: center;
     display: flex;
+    
 }   
 .inputAction{
    max-width:  95vmin !important;
    color: #7e7e7e !important;
 }
+
