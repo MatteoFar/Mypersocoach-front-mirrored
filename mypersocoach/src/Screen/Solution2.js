@@ -1,147 +1,83 @@
-import React from 'react'
-import { withRouter } from 'react-router-dom'
-import './Solution2.css'
+import React from "react";
+import { withRouter } from "react-router-dom";
+import axios from "axios";
+import "./Source2environment.css";
 
 
 
+import IconMain from "../Component/IconMain";
+import HeadingText from "../Component/HeadingText";
+import ForwardStep from "../Component/ForwardStep";
+import FormAction from "../Component/FormAction";
 
 class Solution2 extends React.Component {
+  state = {
+    // action1: "",
+    // action2: "",
+    // action3: "",
+    // action4: "",
+    // action5: "",
+    // addActions: [],
+    icon: [],
+    text_static: [],
+    text_static2: [],
+    icon_add_action:[],
+    icon_remove:[]
+  };
 
+  getHeader = async () => {
+    const res = await axios.get("http://localhost:3001/icon/5");
+    this.setState({ icon: res.data[0] });
+  };
 
+  getTextStatic = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/141");
+    this.setState({ text_static: res.data[0] });
+  };
+  getTextStatic2 = async () => {
+    const res = await axios.get("http://localhost:3001/text_static/128");
+    this.setState({ text_static2: res.data[0] });
+  };
+  getButtonAddAction= async () => {
+    const res = await axios.get("http://localhost:3001/icon/5");
+    this.setState({ icon_add_action: res.data[0] });
+  };
+  getButtonRemoveAction= async () => {
+    const res = await axios.get("http://localhost:3001/icon/5");
+    this.setState({ icon_remove: res.data[0] });
+  };
 
-    state = {
+  componentDidMount() {
+    this.getHeader();
+    this.getTextStatic();
+    this.getTextStatic2();
+    this.getButtonAddAction();
+    this.getButtonRemoveAction();
+  }
 
-        // action1 : '',
-        
-        // action2 : '',
+  render() {
+    const { icon, text_static, text_static2,icon_add_action,icon_remove } = this.state;
 
-        // action3: '',
+    console.log("test action", this.state);
 
-        // action4 : '',
-
-        // action5 : '',
-
-        addActions : [],
-        isDisabled : true
-
-    }
-
-    // When filling in the first five actions, update value of differents action state
-    handleChangeAction = (e) =>{
-    
-        this.setState({ [e.target.name] : e.target.value })
-    }
-
-   // handle value of new action input (beyond five actions) when click on add action
-
-    handleChange = (e, index) =>{
-    this.state.addActions[index] = e.target.value
-    this.setState({ addActions : this.state.addActions })
-    
-    
-}
-    
-    // add 
-    addAction = () => {
-        
-        this.setState({ addActions : [...this.state.addActions, ""] })
-
-    }
-
-    handleRemove = (index) => {
-
-        this.state.addActions.splice(index,1)
-        this.setState({ addAction : this.state.addActions })
-
-    }
-
-
-    handleSubmit = (e) =>{
-        
-        e.preventDefault()
-
-        this.props.history.push({
-            pathname : '/solution-3',
-            state : {
-
-                // action1 : this.state.action1,
-                // action2 : this.state.action2,
-                // action3 : this.state.action3,
-                // action4 : this.state.action4,
-                // action5 : this.state.action5,
-                addActions :this.state.addActions
-               
-            }
-        })
-
-    }
-
-    isDisabled(){
-        
+    return (
+      <div className="containerSource2Environment">
+          
+        <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
+        <div className="text_size">
+        <HeadingText text_static={text_static.all_text} />
+        </div>
+        <FormAction addActions={this.props.addActions}action1={this.props.action1}action2={this.props.action2}action3={this.props.action3}action4={this.props.action4}action5={this.props.action5}/>
+        <ForwardStep redirectionPage={'solution3'} text_static2={text_static2.all_text} /> 
        
-        if ( this.state.addActions.length <=5) {
-           
-            return true;   // for disable button return true otherwise false
-    
-    
-    }
-       else {
-            return false
-       } 
-     
-    
-    }
-
-
-
-    render(){
-        console.log('test de la state' , this.state);
-        console.log('test de add action', this.state.addActions);
         
-        
-        return (
-
-            <div>
-
-                <form className ='formAction' onSubmit={this.handleSubmit} id='dynamicInput'>
-
-
-
-                    {/* <input type ='text' name='action1' value ={this.state.action1} onChange={this.handleChangeAction}></input>
-                    <input type ='text' name='action2' value ={this.state.action2} onChange={this.handleChangeAction}></input>
-                    <input type ='text' name='action3' value ={this.state.action3} onChange={this.handleChangeAction}></input>
-                    <input type ='text' name='action4' value ={this.state.action4} onChange={this.handleChangeAction}></input>
-                    <input type ='text' name='action5' value ={this.state.action5} onChange={this.handleChangeAction}></input> */}
-                    {/* ajouter les input a partir d ici*/}
-                    {this.state.addActions.map( (addAction, index) =>{
-                        return (
-                            <div key={index}>
-
-                                <input onChange={(e)=>this.handleChange(e, index)} value={addAction}   ></input>
-
-                            </div>
-                        )
-                    } )}
-                    <button type='submit'name='valide' disabled={this.isDisabled()} >Je valide ces actions</button>
-
-                </form>
-                
-                <button onClick={(e)=> this.addAction(e)}>Add Action</button>
-                <button onClick={(index) => this.handleRemove(index)}>Remove Action</button>
-
-            </div>
-        )
-
-    }
-
+        {/* <button onClick={e => this.addAction(e)}>Add Action</button>
+        <button onClick={index => this.handleRemove(index)}>
+          Remove Action
+        </button> */}
+      </div>
+    );
+  }
 }
 
-
-
-
-
-
-
-
-
-export default withRouter(Solution2)
+export default withRouter(Solution2);

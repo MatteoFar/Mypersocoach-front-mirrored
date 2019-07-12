@@ -1,12 +1,14 @@
 .formAction {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    justify-content: center;
+
 }
 
-input{
-    margin: 2%;
-    width: 20%;
-   
+@media screen and (max-width:576px){
+
 }
+@media screen and (max-width: 768px) {}
+
+
 

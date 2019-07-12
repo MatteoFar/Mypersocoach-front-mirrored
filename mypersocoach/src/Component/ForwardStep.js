@@ -53,7 +53,7 @@ class ForwardStep extends React.Component{
         state: {
           
           summaryId: this.props.summaryId,
-          problem_originId: this.props.problem_originId
+          w: this.props.problem_originId
         }
         
     })
@@ -88,7 +88,7 @@ else if (this.props.redirectionPage === 'solution2') {
   console.log('ou es ma redireciton page solution2')
   
   this.props.history.push({
-    pathname: "/solution-2", 
+    pathname: "/solution2", 
     state: {
       
       summaryId: this.props.summaryId,
@@ -98,7 +98,21 @@ else if (this.props.redirectionPage === 'solution2') {
 })
 }
 
+// redirection to solution3 page
 
+else if (this.props.redirectionPage === 'solution3') {
+  console.log('ou es ma redireciton page solution3')
+  
+  this.props.history.push({
+    pathname: "/solution3", 
+    state: {
+      
+      summaryId: this.props.summaryId,
+      problem_originId: this.props.problem_originId
+    }
+    
+})
+}
 
 }
   
@@ -138,8 +152,24 @@ else if (this.props.redirectionPage === 'solution2') {
 
   }
 
-// display of "oui c'est exactement ça" in reformulation page
-  else {
+
+  // display of "Je valide ces actions" in solution2 page
+
+  else if (this.props.redirectionPage === 'solution3'){
+    return (
+      <div className="forward_step_container">
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static2} </button>
+      </div>
+    );
+
+
+  }
+
+
+  // display of "oui c'est exactement ça" in reformulation page
+  
+
+else {
     return (
       <div className="forward_step_container">
         <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>

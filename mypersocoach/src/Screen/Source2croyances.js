@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import "./Source2croyances.css";
+import "./Source2environment.css";
 
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
