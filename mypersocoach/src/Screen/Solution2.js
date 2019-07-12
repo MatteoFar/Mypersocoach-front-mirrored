@@ -59,10 +59,6 @@ class Solution2 extends React.Component {
         </div>
         <FormAction summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>       
         
-        {/* <button onClick={e => this.addAction(e)}>Add Action</button>
-        <button onClick={index => this.handleRemove(index)}>
-          Remove Action
-        </button> */}
       </div>
     );
   }

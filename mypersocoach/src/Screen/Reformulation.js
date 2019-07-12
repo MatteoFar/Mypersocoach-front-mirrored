@@ -189,7 +189,10 @@ class Reformulation extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getHeadingResponse();
-    this.getHeadingResponse2();
+    this.getHeadingResponse2();   {/* <button onClick={e => this.addAction(e)}>Add Action</button>
+    <button onClick={index => this.handleRemove(index)}>
+      Remove Action
+    </button> */}
     this.getHeadingResponse3();
     this.getHeadingResponse4();
 
@@ -215,7 +218,7 @@ class Reformulation extends React.Component {
     
 
          return (
-      <div className="containerS2">
+      <div className="containerS2 white">
       <div className="containerSymptome2">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
