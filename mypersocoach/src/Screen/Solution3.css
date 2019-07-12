@@ -1,0 +1,21 @@
+/* Solution3.css */
+
+.solution3_width_height {
+    height: 100vh;
+    width:100vw;
+    border: 1px solid red;
+  }
+
+/*======= DESKTOP FORMAT =======*/
+@media screen and (min-width:960px){
+
+    .solution3_width_height {
+      width:70vw;
+      margin: auto;
+    }
+  
+    /* #grid_login{
+      width: 760px;
+    } */
+  
+  }
