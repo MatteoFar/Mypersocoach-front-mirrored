@@ -14,7 +14,8 @@ class FormAction extends React.Component{
         icon_add_action:[],
         icon_remove:[],
         text_static2:[],
-        text_static3: []
+        text_static3: [],
+        summaryId:''
     }
 
       getButtonAddAction= async () => {
@@ -43,8 +44,10 @@ class FormAction extends React.Component{
       };
 
     
-      addAction = () => {
+      addAction = (e) => {
+        e.preventDefault();
         this.setState({ addActions: [...this.state.addActions, ""] });
+        // this.setState({summaryId: this.props.summaryId})
       };
     
       getFiveInput =() => {
@@ -53,13 +56,16 @@ class FormAction extends React.Component{
 
     }
 
-      handleRemove = index => {
+      handleRemove = (e, index) => {
+        console.log('il est là mon e', e)
+        e.preventDefault();
         this.state.addActions.splice(index, 1);
-        this.setState({ addAction: this.state.addActions });
+        this.setState({ addActions: this.state.addActions });
       };
       // need to fix by putin a "setState"
     
-      handleChange = (e, index) => {
+      handleChange = ( e, index) => {
+        
         this.state.addActions[index] = e.target.value;
         this.setState({ addActions: this.state.addActions });
         console.log("test de add actino", this.state.addActions);
@@ -85,13 +91,13 @@ class FormAction extends React.Component{
 
         <div className="formCenter">
 
-          <form onSubmit={this.handleSubmit}id="dynamicInput" >
+          <form id="dynamicInput" >
       
             {this.state.addActions.map((addAction, index) => {
               return (
 
                 <div key={index}>
-                  <p className ='numbForm'>{index + 1}-<input type ='text'onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/></p>
+                  <p className ='numbForm'>{index + 1}-<input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/></p>
                 </div>
 
               );
@@ -104,12 +110,12 @@ class FormAction extends React.Component{
                   <img src={icon_add_action.picture_src}/>
                 </button>
 
-                <button className="button_action"onClick={index => this.handleRemove(index)}>
+                <button className="button_action" onClick={(e,index) => this.handleRemove(e, index)}>
                   <img src={icon_remove.picture_src}/>
                 </button>
 
             </div>
-         <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
+         <ForwardStep summaryId={this.props.summaryId} text_static3={text_static3.all_text} addActions={this.state.addActions}  redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
         </form>
     </div>
         

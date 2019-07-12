@@ -61,7 +61,7 @@ class Solution3 extends React.Component {
 
 
     render(){
-        
+        console.log('elle est là mon id soummary', this.props.location.state.summaryId)
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
         console.log('cest quoi ce truc', addActions);
@@ -71,7 +71,7 @@ class Solution3 extends React.Component {
             <div className="solution3_width_height">
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
-            {/* <RecapSolution /> */}
+            {/* <AnswerAction /> */}
                 
                     {addActions.map(addAction => 
 
