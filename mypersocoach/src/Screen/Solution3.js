@@ -4,6 +4,7 @@ import axios from "axios";
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
 import BackAction from '../Component/BackAction';
+import { withRouter } from "react-router-dom";
 
 class Solution3 extends React.Component {
 
@@ -12,18 +13,46 @@ class Solution3 extends React.Component {
         text_static: [],
         text_static2: [],
         response : '',
+        isReply: false,
+        summaryId: ''
     }
 
-    handleClick = (action, index) =>{
-        console.log('que passa ?', this.state);
-        
-        this.setState({ response : action[index] })
-  // console.log( 'test target',e.currentTarget.value);
-        console.log('test fonction', this.state.response);
-      
-        // this.props.history.push({
-        //     pathname : '/'
+    handleClick = async (addAction) =>{
+       
+        // console.log('que passa ?',  addAction);
+       
+        // this.setState({response: addAction}, function () {
+        //     console.log('ma state response ouvre toi', this.state.response);
         // })
+      
+        console.log('est pas là ma state?',this.state.response);
+await this.setState({response: addAction});
+    console.log('si elle est là',this.state.response);
+
+
+        this.setState({isReply: !this.state.isReply, })
+       
+        console.log('test fonction', this.state.response);
+        axios.post('http://localhost:3001/action', {
+
+            
+            text_response: this.state.response,
+            summary_id: this.props.location.state.summaryId
+
+        })
+        .then((res => {
+            this.props.history.push({
+                pathname: "/solutions4", 
+                state: {
+
+                    summary_id: this.props.location.state.summaryId
+
+                    }
+            });
+          }
+    ))
+
+        
     }
 
     getHeader = async () => {
@@ -64,19 +93,31 @@ class Solution3 extends React.Component {
         console.log('elle est là mon id soummary', this.props.location.state.summaryId)
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
-        console.log('cest quoi ce truc', addActions);
+        // console.log('cest quoi ce truc', addActions);
         
-        return (
+addActions.map((currElement, index) => {
+  console.log("The current iteration is: " + index);
+  console.log("The current element is: " + currElement);
+  console.log("\n");
+  return 'X';
+});
+        
+const array= (event) =>{
+    console.log('tu es là array?', Array.from(array).indexOf(event.target) );
+  }
+
+
+return (
 
             <div className="solution3_width_height">
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
             {/* <AnswerAction /> */}
                 
-                    {addActions.map(addAction => 
+                    {addActions.map((addAction, index) => 
 
                         <div>
-                            <p>{addAction}<button onClick={()=> this.handleClick(addActions)}>Valider</button></p>
+                            <p>{addAction}<button key={index} onClick={()=> this.handleClick(addAction)}>Valider</button></p>
                         </div>
                     )}
 
@@ -90,4 +131,4 @@ class Solution3 extends React.Component {
 }
 
 
-export default Solution3;
+export default withRouter(Solution3);
