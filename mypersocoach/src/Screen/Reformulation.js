@@ -189,10 +189,7 @@ class Reformulation extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getHeadingResponse();
-    this.getHeadingResponse2();   {/* <button onClick={e => this.addAction(e)}>Add Action</button>
-    <button onClick={index => this.handleRemove(index)}>
-      Remove Action
-    </button> */}
+    this.getHeadingResponse2();
     this.getHeadingResponse3();
     this.getHeadingResponse4();
 

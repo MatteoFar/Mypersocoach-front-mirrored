@@ -90,21 +90,18 @@ await this.setState({response: addAction});
 
 
     render(){
-        console.log('elle est là mon id soummary', this.props.location.state.summaryId)
+        // console.log('elle est là mon id soummary', this.props.location.state.summaryId)
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
-        // console.log('cest quoi ce truc', addActions);
         
-addActions.map((currElement, index) => {
-  console.log("The current iteration is: " + index);
-  console.log("The current element is: " + currElement);
-  console.log("\n");
-  return 'X';
-});
         
-const array= (event) =>{
-    console.log('tu es là array?', Array.from(array).indexOf(event.target) );
-  }
+// addActions.map((currElement, index) => {
+//   console.log("The current iteration is: " + index);
+//   console.log("The current element is: " + currElement);
+//   console.log("\n");
+//   return 'X';
+// });
+        
 
 
 return (

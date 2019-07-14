@@ -76,7 +76,7 @@ class FormAction extends React.Component{
       render(){
         // console.log('ici',this.props.location.state.summaryId);
         
-      const{icon_add_action,icon_remove,text_static2,text_static3}=this.state
+      const{text_static2,text_static3}=this.state
 
       return (
 
