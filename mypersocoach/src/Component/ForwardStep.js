@@ -128,6 +128,7 @@ else if (this.props.redirectionPage === 'solution3') {
               }
           })
       }
+      
       else{
           // console.log('Entrer au moins 5 actions');
           this.setState({displayError: true})

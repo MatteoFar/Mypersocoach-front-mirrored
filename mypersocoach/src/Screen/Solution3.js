@@ -70,7 +70,7 @@ class Solution3 extends React.Component {
 //   return 'X';
 // });
         
-
+console.log('coucou summaryid', this.props.location.state.summaryId)
 
 return (
 
