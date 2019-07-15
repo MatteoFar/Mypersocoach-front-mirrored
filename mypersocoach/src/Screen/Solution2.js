@@ -46,6 +46,8 @@ class Solution2 extends React.Component {
 
   render() {
     const { icon, text_static, text_static2 } = this.state;
+    console.log('la state est elle ici ? :' ,this.props.location.state.addActions);
+    
 
     
 
@@ -56,7 +58,7 @@ class Solution2 extends React.Component {
         <div className="text_size">
         <HeadingText text_static={text_static.all_text} />
         </div>
-        <FormAction summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>       
+        <FormAction summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} addActions={this.props.location.state.addActions}/>       
         
       </div>
     );

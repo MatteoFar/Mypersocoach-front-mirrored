@@ -76,20 +76,25 @@ await this.setState({response: action});
             <div>
 
                 {this.state.addActions.map(addAction => {
-                    if (addAction.length >=1) {
-                    return(
-
-                        <div>
-                            <p>{addAction}<button onClick={()=> this.handleClick(addAction)}>Valider</button></p>
-                        </div>
                     
-                        )
-                    }
-                     else {
-                    return
-                 }
+                        if(addAction.length >= 1 ){
+                            return(
+                                
+                                <div>
+                                    <p>{addAction}<button onClick={()=> this.handleClick(addAction)}>Valider</button></p>
+                                </div>
+                            )
+                        
+                        }
 
+                        else{
+                            
+                            return
+                        }
+                        
                     }
+
+                    
                 )}
 
             </div>
