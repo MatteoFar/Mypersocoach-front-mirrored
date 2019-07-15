@@ -9,7 +9,7 @@ import RecapSolution from '../Component/RecapSolution';
 class Solution3 extends React.Component {
 
     state = {
-        
+
         icon: [],
         text_static: [],
         text_static2: [],
@@ -62,15 +62,6 @@ class Solution3 extends React.Component {
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
         
-        
-// addActions.map((currElement, index) => {
-//   console.log("The current iteration is: " + index);
-//   console.log("The current element is: " + currElement);
-//   console.log("\n");
-//   return 'X';
-// });
-        
-
 
 return (
 
@@ -78,7 +69,7 @@ return (
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
             <RecapSolution  summaryId={this.props.location.state.summaryId} addActions ={addActions}/> 
-            <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text}/>
+            <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text} addActions={addActions}/>
             </div>
             
         )

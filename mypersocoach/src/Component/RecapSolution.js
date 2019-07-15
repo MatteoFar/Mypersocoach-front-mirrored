@@ -9,7 +9,7 @@ class RecapSolution extends React.Component {
         addActions : this.props.addActions,
         response :'',
         isReply: false,
-
+        summaryId: ''
     }
 
     // handleClick = (action) =>{
@@ -37,7 +37,8 @@ class RecapSolution extends React.Component {
 await this.setState({response: action});
     console.log('si elle est là',this.state.response);
 
-
+        this.setState({summaryId: this.props.summaryId})
+        console.log('summaryid ou es tu?', this.state.summaryId)
         this.setState({isReply: !this.state.isReply, })
        
         console.log('test fonction', this.state.response);
@@ -45,15 +46,15 @@ await this.setState({response: action});
 
             
             text_response: this.state.response,
-            summary_id: this.props.location.state.summaryId
+            summary_id: this.state.summaryId
 
         })
         .then((res => {
             this.props.history.push({
-                pathname: "/solutions4", 
+                pathname: "/solution4", 
                 state: {
 
-                    summary_id: this.props.location.state.summaryId
+                    summaryId: this.state.summaryId
 
                     }
             });
@@ -70,7 +71,7 @@ await this.setState({response: action});
 
 
     render(){
-        console.log('etat de la state response:', this.state.response);
+        console.log('etat de la state summaryId:', this.props.summaryId);
         
         return (
             <div>
