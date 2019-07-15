@@ -26,6 +26,7 @@ import Source2capacites from"./Screen/Source2capacites"
 import Solution1 from "./Screen/Solution1"
 import Solution2 from "./Screen/Solution2";
 import Solution3 from "./Screen/Solution3";
+import Solution4 from "./Screen/Solution-4";
 
 
 
@@ -64,6 +65,7 @@ class App extends React.Component {
             <Route exact path="/solution-1" component={Solution1} />
             <Route exact path="/solution-2" component={Solution2} />
             <Route exact path="/solution-3" component={Solution3} />
+            <Route exact path="/solution-4" component={Solution4} />
             
           </Switch>
         </BrowserRouter>
