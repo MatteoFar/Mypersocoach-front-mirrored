@@ -76,7 +76,7 @@ await this.setState({response: action});
             <div>
 
                 {this.state.addActions.map(addAction => {
-
+                    if (addAction.length >=1) {
                     return(
 
                         <div>
@@ -85,13 +85,20 @@ await this.setState({response: action});
                     
                         )
                     }
+                     else {
+                    return
+                 }
+
+                    }
                 )}
 
             </div>
         )
-
-    }
 }
+       
+    
+    }
+
 
 
 

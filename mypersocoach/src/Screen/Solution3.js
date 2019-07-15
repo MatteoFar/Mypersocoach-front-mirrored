@@ -15,7 +15,7 @@ class Solution3 extends React.Component {
         text_static2: [],
         // response : '',
         // isReply: false,
-        // summaryId: ''
+        summaryId: ''
     }
 
 
@@ -55,7 +55,6 @@ class Solution3 extends React.Component {
       }
 
 
-
     render(){
         
         // console.log('etat de la state  1ere fois :' ,this.state.response)
@@ -78,8 +77,8 @@ return (
             <div className="solution3_width_height">
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
-            <RecapSolution addActions ={addActions}/> 
-            <BackAction text_static2={text_static2.all_text}/>
+            <RecapSolution  summaryId={this.props.location.state.summaryId} addActions ={addActions}/> 
+            <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text}/>
             </div>
             
         )

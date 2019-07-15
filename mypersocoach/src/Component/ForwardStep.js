@@ -122,7 +122,7 @@ else if (this.props.redirectionPage === 'solution3') {
           this.props.history.push({
               pathname : '/solution3',
               state : {     
-              addActions :this.props.addActions,
+              addActions: this.props.addActions,
               summaryId: this.props.summaryId,
               problem_originId: this.props.problem_originId 
               }
