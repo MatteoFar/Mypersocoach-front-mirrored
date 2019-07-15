@@ -7,6 +7,7 @@ class ForwardStep extends React.Component{
     state= {
       summaryId:'',
       problem_originId:'',
+      displayError: true
      
     }
   
@@ -110,12 +111,14 @@ else if (this.props.redirectionPage === 'solution3') {
           if(this.props.addActions[i].length >= 1){
               count++
               console.log('le compteur compte?', count);
-          }
+          this.setState({displayError: true})
+          // console.log("quelle valeur de mon displayerror?", this.state.displayError)
+            }
           
       }
 
       if(count >= 5){
-
+          this.setState({displayError: !this.state.displayError})
           this.props.history.push({
               pathname : '/solution3',
               state : {     
@@ -126,8 +129,10 @@ else if (this.props.redirectionPage === 'solution3') {
           })
       }
       else{
-          console.log('Entrer au moins 5 actions');
-          
+          // console.log('Entrer au moins 5 actions');
+          this.setState({displayError: true})
+          console.log("quelle valeur de mon displayerror?", this.state.displayError)
+          // console.log("quelle valeur de mon displayerror?", this.state.displayError)
       }
 
 }
@@ -137,7 +142,7 @@ else if (this.props.redirectionPage === 'solution3') {
 
   
   render(){
-  
+    // console.log("quelle valeur de mon displayerror?", this.state.displayError)
     // display of c'est bien ça button (first summary) in Symptome2 page
     if(this.props.redirectionPage === 'Source2') {
       console.log("qui est là?", this.props.idRespEnvironment)
@@ -175,9 +180,11 @@ else if (this.props.redirectionPage === 'solution3') {
 
   else if (this.props.redirectionPage === 'solution3'){
 
+    const {displayError}= this.state;
     
+   
     return (
-      <div className="forward_step_container">
+      <div ClassName={displayError ? 'displayError' : ''} className="forward_step_container">
         <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
       </div>
     );

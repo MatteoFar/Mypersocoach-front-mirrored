@@ -13,7 +13,8 @@ class FormAction extends React.Component{
         addActions: [],
         text_static2:[],
         text_static3: [],
-        summaryId:''
+        summaryId:'',
+        
     }
 
 
@@ -60,7 +61,7 @@ class FormAction extends React.Component{
         
         this.state.addActions[index] = e.target.value;
         this.setState({ addActions: this.state.addActions });
-        console.log("test de add actino", this.state.addActions);
+        console.log("test de add action", this.state.addActions);
       };
 
       
@@ -77,7 +78,7 @@ class FormAction extends React.Component{
         // console.log('ici',this.props.location.state.summaryId);
         
       const{text_static2,text_static3}=this.state
-
+    
       return (
 
         <div className="formCenter">
