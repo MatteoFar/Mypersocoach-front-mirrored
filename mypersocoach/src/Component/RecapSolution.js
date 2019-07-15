@@ -50,7 +50,7 @@ await this.setState({response: action});
         })
         .then((res => {
             this.props.history.push({
-                pathname: "/solutions4", 
+                pathname: "/solution4", 
                 state: {
 
                     summary_id: this.props.location.state.summaryId

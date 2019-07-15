@@ -65,10 +65,8 @@ class App extends React.Component {
             <Route exact path="/solution2" component={Solution2} />
             <Route exact path="/solution3" component={Solution3} />
             <Route exact path="/Saut1" component={Saut1} />
-            <Route exact path="/solution-1" component={Solution1} />
-            <Route exact path="/solution-2" component={Solution2} />
-            <Route exact path="/solution-3" component={Solution3} />
-            <Route exact path="/solution-4" component={Solution4} />
+            
+            <Route exact path="/solution4" component={Solution4} />
             
           </Switch>
         </BrowserRouter>
