@@ -31,13 +31,21 @@ class RecapSolution extends React.Component {
 
                 {this.state.addActions.map(addAction => {
 
-                    return(
-
-                        <div>
-                            <p>{addAction}<button onClick={()=> this.handleClick(addAction)}>Valider</button></p>
-                        </div>
                     
-                        )
+                        if(addAction.length >= 1 ){
+                            return(
+                                <div>
+                                    <p>{addAction}<button onClick={()=> this.handleClick(addAction)}>Valider</button></p>
+                                </div>
+                            )
+                        
+                        }
+
+                        else{
+                            
+                            return
+                        }
+                        
                     }
                 )}
 

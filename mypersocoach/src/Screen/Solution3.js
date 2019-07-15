@@ -9,7 +9,7 @@ import RecapSolution from '../Component/RecapSolution';
 class Solution3 extends React.Component {
 
     state = {
-        
+
         icon: [],
         text_static: [],
         text_static2: []
@@ -63,10 +63,10 @@ class Solution3 extends React.Component {
         return (
 
             <div className="solution3_width_height">
-            <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-            <HeadingText text_static={text_static.all_text} />
-            <RecapSolution addActions ={addActions}/> 
-            <BackAction text_static2={text_static2.all_text}/>
+                <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
+                <HeadingText text_static={text_static.all_text} />
+                <RecapSolution addActions ={addActions}/> 
+                <BackAction text_static2={text_static2.all_text}/>
             </div>
             
         )
