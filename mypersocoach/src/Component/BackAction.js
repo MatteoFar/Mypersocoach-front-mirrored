@@ -4,7 +4,10 @@ import {NavLink } from "react-router-dom";
 import "./BackAction.css"
 
 const BackAction = ({ text_static2 }) => {
-    return (
+    
+
+  
+  return (
       <div className="back_action_container">
 
         {/* Attention ! Le retour ne doit pas effacer les actions */}
