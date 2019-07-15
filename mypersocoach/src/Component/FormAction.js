@@ -12,7 +12,11 @@ class FormAction extends React.Component{
       
         addActions: [],
         text_static2:[],
-        text_static3: []
+        text_static3: [],
+        summaryId:'',
+        backAction : this.props.location.state.addActions
+        
+        
     }
 
 
@@ -55,12 +59,18 @@ class FormAction extends React.Component{
       };
       // need to fix by putin a "setState"
     
-      handleChange = (e, index) => {
+      handleChange = ( e, index) => {
+        
         this.state.addActions[index] = e.target.value;
-        this.setState({ addActions: this.state.addActions });
-        console.log("test de add actino", this.state.addActions);
+        this.setState({ addActions: this.state.addActions});
+        console.log("test de add action", this.state.addActions);
       };
 
+      getBackAction = () => {
+
+        // this.state.addActions[index] = this.state.backAction
+        this.setState({ addActions : this.state.backAction });
+      }
       
     
      
@@ -68,14 +78,22 @@ class FormAction extends React.Component{
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
-        
+        if( this.state.backAction == null){
+          return
+        }
+        else{
+          this.getBackAction()
+        }
+       
       }
 
       render(){
         // console.log('ici',this.props.location.state.summaryId);
         
-      const{icon_add_action,icon_remove,text_static2,text_static3}=this.state
-
+      const{text_static2,text_static3}=this.state
+      console.log('alors ? :' , this.state.backAction);
+      
+    
       return (
 
         <div className="formCenter">
@@ -86,7 +104,7 @@ class FormAction extends React.Component{
               return (
 
                 <div key={index}>
-                  <p className ='numbForm'>{index + 1}-<input type ='text'onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/></p>
+                  <p className ='numbForm'>{index + 1}-<input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/></p>
                 </div>
 
               );

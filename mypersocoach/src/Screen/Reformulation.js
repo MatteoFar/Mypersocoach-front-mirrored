@@ -189,10 +189,7 @@ class Reformulation extends React.Component {
     this.getTextStatic();
     this.getTextStatic2();
     this.getHeadingResponse();
-    this.getHeadingResponse2();   {/* <button onClick={e => this.addAction(e)}>Add Action</button>
-    <button onClick={index => this.handleRemove(index)}>
-      Remove Action
-    </button> */}
+    this.getHeadingResponse2();
     this.getHeadingResponse3();
     this.getHeadingResponse4();
 
@@ -239,11 +236,12 @@ class Reformulation extends React.Component {
          />
          </div>
         
-        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text}/>
+        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text} summaryId={this.props.location.state.summaryId}/>
         <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
       </div>
       </div>
     );
   }
 }
+
 export default Reformulation;

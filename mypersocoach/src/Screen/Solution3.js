@@ -12,9 +12,12 @@ class Solution3 extends React.Component {
 
         icon: [],
         text_static: [],
-        text_static2: []
-       
+        text_static2: [],
+        // response : '',
+        // isReply: false,
+        summaryId: ''
     }
+
 
 
 
@@ -52,7 +55,6 @@ class Solution3 extends React.Component {
       }
 
 
-
     render(){
         
         // console.log('etat de la state  1ere fois :' ,this.state.response)
@@ -60,13 +62,14 @@ class Solution3 extends React.Component {
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
         
-        return (
+ 
+return (
 
             <div className="solution3_width_height">
-                <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-                <HeadingText text_static={text_static.all_text} />
-                <RecapSolution addActions ={addActions}/> 
-                <BackAction text_static2={text_static2.all_text}/>
+            <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
+            <HeadingText text_static={text_static.all_text} />
+            <RecapSolution  summaryId={this.props.location.state.summaryId} addActions ={addActions}/> 
+            <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text} addActions={addActions}/>
             </div>
             
         )

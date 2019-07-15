@@ -1,5 +1,9 @@
 /* ForwardStep.css */
 
+.displayError {
+  border-color: red;
+}
+
 .forward_step_container {
   margin: auto;
   margin-top: 57px;
