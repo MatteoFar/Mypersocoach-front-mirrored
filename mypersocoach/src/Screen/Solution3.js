@@ -62,7 +62,7 @@ class Solution3 extends React.Component {
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
         
- 
+
 return (
 
             <div className="solution3_width_height">
