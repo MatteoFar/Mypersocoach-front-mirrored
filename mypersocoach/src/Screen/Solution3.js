@@ -63,14 +63,7 @@ class Solution3 extends React.Component {
         const {icon , text_static ,text_static2 } = this.state
         
         
-// addActions.map((currElement, index) => {
-//   console.log("The current iteration is: " + index);
-//   console.log("The current element is: " + currElement);
-//   console.log("\n");
-//   return 'X';
-// });
-        
-console.log('coucou summaryid', this.props.location.state.summaryId)
+
 
 return (
 
