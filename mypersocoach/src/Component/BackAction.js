@@ -12,7 +12,8 @@ class BackAction extends React.Component {
     state: {
       
       summaryId: this.props.summaryId,
-      problem_originId: this.props.problem_originId
+      problem_originId: this.props.problem_originId,
+      addActions : this.props.addActions
     }
     
 })
