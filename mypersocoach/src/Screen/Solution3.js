@@ -4,27 +4,19 @@ import axios from "axios";
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
 import BackAction from '../Component/BackAction';
+import RecapSolution from '../Component/RecapSolution';
 
 class Solution3 extends React.Component {
 
     state = {
+        
         icon: [],
         text_static: [],
-        text_static2: [],
-        response : '',
+        text_static2: []
+       
     }
 
-    handleClick = (action, index) =>{
-        console.log('que passa ?', this.state);
-        
-        this.setState({ response : action[index] })
-  // console.log( 'test target',e.currentTarget.value);
-        console.log('test fonction', this.state.response);
-      
-        // this.props.history.push({
-        //     pathname : '/'
-        // })
-    }
+
 
     getHeader = async () => {
         const res = await axios.get("http://localhost:3001/icon/5");
@@ -56,30 +48,24 @@ class Solution3 extends React.Component {
           this.getHeader();
           this.getTextStatic();
           this.getButtonReturn()
+          
       }
 
 
 
     render(){
         
+        // console.log('etat de la state  1ere fois :' ,this.state.response)
+
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
-        console.log('cest quoi ce truc', addActions);
         
         return (
 
             <div className="solution3_width_height">
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
-            {/* <RecapSolution /> */}
-                
-                    {addActions.map(addAction => 
-
-                        <div>
-                            <p>{addAction}<button onClick={()=> this.handleClick(addActions)}>Valider</button></p>
-                        </div>
-                    )}
-
+            <RecapSolution addActions ={addActions}/> 
             <BackAction text_static2={text_static2.all_text}/>
             </div>
             
