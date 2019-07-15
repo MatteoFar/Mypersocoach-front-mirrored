@@ -114,7 +114,7 @@ class Reformulation extends React.Component {
           
     
       this.setState({ responseCroyance: res.data[0].response_summary})
-      localStorage.clear();
+      
     }
         
     
@@ -135,7 +135,7 @@ class Reformulation extends React.Component {
           
     
       this.setState({ responseCapacite: res.data[0].response_summary})
-      localStorage.clear();
+      
     }
         
       
@@ -155,7 +155,7 @@ class Reformulation extends React.Component {
           
      
       this.setState({ responseComportement: res.data[0].response_summary})
-      localStorage.clear();
+   
     
     }
        
@@ -175,7 +175,7 @@ class Reformulation extends React.Component {
       const res= await axios.get(`http://localhost:3001/response/resp/${idresp}`)
          
       this.setState({ responseEnvironnement: res.data[0].response_summary})
-      localStorage.clear()
+      
     }
       
         
@@ -204,9 +204,7 @@ class Reformulation extends React.Component {
 
    render() {
    
-    const idresp = this.props.location.state.idRespComportement;
-
-    localStorage.getItem('idRespComportement')
+  
      
     
     const{icon, text_static, text_static2,
@@ -217,7 +215,7 @@ class Reformulation extends React.Component {
     
 
          return (
-      <div className="containerS2">
+      <div className="containerS2 white">
       <div className="containerSymptome2">
         <IconMain icon={icon.picture_src} />
         <HeadingText text_static={text_static.all_text} /> 
@@ -238,11 +236,12 @@ class Reformulation extends React.Component {
          />
          </div>
         
-        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text}/>
+        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text} summaryId={this.props.location.state.summaryId}/>
         <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
       </div>
       </div>
     );
   }
 }
+
 export default Reformulation;

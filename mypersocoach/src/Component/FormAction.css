@@ -4,7 +4,7 @@
 }
 .buttonAction{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 20px;
     border: none;
     
@@ -18,9 +18,19 @@
     align-items: center;
     margin-bottom: 10px;
 }
-.button_action{
+.button_add, .button_remove{
     background:none;
     border: none;
+}
+
+.button_add{
+    font-size: 10vw;
+    color: green;
+}
+
+.button_remove{
+    font-size: 10vw;
+    color: red;
 }
 
 .numbForm p{
