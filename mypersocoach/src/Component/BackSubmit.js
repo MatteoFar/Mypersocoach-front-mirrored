@@ -6,7 +6,8 @@ import "./BackSubmit.css";
 class BackSubmit extends React.Component {
   
   state={
-    summaryId:''
+    summaryId:'',
+    // backSubmit: "backSubmit"
   }
   
   handleClick = () => {
@@ -20,9 +21,13 @@ class BackSubmit extends React.Component {
         }
         // retour en arriere je ne valide pas depuis recap final vers solution2
     else {
+      // console.log('youhou backsubmit', this.props.backSubmit)
+      
       this.props.history.push({
         pathname: "/Solution2", 
-        state: {summaryId: this.props.summaryId}
+        state: {summaryId: this.props.summaryId,
+          // backSubmit: this.state.backSubmit
+        }
         });
     }
     }
@@ -30,6 +35,7 @@ class BackSubmit extends React.Component {
   
   render() {
     
+    // console.log('youhou backsubmit', this.props.backSubmit)
     if (this.props.redirectionPage==="symptome3"){
     return (
       <>
@@ -56,8 +62,10 @@ class BackSubmit extends React.Component {
     );
 
   }
+  
   // retour vers solution pour je ne valide pas dans recap final
-  else if (this.props.redirectionPage === "solution2") {
+  else if (this.props.backSubmit === "backSubmit") {
+   
     return (
       <>
         <div className="navlinkcenter" to="/Solution2">

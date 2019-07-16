@@ -7,7 +7,8 @@ class ForwardStep extends React.Component{
     state= {
       summaryId:'',
       problem_originId:'',
-      isValidate: true
+      isValidate: true,
+      // backSubmit: this.props.backSubmit
      
     }
   
@@ -128,7 +129,7 @@ class ForwardStep extends React.Component{
           this.props.history.push({
               pathname : '/solution3',
               state : {    
-
+              // backSubmit: this.state.backSubmit,
               addActions: this.props.addActions,
               summaryId: this.props.summaryId,
               problem_originId: this.props.problem_originId 
@@ -232,9 +233,16 @@ else if (this.props.redirectionPage === 'profil') {
                )
           }
 
-      else {
-
-        return (
+          else {
+            return (
+            <div className="forward_step_container">
+            <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
+          </div>
+        
+        )
+          }
+        }
+    
 
   // display of "Je valide" in Saut1
   else if (this.props.redirectionPage === 'profil'){
@@ -257,17 +265,13 @@ else if (this.props.redirectionPage === 'profil') {
       </div>
     );
 
-          <div className="forward_step_container">
-            <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>
-          </div>
-
-          );
+         
       }
 
 
-    }
+    
 }
-
+}
 
 
 

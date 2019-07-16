@@ -32,6 +32,34 @@ class FormTime extends React.Component {
         const id = this.props.summaryId
         console.log('pouet pouet summaryid', this.props.summaryId)
             
+        //     if (this.props.backSubmit = "backSubmit") {
+        //         axios.put(`http://localhost:3001/action/backSubmit/${id}`, {
+
+        //     date: date
+        //     // response_summary: this.state.textarea,
+        //     // summary_id: this.props.summaryId,
+        //     // problem_id: this.props.problemId,
+        //     // problem_origin_id: 1
+
+        // })
+        // .then((res => {
+            
+        //     console.log("summary id es tu toujours là mercI", this.state.summaryId)
+            
+        //     this.props.history.push({
+        //         pathname: "/Saut1", 
+        //         state: {
+
+        //             summaryId: this.state.summaryId
+
+        //             }
+        //     });
+        //   }
+        // ))
+
+        //     }
+
+        // else {
             axios.put(`http://localhost:3001/action/${id}`, {
 
             date: date
@@ -55,7 +83,9 @@ class FormTime extends React.Component {
             });
           }
         ))
-            }
+    // }    
+    
+    }
        
          
 
