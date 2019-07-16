@@ -55,7 +55,7 @@ class ForwardStep extends React.Component{
         state: {
           
           summaryId: this.props.summaryId,
-          w: this.props.problem_originId
+          problem_originId: this.props.problem_originId
         }
         
     })
@@ -138,6 +138,23 @@ else if (this.props.redirectionPage === 'solution3') {
 
 }
 
+  // redirection to 'profil' page
+else if (this.props.redirectionPage === 'profil') {
+ 
+  
+  console.log('ou es ma redireciton page profil')
+  
+  this.props.history.push({
+    pathname: "/profil", 
+    state: {
+      
+      summaryId: this.props.summaryId,
+      problem_originId: this.props.problem_originId
+    }
+    
+})
+}
+
 }
   
 
@@ -193,11 +210,21 @@ else if (this.props.redirectionPage === 'solution3') {
 
   }
 
+  // display of "Je valide" in Saut1
+  else if (this.props.redirectionPage === 'profil'){
+    return (
+      <div className="forward_step_container">
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static6} </button>
+      </div>
+    );
+
+
+  }
+
+
 
   // display of "oui c'est exactement ça" in reformulation page
-  
-
-else {
+  else {
     return (
       <div className="forward_step_container">
         <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>

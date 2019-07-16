@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { withRouter, NavLink } from "react-router-dom";
+import { withRouter} from "react-router-dom";
 
 import './FormTime.css';
 
@@ -12,7 +12,7 @@ class FormTime extends React.Component {
         
         text_static3: [],
        
-        summaryID: this.props.summaryId,
+        summaryId: this.props.summaryId,
         problem_origin_id: this.props.problem_originId,
         date:''
     }
@@ -41,17 +41,20 @@ class FormTime extends React.Component {
             // problem_origin_id: 1
 
         })
-        //     .then((res => {
-        //         this.props.history.push({
-        //             pathname: "/Saut1", 
-        //             state: {
+        .then((res => {
+            
+            console.log("summary id es tu toujours là mercI", this.state.summaryId)
+            
+            this.props.history.push({
+                pathname: "/Saut1", 
+                state: {
 
-        //                 summaryId: this.props.summaryId
+                    summaryId: this.state.summaryId
 
-        //                 }
-        //         });
-        //       }
-        // ))
+                    }
+            });
+          }
+        ))
             }
        
          
@@ -63,7 +66,8 @@ class FormTime extends React.Component {
 
 
 
-    
+    // index.js:1375 Warning: React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
     
 
 
@@ -82,14 +86,11 @@ class FormTime extends React.Component {
     // console.log("est ce que summary-id se charge", this.state.summary_id)
     // console.log('est ce que ma props se charge', this.props.lastId)
 
-// this return display the form with "retour" button in symptome4_compoents : synmpto4 conflict, symptome4_performance
-   
-    
-    
-    // this return display the form with "je n'en suis pas sûr" button" in Source3 evnvrionnement, source3 behavior ...
+
      
 
             return (
+                
                 <div>
                     <form id="form" method="post" action="#" onSubmit={this.handleSubmit} >
                         
