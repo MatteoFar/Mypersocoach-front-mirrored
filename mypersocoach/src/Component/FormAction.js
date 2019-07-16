@@ -51,12 +51,15 @@ class FormAction extends React.Component{
 
     }
 
-      handleRemove = (e, index) => {
-        console.log('shit');
-        
+      removeAction = (e, index) => {
         e.preventDefault()
-        this.state.addActions.splice(index, 1);
-        this.setState({ addActions : this.state.addActions });
+        if(this.state.addActions.length > 5){
+          this.state.addActions.splice(index, 1);
+          this.setState({ addActions : this.state.addActions });
+        }
+        else{
+          return
+        }
       };
       // need to fix by putin a "setState"
     
@@ -73,14 +76,7 @@ class FormAction extends React.Component{
         this.setState({ addActions : this.state.backAction });
       }
 
-      isValidate = () => {
-
-        this.setState({ validate : !this.state.validate })
-        console.log('ma booleen : ' , this.state.validate);
-        
-
-      }
-      
+     
     
      
       componentDidMount() {
@@ -100,7 +96,7 @@ class FormAction extends React.Component{
         // console.log('ici',this.props.location.state.summaryId);
         
       const{text_static2,text_static3}=this.state
-      console.log('alors ? :' , this.state.validate);
+      console.log('alors ? :' , this.state.addActions);
       
     
       return (
@@ -113,7 +109,9 @@ class FormAction extends React.Component{
               return (
 
                 <div key={index}>
-                  <p className ='numbForm'>{index + 1}-<input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/></p>
+                  <p className ='numbForm'>{index + 1}-
+                    <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
+                  </p>
                 </div>
 
               );
@@ -126,13 +124,13 @@ class FormAction extends React.Component{
                   +
                 </button>
 
-                <button className="button_remove"onClick={(e, index) => this.handleRemove(e, index)}>
+                <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
                   -
                 </button>
 
             </div>
 
-              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
+              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
        
         </form>
     </div>

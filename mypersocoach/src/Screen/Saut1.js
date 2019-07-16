@@ -140,7 +140,7 @@ class Saut1 extends React.Component {
         <ResponseTime/>
         </div>
         <ForwardStep/>
-        <BackSubmit />
+        {/* <BackSubmit /> */}
       </div>
       </div>
     );

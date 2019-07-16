@@ -200,7 +200,7 @@ class ForwardStep extends React.Component{
             return (
           
               <div>
-                <p className='msgError'>Entrer au 5 actions minimum</p>
+                <p className='msgError'>Entrer 5 actions minimum</p>
 
                 <div className="forward_step_container">
                   <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
@@ -239,7 +239,7 @@ class ForwardStep extends React.Component{
 
 
     }
-}
+}// closing class 
 
 
 
