@@ -135,10 +135,19 @@ class ForwardStep extends React.Component{
               }
           })
       }
+
       else {
             // console.log('entrez 5 action');
             this.setState({ isValidate : false })
             // console.log("quelle valeur de mon displayerror?", this.state.displayError)
+
+      
+      else{
+          // console.log('Entrer au moins 5 actions');
+          this.setState({displayError: true})
+          console.log("quelle valeur de mon displayerror?", this.state.displayError)
+          // console.log("quelle valeur de mon displayerror?", this.state.displayError)
+
       }
 
     }
