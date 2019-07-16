@@ -14,7 +14,8 @@ class FormAction extends React.Component{
         text_static2:[],
         text_static3: [],
         summaryId:'',
-        backAction : this.props.location.state.addActions
+        backAction : this.props.location.state.addActions,
+        validate : false
         
         
     }
@@ -71,6 +72,14 @@ class FormAction extends React.Component{
         // this.state.addActions[index] = this.state.backAction
         this.setState({ addActions : this.state.backAction });
       }
+
+      isValidate = () => {
+
+        this.setState({ validate : !this.state.validate })
+        console.log('ma booleen : ' , this.state.validate);
+        
+
+      }
       
     
      
@@ -87,11 +96,11 @@ class FormAction extends React.Component{
        
       }
 
-      render(){
+      render(){            
         // console.log('ici',this.props.location.state.summaryId);
         
       const{text_static2,text_static3}=this.state
-      console.log('alors ? :' , this.state.backAction);
+      console.log('alors ? :' , this.state.validate);
       
     
       return (
@@ -123,7 +132,7 @@ class FormAction extends React.Component{
 
             </div>
 
-              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
+              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
        
         </form>
     </div>
