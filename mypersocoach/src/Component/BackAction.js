@@ -23,10 +23,9 @@ render() {
   return (
       <div className="back_action_container">
 
-        {/* Attention ! Le retour ne doit pas effacer les actions */}
-        {/* <NavLink to="/solution2"> */}
+        
             <button href="#" className="button_back_action" type="reset" name="return" onClick={this.handleClick}>{this.props.text_static2}</button>
-        {/* </NavLink> */}
+       
         
       </div>
     );

@@ -81,12 +81,27 @@ class FormAction extends React.Component{
 
       }
       
+      // deleteResponse = () => {
+
+      //     const id= this.props.location.state.summaryId
+      //   axios.delete(`https://localhost:3001/action/${id}`)
+      //   .then(res => {
+      //     console.log(res);
+      //     console.log(res.data);
+      //   })
+    
+
+      // }
     
      
       componentDidMount() {
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
+        // if (this.props.backsubmit == "backSubmit") {
+        //   this.deleteResponse();
+        // }
+      
         if( this.state.backAction == null){
           return
         }
@@ -133,7 +148,7 @@ class FormAction extends React.Component{
             </div>
 
               <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
-       
+              {/* backSubmit={this.props.backSubmit} */}
         </form>
     </div>
         

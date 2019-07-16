@@ -7,7 +7,8 @@ class ForwardStep extends React.Component{
     state= {
       summaryId:'',
       problem_originId:'',
-      isValidate: true
+      isValidate: true,
+      // backSubmit: this.props.backSubmit
      
     }
   
@@ -59,10 +60,11 @@ class ForwardStep extends React.Component{
           pathname: "/source3_capacites", 
           state: {
           
-            summaryId: this.props.summaryId,
-            problem_originId: this.props.problem_originId
-          }
-      })
+          summaryId: this.props.summaryId,
+          problem_originId: this.props.problem_originId
+        }
+        
+    })
   }
 
 // redirection to source3croyance page
@@ -127,7 +129,7 @@ class ForwardStep extends React.Component{
           this.props.history.push({
               pathname : '/solution3',
               state : {    
-
+              // backSubmit: this.state.backSubmit,
               addActions: this.props.addActions,
               summaryId: this.props.summaryId,
               problem_originId: this.props.problem_originId 
@@ -141,18 +143,30 @@ class ForwardStep extends React.Component{
             this.setState({ isValidate : false })
             // console.log("quelle valeur de mon displayerror?", this.state.displayError)
 
-      
-      else{
-          // console.log('Entrer au moins 5 actions');
-          this.setState({displayError: true})
-          console.log("quelle valeur de mon displayerror?", this.state.displayError)
-          // console.log("quelle valeur de mon displayerror?", this.state.displayError)
-
       }
+    
 
     }
 
+  // redirection to 'profil' page
+else if (this.props.redirectionPage === 'profil') {
+ 
+  
+  console.log('ou es ma redireciton page profil')
+  
+  this.props.history.push({
+    pathname: "/profil", 
+    state: {
+      
+      summaryId: this.props.summaryId,
+      problem_originId: this.props.problem_originId
+    }
+    
+})
 }
+
+}
+  
   
 
   
@@ -219,37 +233,45 @@ class ForwardStep extends React.Component{
                )
           }
 
-      else {
-
-        return (
-
-          <div className="forward_step_container">
-              <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
+          else {
+            return (
+            <div className="forward_step_container">
+            <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
           </div>
+        
         )
-      }
+          }
+        }
+    
 
-    }
+  // display of "Je valide" in Saut1
+  else if (this.props.redirectionPage === 'profil'){
+    return (
+      <div className="forward_step_container">
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static6} </button>
+      </div>
+    );
 
-  
+
+  }
+
+
 
   // display of "oui c'est exactement ça" in reformulation page
-  
+  else {
+    return (
+      <div className="forward_step_container">
+        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>
+      </div>
+    );
 
-    else {
-        return (
-
-          <div className="forward_step_container">
-            <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>
-          </div>
-
-          );
+         
       }
 
 
-    }
+    
 }
-
+}
 
 
 

@@ -6,8 +6,7 @@ import './GeneralContainer.css';
 import IconMain from '../Component/IconMain';
 import HeadingText from '../Component/HeadingText';
 import FormTime from '../Component/FormTime';
-import TitlePageSympto from '../Component/TiltePageSympto';
-import Form from '../Component/Form';
+
 
 
 class Solution4 extends React.Component {
@@ -16,11 +15,7 @@ class Solution4 extends React.Component {
         icon: [],
         text_static: [],
         problem: [],
-        // response: [],
-        // text_static2: [],
-        // text_static3: [],
-        // text_static4: [],
-        // problem_id: 4
+      
     };
 
     
