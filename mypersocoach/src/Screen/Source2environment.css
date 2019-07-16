@@ -2,8 +2,8 @@
   color: rgb(150, 159, 170);
   display: grid;
   margin: auto;
-  width: 380px;
   margin-bottom: 5vh;
+  width: 20.50vmax;
   /* border: 1px solid black; */
 }
 
@@ -79,7 +79,7 @@
 
 } */
 
-/* @media screen and (max-width:768px){
+ @media screen and (max-width:768px){
   .containerSource2Environment{
     width: 461px;
 
@@ -89,4 +89,4 @@
 .containerSource2Environment{
   max-width: 461px;
 }
-} */
+} 

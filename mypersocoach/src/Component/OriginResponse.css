@@ -1,11 +1,12 @@
 .OriginResponse {
     margin: 0 auto;
     text-align: center;
-    min-height: 40vh
+    min-height: 10vh;
 }
 
 .OriginResponse p {
     min-height: 10%;
     font-size: 14px;
-    width: 282px
+    width: 282px;
+    margin: auto;
 }

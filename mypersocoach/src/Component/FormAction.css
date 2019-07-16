@@ -4,28 +4,39 @@
 }
 .buttonAction{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 20px;
     border: none;
     
 }
 
 .numbForm {
-    font-size: 20px !important;
+    font-size: 14px ;
     margin: 0px;
     color: #7e7e7e !important;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-.button_action{
+.button_add, .button_remove{
     background:none;
     border: none;
+}
+
+.button_add{
+    font-size: 10vw;
+    color: green;
+}
+
+.button_remove{
+    font-size: 10vw;
+    color: red;
 }
 
 .numbForm p{
     align-items: center;
     display: flex;
+    
     
 }   
 .inputAction{

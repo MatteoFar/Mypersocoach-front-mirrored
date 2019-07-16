@@ -21,7 +21,7 @@ class Source2Croyances extends React.Component {
     text_static2: [],
     text_static3: [],
     text_modal1: [],
-    icon_modal: [],
+    // icon_modal: [],
     modal_continue: [],
     modal_closed: [],
     link_modal : false,
@@ -119,8 +119,8 @@ class Source2Croyances extends React.Component {
         />
 
         <HeadingText text_after_link={text_after_link.all_text} />
-        <ForwardStep redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.summaryId} problem_originId={this.props.location.problem_originId} />
-        <NextStep summaryId={this.props.location.summaryId} redirectionPage={'reformulation'} text_static3={text_static3.all_text} />
+        <ForwardStep redirectionPage = {'source3_croyances'}  text_static2={text_static2.all_text} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} />
+        <NextStep summaryId={this.props.location.state.summaryId} redirectionPage={'reformulation'} text_static3={text_static3.all_text} />
       </div>
     );
   }
