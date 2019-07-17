@@ -246,7 +246,10 @@ getActionResp = async () => {
           <ForwardStep redirectionPage={'profil'} summaryId={this.props.location.state.summaryId}  text_static6={text_static6.all_text} />
           <BackSubmit summaryId={this.props.location.state.summaryId} backSubmit={"backSubmit"} text_static5={text_static5.all_text}/>
         </div>
+        
+    
       </div>
+      
     );
   }
 }

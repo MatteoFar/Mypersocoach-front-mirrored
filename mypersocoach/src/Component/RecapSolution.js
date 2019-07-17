@@ -23,8 +23,7 @@ class RecapSolution extends React.Component {
    
         this.setState({response: action}); 
       console.log('est pas là ma state?',this.state.response);
-
-      await this.setState({response: action});
+        await this.setState({response: action});
     console.log('si elle est là',this.state.response);
 
         this.setState({
@@ -100,10 +99,10 @@ class RecapSolution extends React.Component {
 
             </div>
         )
-}
+    }
        
     
-    }
+}
 
 
 
