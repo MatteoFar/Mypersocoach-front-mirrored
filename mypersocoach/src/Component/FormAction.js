@@ -58,18 +58,19 @@ class FormAction extends React.Component{
         this.state.addActions.splice(index, 1);
         this.setState({ addActions : this.state.addActions });
       };
-      // need to fix by putin a "setState"
+     
     
       handleChange = ( e, index) => {
         
         this.state.addActions[index] = e.target.value;
+        // this.setState({addActions: e.target.value})
+       
         this.setState({ addActions: this.state.addActions});
         console.log("test de add action", this.state.addActions);
       };
 
       getBackAction = () => {
 
-        // this.state.addActions[index] = this.state.backAction
         this.setState({ addActions : this.state.backAction });
       }
 
@@ -81,26 +82,14 @@ class FormAction extends React.Component{
 
       }
       
-      // deleteResponse = () => {
-
-      //     const id= this.props.location.state.summaryId
-      //   axios.delete(`https://localhost:3001/action/${id}`)
-      //   .then(res => {
-      //     console.log(res);
-      //     console.log(res.data);
-      //   })
     
-
-      // }
     
      
       componentDidMount() {
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
-        // if (this.props.backsubmit == "backSubmit") {
-        //   this.deleteResponse();
-        // }
+       
       
         if( this.state.backAction == null){
           return
@@ -112,7 +101,7 @@ class FormAction extends React.Component{
       }
 
       render(){            
-        // console.log('ici',this.props.location.state.summaryId);
+        
         
       const{text_static2,text_static3}=this.state
       console.log('alors ? :' , this.state.validate);
@@ -148,7 +137,7 @@ class FormAction extends React.Component{
             </div>
 
               <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
-              {/* backSubmit={this.props.backSubmit} */}
+              
         </form>
     </div>
         

@@ -10,67 +10,33 @@ class RecapSolution extends React.Component {
         response :'',
         isReply: false,
         summaryId: '',
-        // backSubmit: this.props.backSubmit
+        
     }
 
-    // handleClick = (action) =>{
-        
-    //     this.setState({ response : action })
-    //     // console.log( 'test target',e.currentTarget.value);
-    //     // console.log('etat de la state reponse :', this.state.response);
-      
-    //     // this.props.history.push({
-    //     //     pathname : '/'
-    //     // })
-    // }
+ 
 
 
 
     handleClick = async (action) =>{
        
-        // console.log('que passa ?',  addAction);
        
-        // this.setState({response: addAction}, function () {
-        //     console.log('ma state response ouvre toi', this.state.response);
-        // })
    
-        
+        this.setState({response: action}); 
       console.log('est pas là ma state?',this.state.response);
-await this.setState({response: action});
+
+      await this.setState({response: action});
     console.log('si elle est là',this.state.response);
 
-        this.setState({summaryId: this.props.summaryId})
-        console.log('summaryid ou es tu?', this.state.summaryId)
-        this.setState({isReply: !this.state.isReply, })
+        this.setState({
+            summaryId: this.props.summaryId, 
+            isReply: !this.state.isReply
+        })
+        
+        console.log('is reply', this.state.isReply)
+        
        
-        console.log('test fonction', this.state.response);
-        // if (this.props.backSubmit== "backSubmit"){
-        //     const id = this.props.summaryId
-        //     console.log('est ce que ma condition sactive')
-
-        //     axios.put(`http://localhost:3001/action/${id}`,{
-        //         text_response: this.state.response,
-                
-        //     })
-        //     .then((res => {
-            
-            
-            
-        //         this.props.history.push({
-        //             pathname: "/solution4", 
-        //             state: {
-    
-        //                 summaryId: this.state.summaryId
-    
-        //                 }
-        //         });
-        //       }
-        // ))
-    
-          
-        // }
        
-    //    else {
+     
         axios.post('http://localhost:3001/action', {
 
             
@@ -80,7 +46,8 @@ await this.setState({response: action});
         })
     
         .then((res => {
-            
+            const respActionId = res.data.respActionId
+            localStorage.setItem('idResponse', respActionId)
             
             
             this.props.history.push({
@@ -93,7 +60,7 @@ await this.setState({response: action});
             });
           }
     ))
-// }
+
         
     }
         
@@ -123,7 +90,7 @@ await this.setState({response: action});
 
                         else{
                             
-                            return
+                            return null
                         }
                         
                     }

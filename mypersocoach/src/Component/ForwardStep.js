@@ -8,7 +8,7 @@ class ForwardStep extends React.Component{
       summaryId:'',
       problem_originId:'',
       isValidate: true,
-      // backSubmit: this.props.backSubmit
+     
      
     }
   
@@ -129,7 +129,7 @@ class ForwardStep extends React.Component{
           this.props.history.push({
               pathname : '/solution3',
               state : {    
-              // backSubmit: this.state.backSubmit,
+            
               addActions: this.props.addActions,
               summaryId: this.props.summaryId,
               problem_originId: this.props.problem_originId 

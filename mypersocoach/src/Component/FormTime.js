@@ -32,41 +32,11 @@ class FormTime extends React.Component {
         const id = this.props.summaryId
         console.log('pouet pouet summaryid', this.props.summaryId)
             
-        //     if (this.props.backSubmit = "backSubmit") {
-        //         axios.put(`http://localhost:3001/action/backSubmit/${id}`, {
-
-        //     date: date
-        //     // response_summary: this.state.textarea,
-        //     // summary_id: this.props.summaryId,
-        //     // problem_id: this.props.problemId,
-        //     // problem_origin_id: 1
-
-        // })
-        // .then((res => {
-            
-        //     console.log("summary id es tu toujours là mercI", this.state.summaryId)
-            
-        //     this.props.history.push({
-        //         pathname: "/Saut1", 
-        //         state: {
-
-        //             summaryId: this.state.summaryId
-
-        //             }
-        //     });
-        //   }
-        // ))
-
-        //     }
-
-        // else {
+      
             axios.put(`http://localhost:3001/action/${id}`, {
 
             date: date
-            // response_summary: this.state.textarea,
-            // summary_id: this.props.summaryId,
-            // problem_id: this.props.problemId,
-            // problem_origin_id: 1
+            
 
         })
         .then((res => {
@@ -83,7 +53,7 @@ class FormTime extends React.Component {
             });
           }
         ))
-    // }    
+     
     
     }
        
@@ -96,7 +66,7 @@ class FormTime extends React.Component {
 
 
 
-    // index.js:1375 Warning: React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    
 
     
 
@@ -113,9 +83,7 @@ class FormTime extends React.Component {
 
         const {text_static3 } = this.state
 
-    // console.log("est ce que summary-id se charge", this.state.summary_id)
-    // console.log('est ce que ma props se charge', this.props.lastId)
-
+  
 
      
 
@@ -134,10 +102,7 @@ class FormTime extends React.Component {
                         <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
 
 
-                        {/* "Je n'en suis pas sûr" button */}
-                        {/* <div className="navlink" >
-                            <button href="#" className="button_back" type="reset" name="return" onClick={this.handleClick} >{text_static5.all_text} </button>
-                    </div> */}
+                       
     
                     </form>
                   
