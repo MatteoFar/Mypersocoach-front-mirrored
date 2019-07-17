@@ -1,0 +1,21 @@
+.grid_photo_name{
+    display:flex;
+    justify-content:center;
+} 
+.format_photo{
+    /* top: 99px; */
+    width: 107px;
+    left: 100px;
+    /* position: absolute; */
+    height: 107px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(150, 159, 170);
+    border-radius: 5px;
+    margin:30px;
+    margin-right: 0px;
+
+}
+.employe_name{
+    margin:auto ;
+}

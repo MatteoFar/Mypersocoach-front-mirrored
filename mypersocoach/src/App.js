@@ -25,7 +25,8 @@ import Source2croyances from "./Screen/Source2croyances";
 import Source2capacites from"./Screen/Source2capacites"
 import Solution1 from "./Screen/Solution1"
 import Solution2 from "./Screen/Solution2";
-import Solution3 from "./Screen/Solution3";
+import Solution3 from "./Screen/Solution3"; 
+import Profil from "./Screen/Profil"
 
 
 
@@ -64,6 +65,8 @@ class App extends React.Component {
             <Route exact path="/solution2" component={Solution2} />
             <Route exact path="/solution3" component={Solution3} />
             <Route exact path="/Saut1" component={Saut1} />
+            <Route exact path="/Profil" component={Profil} />
+
             
             
           </Switch>
