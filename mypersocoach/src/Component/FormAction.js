@@ -61,11 +61,13 @@ class FormAction extends React.Component{
           return
         }
       };
-      // need to fix by putin a "setState"
+     
     
       handleChange = ( e, index) => {
         
         this.state.addActions[index] = e.target.value;
+        // this.setState({addActions: e.target.value})
+       
         this.setState({ addActions: this.state.addActions});
         console.log("test de add action", this.state.addActions);
         
@@ -73,7 +75,6 @@ class FormAction extends React.Component{
 
       getBackAction = () => {
 
-        // this.state.addActions[index] = this.state.backAction
         this.setState({ addActions : this.state.backAction });
       }
 
@@ -84,9 +85,7 @@ class FormAction extends React.Component{
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
-        // if (this.props.backsubmit == "backSubmit") {
-        //   this.deleteResponse();
-        // }
+       
       
         if( this.state.backAction == null){
           return
@@ -98,7 +97,7 @@ class FormAction extends React.Component{
       }
 
       render(){            
-        // console.log('ici',this.props.location.state.summaryId);
+        
         
       const{text_static2,text_static3}=this.state
       console.log('alors ? :' , this.state.addActions);
@@ -136,7 +135,7 @@ class FormAction extends React.Component{
             </div>
 
               <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
-              {/* backSubmit={this.props.backSubmit} */}
+              
         </form>
     </div>
         
