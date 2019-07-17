@@ -132,8 +132,6 @@ class Signup extends React.Component {
                             <input type="text" name="entreprise" placeholder={text_static8.all_text} />
                         </div>
 
-                        <div className="height15"></div>
-
                         <div>
                             <button className="button_signup_submit" type="submit" name="signup" >{text_static9.all_text}</button>
                         </div>

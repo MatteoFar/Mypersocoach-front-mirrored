@@ -3,6 +3,8 @@ import IconMain from '../Component/IconMain';
 import HeadingText from '../Component/HeadingText'
 import DisplayModal from '../Component/DisplayModal'
 import axios from 'axios'
+
+// import '../Component/GeneralCss.css';
 import '../Component/Problem.css'
 
 

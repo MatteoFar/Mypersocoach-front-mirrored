@@ -2,8 +2,15 @@
   color: rgb(150, 159, 170);
   display: grid;
   margin: auto;
-  width: 380px;
-  /* border: 1px solid black; */
+  min-height: 100vh;
+  width: 100vw; /*380px;*/
+  /* border: 1px solid red; */
+}
+
+.noMarginText {
+  margin: 0rem 5rem 0.5rem;
+  justify-content: center;
+  text-align: center;
 }
 
 /* .logo {
@@ -34,11 +41,7 @@
 
 } */
 
-.noMarginText {
-  margin: 0rem 5rem 0.5rem;
-  justify-content: center;
-  text-align: center;
-}
+
 
 /* .textEnvironment {
   background: none;
@@ -78,6 +81,22 @@
 
 } */
 
+
+/*======= DESKTOP FORMAT =======*/
+@media screen and (min-width:768px){
+
+  .containerSource2Environment {
+    display: block;
+    /* background-color: rgb(55, 115, 184); */
+    min-height: 100vh;
+    text-align: center;
+    width: 380px;
+  }
+
+}
+
+
+
 /* @media screen and (max-width:768px){
   .containerSource2Environment{
     width: 461px;
@@ -89,3 +108,4 @@
   max-width: 461px;
 }
 } */
+

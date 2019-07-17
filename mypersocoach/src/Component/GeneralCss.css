@@ -15,7 +15,12 @@ header,section,footer{
     text-align: center;
   }
 
-.header{
+button {
+  font-family: Lato;
+  font-size: 14px;
+}
+
+/* .header{
     grid-area: header;
   }
 
@@ -25,41 +30,41 @@ header,section,footer{
   
 .footer{
     grid-area: footer;
-  }
+  } */
 
 
 /*======= FORM MANAGEMENT =======*/
 /* To position the entire form */
-#form{
+/* #form{
     width: 300px;
     margin: auto;
-    /* border: 1px solid red; */
-  }
+    border: 1px solid red;
+  } */
 
-::placeholder{
+/* ::placeholder{
     font-family: 'Montserrat', sans-serif;
-  }
+  } */
 
 /* Formatting text, email and password fields */
-input[type="text"],input[type="email"],input[type="password"] {
+/* input[type="text"],input[type="email"],input[type="password"] {
     width: 250px;
     padding: 15px;
-    /* margin-top:10px; */
+    margin-top:10px;
     margin-bottom:10px;
     height: 45px;
     font-size: 14px;
-    box-sizing: border-box; /* To force the size of the input to enter in its parent */
+    box-sizing: border-box; To force the size of the input to enter in its parent
     border:none;
     background-color: rgb(245, 245, 245);
     border-radius: 5px;
     outline: none;
-  }
+  } */
 
 /* Focus on the text, email and password fields of the form */
-input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
+/* input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
     border-color: rgb(255, 189, 74);
     box-shadow: 0 0 10px 0 rgb(255, 189, 74);
-  }
+  } */
 
 
 /* Formatting texterea */
@@ -80,11 +85,11 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus 
 /* }  */
 
 /* Formatting the submit button */
-input[type="submit"]{
+/* input[type="submit"]{
     font-family: 'Montserrat', sans-serif;
     width: 282px;
     padding: 15px;
-    /* margin-top:5px; */
+    margin-top:5px;
     margin-bottom:10px;
     height: 45px;
     font-size: 14px;
@@ -92,22 +97,22 @@ input[type="submit"]{
     border-radius: 5px;
     cursor: pointer;
     outline: none;
-  }
+  } */
 
 /* Formatting the Sign up button */
-input[type="button"]{
+/* input[type="button"]{
     font-family: 'Montserrat', sans-serif;
     height: 45px;
     width: 282px;
     margin-bottom:10px;
-    /* margin-top:5px; */
+    margin-top:5px;
     border:none;
     border-radius: 5px;
     padding: 15px;
     font-size: 14px;
     cursor: pointer;
     outline: none;
-  }
+  } */
 
 
 /* Small button size*/
@@ -145,7 +150,7 @@ input[type="button"]{
 
 
 /*=======  COLOR ADJUSTEMENT, HEIGHT... =======*/
-.blue_bg{
+/* .blue_bg{
     background-color:rgb(55, 115, 184);
 }
 
@@ -171,11 +176,11 @@ input[type="button"]{
 
 .height30 {
     height: 30px;
-  }
+  } */
 
 
 /*======= ICONS =======*/
-.image_icon_large {
+/* .image_icon_large {
   width: 64px;
   height: 64px;
 }
@@ -183,7 +188,7 @@ input[type="button"]{
 .image_icon_small {
   width: 30px;
   height: 30px;
-}
+} */
 
 /*======= DESKTOP FORMAT =======
 @media screen and (min-width:960px){
