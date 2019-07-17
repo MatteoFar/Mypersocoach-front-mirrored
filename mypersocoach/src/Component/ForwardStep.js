@@ -235,42 +235,45 @@ else if (this.props.redirectionPage === 'profil') {
 
           else {
             return (
+
             <div className="forward_step_container">
             <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
           </div>
         
-        )
+              )
           }
         }
     
 
   // display of "Je valide" in Saut1
-  else if (this.props.redirectionPage === 'profil'){
-    return (
-      <div className="forward_step_container">
-        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static6} </button>
-      </div>
-    );
+        else if (this.props.redirectionPage === 'profil'){
+          return (
 
+            <div className="forward_step_container">
+              <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static6} </button>
+            </div>
 
-  }
+            );
+
+          }
 
 
 
   // display of "oui c'est exactement ça" in reformulation page
-  else {
-    return (
-      <div className="forward_step_container">
-        <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>
-      </div>
-    );
+      else {
+        return (
 
-         
-      }
-
+          <div className="forward_step_container">
+            <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.textButtonYes} </button>
+          </div>
+        
+          );
+      
+        }
 
     
-}
+    } 
+    
 }
 
 
