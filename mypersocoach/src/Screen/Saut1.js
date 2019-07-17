@@ -87,30 +87,6 @@ getResponseProb = async () => {
   this.setState({responseId: res.data[0].id});
 };
 
-// recupération des réponses à problem origin
-
-// getResponseProbOrigin = async () => {
-      
-      
-//   const id = this.props.location.state.summaryId;
- 
-  
-//   const res= await axios.get(`http://localhost:3001/response/${id}`)
-      
-  
-//   this.setState({ 
-//     response1: res.data.slice(1).map(x => x.response_summary)});
-//   console.log('lensemble des reponse problem origin', res.data.slice(1).map(x => x.response_summary))
- 
- 
-  
-
-
-
-//   // console.log('lensemble des reponse problem origin', res.data[3].response_summary)
-//   // console.log('lensemble des reponse problem origin', res.data[4].response_summary)
-//   // this.setState({responseId: res.data[0].id});
-// };
 
 getResponseCroyance = async () => {
       
@@ -196,17 +172,18 @@ getResponseEnvironnement = async () => {
 
 getActionResp = async () => {
       
-      
-  const id = this.props.location.state.summaryId;
+  const id = localStorage.getItem('idResponse')
+  
  
   
-  const res= await axios.get(`http://localhost:3001/action/recap/${id}`)
+  const res= await axios.get(`http://localhost:3001/action/${id}`)
       
   
   this.setState({ 
-    respAction: res.data[0].text_response, date: res.data[0].date_echeance});
+    respAction: res.data[0].text_response, date: res.data[0].date});
+    
+    console.log ('affiche moi ma date', res.data[0].date)
   
-  // this.setState({responseId: res.data[0].id});
 };
 
 
@@ -273,4 +250,5 @@ getActionResp = async () => {
     );
   }
 }
+
 export default Saut1;

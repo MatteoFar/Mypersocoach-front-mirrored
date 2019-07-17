@@ -57,8 +57,7 @@ class Solution3 extends React.Component {
 
     render(){
         
-        // console.log('etat de la state  1ere fois :' ,this.state.response)
-// console.log ('oulalalalallal', this.props.location.state.backSubmit)
+       
         const addActions = this.props.location.state.addActions
         const {icon , text_static ,text_static2 } = this.state
         
@@ -68,7 +67,7 @@ return (
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
             <RecapSolution  summaryId={this.props.location.state.summaryId} addActions ={addActions}/> 
-            {/* backSubmit={this.props.location.state.backSubmit} */}
+          
             <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text} addActions={addActions}/>
             </div>
             
