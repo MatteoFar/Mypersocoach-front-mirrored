@@ -9,7 +9,8 @@ class RecapSolution extends React.Component {
         addActions : this.props.addActions,
         response :'',
         isReply: false,
-
+        summaryId: '',
+        // backSubmit: this.props.backSubmit
     }
 
     // handleClick = (action) =>{
@@ -32,34 +33,67 @@ class RecapSolution extends React.Component {
         // this.setState({response: addAction}, function () {
         //     console.log('ma state response ouvre toi', this.state.response);
         // })
-      
-        console.log('est pas là ma state?',this.state.response);
+   
+        
+      console.log('est pas là ma state?',this.state.response);
         await this.setState({response: action});
-        console.log('si elle est là',this.state.response);
+    console.log('si elle est là',this.state.response);
 
-
+        this.setState({summaryId: this.props.summaryId})
+        console.log('summaryid ou es tu?', this.state.summaryId)
         this.setState({isReply: !this.state.isReply, })
        
         console.log('test fonction', this.state.response);
+        // if (this.props.backSubmit== "backSubmit"){
+        //     const id = this.props.summaryId
+        //     console.log('est ce que ma condition sactive')
+
+        //     axios.put(`http://localhost:3001/action/${id}`,{
+        //         text_response: this.state.response,
+                
+        //     })
+        //     .then((res => {
+            
+            
+            
+        //         this.props.history.push({
+        //             pathname: "/solution4", 
+        //             state: {
+    
+        //                 summaryId: this.state.summaryId
+    
+        //                 }
+        //         });
+        //       }
+        // ))
+    
+          
+        // }
+       
+    //    else {
         axios.post('http://localhost:3001/action', {
 
             
             text_response: this.state.response,
-            summary_id: this.props.location.state.summaryId
+            summary_id: this.state.summaryId
 
         })
+    
         .then((res => {
+            
+            
+            
             this.props.history.push({
                 pathname: "/solution4", 
                 state: {
 
-                    summary_id: this.props.location.state.summaryId
+                    summaryId: this.state.summaryId
 
                     }
             });
           }
     ))
-
+// }
         
     }
         
@@ -70,7 +104,7 @@ class RecapSolution extends React.Component {
 
 
     render(){
-        console.log('etat de la state response:', this.state.response);
+        // console.log('etat de la state backsubmit:', this.props.backSubmit);
         
         return (
             <div>

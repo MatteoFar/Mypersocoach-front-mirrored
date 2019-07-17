@@ -1,10 +1,10 @@
 import React from "react";
 import "./ResponseAction.css"
 
-const ResponseTime = ({ response }) => {
+const ResponseTime = ({date }) => {
   return (
      <div className="ResponseAction">
-       <p>{response}</p>
+       <p>{date}</p>
      </div>
   );
 };

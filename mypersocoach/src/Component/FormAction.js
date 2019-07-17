@@ -83,6 +83,10 @@ class FormAction extends React.Component{
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
+        // if (this.props.backsubmit == "backSubmit") {
+        //   this.deleteResponse();
+        // }
+      
         if( this.state.backAction == null){
           return
         }
@@ -130,8 +134,8 @@ class FormAction extends React.Component{
 
             </div>
 
-              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
-       
+              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
+              {/* backSubmit={this.props.backSubmit} */}
         </form>
     </div>
         

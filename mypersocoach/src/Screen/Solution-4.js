@@ -6,8 +6,7 @@ import './GeneralContainer.css';
 import IconMain from '../Component/IconMain';
 import HeadingText from '../Component/HeadingText';
 import FormTime from '../Component/FormTime';
-import TitlePageSympto from '../Component/TiltePageSympto';
-import Form from '../Component/Form';
+
 
 
 class Solution4 extends React.Component {
@@ -16,11 +15,7 @@ class Solution4 extends React.Component {
         icon: [],
         text_static: [],
         problem: [],
-        // response: [],
-        // text_static2: [],
-        // text_static3: [],
-        // text_static4: [],
-        // problem_id: 4
+      
     };
 
     
@@ -58,12 +53,14 @@ class Solution4 extends React.Component {
     }
 
     render() {
+        
+        console.log('hola summaryid',this.props.location.state.summaryId )
         const{icon,text_static,problem}= this.state
         return (
             <div className="general_container">
                 <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
                 <HeadingText text_static={text_static.all_text} />
-                <FormTime />
+                <FormTime summaryId={this.props.location.state.summaryId}/>
                 {/* <TitlePageSympto problem={problem} /> */}
                 {/* <Form 
                 // problemId={this.state.problem_id} lastId={this.props.location.state.lastId} redirectionPage={'symptome4'} 
