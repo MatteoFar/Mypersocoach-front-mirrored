@@ -9,39 +9,33 @@ class RecapSolution extends React.Component {
         addActions : this.props.addActions,
         response :'',
         isReply: false,
-        summaryId: ''
+        summaryId: '',
+        
     }
 
-    // handleClick = (action) =>{
-        
-    //     this.setState({ response : action })
-    //     // console.log( 'test target',e.currentTarget.value);
-    //     // console.log('etat de la state reponse :', this.state.response);
-      
-    //     // this.props.history.push({
-    //     //     pathname : '/'
-    //     // })
-    // }
+ 
 
 
 
     handleClick = async (action) =>{
        
-        // console.log('que passa ?',  addAction);
        
-        // this.setState({response: addAction}, function () {
-        //     console.log('ma state response ouvre toi', this.state.response);
-        // })
-      
-        console.log('est pas là ma state?',this.state.response);
-await this.setState({response: action});
+   
+        this.setState({response: action}); 
+      console.log('est pas là ma state?',this.state.response);
+        await this.setState({response: action});
     console.log('si elle est là',this.state.response);
 
-        this.setState({summaryId: this.props.summaryId})
-        console.log('summaryid ou es tu?', this.state.summaryId)
-        this.setState({isReply: !this.state.isReply, })
+        this.setState({
+            summaryId: this.props.summaryId, 
+            isReply: !this.state.isReply
+        })
+        
+        console.log('is reply', this.state.isReply)
+        
        
-        console.log('test fonction', this.state.response);
+       
+     
         axios.post('http://localhost:3001/action', {
 
             
@@ -49,7 +43,12 @@ await this.setState({response: action});
             summary_id: this.state.summaryId
 
         })
+    
         .then((res => {
+            const respActionId = res.data.respActionId
+            localStorage.setItem('idResponse', respActionId)
+            
+            
             this.props.history.push({
                 pathname: "/solution4", 
                 state: {
@@ -71,7 +70,7 @@ await this.setState({response: action});
 
 
     render(){
-        console.log('etat de la state summaryId:', this.props.summaryId);
+        // console.log('etat de la state backsubmit:', this.props.backSubmit);
         
         return (
             <div>
@@ -90,7 +89,7 @@ await this.setState({response: action});
 
                         else{
                             
-                            return
+                            return null
                         }
                         
                     }
@@ -100,10 +99,10 @@ await this.setState({response: action});
 
             </div>
         )
-}
+    }
        
     
-    }
+}
 
 
 

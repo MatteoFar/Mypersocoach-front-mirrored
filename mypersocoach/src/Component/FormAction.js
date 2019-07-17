@@ -14,7 +14,8 @@ class FormAction extends React.Component{
         text_static2:[],
         text_static3: [],
         summaryId:'',
-        backAction : this.props.location.state.addActions
+        backAction : this.props.location.state.addActions,
+        validate : false
         
         
     }
@@ -50,34 +51,42 @@ class FormAction extends React.Component{
 
     }
 
-      handleRemove = (e, index) => {
-        console.log('shit');
-        
+      removeAction = (e, index) => {
         e.preventDefault()
-        this.state.addActions.splice(index, 1);
-        this.setState({ addActions : this.state.addActions });
+        if(this.state.addActions.length > 5){
+          this.state.addActions.splice(index, 1);
+          this.setState({ addActions : this.state.addActions });
+        }
+        else{
+          return
+        }
       };
-      // need to fix by putin a "setState"
+     
     
       handleChange = ( e, index) => {
         
         this.state.addActions[index] = e.target.value;
+        // this.setState({addActions: e.target.value})
+       
         this.setState({ addActions: this.state.addActions});
         console.log("test de add action", this.state.addActions);
+        
       };
 
       getBackAction = () => {
 
-        // this.state.addActions[index] = this.state.backAction
         this.setState({ addActions : this.state.backAction });
       }
-      
+
+     
     
      
       componentDidMount() {
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
+       
+      
         if( this.state.backAction == null){
           return
         }
@@ -87,11 +96,11 @@ class FormAction extends React.Component{
        
       }
 
-      render(){
-        // console.log('ici',this.props.location.state.summaryId);
+      render(){            
+        
         
       const{text_static2,text_static3}=this.state
-      console.log('alors ? :' , this.state.backAction);
+      console.log('alors ? :' , this.state.addActions);
       
     
       return (
@@ -104,7 +113,9 @@ class FormAction extends React.Component{
               return (
 
                 <div key={index}>
-                  <p className ='numbForm'>{index + 1}-<input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/></p>
+                  <p className ='numbForm'>{index + 1}-
+                    <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
+                  </p>
                 </div>
 
               );
@@ -117,14 +128,14 @@ class FormAction extends React.Component{
                   +
                 </button>
 
-                <button className="button_remove"onClick={(e, index) => this.handleRemove(e, index)}>
+                <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
                   -
                 </button>
 
             </div>
 
-              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>
-       
+              <ForwardStep text_static3={text_static3.all_text} addActions={this.state.addActions} summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text} isValidate={()=>this.validate}/>
+              
         </form>
     </div>
         
