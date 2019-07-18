@@ -29,7 +29,14 @@ class Signup extends React.Component {
         text_static6: [],
         text_static7: [],
         text_static8: [],
-        text_static9: []
+        text_static9: [],
+        errors: null,
+        password: '',
+        email: '',
+        firstname: '',
+        lastname: '',
+        fonction: '',
+        entreprise: ''
     }
 
     
