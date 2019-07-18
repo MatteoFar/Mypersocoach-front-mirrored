@@ -19,3 +19,12 @@
 .size_text_profil{
     color: #7e7e7e;
 }
+@media screen and (min-width:768px){
+
+    .icon_recap_profil {
+      
+      text-align: center;
+      width: 380px;
+    }
+  
+  }

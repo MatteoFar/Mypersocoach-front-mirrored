@@ -17,5 +17,6 @@
 
 }
 .employe_name{
-    margin:auto ;
+    margin: 0 auto;
+    padding-top: 80px;
 }
