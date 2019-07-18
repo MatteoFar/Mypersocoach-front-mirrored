@@ -99,6 +99,13 @@ class Signup extends React.Component {
         this.getSignup()
     }
 
+    // Mecanisme recuparation des entrées des forms
+    setelementform = (field) => event => {
+        console.log(event.target.value)
+        this.setState({ [field]: event.target.value });
+        console.log(this.state)
+    }
+
     render() {
 
         const {text_static,text_static2,text_static3,text_static4,text_static5,text_static6,text_static7,text_static8,text_static9} = this.state
@@ -126,7 +133,9 @@ class Signup extends React.Component {
                             <input 
                                 type="password" 
                                 id="password" 
-                                name="password" placeholder={text_static3.all_text} 
+                                name="password" placeholder={text_static3.all_text}
+                                onChange={this.setelementform('password')}
+                                value={this.state.password}
                             />
                         </div>
 
@@ -136,7 +145,9 @@ class Signup extends React.Component {
                             <input 
                                 type="text" 
                                 name="firstname" 
-                                placeholder={text_static5.all_text} 
+                                placeholder={text_static5.all_text}
+                                onChange={this.setelementform('firstname')}
+                                value={this.state.firstname}
                             />
                         </div>
                         {/* Form lastname */}
@@ -144,7 +155,9 @@ class Signup extends React.Component {
                             <input 
                                 type="text" 
                                 name="lastname" 
-                                placeholder={text_static6.all_text} 
+                                placeholder={text_static6.all_text}
+                                onChange={this.setelementform('lastname')}
+                                value={this.state.lastname} 
                             />
                         </div>
                         {/* Form fonction */}
@@ -159,7 +172,9 @@ class Signup extends React.Component {
                             <input 
                                 type="text" 
                                 name="fonction" 
-                                placeholder={text_static7.all_text} 
+                                placeholder={text_static7.all_text}
+                                onChange={this.setelementform('fonction')}
+                                value={this.state.fonction} 
                             />
                         </div>
                         {/* Form entreprise */}
@@ -167,7 +182,9 @@ class Signup extends React.Component {
                             <input 
                                 type="text" 
                                 name="entreprise" 
-                                placeholder={text_static8.all_text} 
+                                placeholder={text_static8.all_text}
+                                onChange={this.setelementform('entreprise')}
+                                value={this.state.entreprise} 
                             />
                         </div>
                         {/* Form submit */}
