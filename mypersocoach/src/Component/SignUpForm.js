@@ -148,10 +148,17 @@ class Signup extends React.Component {
                             />
                         </div>
                         {/* Form fonction */}
+                        {/* TODO : alterrer la table pour valider les modifications du label
+                            function - terme reserver au systeme, vers fonction
+                            Attention si utilisé ailleur
+                            query a réaliser en db :
+                            ALTER TABLE `mycoachperso`.`manager` 
+                            CHANGE COLUMN `function` `fonction` VARCHAR(45) NOT NULL;
+                        */}
                         <div>
                             <input 
                                 type="text" 
-                                name="function" 
+                                name="fonction" 
                                 placeholder={text_static7.all_text} 
                             />
                         </div>
