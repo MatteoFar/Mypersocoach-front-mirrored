@@ -43,7 +43,7 @@ class Solution2 extends React.Component {
     
 
     return (
-      <div className="containerSource2Environment">
+      <div className="containerSolution2">
           
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <div className="text_size">

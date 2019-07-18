@@ -216,15 +216,22 @@ getActionResp = async () => {
       responseComportement, text_static2, text_static3, text_static4, text_static5, text_static6, respAction, date} = this.state
 // console.log('mon tableau response-origin', response1)
     return (
-      <div className="containerS2">
+      <div className="containerS2 white">
         <div className="containerSymptome2">
           <IconMain icon={icon.picture_src} />
-          <HeadingText text_static={text_static.all_text} />
+          
+          <div className="h2_reformulation">
+            <HeadingText text_static={text_static.all_text} />
+          </div>
+          
           <div className="ResponseContainerSaut1">
             <ResponseSymptome2 response={response} />
           </div>
-          <HeadingText text_static={text_static2.all_text} />
-          
+
+          <div className="h2_reformulation">
+            <HeadingText text_static={text_static2.all_text} />
+          </div>
+
           {/* origin response panel */}
           
           <div className="OriginResponseSaut1">
@@ -233,13 +240,18 @@ getActionResp = async () => {
             />
           </div>
           
+          <div className="h2_reformulation">
+            <HeadingText text_static={text_static3.all_text} />
+          </div>
           
-          
-          <HeadingText text_static={text_static3.all_text} />
           <div className="ActionResponse">
             <ResponseAction respAction={respAction}/>
           </div>
-          <HeadingText text_static={text_static4.all_text} />
+          
+          <div className="h2_reformulation">
+            <HeadingText text_static={text_static4.all_text} />
+          </div>
+          
           <div>
             <ResponseTime date={date}/>
           </div>

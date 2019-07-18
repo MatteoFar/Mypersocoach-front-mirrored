@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import "./Source2croyances.css";
-
+import "./Solution1.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
@@ -75,7 +74,7 @@ class Solution1 extends React.Component {
 
 console.log('elle est là ma props?', this.props.location.state.summaryId)
     return (
-      <div className="containerSource2Environment">
+      <div className="container_solution1">
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <HeadingText text_static={text_static.all_text} />
        
@@ -85,8 +84,9 @@ console.log('elle est là ma props?', this.props.location.state.summaryId)
           link_modal= {this.state.link_modal}
         />
 
-
-        <ForwardStep summaryId={this.props.location.state.summaryId} redirectionPage={'solution2'} text_static4={text_static4.all_text} /> 
+        <div className="forward_step_solution1">
+          <ForwardStep summaryId={this.props.location.state.summaryId} redirectionPage={'solution2'} text_static4={text_static4.all_text} />
+        </div> 
        
       </div>
     );
