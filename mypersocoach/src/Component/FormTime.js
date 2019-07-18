@@ -99,7 +99,7 @@ class FormTime extends React.Component {
 
 
                         {/* valider button */}
-                        <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+                        <button id="valid" href="#" className="button_validate_time" type="submit" name="valid" >{text_static3.all_text}</button >
 
 
                        
