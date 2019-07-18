@@ -2,13 +2,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
-@media screen and (max-width:576px){
+.containerSolution2 {
+    /* background-color: rgb(55, 115, 184); */
+    color: rgb(150, 159, 170);
+    /* display: grid; */
+    margin: auto;
+    min-height: 100vh;
+    width: 100vw; /*380px;*/
+  }
 
-}
-@media screen and (max-width: 768px) {}
+/*======= DESKTOP FORMAT =======*/
+@media screen and (min-width:768px){
 
-
-
+    .containerSource2Croyance {
+      display: block;
+      text-align: center;
+      width: 380px;
+    }
+  
+  }

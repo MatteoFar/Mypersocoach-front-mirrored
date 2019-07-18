@@ -2,44 +2,45 @@
     display:flex;
     justify-content: center ;
 }
+
 .buttonAction{
+    border: none;
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
-    border: none;
-    
 }
 
 .numbForm {
-    font-size: 20px !important;
-    margin: 0px;
-    color: #7e7e7e !important;
-    display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    /* color: #7e7e7e !important; */
+    display: flex;
+    /* font-size: 20px !important; */
+    margin: 0px;
+    /* margin-bottom: 10px; */
 }
+
+.numbForm p{
+    margin-right: 5px;
+}   
+
 .button_add, .button_remove{
     background:none;
     border: none;
 }
 
 .button_add{
-    font-size: 10vw;
     color: green;
+    font-size: 10vw;
 }
 
 .button_remove{
-    font-size: 10vw;
     color: red;
+    font-size: 10vw;
 }
 
-.numbForm p{
-    align-items: center;
-    display: flex;
-    
-}   
+
 .inputAction{
-   max-width:  95vmin !important;
-   color: #7e7e7e !important;
+    color: #7e7e7e !important;
+    max-width:  95vmin !important;
 }
 
