@@ -34,10 +34,10 @@
 }
 
 .button_remove{
+    font-size: 15px;
     color: red;
     font-size: 10vw;
 }
-
 
 .inputAction{
     color: #7e7e7e !important;

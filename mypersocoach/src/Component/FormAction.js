@@ -15,7 +15,8 @@ class FormAction extends React.Component{
         text_static3: [],
         summaryId:'',
         backAction : this.props.location.state.addActions,
-        validate : false
+        validate : false,
+        selectedButton : null
         
         
     }
@@ -53,24 +54,22 @@ class FormAction extends React.Component{
 
       removeAction = (e, index) => {
         e.preventDefault()
-        if(this.state.addActions.length > 5){
+        this.setState({ selectedButton : index })
+        console.log('mon index' , index);
+        
           this.state.addActions.splice(index, 1);
           this.setState({ addActions : this.state.addActions });
-        }
-        else{
-          return
-        }
+        
+        
+        
       };
      
     
       handleChange = ( e, index) => {
         
         this.state.addActions[index] = e.target.value;
-        // this.setState({addActions: e.target.value})
-       
-        this.setState({ addActions: this.state.addActions});
+        this.setState({ addActions: this.state.addActions });
         console.log("test de add action", this.state.addActions);
-        
       };
 
       getBackAction = () => {
@@ -116,7 +115,11 @@ class FormAction extends React.Component{
                   <div className ='numbForm'>
                     <p>{index + 1} - </p>
                     <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
+                    <button className="button_remove"onClick={(e) => this.removeAction(e, index)}>
+                      x
+                    </button>
                   </div>
+
                 </div>
               );
             }
@@ -126,10 +129,6 @@ class FormAction extends React.Component{
 
                 <button className="button_add" onClick={e => this.addAction(e)}>
                   +
-                </button>
-
-                <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
-                  -
                 </button>
 
             </div>
