@@ -208,7 +208,7 @@ getActionResp = async () => {
   }
 
   render() {
-    // console.log("voila ma state", this.state)
+    
     
     const { icon, text_static, response, responseEnvironnement,
       responseCroyance,
@@ -243,7 +243,7 @@ getActionResp = async () => {
           <div>
             <ResponseTime date={date}/>
           </div>
-          <ForwardStep redirectionPage={'profil'} summaryId={this.props.location.state.summaryId}  text_static6={text_static6.all_text} />
+          <ForwardStep date={date} respAction={respAction} response={response} responseEnvironnement={responseEnvironnement} responseCroyance={responseCroyance}  responseCapacite={responseCapacite} responseComportement={responseComportement} redirectionPage={'profil'} summaryId={this.props.location.state.summaryId}  text_static6={text_static6.all_text} />
           <BackSubmit summaryId={this.props.location.state.summaryId} backSubmit={"backSubmit"} text_static5={text_static5.all_text}/>
         </div>
         
