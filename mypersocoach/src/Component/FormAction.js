@@ -53,12 +53,15 @@ class FormAction extends React.Component{
 
       removeAction = (e, index) => {
         e.preventDefault()
+        console.log('mon index' , this.state.addActions.length-1);
+        
         if(this.state.addActions.length > 5){
-          this.state.addActions.splice(index, 1);
+          this.state.addActions.splice(this.state.addActions.length-1, 1);
           this.setState({ addActions : this.state.addActions });
+        
         }
         else{
-          return
+          return null
         }
       };
      
