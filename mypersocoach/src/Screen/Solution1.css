@@ -1,0 +1,26 @@
+/* Solution1.css */
+
+.container_solution1 {
+    /* background-color: rgb(55, 115, 184); */
+    color: rgb(150, 159, 170);
+    margin: auto;
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+.forward_step_solution1 {
+    /* border: 1px solid black; */
+    margin-top: 57px;
+  }
+  
+    
+/*======= DESKTOP FORMAT =======*/
+@media screen and (min-width:768px){
+  
+    .container_solution1 {
+      text-align: center;
+      width: 380px;
+    }
+  
+  }
