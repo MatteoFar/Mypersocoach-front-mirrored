@@ -230,6 +230,10 @@ input[type="button"]{
 } */
 
 
+.message-login {
+  color: #ffffff;
+}
+
 
 /*======= DESKTOP FORMAT =======*/
 @media screen and (min-width:768px){

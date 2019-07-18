@@ -31,7 +31,7 @@ class Signup extends React.Component {
         text_static7: [],
         text_static8: [],
         text_static9: [],
-        errors: null,
+        errors: false,
         password: '',
         email: '',
         firstname: '',
@@ -101,10 +101,49 @@ class Signup extends React.Component {
 
     // Mecanisme recuparation des entrées des forms
     setelementform = (field) => event => {
-        console.log(event.target.value)
         this.setState({ [field]: event.target.value });
-        console.log(this.state)
     }
+
+    // Affichage du message d'erreur
+    setMessageError = (er) => {
+        this.setState({ errors: er });
+        setTimeout(() => {
+            this.setState({
+                errors: false
+            });
+        }, 4000);
+    }
+
+    // Pas d'utilisateur avec le meme email.
+    checkforemail = (evt) => {
+        // on recupere la string tapée
+        var email = evt.target.value;
+        this.setState({ email: email });
+        // TODO refactorer l'expression reguliere suivante : elle renvoie en console des notices d'erreur d'echapement de carateres
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var self = this;
+        // On test la string en attente d'un email
+        if ( re.test(email) ) {
+            // Si on a un email, on interroge la db pour savoir
+            // Si cet email exist
+            axios.post('http://localhost:3001/login/check-email', {
+                email: email,
+            })
+            .then(function (res) {
+                // si l'array en retour n'est pas vide
+                // L'email est deja utilisé
+                if (res.data && res.data.length !== 0) {
+                    self.setMessageError("Desolé, mais cet email n\'est pas disponible.");
+                    self.setState({ email: '' });
+                }
+            })
+            .catch(function (error) {
+                console.log('Désolé, erreur systeme.');
+            });
+        }
+
+    }
+
 
     render() {
 
@@ -119,13 +158,21 @@ class Signup extends React.Component {
                 
                 <form method="post" action="#">
                     <div id="form">
+                        {/* Gestion des messages d'erreurs */}
+                        { this.state.errors !== false &&
+                            <div className="message-login">
+                                <h3>{ this.state.errors } </h3>
+                            </div>
+                        }
                         <p className="white_text">{text_static.all_text}</p>
                         {/* Form email */}
                         <div>
                             <input 
                                 type="email" 
                                 name="email" 
-                                placeholder={text_static2.all_text} 
+                                placeholder={text_static2.all_text}
+                                onChange={this.checkforemail}
+                                value={this.state.email} 
                             />
                         </div>
                         {/* Form password */}
@@ -205,7 +252,7 @@ class Signup extends React.Component {
                             <button  className="button_signup" type="button" name="texte">Connexion</button>
                         </NavLink>
                         <div className="height30"></div>
-                    </div>{/* Gestion des messages d'erreurs */}
+                    </div>
                 </form>
                 
             </section>
