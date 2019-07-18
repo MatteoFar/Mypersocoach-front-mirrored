@@ -76,7 +76,11 @@ class Sympto4Conflict extends React.Component {
                 {/* Appel du composant. Le 1er "icon" correspond au state */}
                 {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
                 <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-                <HeadingText text_static={text_static.all_text} />
+                
+                <div className="padding_top_bottom">
+                    <HeadingText text_static={text_static.all_text} />
+                </div>
+                
                 <TitlePageSympto problem={problem} />
                 <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId} redirectionPage={'symptome4'}/>
             </div>

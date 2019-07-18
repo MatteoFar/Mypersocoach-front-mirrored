@@ -5,7 +5,7 @@ import LoginScreen from "./Screen/LoginScreen";
 import Sympto4Conflict from "./Screen/Sympto4Conflict";
 import Symptome2 from "./Screen/Symptome2";
 import Start from "./Screen/Start";
-import Symptome5 from "./Screen/Symptome5";
+// // import Symptome5 from "./Screen/Symptome5";
 import Symptome3 from "./Screen/Symptome3";
 import Source2 from "./Screen/Source2";
 import Source2environment from "./Screen/Source2environment";
@@ -54,7 +54,7 @@ class App extends React.Component {
             <Route exact path="/source2comportement" component={Source2comportement} />
             <Route exact path="/source2croyances" component={Source2croyances} />
             <Route exact path="/source2capacites" component={Source2capacites} />
-            <Route exact path="/Symptome5" component={Symptome5} />
+            {/* <Route exact path="/Symptome5" component={Symptome5} /> */}
             <Route exact path="/symptome2" component={Symptome2} />
             <Route exact path="/source3_environment" component={Source3Environment} />
             <Route exact path="/source3_comportement" component={Source3Behavior}/>

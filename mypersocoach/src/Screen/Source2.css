@@ -4,9 +4,9 @@
     color: rgb(150, 159, 170);
     display: grid;
     justify-content: center;
-    width: 380px;
+    height: 120vh;
     margin: auto;
-  
+    width: 100vw;
   }
   
   .logoTextSymptome3 {
@@ -30,6 +30,25 @@
     text-align: center;
     width: 150px;
     }
+
+  /*======= DESKTOP FORMAT =======*/
+  @media screen and (min-width:768px){
+       
+      .containersource2 {
+        display: block;
+        text-align: center;
+        width: 380px;
+      }
+    
+      
+      .modal_main {
+        display: block;
+        text-align: center;
+        width: 380px;
+      }
+    }
+  
+  
 
     /* .modal_text {
       display: grid;
