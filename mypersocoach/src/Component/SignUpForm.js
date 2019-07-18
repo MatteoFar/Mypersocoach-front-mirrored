@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import {NavLink } from "react-router-dom";
 
 // import '../Component/GeneralCss.css';
 import '../Component/LoginForm.css';
@@ -112,38 +113,75 @@ class Signup extends React.Component {
                 <form method="post" action="#">
                     <div id="form">
                         <p className="white_text">{text_static.all_text}</p>
-                        
+                        {/* Form email */}
                         <div>
-                            <input type="email" name="email" placeholder={text_static2.all_text} />
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder={text_static2.all_text} 
+                            />
                         </div>
-
+                        {/* Form password */}
                         <div>
-                            <input type="password" id="password" name="password" placeholder={text_static3.all_text} />
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" placeholder={text_static3.all_text} 
+                            />
                         </div>
 
                         <p className="white_text">{text_static4.all_text}</p>
+                        {/* Form firstname */}
+                        <div>
+                            <input 
+                                type="text" 
+                                name="firstname" 
+                                placeholder={text_static5.all_text} 
+                            />
+                        </div>
+                        {/* Form lastname */}
+                        <div>
+                            <input 
+                                type="text" 
+                                name="lastname" 
+                                placeholder={text_static6.all_text} 
+                            />
+                        </div>
+                        {/* Form fonction */}
+                        <div>
+                            <input 
+                                type="text" 
+                                name="function" 
+                                placeholder={text_static7.all_text} 
+                            />
+                        </div>
+                        {/* Form entreprise */}
+                        <div>
+                            <input 
+                                type="text" 
+                                name="entreprise" 
+                                placeholder={text_static8.all_text} 
+                            />
+                        </div>
+                        {/* Form submit */}
+                        <div>
+                            <button 
+                                className="button_signup_submit" 
+                                type="submit" 
+                                name="signup" >
+                                    {text_static9.all_text}
+                            </button>
+                        </div>
+
+                        <div className="height30"></div>
                         
-                        <div>
-                            <input type="text" name="firstname" placeholder={text_static5.all_text} />
-                        </div>
-
-                        <div>
-                            <input type="text" name="lastname" placeholder={text_static6.all_text} />
-                        </div>
-
-                        <div>
-                            <input type="text" name="function" placeholder={text_static7.all_text} />
-                        </div>
-
-                        <div>
-                            <input type="text" name="entreprise" placeholder={text_static8.all_text} />
-                        </div>
-
-                        <div>
-                            <button className="button_signup_submit" type="submit" name="signup" >{text_static9.all_text}</button>
-                        </div>
-
-                    </div>
+                        {/* J'ai déjà un compte page bouton */}
+                        <p className="white_text">J'ai déjà un compte</p>
+                        <NavLink to="/">
+                            <button  className="button_signup" type="button" name="texte">Connexion</button>
+                        </NavLink>
+                        <div className="height30"></div>
+                    </div>{/* Gestion des messages d'erreurs */}
                 </form>
                 
             </section>
