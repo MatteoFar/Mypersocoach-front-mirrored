@@ -26,7 +26,7 @@ import Source2capacites from"./Screen/Source2capacites"
 import Solution1 from "./Screen/Solution1"
 import Solution2 from "./Screen/Solution2";
 import Solution3 from "./Screen/Solution3";
-import Solution4 from "./Screen/Solution-4";
+import Solution4 from "./Screen/Solution4";
 
 
 

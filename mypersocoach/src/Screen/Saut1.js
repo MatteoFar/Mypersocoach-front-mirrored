@@ -71,7 +71,7 @@ class Saut1 extends React.Component {
     this.setState({ text_static6: res.data[0] });
   };
 
-// recupération de la réponse ; to problème actuel est : 
+// recupération de la réponse ; "ton problème actuel est" : 
 getResponseProb = async () => {
       
       
@@ -87,7 +87,7 @@ getResponseProb = async () => {
   this.setState({responseId: res.data[0].id});
 };
 
-
+// Recuperation des differentes reponses problem origin
 getResponseCroyance = async () => {
       
       
@@ -170,6 +170,7 @@ getResponseEnvironnement = async () => {
   
 }; 
 
+//récupération de la réponse action
 getActionResp = async () => {
       
   const id = localStorage.getItem('idResponse')
@@ -197,7 +198,7 @@ getActionResp = async () => {
     this.getTextStatic5();
     this.getTextStatic6();
     this.getResponseProb();
-    // this.getResponseProbOrigin();
+
     this.getResponseCroyance();
     this.getResponseEnvironnement();
     this.getResponseComportement();
