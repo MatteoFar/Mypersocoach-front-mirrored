@@ -84,7 +84,7 @@ class Login extends React.Component {
                             
                             <p className="white_text">{text_static5.all_text}</p>
                             
-                            <NavLink to="/sign_up">
+                            <NavLink to="/sign-up">
                                 <button className="button_signup" type="button" name="texte">{text_static6.all_text}</button>
                             </NavLink>
                             
