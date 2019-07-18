@@ -225,6 +225,13 @@ class Signup extends React.Component {
                             />
                         </div>
                         {/* Form entreprise */}
+                        {/*
+                            TODO : alterer la table manager pour activer la validation du champ entreprise
+                            query a utiliser en db :
+                            ALTER TABLE `mycoachperso`.`manager` 
+                            ADD COLUMN `entreprise` VARCHAR(45) NULL AFTER `fonction`;
+                            
+                        */}
                         <div>
                             <input 
                                 type="text" 
