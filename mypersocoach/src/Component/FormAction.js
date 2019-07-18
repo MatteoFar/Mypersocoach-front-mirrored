@@ -16,7 +16,11 @@ class FormAction extends React.Component{
         summaryId:'',
         backAction : this.props.location.state.addActions,
         validate : false,
+<<<<<<< HEAD
         selectedButton: null
+=======
+        selectedButton : null
+>>>>>>> dev
         
         
     }
@@ -54,16 +58,14 @@ class FormAction extends React.Component{
 
       removeAction = (e, index) => {
         e.preventDefault()
-        console.log('mon index' , this.state.addActions.length-1);
+        this.setState({ selectedButton : index })
+        console.log('mon index' , index);
         
-        if(this.state.addActions.length > 5){
-          this.state.addActions.splice(this.state.addActions.length-1, 1);
+          this.state.addActions.splice(index, 1);
           this.setState({ addActions : this.state.addActions });
         
-        }
-        else{
-          return null
-        }
+        
+        
       };
      
     
@@ -119,11 +121,11 @@ class FormAction extends React.Component{
                 <div key={index}>
                   <p className ='numbForm'>{index + 1}-
                     <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
-                    <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
-                  -
+                    <button className="button_remove"onClick={(e) => this.removeAction(e, index)}>
+                      x
                     </button>
-                  
-                    </p>
+                  </p>
+
                 </div>
 
               );
@@ -135,10 +137,6 @@ class FormAction extends React.Component{
                 <button className="button_add" onClick={e => this.addAction(e)}>
                   +
                 </button>
-
-                {/* <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
-                  -
-                </button> */}
 
             </div>
 

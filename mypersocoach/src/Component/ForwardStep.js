@@ -233,9 +233,11 @@ else if (this.props.redirectionPage === 'profil') {
           if(this.state.isValidate === false){
 
             return (
-          
+              
               <div>
-                <p className='msgError'>Entrer 5 actions minimum</p>
+                <div className='msgError'>                
+                  <p >Entrer 5 actions minimum</p>
+                </div>
 
                 <div className="forward_step_container">
                   <button id="forward" href="#" className="buttonForward_Step" type="button" name="" onClick={this.handleClick} >{this.props.text_static3} </button>
