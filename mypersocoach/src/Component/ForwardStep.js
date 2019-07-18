@@ -8,7 +8,13 @@ class ForwardStep extends React.Component{
       summaryId:'',
       problem_originId:'',
       isValidate: true,
-     
+      respAction: [],
+      response:[],
+      responseEnvironnement: [],
+      responseCroyance: [], 
+      responseCapacite: [], 
+      responseComportement:[],
+      date: []
      
     }
   
@@ -152,12 +158,18 @@ class ForwardStep extends React.Component{
 else if (this.props.redirectionPage === 'profil') {
  
   
-  console.log('ou es ma redireciton page profil')
+  console.log('ou es ma redireciton page profil', this.props.date)
   
   this.props.history.push({
     pathname: "/profil", 
     state: {
-      
+      date: this.props.date,
+      respAction: this.props.respAction,
+      response: this.props.response,
+      responseEnvironnement: this.props.responseEnvironnement,
+      responseCroyance: this.props.responseCroyance, 
+      responseCapacite: this.props.responseCapacite, 
+      responseComportement: this.props.responseComportement,
       summaryId: this.props.summaryId,
       problem_originId: this.props.problem_originId
     }

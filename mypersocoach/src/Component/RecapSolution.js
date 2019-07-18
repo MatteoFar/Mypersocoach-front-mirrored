@@ -17,7 +17,7 @@ class RecapSolution extends React.Component {
 
 
 
-    handleClick = async (action) =>{
+    handleClick = async (action, index) =>{
        
        
    
@@ -62,26 +62,26 @@ class RecapSolution extends React.Component {
 
         
     }
-        
-       
-    
-
-
-
 
     render(){
-        // console.log('etat de la state backsubmit:', this.props.backSubmit);
         
         return (
             <div>
 
-                {this.state.addActions.map(addAction => {
+                {this.state.addActions.map( (addAction, index) => {
                     
                         if(addAction.length >= 1 ){
                             return(
                                 
                                 <div>
-                                    <p>{addAction}<button onClick={()=> this.handleClick(addAction)}>Valider</button></p>
+                                    <p>{addAction}<button 
+                                       
+
+                                    onClick={()=> this.handleClick(addAction, index)}>Valider</button></p>
+                                
+                                
+                                
+                                
                                 </div>
                             )
                         

@@ -63,7 +63,6 @@ class HeadingLinkAction extends Component {
     
       icon_modal_action,
       text_modal_action,
-      
       button_finish
     } = this.state;
     

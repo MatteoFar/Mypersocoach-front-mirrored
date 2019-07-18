@@ -76,11 +76,12 @@ class Symptome2 extends React.Component {
    render() {
   
     const{icon, text_static, response, text_static3, text_static4} = this.state
+    
     return (
       <div className="containerS2">
         <div className="containerSymptome2">
           <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-          <div className="white">
+          <div className="white h2_symptome2">
             <HeadingText text_static={text_static.all_text} /> 
           </div>
           <ResponseSymptome2 response={response}/>

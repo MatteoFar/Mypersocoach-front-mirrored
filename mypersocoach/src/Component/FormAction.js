@@ -15,7 +15,8 @@ class FormAction extends React.Component{
         text_static3: [],
         summaryId:'',
         backAction : this.props.location.state.addActions,
-        validate : false
+        validate : false,
+        selectedButton: null
         
         
     }
@@ -55,6 +56,7 @@ class FormAction extends React.Component{
         e.preventDefault()
         if(this.state.addActions.length > 5){
           this.state.addActions.splice(index, 1);
+        this.setState({ selectedButton: index });
           this.setState({ addActions : this.state.addActions });
         }
         else{
@@ -79,7 +81,7 @@ class FormAction extends React.Component{
       }
 
      
-    
+
      
       componentDidMount() {
         this.getFiveInput()
@@ -115,7 +117,11 @@ class FormAction extends React.Component{
                 <div key={index}>
                   <p className ='numbForm'>{index + 1}-
                     <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
-                  </p>
+                    <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
+                  -
+                    </button>
+                  
+                    </p>
                 </div>
 
               );
@@ -128,9 +134,9 @@ class FormAction extends React.Component{
                   +
                 </button>
 
-                <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
+                {/* <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
                   -
-                </button>
+                </button> */}
 
             </div>
 
