@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import bcrypt from "bcryptjs";
 import {NavLink } from "react-router-dom";
 
 // import '../Component/GeneralCss.css';
@@ -144,6 +145,48 @@ class Signup extends React.Component {
 
     }
 
+    // Operation lors du submit
+    handleRegisterSubmit = (e) => {
+        e.preventDefault();
+
+        // On store les champs dans des variables
+        const password = e.target.password.value;
+        const email = e.target.email.value;
+        const lastname = e.target.lastname.value;
+        const firstName = e.target.firstname.value;
+        const fonction = e.target.fonction.value;
+        // const entreprise = e.target.entreprise.value;
+
+        var self = this;
+
+        // On ne veut pas de champs vide
+        if (password === '' || email === '' || lastname === '' || firstName === '' || fonction === '' ) {
+            this.setMessageError("Desolé, mais vous devez renseigner tous les champs.");
+            return
+        }
+
+        // On encrypt le pass
+        const password_bcrypt = bcrypt.hashSync(password);
+
+        // Si tous les champs sont renseignés on enregistre l'utilisateur.
+        axios.post('http://localhost:3001/login/register', {
+            firstName: firstName,
+            lastName: lastname,
+            email: email,
+            password: password_bcrypt,
+            fonction: fonction,
+            // entreprise: entreprise
+        })
+        .then(function (response) {
+            self.setMessageError("Utilisateur enregistré.");
+            self.setState({ email: '', password: '', firstname: '', lastname: '', fonction: '', entreprise: '' });
+        })
+        .catch(function (error) {
+            console.log('Désolé, erreur systeme.');
+        });  
+        
+    }
+
 
     render() {
 
@@ -156,7 +199,7 @@ class Signup extends React.Component {
 
         <section className="blue_bg">
                 
-                <form method="post" action="#">
+                <form method="post" action="#" onSubmit={this.handleRegisterSubmit} >
                     <div id="form">
                         {/* Gestion des messages d'erreurs */}
                         { this.state.errors !== false &&
