@@ -69,14 +69,24 @@ class Profil extends React.Component {
   }
 
    render() {
-  
+    
+
+
     const{title_profil,icon7,icon8,icon9,text_static7,text_static8,text_static9} = this.state
     return (
       <div className="containerSource2Environment">
         
           <TitleProfil title_profil={title_profil.all_text} />
           <Employe  /> 
-          <IconTextProfil 
+          <IconTextProfil
+          date={this.props.location.state.date}
+           respAction={this.props.location.state.respAction}
+           response={this.props.location.state.response}
+           responseEnvironnement={this.props.location.state.responseEnvironnement}
+           responseCroyance={this.props.location.state.responseCroyance} 
+           responseCapacite={this.props.location.state.responseCapacite}
+           responseComportement={this.props.location.state.responseComportement}
+          summaryId={this.props.location.state.summaryId}
           icon7={icon7.picture_src}alt={icon7.description_alt}text_static7={text_static7.all_text}
           icon8={icon8.picture_src}alt={icon8.description_alt}text_static8={text_static8.all_text}
           icon9={icon9.picture_src}alt={icon9.description_alt}text_static9={text_static9.all_text}

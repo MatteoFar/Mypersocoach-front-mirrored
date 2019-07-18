@@ -16,7 +16,8 @@ class IconTextProfil extends React.Component {
     modal_finish: [],
     modal_link_profil: false,
     modal_link_profil2: false,
-    modal_link_profil3: false
+    modal_link_profil3: false,
+   
   };
 
   getIconModalProfil = async () => {
@@ -106,6 +107,9 @@ class IconTextProfil extends React.Component {
     console.log(this.state.modal_link_profil3);
   };
 
+
+
+
   componentDidMount() {
    
     this.getIconModalProfil();
@@ -119,6 +123,9 @@ class IconTextProfil extends React.Component {
   }
 
   render() {
+    console.log('elle est là ma date?', this.props.date)
+    
+    
     const {
       icon_modal_profil,
       icon_modal_profil2,
@@ -127,7 +134,8 @@ class IconTextProfil extends React.Component {
       text_modal_profil2,
       text_modal_profil3,
       date_modal_profil3,
-      modal_finish
+      modal_finish,
+      
     } = this.state;
 
     const showHideModal = this.state.modal_link_profil
@@ -170,6 +178,10 @@ class IconTextProfil extends React.Component {
 
         <div className={showHideModal}>
           <ModalProfil
+          response={this.props.response}
+            
+            
+            
             modal_link_profil={this.state.modal_link_profil}
             icon_modal_profil={icon_modal_profil.picture_src}
             alt={icon_modal_profil.description_alt}
@@ -181,6 +193,10 @@ class IconTextProfil extends React.Component {
 
         <div className={showHideModal2}>
           <ModalProfil
+               responseEnvironnement= {this.props.responseEnvironnement}
+               responseCroyance= {this.props.responseCroyance}
+               responseCapacite={this.props.responseCapacite}
+               responseComportement={this.props.responseComportement}
             modal_link_profil2={this.state.modal_link_profil2}
             icon_modal_profil2={icon_modal_profil2.picture_src}
             alt={icon_modal_profil2.description_alt}
@@ -192,6 +208,9 @@ class IconTextProfil extends React.Component {
 
         <div className={showHideModal3}>
           <ModalProfil
+
+            respAction={this.props.respAction}
+            date={this.props.date}
             modal_link_profil3={this.state.modal_link_profil3}
             icon_modal_profil3={icon_modal_profil3.picture_src}
             alt={icon_modal_profil3.description_alt}
