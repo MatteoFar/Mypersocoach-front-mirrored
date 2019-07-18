@@ -77,7 +77,7 @@ class Symptome3 extends React.Component {
         ))}
 
         </div>
-        <ForwardAnnex />
+        {/* <ForwardAnnex /> */}
       </div>
     );
   }

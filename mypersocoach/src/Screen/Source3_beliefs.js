@@ -48,7 +48,9 @@ class Source3Beliefs extends React.Component {
       <div className="containerSource2Environment">
         <IconMain icon={this.state.icon.picture_src} alt={this.state.icon.description_alt}/>
         <TitlePage problem_origin={this.state.problem_origin} /> 
+        <div className="padding_top_bottom">
         <HeadingText text_static={this.state.text_static.all_text} /> 
+        </div>
         <Form summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} redirectionPage={'reformulation'} />
       </div>
     );
