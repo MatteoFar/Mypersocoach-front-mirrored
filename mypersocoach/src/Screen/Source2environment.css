@@ -1,10 +1,10 @@
 .containerSource2Environment {
+  /* background-color: rgb(55, 115, 184); */
   color: rgb(150, 159, 170);
   display: grid;
   margin: auto;
   min-height: 100vh;
   width: 100vw; /*380px;*/
-  /* border: 1px solid red; */
 }
 
 .noMarginText {
@@ -13,6 +13,20 @@
   text-align: center;
 }
 
+
+/*======= DESKTOP FORMAT =======*/
+@media screen and (min-width:768px){
+
+  .containerSource2Environment {
+    display: block;
+    text-align: center;
+    width: 380px;
+  }
+
+}
+
+
+/**======= LES CODES LAISSES EN COMMENTAIRES *=======*/
 /* .logo {
   font-size: 14px;
   margin-top: 30px;
@@ -82,18 +96,7 @@
 } */
 
 
-/*======= DESKTOP FORMAT =======*/
-@media screen and (min-width:768px){
 
-  .containerSource2Environment {
-    display: block;
-    /* background-color: rgb(55, 115, 184); */
-    min-height: 100vh;
-    text-align: center;
-    width: 380px;
-  }
-
-}
 
 
 

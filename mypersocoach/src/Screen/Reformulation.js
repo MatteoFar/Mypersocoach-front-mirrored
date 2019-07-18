@@ -216,29 +216,34 @@ class Reformulation extends React.Component {
 
          return (
       <div className="containerS2 white">
-      <div className="containerSymptome2">
-        <IconMain icon={icon.picture_src} />
-        <HeadingText text_static={text_static.all_text} /> 
-        
+        <div className="containerSymptome2">
+          <IconMain icon={icon.picture_src} />
+          <div className="h2_reformulation">
+            <HeadingText text_static={text_static.all_text} /> 
+          </div>
           <div>
-        <div className="ResponseContainer">
-           <ResponseSymptome2 response={response}/>
+            <div className="ResponseContainer">
+              <ResponseSymptome2 response={response}/>
+            </div>
+
+            <div className="h2_reformulation">
+              <HeadingText text_static={text_static2.all_text} /> 
+            </div>
+
+            <OriginResponse  headingResponse={headingResponse.all_text} 
+            headingResponse2={headingResponse2.all_text}
+            headingResponse3={headingResponse3.all_text}
+            headingResponse4={headingResponse4.all_text}
+            responseCapacite={responseCapacite}
+            responseComportement = { responseComportement}
+            responseCroyance={responseCroyance} 
+            responseEnvironnement={responseEnvironnement}
+            />
+          </div>
+          
+          <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text} summaryId={this.props.location.state.summaryId}/>
+          <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
         </div>
-        <HeadingText text_static={text_static2.all_text} /> 
-        <OriginResponse  headingResponse={headingResponse.all_text} 
-         headingResponse2={headingResponse2.all_text}
-         headingResponse3={headingResponse3.all_text}
-         headingResponse4={headingResponse4.all_text}
-         responseCapacite={responseCapacite}
-         responseComportement = { responseComportement}
-         responseCroyance={responseCroyance} 
-         responseEnvironnement={responseEnvironnement}
-         />
-         </div>
-        
-        <ForwardStep redirectionPage={'solution1'} textButtonYes={textButtonYes.all_text} summaryId={this.props.location.state.summaryId}/>
-        <BackSubmit summaryId={this.props.location.state.summaryId} redirectionPage={'source2'} textButtonNo={textButtonNo.all_text}/>
-      </div>
       </div>
     );
   }

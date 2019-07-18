@@ -313,7 +313,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
                 <form id="form" method="post" action="#" onSubmit={this.handleSubmit} onClick={this.test}>
                     
 
-                    <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
+                    <textarea id="textarea" name="textarea" type='text'required value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
                         {response}
                     </textarea>
                     {/* valider button */}
@@ -342,7 +342,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
                     <form id="form" method="post" action="#" onSubmit={this.handleSubmit} >
                         
     
-                        <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
+                        <textarea id="textarea" name="textarea" type='text'required value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
                             {response}
                         </textarea>
 

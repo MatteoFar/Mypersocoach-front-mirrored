@@ -11,7 +11,7 @@
 }
 
 .numbForm {
-    font-size: 20px !important;
+    font-size: 14px ;
     margin: 0px;
     color: #7e7e7e !important;
     display: flex;
@@ -36,6 +36,7 @@
 .numbForm p{
     align-items: center;
     display: flex;
+    
     
 }   
 .inputAction{
