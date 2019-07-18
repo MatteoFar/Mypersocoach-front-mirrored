@@ -27,6 +27,7 @@ import Solution1 from "./Screen/Solution1"
 import Solution2 from "./Screen/Solution2";
 import Solution3 from "./Screen/Solution3"; 
 import Profil from "./Screen/Profil"
+import Solution4 from "./Screen/Solution4";
 
 
 
@@ -68,6 +69,7 @@ class App extends React.Component {
             <Route exact path="/Profil" component={Profil} />
 
             
+            <Route exact path="/solution4" component={Solution4} />
             
           </Switch>
         </BrowserRouter>

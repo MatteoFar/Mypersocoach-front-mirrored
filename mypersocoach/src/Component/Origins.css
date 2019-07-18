@@ -1,8 +1,10 @@
+/* Origin.css */
+
 .icons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 14px;
-    height: 40vh;
+    /* height: 40vh; */
     margin: auto 50px 30px 50px;
     margin-top: 5px;
     text-align: center;

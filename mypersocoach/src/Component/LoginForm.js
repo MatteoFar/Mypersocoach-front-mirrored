@@ -81,8 +81,6 @@ class Login extends React.Component {
                             <div>
                                 <button className="button_forward " type="button" name="login">{text_static4.all_text}</button>
                             </div>
-
-                            <div className="height30"></div>
                             
                             <p className="white_text">{text_static5.all_text}</p>
                             

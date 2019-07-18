@@ -73,7 +73,7 @@ class Solution1 extends React.Component {
      
     } = this.state;
 
-
+console.log('elle est là ma props?', this.props.location.state.summaryId)
     return (
       <div className="containerSource2Environment">
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
@@ -86,7 +86,7 @@ class Solution1 extends React.Component {
         />
 
 
-        <ForwardStep redirectionPage={'solution2'} text_static4={text_static4.all_text} /> 
+        <ForwardStep summaryId={this.props.location.state.summaryId} redirectionPage={'solution2'} text_static4={text_static4.all_text} /> 
        
       </div>
     );

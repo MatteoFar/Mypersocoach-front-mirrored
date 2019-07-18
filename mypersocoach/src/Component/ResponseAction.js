@@ -1,10 +1,10 @@
 import React from "react";
 import "./ResponseAction.css"
 
-const ResponseAction = ({ response }) => {
+const ResponseAction = ({ respAction }) => {
   return (
      <div className="ResponseAction">
-       <p>{response}</p>
+       <p>{respAction}</p>
      </div>
   );
 };

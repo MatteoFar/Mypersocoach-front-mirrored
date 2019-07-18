@@ -71,7 +71,7 @@ class Source2Comportement extends React.Component {
     
     return (
       
-      <div className="containerSource2Environment">
+      <div className="containerSource2Comportement">
       
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <TitlePage problem_origin={problem_origin} /> 

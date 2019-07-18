@@ -1,6 +1,9 @@
+/* HeadingText.css*/
+
 .heading_text_container {
     margin: 0 auto;
     margin-top: 10px;
+    padding-bottom: 15px;
     text-align: center;
     width: 282px;
 }

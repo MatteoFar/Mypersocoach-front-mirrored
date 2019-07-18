@@ -4,7 +4,7 @@ import axios from "axios";
 import SignUpForm from '../Component/SignUpForm';
 import BackgroundLogin from '../Component/BackgroundLogin';
 
-import '../Component/GeneralCss.css';
+// import '../Component/GeneralCss.css';
 import '../Component/LoginForm.css';
 
 class SignScreen extends React.Component {

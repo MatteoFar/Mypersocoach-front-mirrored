@@ -14,8 +14,7 @@ class Solution2 extends React.Component {
     icon: [],
     text_static: [],
     text_static2: [],
-    icon_add_action:[],
-    icon_remove:[]
+   
   };
 
   getHeader = async () => {
@@ -28,26 +27,20 @@ class Solution2 extends React.Component {
     this.setState({ text_static: res.data[0] });
   };
   
-  getButtonAddAction= async () => {
-    const res = await axios.get("http://localhost:3001/icon/5");
-    this.setState({ icon_add_action: res.data[0] });
-  };
-  getButtonRemoveAction= async () => {
-    const res = await axios.get("http://localhost:3001/icon/5");
-    this.setState({ icon_remove: res.data[0] });
-  };
+ 
 
   componentDidMount() {
     this.getHeader();
     this.getTextStatic();
-    this.getButtonAddAction();
-    this.getButtonRemoveAction();
+   
+   
   }
 
-  render() {
-    const { icon, text_static, text_static2,icon_add_action,icon_remove } = this.state;
 
-    console.log("test action", this.state);
+  render() {
+    const { icon, text_static, text_static2 } = this.state;
+  
+    
 
     return (
       <div className="containerSource2Environment">
@@ -56,8 +49,8 @@ class Solution2 extends React.Component {
         <div className="text_size">
         <HeadingText text_static={text_static.all_text} />
         </div>
-        <FormAction summaryId={this.props.location.state.summaryId} redirectionPage={'solution3'} text_static2={text_static2.all_text}/>       
-        
+        <FormAction summaryId={this.props.location.state.summaryId}  redirectionPage={'solution3'} text_static2={text_static2.all_text} addActions={this.props.location.state.addActions}/>       
+       
       </div>
     );
   }

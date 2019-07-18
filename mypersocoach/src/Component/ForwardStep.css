@@ -1,8 +1,12 @@
 /* ForwardStep.css */
 
+.displayError {
+  border-color: red;
+}
+
 .forward_step_container {
   margin: auto;
-  margin-top: 57px;
+  /* margin-top: 57px; */
   /* border: 1px solid black; */
 }
 
@@ -29,4 +33,9 @@
 
 .buttonForward_Step:active {
   background-color: rgb(22, 160, 133);
+}
+
+.msgError{
+  color: red;
+  margin : auto;
 }
