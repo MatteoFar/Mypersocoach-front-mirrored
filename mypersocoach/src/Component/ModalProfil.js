@@ -27,8 +27,8 @@ class ModalProfil extends React.Component {
         
         <div className={modal_profil}>
           <div className="modal_main1">
-            <img className="belief_image" src={this.props.icon_modal_profil}/>
-            <img className="belief_image" src={this.props.icon_modal_profil2}/>
+            <img className="belief_image" src={this.props.icon_modal_profil} alt={this.props.alt}/>
+            <img className="belief_image" src={this.props.icon_modal_profil2} alt={this.props.alt1}/>
             <img className="belief_image" src={this.props.icon_modal_profil3} alt={this.props.alt}
             />
             <p>{nl2br(this.props.text_modal_profil)}{nl2br(this.props.text_modal_profil2)}{nl2br(this.props.text_modal_profil3)}</p>

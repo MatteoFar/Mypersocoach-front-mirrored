@@ -27,12 +27,12 @@ class HeadingLinkAction extends Component {
   getIconModalAction = async () => {
     const res = await axios.get("http://localhost:3001/icon/5");
     this.setState({ icon_modal_action: res.data[0] });
-    console.log(res);
+   
   };
   getTextModalAction = async () => {
     const res = await axios.get("http://localhost:3001/text_static/55");
     this.setState({ text_modal_action: res.data[0] });
-    console.log(res);
+   
   };
   
   getButtonFinish = async () => {
@@ -48,7 +48,7 @@ class HeadingLinkAction extends Component {
     } else {
       this.setState({ modal_link_action: false });
     }
-    console.log(this.state.modal_link)
+   
     
   };
 
