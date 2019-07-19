@@ -4,6 +4,8 @@ import { withRouter } from "react-router-dom";
 
 class RecapSolution extends React.Component {
 
+    
+    
     state = {
 
         addActions : this.props.addActions,
@@ -16,10 +18,14 @@ class RecapSolution extends React.Component {
         
     }
 
+
+
     getIconValidate = async () => {
         const res = await axios.get('http://localhost:3001/icon/39')
         this.setState({ iconValidate : res.data[0] })
     }
+
+
 
 
     getIconValidate2 = async () => {
@@ -27,6 +33,8 @@ class RecapSolution extends React.Component {
         this.setState({ iconValidate2 : res.data[0] })
     }
 
+   
+   
     handleClick = async (action, index) =>{
     
     

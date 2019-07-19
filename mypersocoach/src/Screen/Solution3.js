@@ -68,6 +68,8 @@ return (
             <HeadingText text_static={text_static.all_text} />
             <RecapSolution  summaryId={this.props.location.state.summaryId} addActions ={addActions}/> 
           
+          {/* // Retour button in Solution 3 - summary of differents actions */}
+          
             <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text} addActions={addActions}/>
             </div>
             
