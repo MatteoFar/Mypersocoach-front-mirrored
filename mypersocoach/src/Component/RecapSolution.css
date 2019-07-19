@@ -3,7 +3,7 @@
     width: 282px;
     margin: 0 auto;
     /* margin-top: 20px; */
-    height: 85px;
+    min-height: 85px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px dashed ;
@@ -18,9 +18,3 @@
     height: 50px;
     width: 50px;
 }
-
-/* .blo img {
-    height: 50px;
-    width: 50px;
-    
-} */
