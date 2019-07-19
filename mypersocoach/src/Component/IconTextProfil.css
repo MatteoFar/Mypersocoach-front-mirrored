@@ -1,6 +1,6 @@
 .icon_recap_profil{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     
 }
 .icon_text_profil{

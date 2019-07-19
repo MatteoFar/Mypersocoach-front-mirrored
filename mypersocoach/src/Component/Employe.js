@@ -1,11 +1,14 @@
 import React from "react";
+
+import harry_mpc from "../harry_mpc.jpeg"
+
 import "./Employe.css"
 
 const Employe = () => {
   return (
     <div className="grid_photo_name">
     
-      <p className="format_photo"> Photo</p>
+      <img className="format_photo" src={harry_mpc} alt="harry_picture"/> 
     
     
       <p className="employe_name">NOM PRENOM</p>
