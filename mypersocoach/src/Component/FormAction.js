@@ -36,7 +36,9 @@ class FormAction extends React.Component{
         this.setState({ text_static2: res.data[0] });
       };
 
-    
+    // allow us to add an input to addActions table :  thanks to [...this.state.addActions, ""]
+
+
       addAction = (e) => {
 
         e.preventDefault()
@@ -44,11 +46,15 @@ class FormAction extends React.Component{
 
       };
     
+      // allow us to add five inputs to addActions table : so that the page loads with 5 actions inputs
+
       getFiveInput =() => {
  
         this.setState({ addActions : [...this.state.addActions, "","","","",""] })
 
     }
+
+// function that handles removal of action individually 
 
       removeAction = (e, index) => {
         e.preventDefault()
@@ -64,17 +70,18 @@ class FormAction extends React.Component{
       };
      
     
-      // 
+      
 
       handleChange = ( e, index) => {
         
         this.state.addActions[index] = e.target.value;
-        
-       
         this.setState({ addActions: this.state.addActions});
         
         
       };
+
+      // function thant handles return on Solution2 Mage
+      // differents actions stay visibles when we click on the back button
 
       getBackAction = () => {
 
@@ -89,10 +96,13 @@ class FormAction extends React.Component{
         this.getTextStatic3()
         this.getPlaceholderAction()
        
+        // when we go from Solution2 to Solution3 we do nothing with backAction
       
         if( this.state.backAction == null){
           return
         }
+        // when we return from solution3 to solution2, we call out the getBackAction() function 
+        //which allows us to keep the actions origninally filled
         else{
           this.getBackAction()
         }
@@ -117,6 +127,7 @@ class FormAction extends React.Component{
 
                 <div key={index}>
                   <p className ='numbForm'>{index + 1}-
+                    {/*  X button to delete actions inputs individually*/}
                     <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
                     <button className="button_remove"onClick={(e) => this.removeAction(e, index)}>
                       x
