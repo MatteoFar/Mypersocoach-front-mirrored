@@ -1,4 +1,4 @@
-.Recap_container {
+.formActionBlock {
     display: flex;
     width: 282px;
     margin: 0 auto;
@@ -10,11 +10,11 @@
 
 }
 
-.Action_container {
+.formActionInput {
     width: 225px;
 } 
 
-.Validate_picture {
+.formActionIcon {
     height: 50px;
     width: 50px;
 }
