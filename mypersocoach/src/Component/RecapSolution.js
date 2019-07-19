@@ -110,24 +110,14 @@ class RecapSolution extends React.Component {
                         if(addAction.length >= 1 ){
                             return(
                                 
-<<<<<<< HEAD
-                                <div key={index} className="formActionBlock">
-
-                                    <p className="formActionInput ">
-=======
                                 <div className="Recap_container">
 
                                     <p className="Action_container">
->>>>>>> dev
                                     {addAction}
                                  
                                     </p>
 
-<<<<<<< HEAD
-                                    <img className="formActionIcon" src = {this.state.selectedButton === index ? iconValidate2.picture_src : iconValidate.picture_src}
-=======
                                     <img className="Validate_picture" src = {this.state.selectedButton === index ? iconValidate2.picture_src : iconValidate.picture_src}
->>>>>>> dev
                                         alt ="" onClick={()=> this.handleClick(addAction, index)} />
                                     
 
