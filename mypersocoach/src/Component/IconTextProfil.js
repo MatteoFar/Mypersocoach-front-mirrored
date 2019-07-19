@@ -48,30 +48,25 @@ class IconTextProfil extends React.Component {
   };
   getTextModalProfil2 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/37");
-    this.setState({ text_modal_profil2: res.data[0] }, () =>
-      console.log(this.state)
-    );
+    this.setState({ text_modal_profil2: res.data[0]});
     console.log(res);
   };
   getTextModalProfil3 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/38");
-    this.setState({ text_modal_profil3: res.data[0] }, () =>
-      console.log(this.state)
-    );
+    this.setState({ text_modal_profil3: res.data[0] });
     console.log(res);
   };
   getDateModalProfil3 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/39");
-    this.setState({ date_modal_profil3: res.data[0] }, () =>
-      console.log(this.state)
-    );
+    this.setState({ date_modal_profil3: res.data[0] });
     console.log(res);
   };
 
   getModalFinish = async () => {
     const res = await axios.get("http://localhost:3001/text_static/59");
-    this.setState({ modal_finish: res.data[0] }, () => console.log(this.state));
-  };
+    this.setState({ modal_finish: res.data[0] });
+    
+    };
 
   showModalProfil = () => {
     if (this.state.modal_link_profil === false) {
