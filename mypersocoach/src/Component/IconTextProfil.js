@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import axios from "axios";
 import ModalProfil from "./ModalProfil";
 
@@ -123,7 +123,7 @@ class IconTextProfil extends React.Component {
   }
 
   render() {
-    console.log('elle est là ma date?', this.props.date)
+   
     
     
     const {
@@ -154,7 +154,7 @@ class IconTextProfil extends React.Component {
             <img
               className="size_icon_profil"
               src={this.props.icon7}
-              alt={this.props.icon7}
+              alt={this.props.alt1}
             />
             <p className="size_text_profil">{this.props.text_static7}</p>
           </button>
@@ -162,7 +162,7 @@ class IconTextProfil extends React.Component {
             <img
               className="size_icon_profil"
               src={this.props.icon8}
-              alt={this.props.icon8}
+              alt={this.props.alt2}
             />
             <p className="size_text_profil">{this.props.text_static8}</p>
           </button>
@@ -170,7 +170,7 @@ class IconTextProfil extends React.Component {
             <img
               className="size_icon_profil"
               src={this.props.icon9}
-              alt={this.props.icon9}
+              alt={this.props.alt3}
             />
             <p className="size_text_profil">{this.props.text_static9}</p>
           </button>
@@ -199,7 +199,7 @@ class IconTextProfil extends React.Component {
                responseComportement={this.props.responseComportement}
             modal_link_profil2={this.state.modal_link_profil2}
             icon_modal_profil2={icon_modal_profil2.picture_src}
-            alt={icon_modal_profil2.description_alt}
+            alt1={icon_modal_profil2.description_alt}
             text_modal_profil2={text_modal_profil2.all_text}
             modal_finish={modal_finish.all_text}
             CloseModal={this.showModalProfil2}

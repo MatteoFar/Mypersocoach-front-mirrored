@@ -44,10 +44,10 @@ class Sympto4Conflict extends React.Component {
     getIdProblem = () => {
         const {problem_id} = this.state
         const id= this.props.location.state.lastId
-        console.log('pouet pouet', id)
+        
         axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: conflict ", res);
+           
           })
       }
 

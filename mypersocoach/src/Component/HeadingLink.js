@@ -19,41 +19,37 @@ class HeadingLink extends Component {
     button_finish: [],
     modal_link: false
   };
-  // HandleOpenLink=()=> {
-  //   if(this.state.modal_link === false ) {
-  //     return this.setState({ modal_link: !this.state.modal_link });
-  //    }
-  //   }
+  
   getIconModal = async () => {
     const res = await axios.get("http://localhost:3001/problem_origin/4");
     this.setState({ icon_modal: res.data[0] });
-    console.log(res);
+    
   };
 
   getTextModal = async () => {
     const res = await axios.get("http://localhost:3001/text_static/52");
     this.setState({ text_modal1: res.data[0] });
-    console.log(res);
+   
   };
   getTextModal2 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/53");
     this.setState({ text_modal2: res.data[0] });
-    console.log(res);
+    
   };
   getTextModal3 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/54");
     this.setState({ text_modal3: res.data[0] });
-    console.log(res);
+    
   };
   getModalContinue = async () => {
     const res = await axios.get("http://localhost:3001/text_static/58");
     this.setState({ modal_continue: res.data[0] });
-    console.log(res);
+    
   };
   getModalClosed = async () => {
     const res = await axios.get("http://localhost:3001/text_static/59");
     this.setState({ modal_closed: res.data[0] });
-    console.log(res);
+    
   };
 
   getButtonFinish = async () => {
@@ -67,13 +63,11 @@ class HeadingLink extends Component {
     } else {
       this.setState({ modal_link: false });
     }
-    console.log(this.state.modal_link)
+    
     
   };
 
-  // hideModal = () => {
-  //   this.setState({ modal_link: false });
-  // };
+  
 
 
 
@@ -100,7 +94,7 @@ class HeadingLink extends Component {
     const showHideModal =  this.state.modal_link
       ? "modal_main1"
       : "modaloff1";
-    // const show_modal = this.state.modal_action ? "modal display-block" : "modal display-none";
+    
     return (
       <>
         <div>

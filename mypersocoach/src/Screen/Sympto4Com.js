@@ -45,7 +45,7 @@ class Sympto4Com extends React.Component {
         const id= this.props.location.state.lastId
         axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: commmmm", res);
+            
           })
       }
 
