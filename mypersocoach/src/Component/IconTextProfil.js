@@ -183,10 +183,10 @@ class IconTextProfil extends React.Component {
 
         <div className={showHideModal2}>
           <ModalProfil
-               responseEnvironnement= {this.props.responseEnvironnement}
-               responseCroyance= {this.props.responseCroyance}
-               responseCapacite={this.props.responseCapacite}
-               responseComportement={this.props.responseComportement}
+            responseEnvironnement= {this.props.responseEnvironnement}
+            responseCroyance= {this.props.responseCroyance}
+            responseCapacite={this.props.responseCapacite}
+            responseComportement={this.props.responseComportement}
             modal_link_profil2={this.state.modal_link_profil2}
             icon_modal_profil2={icon_modal_profil2.picture_src}
             alt1={icon_modal_profil2.description_alt}
