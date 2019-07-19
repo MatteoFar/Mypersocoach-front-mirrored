@@ -46,7 +46,7 @@ return(
 
  <div className="displayModalCentered">
      
-     <div className="image_icon" ref={node}  onClick={e => setOpen(!open)}>
+     <div className="image_icon" ref={node}  onClick={e => setOpen(!open)} key= "">
         
         <div >
         

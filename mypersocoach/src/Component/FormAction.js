@@ -73,8 +73,11 @@ class FormAction extends React.Component{
       
 
       handleChange = ( e, index) => {
-        
+       
         this.state.addActions[index] = e.target.value;
+        console.log('notre addactionindex',this.state.addActions[index] )
+        
+
         this.setState({ addActions: this.state.addActions});
         
         
