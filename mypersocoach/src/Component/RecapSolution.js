@@ -22,7 +22,7 @@ class RecapSolution extends React.Component {
 
 
     getIconValidate = async () => {
-        const res = await axios.get('http://localhost:3001/icon/39')
+        const res = await axios.get('http://localhost:3001/icon/38')
         this.setState({ iconValidate : res.data[0] })
     }
 
@@ -30,7 +30,7 @@ class RecapSolution extends React.Component {
 
 
     getIconValidate2 = async () => {
-        const res = await axios.get('http://localhost:3001/icon/40')
+        const res = await axios.get('http://localhost:3001/icon/37')
         this.setState({ iconValidate2 : res.data[0] })
     }
 
@@ -110,24 +110,14 @@ class RecapSolution extends React.Component {
                         if(addAction.length >= 1 ){
                             return(
                                 
-<<<<<<< HEAD
-                                <div key={index} className="formActionBlock">
+                                <div className="formActionBlock">
 
-                                    <p className="formActionInput ">
-=======
-                                <div className="Recap_container">
-
-                                    <p className="Action_container">
->>>>>>> dev
+                                    <p className="formActionInput">
                                     {addAction}
                                  
                                     </p>
 
-<<<<<<< HEAD
                                     <img className="formActionIcon" src = {this.state.selectedButton === index ? iconValidate2.picture_src : iconValidate.picture_src}
-=======
-                                    <img className="Validate_picture" src = {this.state.selectedButton === index ? iconValidate2.picture_src : iconValidate.picture_src}
->>>>>>> dev
                                         alt ="" onClick={()=> this.handleClick(addAction, index)} />
                                     
 
