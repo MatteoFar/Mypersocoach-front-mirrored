@@ -1,3 +1,5 @@
+/* FormAction.css */
+
 .formCenter {
     display:flex;
     justify-content: center ;
@@ -7,7 +9,7 @@
     border: none;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .numbForm {
@@ -26,17 +28,17 @@
 .button_add, .button_remove{
     background:none;
     border: none;
+    outline: none;
 }
 
 .button_add{
-    color: green;
-    font-size: 10vw;
+    color: rgb(255, 189, 74);
+    font-size: 50px;
 }
 
 .button_remove{
-    font-size: 15px;
     color: red;
-    font-size: 10vw;
+    font-size: 20px;
 }
 
 .inputAction{

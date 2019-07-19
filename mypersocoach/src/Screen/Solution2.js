@@ -1,9 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import "./Source2environment.css";
 
-
+import "./Solution2.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
