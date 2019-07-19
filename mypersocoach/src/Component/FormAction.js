@@ -15,10 +15,9 @@ class FormAction extends React.Component{
         text_static3: [],
         summaryId:'',
         backAction : this.props.location.state.addActions,
-        validate : false
-        
-        
-    }
+        validate : false,
+        selectedButton : null
+      }
 
 
       getButtonValidate= async () => {
@@ -37,7 +36,9 @@ class FormAction extends React.Component{
         this.setState({ text_static2: res.data[0] });
       };
 
-    
+    // allow us to add an input to addActions table :  thanks to [...this.state.addActions, ""]
+
+
       addAction = (e) => {
 
         e.preventDefault()
@@ -45,33 +46,45 @@ class FormAction extends React.Component{
 
       };
     
+      // allow us to add five inputs to addActions table : so that the page loads with 5 actions inputs
+
       getFiveInput =() => {
  
         this.setState({ addActions : [...this.state.addActions, "","","","",""] })
 
     }
 
+// function that handles removal of action individually 
+
       removeAction = (e, index) => {
         e.preventDefault()
-        if(this.state.addActions.length > 5){
+        
+        // allow us to apply selected remove on one specific button
+        this.setState({ selectedButton : index })
+       
+        
+        // removal of one action in the table action one section deleted from the index
           this.state.addActions.splice(index, 1);
           this.setState({ addActions : this.state.addActions });
-        }
-        else{
-          return
-        }
+        
       };
      
     
+      
+
       handleChange = ( e, index) => {
-        
-        this.state.addActions[index] = e.target.value;
-        // this.setState({addActions: e.target.value})
        
+        this.state.addActions[index] = e.target.value;
+        console.log('notre addactionindex',this.state.addActions[index] )
+        
+
         this.setState({ addActions: this.state.addActions});
-        console.log("test de add action", this.state.addActions);
+        
         
       };
+
+      // function thant handles return on Solution2 Mage
+      // differents actions stay visibles when we click on the back button
 
       getBackAction = () => {
 
@@ -79,17 +92,20 @@ class FormAction extends React.Component{
       }
 
      
-    
+
      
       componentDidMount() {
         this.getFiveInput()
         this.getTextStatic3()
         this.getPlaceholderAction()
        
+        // when we go from Solution2 to Solution3 we do nothing with backAction
       
         if( this.state.backAction == null){
           return
         }
+        // when we return from solution3 to solution2, we call out the getBackAction() function 
+        //which allows us to keep the actions origninally filled
         else{
           this.getBackAction()
         }
@@ -100,7 +116,7 @@ class FormAction extends React.Component{
         
         
       const{text_static2,text_static3}=this.state
-      console.log('alors ? :' , this.state.addActions);
+      
       
     
       return (
@@ -113,11 +129,17 @@ class FormAction extends React.Component{
               return (
 
                 <div key={index}>
-                  <p className ='numbForm'>{index + 1}-
+                  
+                    {/*  X button to delete actions inputs individually*/}
+                  <div className ='numbForm'>
+                    <p>{index + 1} - </p>
                     <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
-                  </p>
-                </div>
+                    <button className="button_remove"onClick={(e) => this.removeAction(e, index)}>
+                      x
+                    </button>
+                  </div>
 
+                </div>
               );
             }
           )}
@@ -126,10 +148,6 @@ class FormAction extends React.Component{
 
                 <button className="button_add" onClick={e => this.addAction(e)}>
                   +
-                </button>
-
-                <button className="button_remove"onClick={(e, index) => this.removeAction(e, index)}>
-                  -
                 </button>
 
             </div>

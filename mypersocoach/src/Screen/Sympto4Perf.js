@@ -44,9 +44,7 @@ class Sympto4Perf extends React.Component {
         const {problem_id} = this.state
         const id= this.props.location.state.lastId
         axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
-          .then(res => {
-            console.log("response axios: perf ", res);
-          })
+          
       }
 
     componentDidMount() {
@@ -63,7 +61,11 @@ class Sympto4Perf extends React.Component {
         return (
             <div className="general_container">
                 <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-                <HeadingText text_static={text_static.all_text} />
+                
+                <div className="padding_top_bottom">
+                    <HeadingText text_static={text_static.all_text} />
+                </div>
+
                 <TitlePageSympto problem={problem} />
                 <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId} redirectionPage={'symptome4'} />
 

@@ -1,7 +1,5 @@
 /* LoginForm.css */
 
-
-
 .page_width_height {
   min-height: 100vh;
   width:100vw;
@@ -55,7 +53,7 @@ header,section,footer{
   color:white;
 }
 
-.height5 {
+/* .height5 {
   height: 5px;
 }
 
@@ -73,13 +71,14 @@ header,section,footer{
 
 .height30 {
   height: 30px;
-}
+} */
 
 /*======= FORM MANAGEMENT =======*/
 /* To position the entire form */
 #form{
   width: 300px;
   margin: auto;
+  text-align: center;
   /* border: 1px solid red; */
 }
 
@@ -89,17 +88,17 @@ header,section,footer{
 
 /* Formatting text, email and password fields */
 input[type="text"],input[type="email"],input[type="password"] {
-  width: 250px;
-  padding: 15px;
+  background-color: rgb(245, 245, 245);
+  border:none;
+  border-radius: 5px;
+  box-sizing: border-box; /* To force the size of the input to enter in its parent */
+  font-size: 14px;
+  height: 45px;
   margin-top:10px;
   margin-bottom:10px;
-  height: 45px;
-  font-size: 14px;
-  box-sizing: border-box; /* To force the size of the input to enter in its parent */
-  border:none;
-  background-color: rgb(245, 245, 245);
-  border-radius: 5px;
   outline: none;
+  padding: 15px;
+  width: 250px;
 }
 
 /* Focus on the text, email and password fields of the form */

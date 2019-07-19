@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import "./Source2environment.css";
+import "./Source2croyances.css";
 
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
@@ -21,7 +21,6 @@ class Source2Croyances extends React.Component {
     text_static2: [],
     text_static3: [],
     text_modal1: [],
-    // icon_modal: [],
     modal_continue: [],
     modal_closed: [],
     link_modal : false,
@@ -31,31 +30,22 @@ class Source2Croyances extends React.Component {
   getHeader = async () => {
     const res = await axios.get("http://localhost:3001/icon/6");
     this.setState({ icon: res.data[0] });
-    // .then(data => {
-    //   this.setState({ icon: data[0] });
-    // });
+   
   };
   getProblem = async () => {
     const res = await axios.get("http://localhost:3001/problem_origin/4");
     this.setState({ problem_origin: res.data[0] });
-    // .then(data => {
-    //   this.setState({ problem_origin: data[0] });
-    // });
+    
   };
   getTextStatic2 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/17");
     this.setState({ text_static1: res.data[0] });
-    // .then(data => {
-    // this.setState({ text_static: data[0] });
-    // });
-    // console.log(res)
+   
   };
   getTextStatic = async () => {
     const res = await axios.get("http://localhost:3001/text_static/25");
     this.setState({ text_static: res.data[0] });
-    // .then(data => {
-    //   this.setState({ text_static: data[0] });
-    // });
+   
   };
   getTextLink = async () => {
     const res = await axios.get("http://localhost:3001/text_static/106");
@@ -69,9 +59,7 @@ class Source2Croyances extends React.Component {
   getTextStatic2 = async () => {
     const res = await axios.get("http://localhost:3001/text_static/121");
     this.setState({ text_static2: res.data[0] });
-    // .then(data => {
-    //   this.setState({ text_static: data[0] });
-    // });
+   
   };
   
 

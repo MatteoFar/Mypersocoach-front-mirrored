@@ -1,10 +1,16 @@
+/* ResponseSymptome2.css */
+
+.response_height {
+    min-height: 10vh;
+    padding-bottom: 30px;
+}
 
 .Response {
     color: white;
     /* height: 66vh; */
     margin: 0 auto;
-    min-height: 10vh;
-    width: 282px;
+    /* min-height: 10vh;
+    padding-bottom: 30px; */
     text-align: center;
     width: 282px;
 }

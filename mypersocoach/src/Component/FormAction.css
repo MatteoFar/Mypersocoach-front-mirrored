@@ -1,45 +1,48 @@
+/* FormAction.css */
+
 .formCenter {
     display:flex;
     justify-content: center ;
 }
+
 .buttonAction{
+    border: none;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
-    border: none;
-    
+    /* margin-top: 20px; */
 }
 
 .numbForm {
-    font-size: 20px !important;
-    margin: 0px;
-    color: #7e7e7e !important;
-    display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
-.button_add, .button_remove{
-    background:none;
-    border: none;
-}
-
-.button_add{
-    font-size: 10vw;
-    color: green;
-}
-
-.button_remove{
-    font-size: 10vw;
-    color: red;
+    /* color: #7e7e7e !important; */
+    display: flex;
+    /* font-size: 20px !important; */
+    margin: 0px;
+    /* margin-bottom: 10px; */
 }
 
 .numbForm p{
-    align-items: center;
-    display: flex;
-    
+    margin-right: 5px;
 }   
+
+.button_add, .button_remove{
+    background:none;
+    border: none;
+    outline: none;
+}
+
+.button_add{
+    color: rgb(255, 189, 74);
+    font-size: 50px;
+}
+
+.button_remove{
+    color: red;
+    font-size: 20px;
+}
+
 .inputAction{
-   max-width:  95vmin !important;
-   color: #7e7e7e !important;
+    color: #7e7e7e !important;
+    max-width:  95vmin !important;
 }
 

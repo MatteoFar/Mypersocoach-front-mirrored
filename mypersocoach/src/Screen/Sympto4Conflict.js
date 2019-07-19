@@ -44,10 +44,10 @@ class Sympto4Conflict extends React.Component {
     getIdProblem = () => {
         const {problem_id} = this.state
         const id= this.props.location.state.lastId
-        console.log('pouet pouet', id)
+        
         axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
           .then(res => {
-            console.log("response axios: conflict ", res);
+           
           })
       }
 
@@ -76,7 +76,11 @@ class Sympto4Conflict extends React.Component {
                 {/* Appel du composant. Le 1er "icon" correspond au state */}
                 {/* "icon.picture.src" correspond à l'accès à la bdd "icon" et au champ "picture.src" */}
                 <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
-                <HeadingText text_static={text_static.all_text} />
+                
+                <div className="padding_top_bottom">
+                    <HeadingText text_static={text_static.all_text} />
+                </div>
+                
                 <TitlePageSympto problem={problem} />
                 <Form problemId={this.state.problem_id} lastId={this.props.location.state.lastId} redirectionPage={'symptome4'}/>
             </div>

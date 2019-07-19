@@ -1,0 +1,10 @@
+.containerProfil {
+    color: rgb(150, 159, 170);
+    height: 100%;
+    max-width: 380px;
+    margin: auto; 
+    display: grid;
+    grid-template-columns: 1fr ;
+    
+  
+  }

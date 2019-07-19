@@ -28,10 +28,12 @@ class Form extends React.Component {
 
     }
 
+    // handlesubmit : function that handles "Valider" button in every forms
+    
     handleSubmit = (e) => {
         e.preventDefault();
         const { textarea } = this.state;
-        // allows us to go the symptome 2 page thanks to history.push and tranfert lastId recap as props
+        // allows us to go the symptome 2 page (first summary : "Ton problème actuel est), "thanks to history.push and tranfert lastId recap as props
         // first condition 
         
         if (this.props.redirectionPage === 'symptome4') {
@@ -59,7 +61,10 @@ class Form extends React.Component {
        
        
         } 
-      // another condition 
+      // another condition when we are in Source2environment and that we go to source2comportement 
+      
+      // we pass through Source2, then  Origins component, then Form, then Source2envrionnement, source2croyance etc...: 
+
       else if ( this.props.redirectionPage === 'Source2environnement') {
         
       axios.post('http://localhost:3001/response', {
@@ -73,10 +78,9 @@ class Form extends React.Component {
     })
 
     .then((res => { 
-        //mettre des conditions de redirection
-        //recup de lastid de response
        
-        console.log("que fais tu button valider")
+       
+      
 
            const idRespEnvironment = res.data.lastResponseId
           
@@ -100,119 +104,125 @@ class Form extends React.Component {
     ))
 }
 
-// redirection to source2capacités
+        // redirection to source2capacités when we are in source2comportement
+        // we pass through Source2, then  Origins component, then Form, then Source2envrionnement, source2croyance etc...: 
 
-else if ( this.props.redirectionPage === 'Source2comportement') {
-        
-    axios.post('http://localhost:3001/response', {
 
-      textarea: textarea,
-      response_summary: this.state.textarea,
-      summary_id: this.props.summaryId,
-      problem_origin_id: this.props.problem_originId
-      
+        else if ( this.props.redirectionPage === 'Source2comportement') {
+                
+            axios.post('http://localhost:3001/response', {
 
-  })
+            textarea: textarea,
+            response_summary: this.state.textarea,
+            summary_id: this.props.summaryId,
+            problem_origin_id: this.props.problem_originId
+            
 
-  .then((res => { 
-      
-      const idRespComportement = res.data.lastResponseId
-      localStorage.setItem('idRespComportement',idRespComportement)
-      
-      console.log('est ce que jai mon id comportement', idRespComportement);
-      
-      this.props.history.push({
-              pathname: "/source2capacites", 
-              state: {
-                  
-                 
-                  summaryId: this.props.summaryId, 
-                  problem_origin_id: this.props.problem_originId 
+        })
 
+        .then((res => { 
+            
+            const idRespComportement = res.data.lastResponseId
+            localStorage.setItem('idRespComportement',idRespComportement)
+            
+            
+            
+            this.props.history.push({
+                    pathname: "/source2capacites", 
+                    state: {
+                        
+                        
+                        summaryId: this.props.summaryId, 
+                        problem_origin_id: this.props.problem_originId 
+
+                        }
+                    })
                 }
-            })
+            ))
         }
-    ))
-}
 
-else if ( this.props.redirectionPage === 'Source2croyances') {
+        // redirection to Source2croyances when we are in Source2Capacités
+        // we pass through Source2, then  Origins component, then Form, then Source2envrionnement, source2croyance etc...: 
+
+        else if ( this.props.redirectionPage === 'Source2croyances') {
+                
+            axios.post('http://localhost:3001/response', {
+
+            textarea: textarea,
+            response_summary: this.state.textarea,
+            summary_id: this.props.summaryId,
+            problem_origin_id: this.props.problem_originId
+            
+            
+
+        })
+
+        .then((res => { 
+            
+            
+            const idRespCapacite = res.data.lastResponseId
+            localStorage.setItem('idRespCapacite', idRespCapacite) 
+
+            
+                this.props.history.push({
+                    pathname: "/source2croyances", 
+                    state: {
+
+                        
+                        summaryId: this.props.summaryId,
+                        problem_origin_id: this.props.problem_originId    
+
+                        }
+                    })
         
-    axios.post('http://localhost:3001/response', {
-
-      textarea: textarea,
-      response_summary: this.state.textarea,
-      summary_id: this.props.summaryId,
-      problem_origin_id: this.props.problem_originId
-      // problem_origin_id: 1
-
-  })
-
-  .then((res => { 
-      //mettre des conditions de redirection
-      console.log("response à ma réponse", res)
-      
-      const idRespCapacite = res.data.lastResponseId
-      localStorage.setItem('idRespCapacite', idRespCapacite) 
-
-      console.log("est ce que j'ai mon idcapacite",  res.data.lastResponseId)
-   
-          this.props.history.push({
-              pathname: "/source2croyances", 
-              state: {
-
-                  
-                  summaryId: this.props.summaryId,
-                  problem_origin_id: this.props.problem_originId    
-
                 }
-            })
-  
+            ))
         }
-    ))
-}
 
-else if ( this.props.redirectionPage === 'reformulation') {
-        
-    axios.post('http://localhost:3001/response', {
-
-      textarea: textarea,
-      response_summary: this.state.textarea,
-      summary_id: this.props.summaryId,
-      problem_origin_id: this.props.problem_originId
-      // problem_origin_id: 1
-
-  })
-
-  .then((res => { 
-     
-        console.log("response à ma réponse", res)
-        //    const idRespCroyance = res.data.lastResponseId
-           console.log("est ce que j'ai mon idcroyance",  res.data.lastResponseId)
-           const idRespCroyance = res.data.lastResponseId
-           localStorage.setItem('idRespCroyance', idRespCroyance) 
-        
-           
-        this.props.history.push({
-                pathname: "/reformulation", 
-                state: {
-                    
-                    
-                    summaryId: this.props.summaryId,       
-                    problem_origin_id: this.props.problem_originId
-
-                }
-            });
+    // redirection to reformulation (summary) when we are in Source2croyances
+    // we pass through Source2, then  Origins component, then Form, then Source2envrionnement, source2croyance etc...: 
 
 
-  }
-  ))
-}
+        else if ( this.props.redirectionPage === 'reformulation') {
+                
+            axios.post('http://localhost:3001/response', {
+
+            textarea: textarea,
+            response_summary: this.state.textarea,
+            summary_id: this.props.summaryId,
+            problem_origin_id: this.props.problem_originId
+            
+
+        })
+
+        .then((res => { 
+            
+            
+                const idRespCroyance = res.data.lastResponseId
+                localStorage.setItem('idRespCroyance', idRespCroyance) 
+                
+                
+                this.props.history.push({
+                        pathname: "/reformulation", 
+                        state: {
+                            
+                            
+                            summaryId: this.props.summaryId,       
+                            problem_origin_id: this.props.problem_originId
+
+                        }
+                    });
 
 
-}   
+                 }   
+            ))
+        }
 
 
-// another c}
+}   // end of the function handleSubmit 
+
+
+
         
     getTextarea = async () => {
         //Vérifier ce qu'il faut mettre en ciblage
@@ -246,7 +256,7 @@ else if ( this.props.redirectionPage === 'reformulation') {
    
    
    handleClick = () => {
-      //redirection for "je ne suis pas sûr button" in Source 3 envrionnement
+      //redirection for "je ne suis pas sûr button" in Source 3 environnement
       // we go one step back to Source2envrionnement
       
         if(this.props.redirectionPage === 'Source2environnement') {
@@ -256,18 +266,22 @@ else if ( this.props.redirectionPage === 'reformulation') {
             });
          
       }
+
     //redirection for "je ne suis pas sûr " in source 3 comportement
     // we go one step back to Source2comportement
+
     else if(this.props.redirectionPage === 'Source2comportement') {
         
         this.props.history.push({
             pathname: "/source2comportement", 
             state: {summaryId: this.props.summaryId}
             });
-         console.log("que passa with button valider")
+         
       }
+
      // reditection for "je ne suis pas sûr " in source 3 capacité
-     // we go one step back to Source2croyances
+     // we go one step back to Source2capacités
+
       else if(this.props.redirectionPage === 'Source2croyances') {
         this.props.history.push({
             pathname: "/source2capacites", 
@@ -275,8 +289,10 @@ else if ( this.props.redirectionPage === 'reformulation') {
             });
          
       }
+
   // reditection for "je ne suis pas sûr " in source 3 croyances
   // we go one step back to Source2croyances
+
       else if(this.props.redirectionPage === 'reformulation') {
         this.props.history.push({
             pathname: "/source2croyances", 
@@ -306,66 +322,70 @@ else if ( this.props.redirectionPage === 'reformulation') {
 
    
 
-// this return display the form with "retour" button in symptome4_compoents : synmpto4 conflict, symptome4_performance
-    if (this.props.redirectionPage === 'symptome4'){
-        return (
-            <div>
-                <form id="form" method="post" action="#" onSubmit={this.handleSubmit} onClick={this.test}>
+        // this return display the form with "retour" button in symptome4_compoents : synmpto4 conflict, symptome4_performance
+
+
+            if (this.props.redirectionPage === 'symptome4'){
+                return (
+                    <div>
+                        <form id="form" method="post" action="#" onSubmit={this.handleSubmit} onClick={this.test}>
+                            
+
+                            <textarea id="textarea" name="textarea" type='text'required value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
+                                {response}
+                            </textarea>
+                            {/* valider button */}
+                            
+                            <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+
+                            {/* "Retour" button */}
+
+                            <NavLink className="navlink" to="/symptome3">
+                                <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text} </button>
+                            </NavLink>
+
+                        </form>
                     
-
-                    <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
-                        {response}
-                    </textarea>
-                    {/* valider button */}
                     
-                    <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
-
-                    {/* "Retour" button */}
-
-                    <NavLink className="navlink" to="/symptome3">
-                        <button href="#" className="button_back" type="reset" name="return">{text_static4.all_text} </button>
-                    </NavLink>
-
-                </form>
-            
-            
-            </div>
-        )
-    }
+                    </div>
+                )
+            }
     
     
     // this return display the form with "je n'en suis pas sûr" button" in Source3 evnvrionnement, source3 behavior ...
-        else {
+            else {
 
-            return (
-                <div>
-                    <form id="form" method="post" action="#" onSubmit={this.handleSubmit} >
-                        
-    
-                        <textarea id="textarea" name="textarea" type='text' value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
-                            {response}
-                        </textarea>
-
-
-                        {/* valider button */}
-                        <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+                return (
+                    <div>
+                        <form id="form" method="post" action="#" onSubmit={this.handleSubmit} >
+                            
+        
+                            <textarea id="textarea" name="textarea" type='text'required value={this.state.textarea} maxlength="300" placeholder={text_static2.all_text} onChange={this.handleChangeTextarea}>
+                                {response}
+                            </textarea>
 
 
-                        {/* "Je n'en suis pas sûr" button */}
-                        <div className="navlink" >
-                            <button href="#" className="button_back" type="reset" name="return" onClick={this.handleClick} >{text_static5.all_text} </button>
+                            {/* valider button */}
+                            <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+
+
+                            {/* "Je n'en suis pas sûr" button */}
+                            <div className="navlink" >
+                                <button href="#" className="button_back" type="reset" name="return" onClick={this.handleClick} >{text_static5.all_text} </button>
+                        </div>
+        
+                        </form>
+                    
                     </div>
-    
-                    </form>
-                  
-                </div>
-            )  
+                )  
 
-        }
+            }
 
 
 
     }
 }
+
+
 
 export default withRouter(Form);

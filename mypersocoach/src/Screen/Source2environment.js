@@ -6,7 +6,7 @@ import "./Source2environment.css";
 import IconMain from "../Component/IconMain";
 import TitlePage from "../Component/TitlePage";
 import HeadingText from "../Component/HeadingText";
-import FowardStep from "../Component/ForwardStep";
+import ForwardStep from "../Component/ForwardStep";
 import NextStep from "../Component/NextStep";
 
 
@@ -82,7 +82,7 @@ class Source2Environment extends React.Component {
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <TitlePage problem_origin={problem_origin} /> 
         <HeadingText text_static={text_static.all_text} />
-        <FowardStep redirectionPage={'source3_environment'} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
+        <ForwardStep redirectionPage={'source3_environment'} summaryId={this.props.location.state.summaryId} problem_originId={this.props.location.state.problem_originId} text_static2={text_static2.all_text}/>
         <NextStep summaryId={this.props.location.state.summaryId} redirectionPage={'source2comportement'} text_static3={text_static3.all_text}/>
       </div>
         

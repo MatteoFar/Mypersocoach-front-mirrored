@@ -8,7 +8,7 @@ import "../Screen/Symptome3.css";
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
 import Symptomes from "../Component/Symptomes";
-import ForwardAnnex from "../Component/ForwardAnnex";
+
 
 class Symptome3 extends React.Component {
   
@@ -66,7 +66,6 @@ class Symptome3 extends React.Component {
     //display of problem array where we see id=1 conflit avec un collègue, id=2 maperformance etc...
     //we need this id in the next component :Symptomes in order to set conditions to access the 6 Symto4 components
 
-    console.log("mon tableau problem", problem)
     return (
       <div className="containerSymptom3">
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
@@ -77,7 +76,7 @@ class Symptome3 extends React.Component {
         ))}
 
         </div>
-        <ForwardAnnex />
+        {/* <ForwardAnnex /> */}
       </div>
     );
   }

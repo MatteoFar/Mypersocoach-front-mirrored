@@ -28,9 +28,9 @@ class FormTime extends React.Component {
         const { date } = this.state;
         // allows us to go the symptome 2 page thanks to history.push and tranfert lastId recap as props
         // first condition 
-        console.log('a quoi ressemble la date', date)
+       
         const id = this.props.summaryId
-        console.log('pouet pouet summaryid', this.props.summaryId)
+       
             
       
             axios.put(`http://localhost:3001/action/${id}`, {
@@ -41,7 +41,7 @@ class FormTime extends React.Component {
         })
         .then((res => {
             
-            console.log("summary id es tu toujours là mercI", this.state.summaryId)
+           
             
             this.props.history.push({
                 pathname: "/Saut1", 
@@ -99,7 +99,7 @@ class FormTime extends React.Component {
 
 
                         {/* valider button */}
-                        <button id="valid" href="#" className="button_validate" type="submit" name="valid" >{text_static3.all_text}</button >
+                        <button id="valid" href="#" className="button_validate_time" type="submit" name="valid" >{text_static3.all_text}</button >
 
 
                        

@@ -1,11 +1,12 @@
 
  .modal_main {
   background-color: rgba(55, 115, 184, 0.9);
-  position: absolute;
+  /* height: 100%; */
+  min-height: 120vh;
   opacity: 20%;
+  position: absolute;
+  width: 100vw;
   z-index: 1;
-  width: 380px;
-  height: 100%;
 }
 
 .modal_text {
@@ -36,4 +37,20 @@
 
   .modaloff {
   display: none;
+  }
+
+  @media screen and (min-width:768px){
+       
+    /* .containersource2 {
+      display: block;
+      text-align: center;
+      width: 380px;
+    } */
+  
+    
+    .modal_main {
+      /* display: block; */
+      text-align: center;
+      width: 380px;
+    }
   }
