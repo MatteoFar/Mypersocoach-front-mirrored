@@ -1,4 +1,4 @@
-.bla {
+.formActionBlock {
     display: flex;
     width: 282px;
     margin: 0 auto;
@@ -10,11 +10,11 @@
 
 }
 
-.blo {
+.formActionInput {
     width: 225px;
 } 
 
-.bli {
+.formActionIcon {
     height: 50px;
     width: 50px;
 }
