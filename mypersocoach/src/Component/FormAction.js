@@ -126,16 +126,17 @@ class FormAction extends React.Component{
               return (
 
                 <div key={index}>
-                  <p className ='numbForm'>{index + 1}-
+                  
                     {/*  X button to delete actions inputs individually*/}
+                  <div className ='numbForm'>
+                    <p>{index + 1} - </p>
                     <input type ='text' onChange={e => this.handleChange(e, index)} value={addAction} className='numbForm'placeholder={text_static2.all_text}/>
                     <button className="button_remove"onClick={(e) => this.removeAction(e, index)}>
                       x
                     </button>
-                  </p>
+                  </div>
 
                 </div>
-
               );
             }
           )}

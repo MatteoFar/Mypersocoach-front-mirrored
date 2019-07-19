@@ -1,9 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import "./Source2environment.css";
 
-
+import "./Solution2.css";
 
 import IconMain from "../Component/IconMain";
 import HeadingText from "../Component/HeadingText";
@@ -43,7 +42,7 @@ class Solution2 extends React.Component {
     
 
     return (
-      <div className="containerSource2Environment">
+      <div className="containerSolution2">
           
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
         <div className="text_size">
