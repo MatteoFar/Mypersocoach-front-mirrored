@@ -5,9 +5,9 @@
 }
 
 .forward_step_container {
+  /* border: 1px solid black; */
   margin: auto;
   /* margin-top: 57px; */
-  /* border: 1px solid black; */
 }
 
 .buttonForward_Step {
@@ -38,4 +38,5 @@
 .msgError{
   color: red;
   margin : auto;
+  text-align: center;
 }

@@ -83,8 +83,7 @@ class Source2 extends React.Component {
   }
 
   render() {
-    // console.log("summaryId es-tu là", this.props.summaryId)
-    // console.log('map de origin est la ', this.state.problem_origin);
+   
     
     
     const {icon, text_static, problem_origin,text_static1,text_static3}=this.state

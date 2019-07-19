@@ -57,13 +57,11 @@ class Symptomes extends Component {
   
 
   render(){
-  // console.log('couccou ma props',this.props.lastId)
-  // console.log('history çamarche?', this.props.history)
-  // console.log('mon objet', this)  
+  
   
   return (
     <div className="iconsSymptom3">
-      {/* {problem.map(problem => (  */}
+     
       <button className="iconLinkSymptom3">
         <img
           href="#"

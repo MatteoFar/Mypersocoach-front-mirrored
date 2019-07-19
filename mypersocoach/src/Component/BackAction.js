@@ -22,7 +22,8 @@ class BackAction extends React.Component {
 render() {
   return (
       <div className="back_action_container">
-
+            
+            {/* // Retour button in Solution 3 - summary of differents actions - return to solution2*/}
         
             <button href="#" className="button_back_action" type="reset" name="return" onClick={this.handleClick}>{this.props.text_static2}</button>
        
