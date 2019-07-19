@@ -6,6 +6,8 @@ import HeadingText from "../Component/HeadingText";
 import BackAction from '../Component/BackAction';
 import RecapSolution from '../Component/RecapSolution';
 
+import "./Solution3.css"
+
 class Solution3 extends React.Component {
 
     state = {
@@ -67,10 +69,9 @@ return (
             <IconMain icon={icon.picture_src} alt={icon.description_alt}/>
             <HeadingText text_static={text_static.all_text} />
             <RecapSolution  summaryId={this.props.location.state.summaryId} addActions ={addActions}/> 
-          
-          {/* // Retour button in Solution 3 - summary of differents actions */}
-          
+            <div className="backButton_solution3">
             <BackAction summaryId={this.props.location.state.summaryId} text_static2={text_static2.all_text} addActions={addActions}/>
+            </div>
             </div>
             
         )

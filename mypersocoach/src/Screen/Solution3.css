@@ -3,7 +3,7 @@
 .solution3_width_height {
     height: 100vh;
     width:100vw;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
 /*======= DESKTOP FORMAT =======*/
@@ -18,4 +18,8 @@
       width: 760px;
     } */
   
+  }
+
+  .backButton_solution3 {
+    margin-top: 30px
   }
