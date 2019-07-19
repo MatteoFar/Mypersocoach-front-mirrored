@@ -62,14 +62,7 @@ class Origins extends React.Component {
     
   return (
       <>
-     {/* <div className="logoTextSymptome3">
-        {headingIcons3.map(headingIcon3 => (
-          <img className="image_icon" alt="icon" src={headingIcon3.image} />
-        ))}
-        {headingTexts3.map(headingText3 => (
-          <p> {headingText3.text} </p>
-        ))}
-      </div> */}
+     
       
       <div>
           <button onClick={this.handleClick} className="iconLink">

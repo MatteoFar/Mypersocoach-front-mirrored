@@ -16,14 +16,8 @@ class FormAction extends React.Component{
         summaryId:'',
         backAction : this.props.location.state.addActions,
         validate : false,
-<<<<<<< HEAD
-        selectedButton: null
-=======
         selectedButton : null
->>>>>>> dev
-        
-        
-    }
+      }
 
 
       getButtonValidate= async () => {
@@ -58,24 +52,27 @@ class FormAction extends React.Component{
 
       removeAction = (e, index) => {
         e.preventDefault()
-        this.setState({ selectedButton : index })
-        console.log('mon index' , index);
         
+        // allow us to apply selected remove on one specific button
+        this.setState({ selectedButton : index })
+       
+        
+        // removal of one action in the table action one section deleted from the index
           this.state.addActions.splice(index, 1);
           this.setState({ addActions : this.state.addActions });
-        
-        
         
       };
      
     
+      // 
+
       handleChange = ( e, index) => {
         
         this.state.addActions[index] = e.target.value;
-        // this.setState({addActions: e.target.value})
+        
        
         this.setState({ addActions: this.state.addActions});
-        console.log("test de add action", this.state.addActions);
+        
         
       };
 
@@ -106,7 +103,7 @@ class FormAction extends React.Component{
         
         
       const{text_static2,text_static3}=this.state
-      console.log('alors ? :' , this.state.addActions);
+      
       
     
       return (

@@ -63,7 +63,7 @@ class BackSubmit extends React.Component {
 
   }
   
-  // retour vers solution pour je ne valide pas dans recap final
+  // retour vers solution2 pour "je ne valide pas" dans recap final : Saut1
   else if (this.props.backSubmit === "backSubmit") {
    
     return (
