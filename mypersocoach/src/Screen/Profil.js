@@ -87,13 +87,13 @@ class Profil extends React.Component {
           responseComportement={this.props.location.state.responseComportement}
           summaryId={this.props.location.state.summaryId}
           icon7={icon7.picture_src}
-          alt={icon7.description_alt}
+          alt1={icon7.description_alt}
           text_static7={text_static7.all_text}
           icon8={icon8.picture_src}
-          alt={icon8.description_alt}
+          alt2={icon8.description_alt}
           text_static8={text_static8.all_text}
           icon9={icon9.picture_src}
-          alt={icon9.description_alt}
+          alt3={icon9.description_alt}
           text_static9={text_static9.all_text}
         />
       </div>

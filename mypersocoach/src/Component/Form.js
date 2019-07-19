@@ -125,7 +125,7 @@ class Form extends React.Component {
             const idRespComportement = res.data.lastResponseId
             localStorage.setItem('idRespComportement',idRespComportement)
             
-            console.log('est ce que jai mon id comportement', idRespComportement);
+            
             
             this.props.history.push({
                     pathname: "/source2capacites", 
@@ -276,7 +276,7 @@ class Form extends React.Component {
             pathname: "/source2comportement", 
             state: {summaryId: this.props.summaryId}
             });
-         console.log("que passa with button valider")
+         
       }
 
      // reditection for "je ne suis pas sûr " in source 3 capacité

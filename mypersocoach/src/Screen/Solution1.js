@@ -72,7 +72,7 @@ class Solution1 extends React.Component {
      
     } = this.state;
 
-console.log('elle est là ma props?', this.props.location.state.summaryId)
+
     return (
       <div className="container_solution1">
         <IconMain icon={icon.picture_src} alt={icon.description_alt}/>

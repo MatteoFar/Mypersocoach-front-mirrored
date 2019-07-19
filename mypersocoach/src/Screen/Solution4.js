@@ -41,8 +41,7 @@ class Solution4 extends React.Component {
     }
 
     render() {
-        
-        console.log('hola summaryid',this.props.location.state.summaryId )
+       
         const{icon,text_static}= this.state
         return (
             <div className="general_container">

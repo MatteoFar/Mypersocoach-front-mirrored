@@ -38,17 +38,14 @@ class RecapSolution extends React.Component {
     handleClick = async (action, index) =>{
     
     
-            console.log('mon index :', index, action);
-            console.log('taille tab : ',this.state.addActions.indexOf(action));
-
+            
         this.setState({ selectedButton : index })
         
 
         this.setState({response: action}); 
-        console.log('est pas là ma state?',this.state.response);
+        
         await this.setState({response: action});
-        console.log('si elle est là',this.state.response);
-
+        
         this.setState({
             summaryId: this.props.summaryId, 
             isReply: !this.state.isReply
@@ -56,7 +53,7 @@ class RecapSolution extends React.Component {
 
        
         
-        console.log('is reply', this.state.isReply)
+        
         
        
        
@@ -98,8 +95,7 @@ class RecapSolution extends React.Component {
 
 
     render(){
-        // console.log('etat de la state backsubmit:', this.props.backSubmit);
-        console.log('ma state :', this.state.iconValidate);
+        
         
         const {iconValidate, iconValidate2} = this.state
         
