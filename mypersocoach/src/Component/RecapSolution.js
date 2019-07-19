@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { withRouter } from "react-router-dom";
+import "./RecapSolution.css"
 
 class RecapSolution extends React.Component {
 
@@ -105,15 +106,16 @@ class RecapSolution extends React.Component {
                         if(addAction.length >= 1 ){
                             return(
                                 
-                                <div>
+                                <div className="bla">
 
-                                    <p>
+                                    <p className="blo">
                                     {addAction}
                                  
-                                        <img src = {this.state.selectedButton === index ? iconValidate2.picture_src : iconValidate.picture_src}
+                                    </p>
+
+                                    <img className="bli" src = {this.state.selectedButton === index ? iconValidate2.picture_src : iconValidate.picture_src}
                                         alt ="" onClick={()=> this.handleClick(addAction, index)} />
                                     
-                                    </p>
 
                                 </div>
                             ) 
