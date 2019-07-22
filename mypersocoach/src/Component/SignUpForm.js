@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from "axios";
 import bcrypt from "bcryptjs";
-import {NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import { withRouter } from "react-router-dom";
+
 
 // import '../Component/GeneralCss.css';
 import '../Component/LoginForm.css';
@@ -164,7 +166,7 @@ class Signup extends React.Component {
             this.setMessageError("Desolé, mais vous devez renseigner tous les champs.");
             return
         }
-
+        else{
         // On encrypt le pass
         const password_bcrypt = bcrypt.hashSync(password);
 
@@ -184,6 +186,12 @@ class Signup extends React.Component {
         .catch(function (error) {
             console.log('Désolé, erreur systeme.');
         });  
+        
+        this.props.history.push({
+            pathname :"/start"
+        })
+        
+        }
         
     }
 
@@ -297,11 +305,14 @@ class Signup extends React.Component {
                         <div className="height30"></div>
                         
                         {/* J'ai déjà un compte page bouton */}
-                        <p className="white_text">J'ai déjà un compte</p>
                         <NavLink to="/">
+                            <a className="white_text">J'ai déjà un compte</a>
+                        </NavLink>
+
+                        {/* <NavLink to="/">
                             <button  className="button_signup" type="button" name="texte">Connexion</button>
                         </NavLink>
-                        <div className="height30"></div>
+                        <div className="height30"></div> */}
                     </div>
                 </form>
                 
@@ -313,4 +324,4 @@ class Signup extends React.Component {
     }
   }
 
-export default Signup;
+export default withRouter(Signup);
