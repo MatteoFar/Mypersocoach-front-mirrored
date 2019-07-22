@@ -81,8 +81,8 @@ class Login extends React.Component {
         
         // Pas de forme vide soumise.
         if (password_send === '' && email_send === '') { this.setMessageError("Vous devez renseigner vos crédentials."); return; }
-        if (password_send === '' && email_send != '') { this.setMessageError("Le mot de passe ne peut pas etre vide."); return; }
-        if (email_send === '' && password_send != ''){ this.setMessageError("L\'email ne peut pas etre vide."); return; }
+        if (password_send === '' && email_send !== '') { this.setMessageError("Le mot de passe ne peut pas etre vide."); return; }
+        if (email_send === '' && password_send !== ''){ this.setMessageError("L'email ne peut pas etre vide."); return; }
 
         // On lance le log utilisateur
         axios.post('http://localhost:3001/login', {
