@@ -22,7 +22,7 @@ class RecapSolution extends React.Component {
 
 
     getIconValidate = async () => {
-        const res = await axios.get('http://localhost:3001/icon/38')
+        const res = await axios.get('http://localhost:3001/icon/40')
         this.setState({ iconValidate : res.data[0] })
     }
 
@@ -30,7 +30,7 @@ class RecapSolution extends React.Component {
 
 
     getIconValidate2 = async () => {
-        const res = await axios.get('http://localhost:3001/icon/37')
+        const res = await axios.get('http://localhost:3001/icon/39')
         this.setState({ iconValidate2 : res.data[0] })
     }
 
@@ -110,9 +110,9 @@ class RecapSolution extends React.Component {
                         if(addAction.length >= 1 ){
                             return(
                                 
-                                <div className="formActionBlock">
+                                <div key={index} className="formActionBlock">
 
-                                    <p className="formActionInput">
+                                    <p className="formActionInput ">
                                     {addAction}
                                  
                                     </p>
