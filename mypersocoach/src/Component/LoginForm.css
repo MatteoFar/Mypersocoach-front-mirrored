@@ -53,6 +53,10 @@ header,section,footer{
   color:white;
 }
 
+a{
+  text-decoration: none;
+
+}
 /* .height5 {
   height: 5px;
 }
@@ -228,6 +232,10 @@ input[type="button"]{
   text-decoration: none;
 } */
 
+
+.message-login {
+  color: #ffffff;
+}
 
 
 /*======= DESKTOP FORMAT =======*/
