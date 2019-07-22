@@ -110,9 +110,9 @@ class RecapSolution extends React.Component {
                         if(addAction.length >= 1 ){
                             return(
                                 
-                                <div className="formActionBlock">
+                                <div key={index} className="formActionBlock">
 
-                                    <p className="formActionInput">
+                                    <p className="formActionInput ">
                                     {addAction}
                                  
                                     </p>
