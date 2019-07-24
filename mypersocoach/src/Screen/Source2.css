@@ -2,11 +2,12 @@
 
 .containersource2 {
     color: rgb(150, 159, 170);
-    display: grid;
+    /* display: grid; */
+    text-align: center;
     justify-content: center;
     height: 120vh;
     margin: auto;
-    width: 100vw;
+    width: 380px;
   }
   
   .logoTextSymptome3 {
