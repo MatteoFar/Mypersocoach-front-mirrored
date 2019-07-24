@@ -34,7 +34,6 @@ class LoginScreen extends React.Component {
           <BackgroundLogin text_static={text_static.all_text}/>
         </div>
         
-        {/* Voir quels sont les paramètres à ajouter dans le composant*/}
         <LoginForm/>
       </div>
     );

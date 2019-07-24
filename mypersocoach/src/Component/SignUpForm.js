@@ -136,7 +136,7 @@ class Signup extends React.Component {
                 // si l'array en retour n'est pas vide
                 // L'email est deja utilisé
                 if (res.data && res.data.length !== 0) {
-                    self.setMessageError("Desolé, mais cet email n\'est pas disponible.");
+                    self.setMessageError("Desolé, mais cet email n\'est pas disponible");
                     self.setState({ email: '' });
                 }
             })
@@ -163,7 +163,7 @@ class Signup extends React.Component {
 
         // On ne veut pas de champs vide
         if (password === '' || email === '' || lastname === '' || firstName === '' || fonction === '' ) {
-            this.setMessageError("Desolé, mais vous devez renseigner tous les champs.");
+            this.setMessageError("Desolé, mais vous devez renseigner tous les champs");
             return
         }
         else{
@@ -180,7 +180,7 @@ class Signup extends React.Component {
             // entreprise: entreprise
         })
         .then(function (response) {
-            self.setMessageError("Utilisateur enregistré.");
+            self.setMessageError("Utilisateur enregistré");
             self.setState({ email: '', password: '', firstname: '', lastname: '', fonction: '', entreprise: '' });
         })
         .catch(function (error) {
