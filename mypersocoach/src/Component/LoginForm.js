@@ -115,6 +115,7 @@ class Login extends React.Component {
                 <section>
                     {/* handleSubmit pour soumettre les informations sur la Form*/}
                     <form method="post" action="#" onSubmit={this.handleSubmit}> 
+                        <p>{this.state.errors === false ? 'Login incorect' : null}</p>
                         <div id="form">
                             {/* Gestion des messages d'erreurs */}
                             <div className="message-login">
