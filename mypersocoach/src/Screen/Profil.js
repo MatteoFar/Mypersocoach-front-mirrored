@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {NavLink} from "react-router-dom";
 
 import "./Source2environment.css";
 
@@ -135,6 +136,8 @@ class Profil extends React.Component {
     const res = await axios.get("http://localhost:3001/text_static/51");
     this.setState({ text_static15: res.data[0] });
   };
+
+  
   componentDidMount() {
     this.getTitleProfil();
     this.getTitleProfil2();
@@ -218,7 +221,14 @@ class Profil extends React.Component {
                     icon13={icon13.picture_src}text_static13={text_static13.all_text}
                     icon14={icon14.picture_src}text_static14={text_static14.all_text}
                     icon15={icon15.picture_src}text_static15={text_static15.all_text}/>
+          <div className='div-btn'>
+          <NavLink to='/start'>
+              <button className='btn-back'>Retour acceuil</button>
+          </NavLink>
+          </div>
       </div>
+      
+      
     );
   }
 }
