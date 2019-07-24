@@ -255,7 +255,7 @@ class ForwardStep extends React.Component{
               
               <div>
                 <div className='msgError'>                
-                  <p >Entrer 5 actions minimum</p>
+                  <p >Entre 5 actions minimum</p>
                 </div>
 
                 <div className="forward_step_container">

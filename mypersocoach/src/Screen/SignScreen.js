@@ -30,7 +30,6 @@ class SignScreen extends React.Component {
       <div className="page_width_height blue_bg">
         <BackgroundLogin text_static={text_static.all_text}/>
         
-        {/* Voir quels sont les paramètres à ajouter dans le composant*/}
         <SignUpForm/>
       </div>
     );

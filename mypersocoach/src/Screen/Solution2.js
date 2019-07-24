@@ -22,7 +22,7 @@ class Solution2 extends React.Component {
   };
 
   getTextStatic = async () => {
-    const res = await axios.get("http://localhost:3001/text_static/141");
+    const res = await axios.get("http://localhost:3001/text_static/146");
     this.setState({ text_static: res.data[0] });
   };
   
