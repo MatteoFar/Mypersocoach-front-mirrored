@@ -12,6 +12,27 @@
   justify-content: center;
   text-align: center;
 }
+.div-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-back{
+  background: none rgb(255, 189, 74);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255,255,255);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-bottom: 10%;
+  text-align: center;
+  width: 250px;
+  height: 45px;
+}
+.btn-back:hover{
+  background-color: rgb(55,115,184);
+}
 
 
 /*======= DESKTOP FORMAT =======*/
@@ -23,6 +44,7 @@
     width: 380px;
   }
 
+  
 }
 
 
