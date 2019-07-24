@@ -39,6 +39,7 @@
 .display-modal {
     display: flex;
     justify-content: space-around;
+    /* width: 300px */
     
 }
 
@@ -61,8 +62,8 @@
     position: fixed;
     display: grid; 
     grid-template-rows: 1fr 1fr 1fr;
-    top: 50%;
-    right: 41%;
+    /* top: 50%; */
+    right: 39vw;
     align-items: center;
     text-align: center;
     background-color: rgba(253, 253, 253, 0.25);
@@ -108,3 +109,30 @@
     text-align: center;
 }
 
+@media screen and (max-width:320px) {
+    .Problem_modal {
+        right: 12vw;
+    }
+
+}
+
+@media screen and (max-width:375px) {
+    .Problem_modal {
+        right: 11vw;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .Problem_modal {
+        right: 13vw;
+    }
+
+}
+
+/* @media screen and (max-width:768px) {
+    .Problem_modal {
+        right: 30vw;
+    }
+
+} */
