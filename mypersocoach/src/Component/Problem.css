@@ -123,16 +123,23 @@
 
 }
 
-@media screen and (max-width:425px) {
+@media screen and (min-width:425px) {
     .Problem_modal {
         right: 13vw;
     }
 
 }
 
-/* @media screen and (max-width:768px) {
+@media screen and (min-width:768px) {
     .Problem_modal {
         right: 30vw;
     }
 
-} */
+}
+
+@media screen and (min-width:1000px) {
+    .Problem_modal {
+        right: 39vw;
+    }
+
+}
