@@ -80,7 +80,7 @@ class Login extends React.Component {
         var self = this;
         
         // Pas de forme vide soumise.
-        if (password_send === '' && email_send === '') { this.setMessageError("Vous devez renseigner vos crédentials"); return; }
+        if (password_send === '' && email_send === '') { this.setMessageError("Vous devez renseigner vos identifiants"); return; }
         if (password_send === '' && email_send !== '') { this.setMessageError("Le mot de passe ne peut pas être vide"); return; }
         if (email_send === '' && password_send !== ''){ this.setMessageError("L'email ne peut pas être vide"); return; }
 
@@ -115,7 +115,7 @@ class Login extends React.Component {
                 <section>
                     {/* handleSubmit pour soumettre les informations sur la Form*/}
                     <form method="post" action="#" onSubmit={this.handleSubmit}> 
-                        <p>{this.state.errors === false ? 'Login incorrect' : null}</p>
+                        {/* <p>{this.state.errors === false ? 'Login incorrect' : null}</p> */}
                         <div id="form">
                             {/* Gestion des messages d'erreurs */}
                             <div className="message-login">
