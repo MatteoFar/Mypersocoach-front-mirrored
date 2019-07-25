@@ -1,10 +1,11 @@
 .containerSource2Croyance {
   /* background-color: rgb(55, 115, 184); */
   color: rgb(150, 159, 170);
-  display: grid;
+  /* display: grid; */
   margin: auto;
   min-height: 100vh;
-  width: 100vw;
+  text-align: center;
+  width: 380px;
 }
 
 /* .modal_main {
