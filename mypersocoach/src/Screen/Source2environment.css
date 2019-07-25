@@ -22,16 +22,26 @@
   border: none;
   border-radius: 5px;
   color: rgb(255,255,255);
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   margin: 0 auto;
   margin-bottom: 10%;
+  outline: none;
   text-align: center;
   width: 250px;
   height: 45px;
 }
-.btn-back:hover{
+/* .btn-back:hover{
   background-color: rgb(55,115,184);
+} */
+
+.btn-back:hover {
+  background-color: rgb(72, 201, 176);
+}
+
+.btn-back:active {
+  background-color: rgb(22, 160, 133);
 }
 
 
