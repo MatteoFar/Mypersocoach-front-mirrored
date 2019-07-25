@@ -223,7 +223,7 @@ class Profil extends React.Component {
                     icon15={icon15.picture_src}text_static15={text_static15.all_text}/>
           <div className='div-btn'>
           <NavLink to='/start'>
-              <button className='btn-back'>Retour acceuil</button>
+              <button className='btn-back'>Retour accueil</button>
           </NavLink>
           </div>
       </div>
